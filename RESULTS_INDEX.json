@@ -68,5 +68,10 @@
     "report": "outputs/mathematical_audit/population/report.json",
     "manuscript_destination": "Results and Methods; Table tab:p2weights",
     "scope": "Mathematical verification and conditional sensitivity of saved observations; no new biological replication."
+  },
+  {
+    "report": "outputs/biological_expansion/population/report.json",
+    "manuscript_destination": "Results and Methods; Figures 1 and 3; Tables tab:p2biologicalcounts, tab:p2interpolation and tab:p2interpolationdonors",
+    "scope": "Observed fibroblast states and two global missing-time comparisons against simple baselines; three donors, three computational seeds, no individual cell tracking."
   }
 ]

@@ -258,3 +258,80 @@ PWH27 & 497 / 1992 & 1.58457 & 0.84112 & 46.92\% \\*
 PWH28 & 260 / 909 & 1.07483 & 0.64420 & 40.07\% \\
 \end{longtable}
 }
+
+{\small
+\begin{longtable}{@{}p{33mm}p{33mm}p{33mm}p{33mm}p{33mm}@{}}
+\caption{Observed author-annotated fibroblasts retained after the sample--barcode join in GSE241132. Donors A, B and C correspond to source donor labels PWH26, PWH27 and PWH28. Each cell-count entry comes from one biopsy; the three donors supply the biological replication. The 12 entries sum to 12,259 cells and provide the material for expression and geometry displays. Day 0 is intact skin, followed by acute wounds at days 1, 7 and 30.}\label{tab:p2biologicalcounts}\\
+\toprule
+\textbf{Donor} & \textbf{Day 0 cells} & \textbf{Day 1 cells} & \textbf{Day 7 cells} & \textbf{Day 30 cells} \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+\textbf{Donor} & \textbf{Day 0 cells} & \textbf{Day 1 cells} & \textbf{Day 7 cells} & \textbf{Day 30 cells} \\
+\midrule\endhead
+\bottomrule\endfoot
+Donor A & 724 & 255 & 920 & 843 \\*
+Donor B & 521 & 497 & 1992 & 2096 \\*
+Donor C & 907 & 260 & 909 & 2335 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{17mm}p{42mm}p{24mm}p{24mm}p{24mm}p{32mm}@{}}
+\caption{Retrospective global missing-time comparison in three donors. Each error is the equally weighted mean of three within-donor, full-cell empirical energy distances in all 15 training-standardized coordinates. The table gives its mean and range over seeds 0, 1 and 2; deterministic baselines have zero seed range. Improvement is relative to the corresponding unchanged-source error. Withheld day 7 uses day 1 as source and day 30 as anchor; withheld day 1 uses intact skin as source and day 7 as anchor. Both have rank-time interpolation fraction one half. The held-time cells are excluded from scaling, fitting and anchor construction. Seed ranges are not donor confidence intervals, and absolute errors from different tasks use different scalers.}\label{tab:p2interpolation}\\
+\toprule
+\textbf{Held day} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} & \textbf{Mean improvement} \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+\textbf{Held day} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} & \textbf{Mean improvement} \\
+\midrule\endhead
+\bottomrule\endfoot
+7 & Unchanged source & 1.4725 & 1.4725 & 1.4725 & 0.00\% \\*
+7 & Centroid translation & 0.6674 & 0.6674 & 0.6674 & 54.67\% \\
+7 & Independent bridge & 0.9284 & 0.9224 & 0.9386 & 36.95\% \\
+7 & Shared flow & 0.8110 & 0.8044 & 0.8237 & 44.93\% \\
+1 & Unchanged source & 1.3460 & 1.3460 & 1.3460 & 0.00\% \\
+1 & Centroid translation & 0.9293 & 0.9293 & 0.9293 & 30.96\% \\
+1 & Independent bridge & 1.0959 & 1.0920 & 1.1007 & 18.58\% \\*
+1 & Shared flow & 1.0571 & 0.9484 & 1.1231 & 21.46\% \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{17mm}p{24mm}p{48mm}p{24mm}p{24mm}p{24mm}@{}}
+\caption{Every donor-specific error in the two global missing-time tasks, summarized over the three computational seeds. ED is the full 15-dimensional empirical energy distance using all available source-derived predictions and target cells in that donor. The mean, minimum and maximum describe seeds, not independent specimens. The centroid baseline has lower seed-averaged error than the field in all three day-7 donors and two of three day-1 donors. Each donor supplies both training endpoints in this retrospective design; these rows are not held-out-donor transfer.}\label{tab:p2interpolationdonors}\\
+\toprule
+\textbf{Held day} & \textbf{Donor} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+\textbf{Held day} & \textbf{Donor} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} \\
+\midrule\endhead
+\bottomrule\endfoot
+7 & Donor A & Unchanged source & 1.7580 & 1.7580 & 1.7580 \\*
+7 & Donor A & Centroid translation & 0.7058 & 0.7058 & 0.7058 \\
+7 & Donor A & Independent bridge & 0.8633 & 0.8508 & 0.8712 \\
+7 & Donor A & Shared flow & 0.9069 & 0.8878 & 0.9291 \\
+7 & Donor B & Unchanged source & 1.5846 & 1.5846 & 1.5846 \\
+7 & Donor B & Centroid translation & 0.6898 & 0.6898 & 0.6898 \\
+7 & Donor B & Independent bridge & 0.9808 & 0.9591 & 0.9980 \\
+7 & Donor B & Shared flow & 0.8645 & 0.8411 & 0.8804 \\
+7 & Donor C & Unchanged source & 1.0748 & 1.0748 & 1.0748 \\
+7 & Donor C & Centroid translation & 0.6066 & 0.6066 & 0.6066 \\
+7 & Donor C & Independent bridge & 0.9411 & 0.8981 & 0.9889 \\
+7 & Donor C & Shared flow & 0.6614 & 0.6442 & 0.6868 \\
+1 & Donor A & Unchanged source & 1.1341 & 1.1341 & 1.1341 \\
+1 & Donor A & Centroid translation & 0.8704 & 0.8704 & 0.8704 \\
+1 & Donor A & Independent bridge & 1.0311 & 1.0192 & 1.0471 \\
+1 & Donor A & Shared flow & 0.8410 & 0.7370 & 0.8960 \\
+1 & Donor B & Unchanged source & 1.5517 & 1.5517 & 1.5517 \\
+1 & Donor B & Centroid translation & 1.0900 & 1.0900 & 1.0900 \\
+1 & Donor B & Independent bridge & 1.3196 & 1.3132 & 1.3232 \\
+1 & Donor B & Shared flow & 1.3462 & 1.2486 & 1.4146 \\
+1 & Donor C & Unchanged source & 1.3522 & 1.3522 & 1.3522 \\
+1 & Donor C & Centroid translation & 0.8275 & 0.8275 & 0.8275 \\
+1 & Donor C & Independent bridge & 0.9369 & 0.9258 & 0.9525 \\*
+1 & Donor C & Shared flow & 0.9841 & 0.8597 & 1.0585 \\
+\end{longtable}
+}

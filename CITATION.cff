@@ -5,7 +5,7 @@ title: Held-out wound single-cell population dynamics
 authors:
 - family-names: Fu
   given-names: Zeyu
-version: 0.2.0
+version: 0.3.0
 license: MIT
 abstract: Software for reconstructing a held-out acute human wound distribution and
   evaluating transfer to held-out donors. The study compares time coordinates, neural
@@ -17,5 +17,3 @@ keywords:
 - single-cell transcriptomics
 - wound healing
 - population dynamics
-doi: 10.5281/zenodo.22875664
-date-released: '2026-09-21'

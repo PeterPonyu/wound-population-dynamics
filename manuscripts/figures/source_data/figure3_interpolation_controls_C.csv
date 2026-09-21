@@ -1,0 +1,7 @@
+"holdout","donor","method_flow","energy_distance_flow","method_translation","energy_distance_translation","difference","day"
+"Wound1","Donor A","Shared flow",0.841029804569914,"Centroid translation",0.870374465788461,-0.0293446612185475,"Day 1"
+"Wound1","Donor B","Shared flow",1.34621093594958,"Centroid translation",1.08997490880917,0.256236027140405,"Day 1"
+"Wound1","Donor C","Shared flow",0.984125268027365,"Centroid translation",0.827468837851263,0.156656430176102,"Day 1"
+"Wound7","Donor A","Shared flow",0.906914646627736,"Centroid translation",0.705820683439951,0.201093963187785,"Day 7"
+"Wound7","Donor B","Shared flow",0.864547717903319,"Centroid translation",0.689834474129767,0.174713243773552,"Day 7"
+"Wound7","Donor C","Shared flow",0.66141494844046,"Centroid translation",0.606606165621247,0.0548087828192131,"Day 7"

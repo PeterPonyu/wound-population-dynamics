@@ -148,9 +148,7 @@ methods <- c("topic_simplex_theta0", "module_score", "pca", "nmf")
 method_names <- c("Fibroblast\ntopic", "Module", "PCA", "NMF")
 
 figure1_workflow <- function() {
-  body <- readLines(file.path(ROOT, "manuscripts/r_tikz/temporal_design.tikz"))
-  write_workflow("figure1_workflow", 111, body,
-    c("Missing time point", "New donor: example fold", "Common evaluation and complementary sensitivity analyses"), c(43, 135, 90))
+  biological_population_figure()
 }
 
 figure2_wound7_transfer <- function() {
@@ -171,7 +169,7 @@ figure2_wound7_transfer <- function() {
   draw_figure("figure2_wound7_transfer", list(panel(pa, "Held-out Wound7", a),
     panel(pb, "Donor transfer", b), panel(pc, "Donor–time geometry", c)), height = 67)
 }
-figure3_time_axes <- function() {
+figure4_time_axes <- function() {
   r <- repaired("time_parameterisation")
   keys <- c("rank", "days", "sqrt_days", "log_days")
   labels <- c("Rank", "Linear days", "Square-root days", "Log days")
@@ -187,9 +185,9 @@ figure3_time_axes <- function() {
   # Retain the complete observed y range; do not truncate the linear-days curve.
   exported <- rbind(transform(d, point_type = "scan"), transform(target, point_type = "held_out_target"),
     data.frame(axis = "Stay-still", fraction = NA, ed = r$standstill, point_type = "baseline"))
-  draw_figure("figure3_time_axes", list(panel(p, "Time parameterization", exported)), height = 70)
+  draw_figure("figure4_time_axes", list(panel(p, "Time parameterization", exported)), height = 70)
 }
-figure4_methods_benchmark <- function() {
+figure5_methods_benchmark <- function() {
   r <- repaired("donor_conditioned_benchmark")
   keys <- c("M0_standstill", "M1_shared_cfm", "M2_mean_displacement", "M3_nearest_donor", "M4_conditioned_cfm", "M5_optimal_transport")
   a <- data.frame(label = c("Stay-\nstill", "Shared\nCFM", "Mean\nshift", "Nearest\ndonor", "Cond.\nCFM", "OT"), value = num(r$summary[keys], "mean_ed"))
@@ -199,10 +197,10 @@ figure4_methods_benchmark <- function() {
   b$field <- factor(b$field, levels = c("Shared", "Conditioned"))
   pb <- ggplot(b, aes(field, value, group = fold)) + geom_line(colour = PURPLE, alpha = .6, linewidth = .5) +
     geom_point(colour = PURPLE, size = 1.5) + labs(x = NULL, y = "Energy distance")
-  draw_figure("figure4_methods_benchmark", list(panel(pa, "Held-out donor", a),
+  draw_figure("figure5_methods_benchmark", list(panel(pa, "Held-out donor", a),
     panel(pb, "Training donors", b)), height = 68, widths = c(99, 70))
 }
-figure5_donor_curve_stability <- function() {
+figure6_donor_curve_stability <- function() {
   s <- repaired("donor_curve_seed_stability"); c <- repaired("donor_count_curve"); r <- repaired("donor_curve_inference")
   a <- data.frame(k = rep(1:2, each = 3), seed = rep(names(s$per_seed), 2),
     value = c(num(s$per_seed, "k1_mean_ed"), num(s$per_seed, "k2_mean_ed")))
@@ -221,10 +219,10 @@ figure5_donor_curve_stability <- function() {
     geom_hline(yintercept = b$mean[1], colour = NAVY, linewidth = .55) +
     geom_point(size = 2.2, colour = ORANGE) + coord_cartesian(ylim = c(-.04, .39)) +
     labs(x = "Training seed", y = "ED reduction (k=1 − k=2)")
-  draw_figure("figure5_donor_curve_stability", list(panel(pa, "Donor curve", a),
+  draw_figure("figure6_donor_curve_stability", list(panel(pa, "Donor curve", a),
     panel(pb, "Seed stability", b)), height = 70)
 }
-figure6_mouse_arms <- function() {
+figure7_mouse_arms <- function() {
   r <- repaired("mouse_all_arms_pod7_audit"); keys <- c("NDB", "PDB", "GDB")
   a <- data.frame(label = keys, value = 100 * num(r$arms[keys], "improvement_fraction"))
   pa <- columns(a, "Improvement (%)", c(GRAY, ORANGE, GREEN), c(-20, 65)) + zero_h()
@@ -248,11 +246,13 @@ figure6_mouse_arms <- function() {
     scale_x_continuous(breaks = 1:3, labels = keys) + labs(x = NULL, y = "Energy distance")
   pb <- pb + geom_segment(data = hatch(2.17, .145, b$value[5], .055),
     aes(x = x, xend = xend, y = y, yend = yend), inherit.aes = FALSE, colour = "white", linewidth = .25)
-  draw_figure("figure6_mouse_arms", list(panel(pa, "POD7 audit", a),
+  draw_figure("figure7_mouse_arms", list(panel(pa, "POD7 audit", a),
     panel(pb, "Baseline vs prediction", b)), height = 66)
 }
 
-names_all <- c("figure1_workflow", "figure2_wound7_transfer", "figure3_time_axes", "figure4_methods_benchmark", "figure5_donor_curve_stability", "figure6_mouse_arms")
+source(file.path(ROOT, "manuscripts/r_tikz/biological_figures.R"))
+
+names_all <- c("figure1_workflow", "figure2_wound7_transfer", "figure3_interpolation_controls", "figure4_time_axes", "figure5_methods_benchmark", "figure6_donor_curve_stability", "figure7_mouse_arms")
 selected <- if (length(requested)) requested else names_all
 if (!all(selected %in% names_all)) stop("Unknown figure name")
 for (name in selected) get(name, mode = "function")()
@@ -265,5 +265,6 @@ manifest <- list(renderer = "R + ggplot2/grid + tikzDevice + XeLaTeX", font = "A
     function(f) digest::digest(file = file.path(ROOT, "manuscripts/r_tikz", f), algo = "sha256")),
     paste0("manuscripts/r_tikz/", c("temporal_design.tikz"))),
   script_sha256 = digest::digest(file = normalizePath(script), algo = "sha256"))
+manifest$auxiliary_sources <- setNames(list(digest::digest(file=file.path(ROOT,"manuscripts/r_tikz/biological_figures.R"),algo="sha256")),"manuscripts/r_tikz/biological_figures.R")
 write_json(manifest, file.path(BUILD, "manifest.json"), auto_unbox = TRUE, pretty = TRUE, digits = NA)
 writeLines(capture.output(sessionInfo()), file.path(BUILD, "sessionInfo.txt"))

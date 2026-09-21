@@ -1,8 +1,6 @@
 # Held-out wound single-cell population dynamics
 
-Author: Zeyu Fu. Software version: 0.2.0.
-
-The manuscript and figures were revised on 21 September 2026. See [MANUSCRIPT_REVISION.md](MANUSCRIPT_REVISION.md) for the editorial changes and verification. The software DOI identifies the independently archived analysis version.
+Author: Zeyu Fu. Software version: 0.3.0.
 
 Software for reconstructing a held-out acute human wound distribution and evaluating transfer to held-out donors. The study compares time coordinates, neural and non-neural predictors, training-donor counts, training seeds, mouse model arms, numerical integration and evaluation sampling. Three human donors provide biological replication; the study does not establish diabetic-foot-ulcer prognosis.
 
@@ -10,7 +8,7 @@ The acute human time course contains three donors. The mouse comparison has one 
 
 This study has its own [GitHub repository](https://github.com/PeterPonyu/wound-population-dynamics), version history, citation metadata and Zenodo deposit metadata. It does not import code or results from another study repository. Its GitHub release and Zenodo deposition are managed independently; no GitHub–Zenodo integration is required.
 
-Read the [manuscript](output/pdf/wound_population_dynamics.pdf) and the [figure collection](manuscripts/figures/figures.pdf). The package contains 6 editable R/TikZ vector figures, numerical tables, completed reports, and its own copy of the frozen expression model. RESULTS_INDEX.json maps numerical reports to manuscript use. A copy of the model is included here so the project runs independently.
+Read the [manuscript](output/pdf/wound_population_dynamics.pdf) and the [figure collection](manuscripts/figures/figures.pdf). The package contains 7 editable R/TikZ vector figures, numerical tables, completed reports, and its own copy of the frozen expression model. RESULTS_INDEX.json maps numerical reports to manuscript use. A copy of the model is included here so the project runs independently.
 
 ![Study design](manuscripts/figures/figure1_workflow.png)
 
@@ -35,8 +33,10 @@ The MIT License applies to software, including analysis and rendering programs. 
 
 Use CITATION.cff for software attribution. ARCHIVING.md describes direct Zenodo deposition using this study's .zenodo.json and software-only ZIP. A reserved identifier is not a published DOI; only verified published records are added to citations. Each study has its own deposit state, preventing accidental reuse of the other study's record.
 
-The independently published software archive for version 0.2.0 is [available on Zenodo](https://doi.org/10.5281/zenodo.22875664). Previous versions remain available for attribution.
-
 ## Mathematical verification
 
-Version 0.2.0 corrects method descriptions and adds explicit estimands, analytic unit tests and a frozen-input sensitivity report. Read METHODS_CONTRACT.md and CHANGELOG.md for the interpretation and provenance boundaries. Recompute the added analysis with `python3 scripts/audit_population_math.py --output-dir outputs/reruns/mathematical_audit`. This uses saved inputs and does not refit the original representation or temporal fields.
+Version 0.3.0 corrects method descriptions and adds explicit estimands, analytic unit tests and a frozen-input sensitivity report. Read METHODS_CONTRACT.md and CHANGELOG.md for the interpretation and provenance boundaries. Recompute the added analysis with `python3 scripts/audit_population_math.py --output-dir outputs/reruns/mathematical_audit`. This uses saved inputs and does not refit the original representation or temporal fields.
+
+## Observed-cell and experimental extension
+
+Version 0.3.0 adds observed-cell maps, raw-count expression context and explicitly bounded experiments. Two globally missing times are compared against unchanged source, within-donor centroid translation and an independent-endpoint bridge across three seeds. The centroid predictor has lower mean donor error in both tasks; the earlier held-donor ranking is task-specific. The frozen original reports remain unchanged.
