@@ -1,7 +1,5 @@
-\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (3,106) {A};
-\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (10,106) {Missing time point};
-\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (94,106) {B};
-\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (101,106) {New donor: example fold};
+\node[anchor=center,font=\fontsize{9}{11}\selectfont\bfseries] at (43,106) {A Missing time point};
+\node[anchor=center,font=\fontsize{9}{11}\selectfont\bfseries] at (135,106) {B New donor: example fold};
 \foreach \offset in {0,91} {
   \foreach \x/\day in {31/0,45/1,59/7,73/30} {
     \node[font=\fontsize{7.5}{9}\selectfont\bfseries] at (\x+\offset,98) {Day \day};
@@ -32,8 +30,7 @@
 \draw[draw=gray!35,fill=gray!6] (148,43) rectangle (154,47);
 \node[anchor=west,font=\fontsize{7}{9}\selectfont\bfseries] at (155,45) {Unused};
 \draw[draw=gray!40] (3,39) -- (177,39);
-\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (3,34) {C};
-\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (10,34) {Common evaluation and complementary sensitivity analyses};
+\node[anchor=center,font=\fontsize{9}{11}\selectfont\bfseries] at (90,34) {C Common evaluation and complementary sensitivity analyses};
 \node[draw=blue!45,fill=blue!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (scale) at (23,23) {Frozen expression map\\Training-only scaling};
 \node[draw=teal!45,fill=teal!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (predict) at (68,23) {Day 1 → day 7\\Flow / baselines};
 \node[draw=orange!45,fill=orange!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (distance) at (113,23) {Predicted vs observed\\Energy distance};

@@ -2,6 +2,8 @@
 
 Author: Zeyu Fu. Software version: 0.2.0.
 
+The manuscript and figures were revised on 21 September 2026. See [MANUSCRIPT_REVISION.md](MANUSCRIPT_REVISION.md) for the editorial changes and verification. The software DOI identifies the independently archived analysis version.
+
 Software for reconstructing a held-out acute human wound distribution and evaluating transfer to held-out donors. The study compares time coordinates, neural and non-neural predictors, training-donor counts, training seeds, mouse model arms, numerical integration and evaluation sampling. Three human donors provide biological replication; the study does not establish diabetic-foot-ulcer prognosis.
 
 The acute human time course contains three donors. The mouse comparison has one animal per arm and time point. Numerical resolutions, seeds and evaluation draws do not increase the donor count. Bootstrap draws and cells are not additional independent patients.

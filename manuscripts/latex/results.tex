@@ -1,9 +1,9 @@
 \subsection{A held-out acute human time point can be reconstructed under the fixed protocol}
 
-The evaluation architecture is summarized in Figure~\ref{fig:p2f1}\label{call:p2f1}. The protocols separate a globally missing Wound7 time point from transfer to a donor excluded from fitting; both use training-only scaling and compare the predicted distribution with stay-still.
+Global timepoint holdout removes day 7 from all donors (Figure~\ref{fig:p2f1}A\label{call:p2f1}), whereas donor transfer removes one donor and retains every time point in the others (Figure~\ref{fig:p2f1}B). Both tasks apply the frozen representation, training-only scaling and a comparison with unchanged source, followed by complementary sensitivity analyses (Figure~\ref{fig:p2f1}C).
 \input{figure_captions/f1}
 
-The finalized held-out Wound7 analysis improved on the stay-still baseline by +49.9\%. Dropping one donor at a time preserved improvement in 3/3 retained-donor sensitivity runs; these runs predict the retained donors, not the omitted donor. The held-out donor transfer analysis also passed in 3/3 folds, with a mean improvement of +75.9\% and a mean pairwise displacement cosine of +0.948. In the geometry audit, the median same-donor temporal distance was 1.967 and the median same-time donor distance was 0.233, giving a time-to-donor ratio of 8.46 (bootstrap 95\% interval 6.02--13.11). The mean displacement cosine was 0.948, with a descriptive bootstrap interval of 0.943--0.954. These results show that the current representation and protocol contain a transferable signal for one interval in this acute human cohort, while also showing that the geometry summary is based on only three donors (Tables~\ref{tab:p2folds} and~\ref{tab:p2geometrytable}; Figure~\ref{fig:p2f2}\label{call:p2f2}).
+The finalized held-out Wound7 analysis improved on the stay-still baseline by +49.9\% (Figure~\ref{fig:p2f2}A\label{call:p2f2}). Dropping one donor at a time preserved improvement in 3/3 retained-donor sensitivity runs; these runs predict the retained donors, not the omitted donor. The held-out donor transfer analysis also passed in 3/3 folds, with a mean improvement of +75.9\% (Figure~\ref{fig:p2f2}B). In the geometry audit, the median same-donor temporal distance was 1.967 and the median same-time donor distance was 0.233, giving a time-to-donor ratio of 8.46 (bootstrap 95\% interval 6.02--13.11; Figure~\ref{fig:p2f2}C). The mean displacement cosine was +0.948, with a descriptive bootstrap interval of 0.943--0.954. These results show that the current representation and protocol contain a transferable signal for one interval in this acute human cohort, while also showing that the geometry summary is based on only three donors (Tables~\ref{tab:p2folds} and~\ref{tab:p2geometrytable}).
 
 \input{figure_captions/f2}
 
@@ -13,9 +13,10 @@ A fixed-seed refit assessed numerical resolution and evaluation sampling. Across
 
 Using all cells and the same fixed 50-step prediction, equal cell weights gave a 49.40\% improvement and equal donor mass gave 49.69\%. The three donor-specific improvements under this pooled field were 47.15\%, 46.92\% and 40.07\% (Table~\ref{tab:p2weights}). This sensitivity changes the evaluation measure without refitting the field; it is distinct from the donor-transfer experiment and from the earlier capped-distance estimate.
 
+\FloatBarrier
 \subsection{Time parameterization changes the held-out result}
 
-The linear days axis failed at the held-out Wound7 target, with an improvement of −18.2\% relative to stay-still. Rank, square-root days and log days met the specified noise-reference criterion, and none of the four tested axes diverged. Changing the time coordinate changes both the path specification and the optimization problem; this comparison does not isolate interval compression as a cause of failure. It does not establish log days as a universal biological clock; the transform must be prespecified and tested in a design with more independent time series (Table~\ref{tab:p2axes}; Figure~\ref{fig:p2f3}\label{call:p2f3}).
+The linear days axis failed at the held-out Wound7 target, with an improvement of −18.2\% relative to stay-still. Rank, square-root days and log days met the specified noise-reference criterion, and none of the four tested axes diverged. Changing the time coordinate changes both the path specification and the optimization problem; this comparison does not isolate interval compression as a cause of failure. It does not establish log days as a universal biological clock; the transform must be prespecified and tested in a design with more independent time series (Table~\ref{tab:p2axes}; Figure~\ref{fig:p2f3}A\label{call:p2f3}).
 
 \input{figure_captions/f3}
 
@@ -23,7 +24,7 @@ The linear days axis failed at the held-out Wound7 target, with an improvement o
 
 \subsection{The shared field has the lowest observed held-donor error}
 
-Under the common held-donor protocol, shared flow matching had mean energy distance 0.395 and passed in 3/3 folds. The non-neural mean-displacement, nearest-donor and optimal-transport baselines also passed in 3/3 folds. The donor-conditioned model passed in 3/3 held-donor folds but had a higher mean energy distance than the shared field in this comparison. In the six training-donor comparisons, conditioning improved on the shared field in 6/6 cases. This difference between training-donor and held-donor is the central safeguard against interpreting capacity as generalization (Tables~\ref{tab:p2methods}, \ref{tab:p2methodsbydonor} and~\ref{tab:p2insample}; Figure~\ref{fig:p2f4}\label{call:p2f4}).
+Under the common held-donor protocol, shared flow matching had mean energy distance 0.395 and passed in 3/3 folds (Figure~\ref{fig:p2f4}A\label{call:p2f4}). The non-neural mean-displacement, nearest-donor and optimal-transport baselines also passed in 3/3 folds. The donor-conditioned model passed in 3/3 held-donor folds but had a higher mean energy distance than the shared field in this comparison. In the six training-donor comparisons, conditioning improved on the shared field in 6/6 cases (Figure~\ref{fig:p2f4}B). This difference between training-donor and held-donor is the central safeguard against interpreting capacity as generalization (Tables~\ref{tab:p2methods}, \ref{tab:p2methodsbydonor} and~\ref{tab:p2insample}).
 
 \input{figure_captions/f4}
 
@@ -32,7 +33,7 @@ The data therefore do not justify selecting the conditioned field as the final m
 \FloatBarrier
 \subsection{A second donor improves the two measured points, but k=1 already passes}
 
-With one training donor, mean held-out energy distance was 0.5496. With two training donors, it was 0.3854. The reduction was positive in each of the three training seeds: 0.164 at seed 0, 0.176 at seed 1 and 0.156 at seed 2. The mean-displacement control also improved at seed 0, from 0.5325 with one donor to 0.4186 with two, so the benefit of a second donor was not unique to the neural field. The mean within-configuration training SD of 0.0717 was 3.13 times the mean split-half reference of 0.0229, showing that the reference omits a material source of run variation (Tables~\ref{tab:p2seedcurve} and~\ref{tab:p2seedconfigs}). This makes the aggregate direction reproducible across seeds (Figure~\ref{fig:p2f5}\label{call:p2f5}).
+With one training donor, mean held-out energy distance was 0.5496. With two training donors, it was 0.3854 (Figure~\ref{fig:p2f5}A\label{call:p2f5}). The reduction was positive in each of the three training seeds: 0.164 at seed 0, 0.176 at seed 1 and 0.156 at seed 2. The mean-displacement control also improved at seed 0, from 0.5325 with one donor to 0.4186 with two, so the benefit of a second donor was not unique to the neural field. The mean within-configuration training SD of 0.0717 was 3.13 times the mean split-half reference of 0.0229, showing that the reference omits a material source of run variation (Tables~\ref{tab:p2seedcurve} and~\ref{tab:p2seedconfigs}). This makes the aggregate direction reproducible across seeds (Figure~\ref{fig:p2f5}B).
 
 \input{figure_captions/f5}
 
@@ -40,6 +41,8 @@ The same analysis shows why the curve cannot be overinterpreted. The paired dono
 
 \subsection{Three mouse arms expose model-arm heterogeneity}
 
-The all-arm audit gave different results under the same protocol. NDB changed by −1.5\% relative to stay-still and did not beat the baseline. PDB improved by +32.1\%, but its POD7 target failed an endpoint-distance ordering check, warning against a simple interpolation interpretation without proving an off-manifold trajectory. GDB improved by +50.6\% with a POD7 target satisfying that ordering check. In aggregate, 2/3 arms beat stay-still, 2/3 met the noise criterion and 2/3 satisfied the ordering check. Each arm had one animal per time point, and NDB covered 59.7\% of the frozen panel. These arm-level computations are useful for protocol auditing, but they do not establish a mouse biological trajectory, a cross-species equivalence or DFU transfer (Tables~\ref{tab:p2mouse} and~\ref{tab:p2mousecounts}; Figure~\ref{fig:p2f6}\label{call:p2f6}).
+The all-arm audit gave different results under the same protocol. NDB changed by −1.5\% relative to stay-still and did not beat the baseline. PDB improved by +32.1\%, but its POD7 target failed an endpoint-distance ordering check, warning against a simple interpolation interpretation without proving an off-manifold trajectory. GDB improved by +50.6\% with a POD7 target satisfying that ordering check. In aggregate, 2/3 arms beat stay-still, 2/3 met the noise criterion and 2/3 satisfied the ordering check (Figure~\ref{fig:p2f6}A\label{call:p2f6}). Each arm had one animal per time point, and NDB covered 59.7\% of the frozen panel. These arm-level computations are useful for protocol auditing, but they do not establish a mouse biological trajectory, a cross-species equivalence or DFU transfer (Tables~\ref{tab:p2mouse} and~\ref{tab:p2mousecounts}).
+
+The paired baseline and predicted distances show the absolute error scale within each mouse arm (Figure~\ref{fig:p2f6}B); relative improvement alone would hide these differences.
 
 \input{figure_captions/f6}

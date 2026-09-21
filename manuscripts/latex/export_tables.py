@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export numerical supplementary tables from completed reports; no model fitting."""
 from pathlib import Path
-import csv,json,math
+import csv,json
 ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 ANALYSIS=ROOT/'outputs/analysis'
@@ -15,12 +15,11 @@ def f(x,n=4):return '—' if x in (None,'') else f'{float(x):.{n}f}'
 def table(label,caption,headers,rows,widths):
  col='@{}'+''.join('p{'+str(w)+'mm}' for w in widths)+'@{}'
  header=' & '.join(r'\textbf{'+esc(h)+'}' for h in headers)+r' \\'
- body='\n'.join(' & '.join(esc(c) for c in row)+r' \\' for row in rows)
- # Reserve each compact table including its caption, header and wrapped rows.
- row_lines=sum(max(math.ceil(len(str(c))/max(1,w*.7)) for c,w in zip(row,widths)) for row in rows)
- reserve=min(700, 65 + 11*math.ceil(len(caption)/125) + 12*row_lines)
- prefix = (r'\Needspace{'+str(reserve)+'pt}\n') if reserve else ''
- return prefix+'\n'.join([r'{\small',r'\begin{longtable}{'+col+'}',r'\caption{'+caption+r'}\label{'+label+r'}\\',r'\toprule',header,r'\midrule\endfirsthead',r'\multicolumn{'+str(len(headers))+r'}{l}{\tablename\ \thetable\ (continued)}\\',r'\toprule',header,r'\midrule\endhead',r'\bottomrule\endfoot',body,r'\end{longtable}',r'}'])
+ # Longtable measures its caption/header and starts only when a row fits.
+ # Keep the first and last row pairs together without reserving an estimated
+ # table height, which can push otherwise usable content onto another page.
+ body='\n'.join(' & '.join(esc(c) for c in row)+(r' \\*' if len(rows)>1 and i in (0,len(rows)-2) else r' \\') for i,row in enumerate(rows))
+ return '\n'.join([r'{\small',r'\begin{longtable}{'+col+'}',r'\caption{'+caption+r'}\label{'+label+r'}\\',r'\toprule',header,r'\midrule\endfirsthead',r'\multicolumn{'+str(len(headers))+r'}{l}{\tablename\ \thetable\ (continued)}\\',r'\toprule',header,r'\midrule\endhead',r'\bottomrule\endfoot',body,r'\end{longtable}',r'}'])
 def csvrows(n):return list(csv.DictReader((ROOT/'manuscripts/tables'/n).open()))
 # Each exported table lives in TeX; no Markdown draft is used by the build.
 p2=[]
@@ -66,11 +65,11 @@ p2.insert(6, p2.pop())
 
 r=json.loads((ROOT/'outputs/robustness_extensions/report.json').read_text())['temporal']
 rows=[[v['rk4_steps'],f(v['energy_distance'],9),f(100*v['relative_improvement'],6)+'%',f"{v['rms_coordinate_difference_from_200']:.3g}"] for v in r['numerical_sensitivity']['rows']]
-p2.append(r'\Needspace{330pt}'+'\n'+table('tab:p2numerics',r'Fixed-field Runge--Kutta resolution comparison for pooled day-7 holdout. A single seed-0 field was refitted with the specified 8,000 optimization steps and 256-cell batches on the saved expression coordinates, excluding day 7 from fitting and scaling. All rows use the same 1,012 day-1 cells and the same 1,500 sampled target cells. Energy distance is the empirical V-statistic evaluated in double precision; improvement is relative to the same unchanged-source baseline (1.406924). RMS is the root-mean-square coordinate difference from the 200-step solution; it is a numerical discrepancy, not a confidence interval. The comparison is conditional on one field and finite-precision arithmetic and does not establish formal convergence to an exact ODE solution.',['RK4 steps','Energy distance','Improvement','RMS vs 200 steps'],rows,[28,46,44,48]))
+p2.append(table('tab:p2numerics',r'Fixed-field Runge--Kutta resolution comparison for pooled day-7 holdout. A single seed-0 field was refitted with the specified 8,000 optimization steps and 256-cell batches on the saved expression coordinates, excluding day 7 from fitting and scaling. All rows use the same 1,012 day-1 cells and the same 1,500 sampled target cells. Energy distance is the empirical V-statistic evaluated in double precision; improvement is relative to the same unchanged-source baseline (1.406924). RMS is the root-mean-square coordinate difference from the 200-step solution; it is a numerical discrepancy, not a confidence interval. The comparison is conditional on one field and finite-precision arithmetic and does not establish formal convergence to an exact ODE solution.',['RK4 steps','Energy distance','Improvement','RMS vs 200 steps'],rows,[28,46,44,48]))
 rows=[[v['cells_per_distribution'],v['draws'],f(100*v['median_relative_improvement'],2)+'%',f(100*v['central_95_draw_range'][0],2)+' to '+f(100*v['central_95_draw_range'][1],2)+'%',str(v['gain_exceeds_split_half_count'])+'/'+str(v['draws'])] for v in r['evaluation_sampling']['summary']]
 p2.append(table('tab:p2sampling',r'Evaluation-sampling sensitivity for the same fixed field with 50 RK4 steps. For each cell count, 50 seeded draws sample source and target cells without replacement; prediction and unchanged-source comparisons use identical source indices and identical target indices within a draw. An additional pair of disjoint target subsets at that count defines a split-half reference. Percentages summarize relative improvement over unchanged source; the central 95\% draw range measures Monte Carlo sensitivity conditional on this cohort and field, not patient-level confidence. The final column counts draws whose gain exceeds the split-half reference. Cell count and resampling do not increase the three-donor biological sample size.',['Cells per distribution','Draws','Median improvement','Central 95% draw range','Gain exceeds reference'],rows,[34,17,37,42,37]))
 d=json.loads((ROOT/'outputs/mathematical_audit/population/report.json').read_text())
 rows=[[v['evaluation'],f"{v['n_source']} / {v['n_target']}",f(v['stay_still_distance'],5),f(v['predicted_distance'],5),f(100*v['relative_improvement'],2)+'%'] for v in d['evaluation']]
-p2.append(table('tab:p2weights',r'Fixed-field evaluation with all 1,012 Wound1 and 3,821 Wound7 cells, without subsampling. ED denotes exact weighted empirical energy distance calculated in double precision. Cell-pooled weights give equal mass to each cell; equal donor mass gives each of the three donors one third at source and target, with equal weights within a donor. Predicted cells retain source weights. Both rows use the same saved 50-step pooled time-holdout prediction and training-only scaler. The last three rows evaluate individual donors under that same field, which was trained on their other time points; these are not held-out-donor transfer folds. Improvement is relative to the corresponding unchanged-source ED. No row adds independent donors or a confidence interval, and this full-cell calculation is distinct from earlier capped-distance estimates.',['Evaluation','Source / target cells','Stay-still ED','Predicted ED','Improvement'],rows,[40,37,31,31,28]))
+p2.append(table('tab:p2weights',r'Evaluation of the saved pooled 50-step field in training-standardized coordinates, using all 1,012 Wound1 and 3,821 Wound7 cells. ED is the double-precision weighted empirical energy distance, without subsampling. Cell-pooled weights are uniform; donor-balanced weights allocate one third to each donor and equal mass within donor. Predictions retain source weights. The final three rows evaluate training donors separately, not donor-transfer folds. Improvement uses the corresponding unchanged-source ED. These three-donor point estimates have no confidence intervals and differ from capped-distance estimates.',['Evaluation','Source / target cells','Stay-still ED','Predicted ED','Improvement'],rows,[40,37,31,31,28]))
 (HERE/'tables.tex').write_text('\n\n'.join(p2)+'\n')
 print('Exported supplementary numerical tables from reports without fitting models.')

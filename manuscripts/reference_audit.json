@@ -200,6 +200,102 @@
       "publisher_title": "Solving Ordinary Differential Equations I",
       "publisher_metadata_source": "https://api.crossref.org/works/10.1007%2F978-3-540-78862-1",
       "status": "Publisher title matched; extended subtitle checked separately"
+    },
+    {
+      "citation_key": "weinreb2020",
+      "title": "Lineage tracing on transcriptional landscapes links state to fate during differentiation",
+      "source": "https://doi.org/10.1126/science.aaw3381",
+      "publisher_title": "Lineage tracing on transcriptional landscapes links state to fate during differentiation",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1126%2Fscience.aaw3381",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "lamanno2018",
+      "title": "RNA velocity of single cells",
+      "source": "https://doi.org/10.1038/s41586-018-0414-6",
+      "publisher_title": "RNA velocity of single cells",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41586-018-0414-6",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "bergen2020",
+      "title": "Generalizing RNA velocity to transient cell states through dynamical modeling",
+      "source": "https://doi.org/10.1038/s41587-020-0591-3",
+      "publisher_title": "Generalizing RNA velocity to transient cell states through dynamical modeling",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41587-020-0591-3",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "lange2022",
+      "title": "CellRank for directed single-cell fate mapping",
+      "source": "https://doi.org/10.1038/s41592-021-01346-6",
+      "publisher_title": "CellRank for directed single-cell fate mapping",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41592-021-01346-6",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "vinyard2025",
+      "title": "Learning cell dynamics with neural differential equations",
+      "source": "https://doi.org/10.1038/s42256-025-01150-3",
+      "publisher_title": "Learning cell dynamics with neural differential equations",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs42256-025-01150-3",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "luecken2022",
+      "title": "Benchmarking atlas-level data integration in single-cell genomics",
+      "source": "https://doi.org/10.1038/s41592-021-01336-8",
+      "publisher_title": "Benchmarking atlas-level data integration in single-cell genomics",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41592-021-01336-8",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "roberts2017",
+      "title": "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure",
+      "source": "https://doi.org/10.1111/ecog.02881",
+      "publisher_title": "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1111%2Fecog.02881",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "varma2006",
+      "title": "Bias in error estimation when using cross-validation for model selection",
+      "source": "https://doi.org/10.1186/1471-2105-7-91",
+      "publisher_title": "Bias in error estimation when using cross-validation for model selection",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1186%2F1471-2105-7-91",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "vabalas2019",
+      "title": "Machine learning algorithm validation with a limited sample size",
+      "source": "https://doi.org/10.1371/journal.pone.0224365",
+      "publisher_title": "Machine learning algorithm validation with a limited sample size",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0224365",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "rognoni2018",
+      "title": "Fibroblast state switching orchestrates dermal maturation and wound healing",
+      "source": "https://doi.org/10.15252/msb.20178174",
+      "publisher_title": "Fibroblast state switching orchestrates dermal maturation and wound healing",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.15252%2Fmsb.20178174",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "shook2018",
+      "title": "Myofibroblast proliferation and heterogeneity are supported by macrophages during skin repair",
+      "source": "https://doi.org/10.1126/science.aar2971",
+      "publisher_title": "Myofibroblast proliferation and heterogeneity are supported by macrophages during skin repair",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1126%2Fscience.aar2971",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
+    },
+    {
+      "citation_key": "sejdinovic2013",
+      "title": "Equivalence of distance-based and RKHS-based statistics in hypothesis testing",
+      "source": "https://doi.org/10.1214/13-aos1140",
+      "publisher_title": "Equivalence of distance-based and RKHS-based statistics in hypothesis testing",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1214%2F13-aos1140",
+      "status": "Publisher-deposited bibliographic identity checked; cited for contextual biological or methodological interpretation, not as an analysis performed in this study."
     }
   ]
 }
