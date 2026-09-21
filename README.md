@@ -1,5 +1,7 @@
 # Held-out wound single-cell population dynamics
 
+Published software archive: [10.5281/zenodo.22872454](https://doi.org/10.5281/zenodo.22872454) (version 0.1.0).
+
 Author: Zeyu Fu. Software version: 0.1.0.
 
 Software for reconstructing a held-out acute human wound distribution and evaluating transfer to held-out donors. The study compares time coordinates, neural and non-neural predictors, training-donor counts, training seeds, mouse model arms, numerical integration and evaluation sampling. Three human donors provide biological replication; the study does not establish diabetic-foot-ulcer prognosis.
