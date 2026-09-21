@@ -60,7 +60,7 @@ def main() -> int:
     ap.add_argument('--batch-size', type=int, default=256)
     ap.add_argument('--ot-reg', type=float, default=0.05)
     ap.add_argument('--knn', type=int, default=15)
-    ap.add_argument('--context-dropout', type=float, default=0.2, help='fraction of training batches with the context zeroed, so an unseen context degrades to the shared field instead of diverging')
+    ap.add_argument('--context-dropout', type=float, default=0.2, help="probability of zeroing each example's whole context vector; this does not guarantee unseen-donor stability")
     ap.add_argument('--seed', type=int, default=0)
     args = ap.parse_args()
     preserve_reference_outputs(args.output_dir)
@@ -198,11 +198,11 @@ def main() -> int:
             log(f"{', '.join(minority)} beat stand-still on a minority of donors only, with negative mean gain overall - not a win.")
         log('NO method beats stand-still on a majority of held-out donors, neural or not.')
         if cond_ok:
-            log(f'Conditioning does help on the donors it saw ({cond_better}/{len(insample)} folds), so the model class is not the problem - with two training contexts, predicting a third is extrapolation. The requirement this sets is donors, not architecture.')
+            log('Conditioning improves training-donor fit without sufficient held-donor gain. The comparison does not identify the correct model class or a required donor count.')
             verdict = 'conditioning_helps_in_sample_only'
         else:
-            log('Conditioning does not even help in-sample, so the limitation is upstream of the field - most likely the frozen latent does not encode this trajectory.')
-            verdict = 'limitation_upstream_of_field'
+            log('Conditioning does not improve a majority of training-donor fits; the source of the limitation remains unidentified.')
+            verdict = 'conditioning_does_not_improve_training_fit'
     log('=' * 74)
     report = {'summary': summary, 'per_donor': results, 'in_sample': insample, 'conditioned_better_in_sample': f'{cond_better}/{len(insample)}', 'verdict': verdict, 'caveat': '3 donors; leave-one-out leaves 2 training contexts for the conditional model.', 'protocol': protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'holdout_{d}' for d in donor_list], extra={'paired_same_donor_endpoints': True, 'shared_and_conditioned_use_same_pairs': True, 'source': args.source, 'target': args.target, 'steps': args.steps, 'batch_size': args.batch_size})}
     out = os.path.join(args.output_dir, 'report.json')

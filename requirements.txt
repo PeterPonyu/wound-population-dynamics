@@ -7,3 +7,4 @@ pyarrow==23.0.1
 h5py==3.16.0
 PyMuPDF==1.27.1
 PyYAML==6.0.3
+POT==0.9.6.post1

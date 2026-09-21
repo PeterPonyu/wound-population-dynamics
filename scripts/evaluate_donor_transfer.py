@@ -131,7 +131,7 @@ def main() -> int:
     spread = max(norms.values()) / min(norms.values()) if norms else float('nan')
     aligned = bool(mean_cos > 0.5)
     log(f'  mean cosine = {mean_cos:+.3f}; magnitude spread = {spread:.1f}x')
-    log(f"  -> donor trajectories are {('ALIGNED' if aligned else 'NOT aligned')}; a single shared field is {('well-specified' if aligned else 'MIS-SPECIFIED by construction')}")
+    log(f'  Mean displacement alignment exceeds the descriptive 0.5 cut: {aligned}; this does not establish field specification')
     report['donor_trajectory_alignment'] = {'displacement_norms': norms, 'pairwise_cosine': cos, 'mean_cosine': mean_cos, 'magnitude_spread': spread, 'aligned': aligned}
     report['per_donor'] = per_donor
     n_pass = sum((1 for v in per_donor.values() if v['passes_noise_gate']))
@@ -143,16 +143,16 @@ def main() -> int:
     log('=' * 74)
     log(f'DONOR TRANSFER {args.source} -> {args.target}: {n_pass}/{len(per_donor)} held-out donors beat stand-still by more than their own noise floor; mean improvement {mean_imp:+.1%}')
     if n_pass == len(per_donor) and per_donor:
-        log('The identifiable form of the question is answerable: population dynamics transfer to an unseen individual. The earlier failure was the unidentifiable form, not the method.')
+        log('All observed donor folds meet the descriptive reference criterion; population generalization requires additional independent donors.')
         verdict = 'transfer_works'
     elif n_pass > 0:
         log('Mixed. Transfer works for some donors and not others, so any claim must be per-donor, not aggregate.')
         verdict = 'transfer_partial'
     elif not aligned:
-        log(f"Transfer fails, and the alignment diagnostic says why: the donors' {args.source} -> {args.target} displacements have mean cosine {mean_cos:+.3f} and differ in magnitude by {spread:.1f}x. A field that depends only on time and position must move every donor the same way, so it is mis-specified here regardless of the conditional path. The fix is a donor-conditioned field, not a better interpolant.")
+        log('Transfer fails with heterogeneous mean displacements. This association does not identify the reason for failure or prove that conditioning would repair it.')
         verdict = 'transfer_fails_donors_unaligned'
     else:
-        log('Transfer fails even though donor trajectories are aligned, so the limitation sits in the latent or the field rather than in between-donor heterogeneity.')
+        log('Transfer fails despite aligned average displacements; this diagnostic does not locate the source of error.')
         verdict = 'transfer_fails_despite_alignment'
     log('=' * 74)
     report['verdict'] = verdict

@@ -1,0 +1,205 @@
+{
+  "scope": "Bibliographic identity and citation-purpose audit; this is not a systematic literature review.",
+  "entries": [
+    {
+      "citation_key": "liu2025_wound",
+      "title": "Spatiotemporal single-cell roadmap of human skin wound healing",
+      "source": "https://doi.org/10.1016/j.stem.2024.11.013",
+      "publisher_title": "Spatiotemporal single-cell roadmap of human skin wound healing",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1016%2Fj.stem.2024.11.013",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "geo_gse241132",
+      "title": "GSE241132: Spatiotemporal Single-Cell Roadmap of Human Skin Wound Healing",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241132",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "lipman2023",
+      "title": "Flow Matching for Generative Modeling",
+      "source": "https://arxiv.org/abs/2210.02747",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "tong2023",
+      "title": "Improving and generalizing flow-based generative models with minibatch optimal transport",
+      "source": "https://arxiv.org/abs/2302.00482",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "szekely2013",
+      "title": "Energy statistics: A class of statistics based on distances",
+      "source": "https://doi.org/10.1016/j.jspi.2013.03.018",
+      "publisher_title": "Energy statistics: A class of statistics based on distances",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1016%2Fj.jspi.2013.03.018",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "schiebinger2019",
+      "title": "Optimal-Transport Analysis of Single-Cell Gene Expression Identifies Developmental Trajectories in Reprogramming",
+      "source": "https://doi.org/10.1016/j.cell.2019.01.006",
+      "publisher_title": "Optimal-Transport Analysis of Single-Cell Gene Expression Identifies Developmental Trajectories in Reprogramming",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1016%2Fj.cell.2019.01.006",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "benamou2000",
+      "title": "A computational fluid mechanics solution to the Monge--Kantorovich mass transfer problem",
+      "source": "https://doi.org/10.1007/s002110050002",
+      "publisher_title": "A computational fluid mechanics solution to the Monge-Kantorovich mass transfer problem",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1007%2Fs002110050002",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "lavenant2021",
+      "title": "Toward a mathematical theory of trajectory inference",
+      "source": "https://doi.org/10.1214/23-AAP1969",
+      "publisher_title": "Toward a mathematical theory of trajectory inference",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1214%2F23-AAP1969",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "geo_gse326622",
+      "title": "GSE326622: Mechanotransduction unifies healthy non-diabetic wound healing over time by promoting a Cd14+/C1qa+ fibroblast subpopulation",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326622",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "efron1993bootstrap",
+      "title": "An Introduction to the Bootstrap",
+      "source": "Publisher book metadata; ISBN 9780412042317",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "cuturi2013",
+      "title": "Sinkhorn Distances: Lightspeed Computation of Optimal Transport",
+      "source": "https://proceedings.neurips.cc/paper/2013/hash/af21d0c97db2e27e13572cbf59eb343d-Abstract.html",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "theocharidis2022",
+      "title": "Single cell transcriptomic landscape of diabetic foot ulcers",
+      "source": "https://doi.org/10.1038/s41467-021-27801-8",
+      "publisher_title": "Single cell transcriptomic landscape of diabetic foot ulcers",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41467-021-27801-8",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "armstrong2017",
+      "title": "Diabetic Foot Ulcers and Their Recurrence",
+      "source": "https://doi.org/10.1056/nejmra1615439",
+      "publisher_title": "Diabetic Foot Ulcers and Their Recurrence",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1056%2Fnejmra1615439",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "wilkinson2020",
+      "title": "Wound healing: cellular mechanisms and pathological outcomes",
+      "source": "https://doi.org/10.1098/rsob.200223",
+      "publisher_title": "Wound healing: cellular mechanisms and pathological outcomes",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1098%2Frsob.200223",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "zimmerman2021",
+      "title": "A practical solution to pseudoreplication bias in single-cell studies",
+      "source": "https://doi.org/10.1038/s41467-021-21038-1",
+      "publisher_title": "A practical solution to pseudoreplication bias in single-cell studies",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41467-021-21038-1",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "heumos2023",
+      "title": "Best practices for single-cell analysis across modalities",
+      "source": "https://doi.org/10.1038/s41576-023-00586-w",
+      "publisher_title": "Best practices for single-cell analysis across modalities",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41576-023-00586-w",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "lopez2018",
+      "title": "Deep generative modeling for single-cell transcriptomics",
+      "source": "https://doi.org/10.1038/s41592-018-0229-2",
+      "publisher_title": "Deep generative modeling for single-cell transcriptomics",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41592-018-0229-2",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "saelens2019",
+      "title": "A comparison of single-cell trajectory inference methods",
+      "source": "https://doi.org/10.1038/s41587-019-0071-9",
+      "publisher_title": "A comparison of single-cell trajectory inference methods",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41587-019-0071-9",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "weinreb2018",
+      "title": "Fundamental limits on dynamic inference from single-cell snapshots",
+      "source": "https://doi.org/10.1073/pnas.1714723115",
+      "publisher_title": "Fundamental limits on dynamic inference from single-cell snapshots",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1073%2Fpnas.1714723115",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "bunne2023",
+      "title": "Learning single-cell perturbation responses using neural optimal transport",
+      "source": "https://doi.org/10.1038/s41592-023-01969-x",
+      "publisher_title": "Learning single-cell perturbation responses using neural optimal transport",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1038%2Fs41592-023-01969-x",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "tong2020trajectory",
+      "title": "TrajectoryNet: A Dynamic Optimal Transport Network for Modeling Cellular Dynamics",
+      "source": "https://proceedings.mlr.press/v119/tong20a.html",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "chen2018ode",
+      "title": "Neural Ordinary Differential Equations",
+      "source": "https://arxiv.org/abs/1806.07366",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "lipman2024guide",
+      "title": "Flow Matching Guide and Code",
+      "source": "https://arxiv.org/abs/2412.06264",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "bengio2004",
+      "title": "No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "source": "https://www.jmlr.org/papers/v5/grandvalet04a.html",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "cawley2010",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "source": "https://www.jmlr.org/papers/v11/cawley10a.html",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "peyre2019",
+      "title": "Computational Optimal Transport with Applications to Data Sciences",
+      "source": "https://doi.org/10.1561/2200000073",
+      "publisher_title": "Computational Optimal Transport with Applications to Data Sciences",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1561%2F2200000073",
+      "status": "Publisher-deposited title matched"
+    },
+    {
+      "citation_key": "flamary2021",
+      "title": "POT: Python Optimal Transport",
+      "source": "https://www.jmlr.org/papers/v22/20-451.html",
+      "status": "Primary article page or source repository checked; no DOI asserted"
+    },
+    {
+      "citation_key": "hairer1993",
+      "title": "Solving Ordinary Differential Equations I: Nonstiff Problems",
+      "source": "https://doi.org/10.1007/978-3-540-78862-1",
+      "publisher_title": "Solving Ordinary Differential Equations I",
+      "publisher_metadata_source": "https://api.crossref.org/works/10.1007%2F978-3-540-78862-1",
+      "status": "Publisher title matched; extended subtitle checked separately"
+    }
+  ]
+}

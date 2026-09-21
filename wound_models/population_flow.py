@@ -54,13 +54,11 @@ class ConditionalLatentFlowField(nn.Module):
     """
     Velocity field v_theta(z, t, c) conditioned on a per-individual context c.
 
-    The unconditional field cannot represent individuals whose trajectories
-    disagree: it must return one velocity per (position, time), yet the three
-    GSE241132 donors move from wound day 1 to day 7 with pairwise displacement
-    cosines of +0.844, -0.344 and +0.028. Adding c gives the field the degree
-    of freedom it needs, provided c is computable for an unseen individual at
-    prediction time - here c summarises that individual's own cells at the
-    source timepoint, which are exactly the cells being pushed forward.
+    Context provides additional source-sample information beyond (z, t).
+    A shared field can already give different velocities at different z;
+    differences between donor-average displacements do not establish that
+    conditioning is necessary. Source-only context prevents use of a held-out
+    target but does not guarantee transfer to an unseen context.
     """
 
     def __init__(self, latent_dim: int, context_dim: int, hidden_dim: int=128, time_embed_dim: int=32):
@@ -81,18 +79,19 @@ def compute_conditional_cfm_loss(field: ConditionalLatentFlowField, z_1: torch.T
     """
     Conditional-flow-matching loss for the context-conditioned field.
 
-    context_dropout randomly replaces c with zeros for a fraction of the batch,
-    so the field also learns an unconditional fallback. Without it, a field
-    trained on a handful of contexts produces arbitrary velocities when handed
-    an unseen one and the ODE diverges: measured on GSE241132 with two training
-    donors, held-out energy distance blew up to 7.04 against a stand-still
-    baseline of 0.96. With the fallback, an unfamiliar context degrades toward
-    the shared-field answer instead of exploding.
+    context_dropout independently masks each example's entire context vector.
+    Training at zero context imposes an additional regression task. It neither
+    reproduces a separately trained shared field nor guarantees ODE stability
+    or accurate extrapolation to unseen donors.
     """
     batch_size = z_1.size(0)
     span = t_1 - t_0
-    if span <= 0:
+    if not math.isfinite(span) or span <= 0:
         raise ValueError(f't_1 must exceed t_0, got t_0={t_0}, t_1={t_1}')
+    if not 0 <= context_dropout <= 1:
+        raise ValueError('context_dropout must lie in [0, 1]')
+    if z_1.ndim != 2 or z_0.shape != z_1.shape or batch_size == 0:
+        raise ValueError('Endpoints must be nonempty matching batch-by-coordinate tensors')
     u = torch.rand(batch_size, device=z_1.device)
     z_t = (1.0 - u.view(-1, 1)) * z_0 + u.view(-1, 1) * z_1
     target = (z_1 - z_0) / span
@@ -115,6 +114,8 @@ class FlowMatchingIntegrator:
         Runge-Kutta 4th Order numerical integration from t=0 to t=1.
         Returns full trajectory tensor [n_steps + 1, batch_size, latent_dim].
         """
+        if not isinstance(n_steps, int) or isinstance(n_steps, bool) or n_steps <= 0:
+            raise ValueError('n_steps must be a positive integer')
         dt = 1.0 / n_steps
         traj = [z0]
         curr_z = z0.clone()
@@ -144,8 +145,10 @@ def compute_cfm_loss(flow_field: LatentFlowField, z_1: torch.Tensor, z_0: Option
     batch_size = z_1.size(0)
     device = z_1.device
     span = t_1 - t_0
-    if span <= 0:
+    if not math.isfinite(span) or span <= 0:
         raise ValueError(f't_1 must exceed t_0, got t_0={t_0}, t_1={t_1}')
+    if z_1.ndim != 2 or batch_size == 0 or (z_0 is not None and z_0.shape != z_1.shape):
+        raise ValueError('Endpoints must be nonempty matching batch-by-coordinate tensors')
     if z_0 is None:
         z_0 = torch.randn_like(z_1)
     u = torch.rand(batch_size, device=device)

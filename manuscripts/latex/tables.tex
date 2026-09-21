@@ -253,3 +253,23 @@ PWH28 & PWH26, PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
 1000 & 50 & 49.26\% & 47.86 to 50.60\% & 50/50 \\
 \end{longtable}
 }
+
+\Needspace{202pt}
+{\small
+\begin{longtable}{@{}p{40mm}p{37mm}p{31mm}p{31mm}p{28mm}@{}}
+\caption{Fixed-field evaluation with all 1,012 Wound1 and 3,821 Wound7 cells, without subsampling. ED denotes exact weighted empirical energy distance calculated in double precision. Cell-pooled weights give equal mass to each cell; equal donor mass gives each of the three donors one third at source and target, with equal weights within a donor. Predicted cells retain source weights. Both rows use the same saved 50-step pooled time-holdout prediction and training-only scaler. The last three rows evaluate individual donors under that same field, which was trained on their other time points; these are not held-out-donor transfer folds. Improvement is relative to the corresponding unchanged-source ED. No row adds independent donors or a confidence interval, and this full-cell calculation is distinct from earlier capped-distance estimates.}\label{tab:p2weights}\\
+\toprule
+\textbf{Evaluation} & \textbf{Source / target cells} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+\textbf{Evaluation} & \textbf{Source / target cells} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} \\
+\midrule\endhead
+\bottomrule\endfoot
+Cell-pooled & 1012 / 3821 & 1.36146 & 0.68890 & 49.40\% \\
+Equal donor mass & 1012 / 3821 & 1.31723 & 0.66265 & 49.69\% \\
+PWH26 & 255 / 920 & 1.75803 & 0.92909 & 47.15\% \\
+PWH27 & 497 / 1992 & 1.58457 & 0.84112 & 46.92\% \\
+PWH28 & 260 / 909 & 1.07483 & 0.64420 & 40.07\% \\
+\end{longtable}
+}

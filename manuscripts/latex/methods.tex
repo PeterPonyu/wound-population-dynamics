@@ -2,7 +2,7 @@
 \subsection{Data, representation and join integrity}
 GSE241132 contains three healthy acute-wound donors, labelled PWH26, PWH27 and PWH28, with Skin, Wound1, Wound7 and Wound30 samples \citep{liu2025_wound,geo_gse241132}. Among 65,521 loaded cells, 58,823 joined the author metadata, and 12,259 author-annotated fibroblasts entered the temporal analysis. The fibroblast counts were 2,152, 1,012, 3,821 and 5,274 at the four times, respectively. Annotation is joined using sample identity and original cell-row identity before quality filtering; a filtered positional row number is not a valid substitute. Earlier exploratory outputs based on positional mismatching are invalid and contribute no results here.
 
-The expression encoder is frozen from GSE165816 \citep{theocharidis2022}; the human wound cohort was not used to refit it. It maps panel-normalized counts into a $q=15$ dimensional Gaussian-encoder mean $\mu$. Only 5,383 of 7,002 panel genes are covered in the human wound input (76.9\%); absent panel genes are zero-filled. The flow acts on $\mu\in\R^{15}$, not on simplex topic weights $\theta=\operatorname{softmax}(\mu)$. Successful reconstruction is therefore conditional on this incomplete transferred panel and this coordinate system.
+The expression encoder is frozen from GSE165816 \citep{theocharidis2022}; the human wound cohort was not used to refit it. It maps panel-normalized counts into a $q=15$ dimensional Gaussian-encoder mean $\mu$. Its training objective combines cross-entropy on cell proportions with a standard-Gaussian KL penalty of weight 0.01; it is not a Dirichlet model or an unmodified count-likelihood objective. Only 5,383 of 7,002 panel genes are covered in the human wound input (76.9\%); absent panel genes are zero-filled. The flow acts on $\mu\in\R^{15}$, not on simplex topic weights $\theta=\operatorname{softmax}(\mu)$. Softmax ignores a common additive coordinate offset, whereas Euclidean distance in $\mu$ need not. The frozen regularized encoder fixes a particular representation; the distance is not invariant to all representations producing the same simplex weights. Successful reconstruction is therefore conditional on this incomplete transferred panel and this coordinate system.
 
 For training-cell set $\mathcal T$, scaling parameters are fitted coordinatewise on $\mathcal T$ only:
 \begin{equation}
@@ -30,12 +30,18 @@ z_\lambda=(1-\lambda)z_a+\lambda z_b,\quad
 s_\lambda=(1-\lambda)s_a+\lambda s_b,\quad
 u_{ab}=\frac{z_b-z_a}{s_b-s_a}.\label{eq:p2bridge}
 \end{equation}
-Equation~\eqref{eq:p2bridge} defines the interpolated state, time and target velocity. The implemented loss cycles over donor--segment pairs and averages squared error over cells and coordinates:
+Equation~\eqref{eq:p2bridge} defines the interpolated state, time and target velocity. Let $\mathcal A$ be the list of available donor--segment pairs and $h_{ab}=s_b-s_a>0$. The implementation cycles through this list, so pair counts differ by at most one batch over 8,000 steps. Its ideal uniformly weighted objective is
 \begin{equation}
-\mathcal L_{\rm CFM}(\phi)=\E_{(d,a,b),\pi_{d,ab},\lambda}
-\left[\frac1q\left\|v_\phi(z_\lambda,s_\lambda)-u_{ab}\right\|_2^2\right].\label{eq:p2cfm}
+\mathcal L_{\rm CFM}(\phi)=\frac1{|\mathcal A|}\sum_{(d,a,b)\in\mathcal A}\frac1{h_{ab}}
+\int_{s_a}^{s_b}\E_{\pi_{d,ab}}\!\left[\frac1q\|v_\phi(z_{(s-s_a)/h_{ab}},s)-u_{ab}\|_2^2\right]ds.\label{eq:p2cfm}
 \end{equation}
-In Equation~\eqref{eq:p2cfm}, the division of the target velocity by $s_b-s_a$ is necessary: the target is velocity per unit transformed time. In particular, compressing the Skin-to-Wound1 segment on the linear-day axis increases its numerical velocity scale. Equations~\eqref{eq:p2bridge}--\eqref{eq:p2cfm} implement conditional flow matching \citep{lipman2023,tong2023,lipman2024guide}. They do not solve the Benamou--Brenier minimum-kinetic-energy problem \citep{benamou2000} or establish globally optimal transport.
+Equation~\eqref{eq:p2cfm} averages squared error over batch examples and coordinates. The factor $1/h_{ab}$ follows from sampling $\lambda$ uniformly on each segment; dividing $z_b-z_a$ by $h_{ab}$ gives velocity per unit transformed time. Donors therefore receive approximately equal training weight within a segment, regardless of their cell yields. Scaling and the original pooled evaluation instead weight retained cells equally. These measures need not coincide. Equations~\eqref{eq:p2bridge}--\eqref{eq:p2cfm} implement conditional flow matching with a product coupling \citep{lipman2023,tong2023,lipman2024guide}; they do not solve the Benamou--Brenier minimum-kinetic-energy problem \citep{benamou2000,peyre2019}.
+
+A pure change of time coordinate for an already specified physical-time field $v_t$ would require
+\begin{equation}
+v_s(z,s)=\frac{v_t(z,g^{-1}(s))}{g'(g^{-1}(s))},\qquad 0<g'(t)<\infty.\label{eq:p2clock}
+\end{equation}
+Equation~\eqref{eq:p2clock} is the chain rule, not the procedure used in the time-axis experiment. Each tested axis instead defines new straight bridges, new segment widths and a separately fitted field with the same optimization budget. A short segment increases target-velocity magnitude and alters the loss density in time. Performance differences consequently combine modeling and optimization effects; they cannot isolate a biological clock or prove that interval compression caused an observed failure.
 
 Following the neural ordinary-differential-equation formulation \citep{chen2018ode}, predictions solve an initial-value problem and push forward the empirical source measure:
 \begin{equation}
@@ -45,11 +51,15 @@ Following the neural ordinary-differential-equation formulation \citep{chen2018o
 Equation~\eqref{eq:p2ode} defines prediction from the observed source distribution. The network uses two 128-unit SiLU hidden layers and a 32-dimensional sinusoidal time embedding. Training uses Adam with learning rate $10^{-3}$, 8,000 steps and batches of 256. Direct target predictions use 50 fixed fourth-order Runge--Kutta steps. The time-axis diagnostic instead uses 60 steps over the full Wound1-to-Wound30 segment and reads the grid point nearest the transformed Wound7 coordinate; it does not select the grid point with the lowest target distance. A separate fixed-field resolution comparison is described below; finite-step agreement does not prove convergence to an exact solution.
 
 \subsection{What distributional success does and does not identify}
-At the ideal population minimizer of the squared loss, the field is a conditional expectation of path velocities, $v^*(z,s)=\E[u_{ab}\mid z_\lambda=z,s_\lambda=s]$, where defined. Under suitable integrability and regularity, the induced marginal path satisfies a continuity equation,
-\begin{equation}
-\partial_s p_s+\nabla\!\cdot(p_sv^*)=0.\label{eq:p2continuity}
-\end{equation}
-Equation~\eqref{eq:p2continuity} describes conservation of probability mass in the model. It neither tracks proliferation/death rates nor determines individual-cell ancestry. Multiple couplings and fields can interpolate the same marginals; finite neural optimization adds approximation error. Matching the observed target distribution therefore does not identify a unique biological vector field \citep{lavenant2021}. With only four measurement times, the values of $g$ between observations are analysis choices rather than an identified biological clock.
+At the unrestricted square-integrable minimizer, the field is $v^*(z,s)=\E[u_{ab}\mid z_\lambda=z,s_\lambda=s]$ under the training sampling measure. The standard squared-error decomposition leaves an irreducible conditional velocity variance plus the error in approximating $v^*$. Within a common observed segment, let $P_s$ be the donor-balanced mixture of the product-coupling paths. For a smooth compactly supported test function $f$,
+\begin{align}
+\frac{d}{ds}\int f(z)\,dP_s(z)&=\E[\nabla f(z_s)^{\mathsf T}u_{ab}]
+=\int\nabla f(z)^{\mathsf T}v^*(z,s)\,dP_s(z),\notag\\
+\partial_s p_s+\nabla\!\cdot(p_sv^*)&=0\quad\text{when a density exists}.\label{eq:p2continuity}
+\end{align}
+Equation~\eqref{eq:p2continuity} states probability conservation first in weak form, which does not presume that empirical atomic measures have a density. Identifying its solution with a unique deterministic ODE push-forward requires additional regularity; the weak identity alone supplies no such guarantee for empirical endpoints. Finite neural fitting and integration introduce further approximation. Moreover, Wound7 is not an endpoint in the globally withheld-time training path, and a cell-weighted source need not equal its donor-balanced source. The flow-matching identity therefore does not guarantee either the held-out biological distribution or the originally pooled evaluation score.
+
+Normalized probability transport does not identify cell proliferation, death or ancestry. Recovery of underlying dynamics from marginal observations requires assumptions beyond matching those observations \citep{weinreb2018,lavenant2021}. The present analysis does not verify the diffusion and sampling conditions of trajectory-identification theory. With four measurement times, the values of $g$ between observations remain analysis choices.
 
 \subsection{Distance estimand, finite-sample statistic and thresholds}
 For independent $X,X'\sim P$ and $Y,Y'\sim Q$ with finite first moments, define energy distance without the optional square root \citep{szekely2013}:
@@ -66,19 +76,24 @@ Equation~\eqref{eq:p2edv} is the exact distance between the two empirical measur
 \begin{equation}
 G=B-D,\qquad I=G/B=1-D/B.\label{eq:p2improvement}
 \end{equation}
-Equation~\eqref{eq:p2improvement} defines the absolute gain and the fraction reported as a percentage. Stay-still means $P_{\rm prediction}=P_{\rm source}$. Seeded subsampling caps the quadratic distance calculation (1,500 cells per distribution in the initial temporal and donor-transfer runs; the common benchmark uses its recorded 1,200-cell cap). Counts, caps and per-fold values accompany each comparison; independently run analyses need not have identical stochastic point estimates.
+Equation~\eqref{eq:p2improvement} defines the absolute gain and the fraction reported as a percentage. Stay-still means $P_{\rm prediction}=P_{\rm source}$. Seeded subsampling caps the quadratic distance calculation at 1,500 cells per distribution for initial timepoint reconstruction and at 1,200 for donor transfer, the common method benchmark and the donor-count analyses. Counts, caps and per-fold values accompany each comparison; independently run analyses need not have identical stochastic point estimates.
 
 The target is split once into seeded disjoint halves, defining $N=\widehat D_E(P_{\rm target,1},P_{\rm target,2})$. The initial timepoint report asks only whether $G>0$, while the time-axis, donor-transfer, method and donor-count comparisons use $G>N$. The latter is a sampling-scale heuristic, not a significance test with known type-I error, a repeated-resampling interval, or an error bound. Selecting the best position on a path using target distances is retrospective; the preassigned Wound7 coordinate supplies the held-out result, and the full scan is a diagnostic rather than a tuned clinical predictor.
 
 \subsection{Donor context and the non-neural predictors}
-For a source sample, context concatenates the coordinatewise mean and standard deviation, $c_d=(\bar z_d,\operatorname{sd}(z_d))\in\R^{2q}$. The conditioned field $v_\phi(z,s,c_d)$ uses this context from the training segment's source. At test time, the held donor's source alone supplies $c_d$; its target is not used. Context is zeroed in 20\% of training batches. Both neural fields use the same donor-segment schedule and endpoint-sampling rule, although successive pseudorandom draws need not be identical. Six training-donor evaluations are reported separately from the three held-out-donor folds.
+For a source sample, context concatenates the coordinatewise mean and population standard deviation (divisor $n$), $c_d=(\bar z_d,\operatorname{sd}(z_d))\in\R^{2q}$. The conditioned field uses this context from the training segment's source. Independently for each training example $i$,
+\begin{equation}
+B_i\sim\operatorname{Bernoulli}(0.8),\qquad \widetilde c_i=B_i c_d,\qquad
+\mathcal L_{\rm context}=\E\!\left[q^{-1}\|v_\phi(z_i,s_i,\widetilde c_i)-u_{ab,i}\|_2^2\right].\label{eq:p2context}
+\end{equation}
+Equation~\eqref{eq:p2context} masks the entire context vector per example, rather than masking an entire batch or individual context coordinates. At test time there is no mask, and the held donor's source alone supplies $c_d$. Training with zero context does not guarantee agreement with a separately trained shared field, bounded extrapolation or successful donor transfer. Both neural fields use the same donor-segment schedule and endpoint-sampling rule, although successive pseudorandom draws need not be identical. Six training-donor evaluations are reported separately from the three held-out-donor folds.
 
 Let $\delta_d=\bar z_{d,7}-\bar z_{d,1}$ for a training donor. Mean displacement predicts $z+\overline\delta$; nearest-donor displacement predicts $z+\delta_{d^*}$, where $d^*$ maximizes cosine similarity between the source contexts. These are translations, not fitted neural fields. The entropic transport baseline \citep{cuturi2013} uses pooled training-source and training-target cells, uniform empirical marginals $a,b$, and normalized squared Euclidean cost $C$:
 \begin{equation}
 \Gamma_\varepsilon=\arg\min_{\Gamma\geq0,\,\Gamma\mathbf1=a,\,\Gamma^{\mathsf T}\mathbf1=b}
 \left\{\langle C,\Gamma\rangle+\varepsilon\sum_{ij}\Gamma_{ij}(\log\Gamma_{ij}-1)\right\},\quad\varepsilon=0.05.\label{eq:p2ot}
 \end{equation}
-Equation~\eqref{eq:p2ot} defines the entropic transport plan fitted to the training endpoints. Sinkhorn iteration is capped at 2,000 steps, with at most 1,500 cells per endpoint. Row-normalized barycentres define training-source displacements; each held-out source cell receives the average displacement of its 15 nearest training-source neighbours. This is an out-of-sample displacement extension of a transport plan, not transport fitted to the held target.
+Equation~\eqref{eq:p2ot} defines the entropic transport plan fitted to the training endpoints. Specifically, $C_{ij}=\|z_i-z_j\|_2^2/\max_{kl}\|z_k-z_l\|_2^2$, so the regularization value is relative to the largest sampled training cost. The POT implementation \citep{flamary2021} caps Sinkhorn iteration at 2,000 steps, with at most 1,500 cells per endpoint. Row-normalized barycentres define training-source displacements; each held-out source cell receives the average displacement of its 15 nearest training-source neighbours. This is an out-of-sample displacement extension of a transport plan, not transport fitted to the held target. A finite iteration budget alone does not certify exact marginal feasibility or optimality.
 
 \subsection{Donor-count estimand and dependence-aware summaries}
 For each held donor $d$ and seed $r\in\{0,1,2\}$, let $D_{1,d,r}$ average the errors from the two possible single-training-donor choices, and let $D_{2,d,r}$ be the error with both available training donors. Equal weighting then gives
@@ -87,7 +102,7 @@ R_k=\frac1{3\cdot3}\sum_{d=1}^{3}\sum_{r=0}^{2}D_{k,d,r},\qquad
 \Delta_d=\frac13\sum_{r=0}^{2}(D_{1,d,r}-D_{2,d,r}),\qquad
 \overline\Delta=\frac13\sum_d\Delta_d.\label{eq:p2curve}
 \end{equation}
-Equation~\eqref{eq:p2curve} defines the seed-averaged estimand and donor-block differences. The plotted main curve uses seed 0, with other seeds shown separately. The 4,000-draw percentile interval resamples the three $\Delta_d$ blocks after averaging seeds \citep{efron1993bootstrap}. Overlapping training donors still induce dependence between held-out errors, so even this interval is a descriptive three-block summary, not a population coverage guarantee. Seeds and alternative training subsets are not additional biological replicates. Configuration-specific ranges quantify stochastic instability. Two values of $k$ cannot identify a plateau, a functional learning-curve model or a required number of donors.
+Equation~\eqref{eq:p2curve} defines the seed-averaged estimand and donor-block differences. The plotted main curve uses seed 0, with other seeds shown separately. The 4,000-draw percentile interval resamples the three $\Delta_d$ blocks after averaging seeds \citep{efron1993bootstrap}. Overlapping training donors still induce dependence between held-out errors \citep{bengio2004}, so even this interval is a descriptive three-block summary, not a population coverage guarantee. Seeds and alternative training subsets are not additional biological replicates. Configuration-specific ranges quantify stochastic instability. Two values of $k$ cannot identify a plateau, a functional learning-curve model or a required number of donors.
 
 \subsection{Geometry and mouse computation}
 Donor displacement alignment is $\cos(\delta_d,\delta_e)=\delta_d^{\mathsf T}\delta_e/(\|\delta_d\|\|\delta_e\|)$. The time-versus-donor contrast compares 18 within-donor temporal distances with 12 between-donor same-time distances. Pair-distance bootstrap intervals are descriptive because pairs share donors. The geometric screen used for endpoints $a,b$ and held time $h$ is
@@ -102,3 +117,14 @@ GSE326622 is evaluated separately for the source-labelled NDB, PDB and GDB mouse
 The saved human expression coordinates and annotations supply a separate seed-0 pooled fit using the stated training exclusions, 8,000 optimization steps and batch size 256. The fitted field is then fixed. Predictions integrate the same 1,012 day-1 cells with 25, 50, 100 and 200 RK4 steps to the prespecified rank-time day-7 coordinate. Distance calculations use one fixed set of 1,500 day-7 cells and double-precision pairwise distances. Root-mean-square coordinate discrepancies are measured relative to the 200-step result (Table~\ref{tab:p2numerics}).
 
 Evaluation sensitivity fixes the 50-step prediction and varies only cell subsampling. At each count of 250, 500 and 1,000 cells per distribution, 50 seeded draws without replacement use common source and target indices for predicted and unchanged-source distances. Each draw additionally samples two disjoint target subsets of that size for the reference distance. We report median improvement, the central 95\% range across draws and the count exceeding the reference (Table~\ref{tab:p2sampling}). These are conditional Monte Carlo summaries. They neither refit the field per draw nor estimate uncertainty across new donors.
+
+\subsection{Evaluation weights and mathematical verification}
+A further analysis fixes that same 50-step field prediction, retains all 1,012 source cells and 3,821 target cells, and changes only empirical weights. For nonnegative unit-sum weights $a,b$, the exact weighted empirical distance is
+\begin{align}
+\widehat D_{E,a,b}={}&2\sum_{i,j}a_i b_j\|x_i-y_j\|_2
+-\sum_{i,i'}a_i a_{i'}\|x_i-x_{i'}\|_2\notag\\
+&-\sum_{j,j'}b_jb_{j'}\|y_j-y_{j'}\|_2.\label{eq:p2weighted}
+\end{align}
+Equation~\eqref{eq:p2weighted} uses equal cell weights for the original pooled estimand. Equal donor mass instead assigns each cell from donor $d$ weight $1/(3n_d)$, separately at source and target; predicted cells retain their source weights. We also evaluate each donor using this same pooled time-holdout field. Those rows are not new donor-transfer fits. This analysis changes neither scaling nor training weights, and it supplies no additional donor-level uncertainty estimate (Table~\ref{tab:p2weights}).
+
+Executable checks compare interval-scaled flow loss with an analytic translation, the context mask with a prescribed per-example draw, RK4 with translation and exponential ODE solutions, and weighted energy distance with explicitly replicated empirical samples. Invalid time spans, endpoint shapes and dropout probabilities are rejected before training. These checks verify mathematical implementation properties; they do not substitute for held-out biological evaluation. Numerical-order claims follow the usual smoothness assumptions for RK4 \citep{hairer1993}.

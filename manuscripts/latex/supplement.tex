@@ -22,7 +22,7 @@ k_1&=v(z_n,s_n),& k_2&=v(z_n+hk_1/2,s_n+h/2),\notag\\
 k_3&=v(z_n+hk_2/2,s_n+h/2),& k_4&=v(z_n+hk_3,s_n+h),\notag\\
 z_{n+1}&=z_n+\frac h6(k_1+2k_2+2k_3+k_4),&h&=(s_b-s_a)/50.\label{eq:p2rk4}
 \end{align}
-Equation~\eqref{eq:p2rk4} gives the numerical update for the direct target predictions. The conditioned field holds the source-derived context fixed throughout this integration. Under standard smoothness assumptions RK4 has fourth-order global convergence, but this property does not establish the actual error of the fitted field or certify the chosen step count in these experiments.
+Equation~\eqref{eq:p2rk4} gives the numerical update for the direct target predictions. The conditioned field holds the source-derived context fixed throughout this integration. Under standard smoothness assumptions RK4 has fourth-order global convergence \citep{hairer1993}, but this property does not establish the actual error of the fitted field or certify the chosen step count in these experiments.
 
 \section{Limits of the noise and geometric checks}
 The finite empirical energy distance is nonzero when two independently sampled subsets represent the same population. The split-half reference therefore indicates one realized scale of target-sampling variation. It changes with cell number, latent scaling and random split, and does not include model-fit uncertainty. Comparing a prediction gain to it is a practical diagnostic with no established frequentist size in this analysis.

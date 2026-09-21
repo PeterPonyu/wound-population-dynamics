@@ -157,7 +157,7 @@ def main() -> int:
     on_path = bool(d_pl >= max(d_ph, d_hl))
     log()
     log(f'geometry: d({prior},{args.holdout})={d_ph:.3f}  d({args.holdout},{train_conds[-1]})={d_hl:.3f}  d({prior},{train_conds[-1]})={d_pl:.3f}')
-    log(f"  {args.holdout} is {('BETWEEN' if on_path else 'OFF')} the training endpoints -> test is {('fair' if on_path else 'UNFAIR by construction')}")
+    log(f'  {args.holdout} endpoint-distance ordering satisfied: {on_path}; this is not a geodesic or fairness test')
     report['geometry'] = {'d_prior_holdout': d_ph, 'd_holdout_last': d_hl, 'd_prior_last': d_pl, 'holdout_on_direct_path': on_path}
     log()
     log('=' * 70)

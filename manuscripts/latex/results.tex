@@ -11,21 +11,23 @@ The result is deliberately bounded. The donors are healthy volunteers, the wound
 
 A fixed-seed refit assessed numerical resolution and evaluation sampling. Across 25, 50, 100 and 200 RK4 steps, the target energy distance remained 0.705395 and the improvement remained 49.863\%; the largest discrepancy from the 200-step coordinates was below $6\times10^{-7}$ in root-mean-square units (Table~\ref{tab:p2numerics}). Repeated evaluation at 250, 500 and 1,000 cells per distribution gave median improvements of 48.46\%, 48.39\% and 49.26\%, respectively. Gain exceeded the same-count split-half reference in all 50 draws at each count (Table~\ref{tab:p2sampling}). These results assess one fitted field and the observed cells; the ranges across draws quantify evaluation sensitivity, not additional donor replication or confidence in clinical generalization.
 
+Using all cells and the same fixed 50-step prediction, equal cell weights gave a 49.40\% improvement and equal donor mass gave 49.69\%. The three donor-specific improvements under this pooled field were 47.15\%, 46.92\% and 40.07\% (Table~\ref{tab:p2weights}). This sensitivity changes the evaluation measure without refitting the field; it is distinct from the donor-transfer experiment and from the earlier capped-distance estimate.
+
 \subsection{Time parameterization changes the held-out result}
 
-The linear days axis failed at the held-out Wound7 target, with an improvement of −18.2\% relative to stay-still. Rank, square-root days and log days met the specified noise-reference criterion, and none of the four tested axes diverged. The result is consistent with a time-coordinate mismatch in which the early wound interval occupies a small fraction of the linear 0--30 day range. It does not establish log days as a universal biological clock; the transform must be prespecified and tested in a design with more independent time series (Table~\ref{tab:p2axes}; Figure~\ref{fig:p2f3}\label{call:p2f3}).
+The linear days axis failed at the held-out Wound7 target, with an improvement of −18.2\% relative to stay-still. Rank, square-root days and log days met the specified noise-reference criterion, and none of the four tested axes diverged. Changing the time coordinate changes both the path specification and the optimization problem; this comparison does not isolate interval compression as a cause of failure. It does not establish log days as a universal biological clock; the transform must be prespecified and tested in a design with more independent time series (Table~\ref{tab:p2axes}; Figure~\ref{fig:p2f3}\label{call:p2f3}).
 
 \input{figure_captions/f3}
 
 
 
-\subsection{Sample-out comparison favours the shared field in this cohort}
+\subsection{The shared field has the lowest observed held-donor error}
 
-Under the common sample-out protocol, shared flow matching had mean energy distance 0.395 and passed in 3/3 folds. The non-neural mean-displacement, nearest-donor and optimal-transport baselines also passed in 3/3 folds. The donor-conditioned model passed in 3/3 sample-out folds but had a higher mean energy distance than the shared field in this comparison. In the six sample-in comparisons, conditioning improved on the shared field in 6/6 cases. This difference between sample-in and sample-out is the central safeguard against interpreting capacity as generalization (Tables~\ref{tab:p2methods}, \ref{tab:p2methodsbydonor} and~\ref{tab:p2insample}; Figure~\ref{fig:p2f4}\label{call:p2f4}).
+Under the common held-donor protocol, shared flow matching had mean energy distance 0.395 and passed in 3/3 folds. The non-neural mean-displacement, nearest-donor and optimal-transport baselines also passed in 3/3 folds. The donor-conditioned model passed in 3/3 held-donor folds but had a higher mean energy distance than the shared field in this comparison. In the six training-donor comparisons, conditioning improved on the shared field in 6/6 cases. This difference between training-donor and held-donor is the central safeguard against interpreting capacity as generalization (Tables~\ref{tab:p2methods}, \ref{tab:p2methodsbydonor} and~\ref{tab:p2insample}; Figure~\ref{fig:p2f4}\label{call:p2f4}).
 
 \input{figure_captions/f4}
 
-The data therefore do not justify selecting the conditioned field as the final model class. They support a more limited statement: the conditioned model can fit known donor contexts, while the shared model had the lowest point-estimate sample-out error in the present three-donor benchmark. Neither result identifies the model class that will work in DFU patients.
+The data therefore do not justify selecting the conditioned field as the final model class. They support a more limited statement: the conditioned model can fit known donor contexts, while the shared model had the lowest point-estimate held-donor error in the present three-donor benchmark. Neither result identifies the model class that will work in DFU patients.
 
 \FloatBarrier
 \subsection{A second donor improves the two measured points, but k=1 already passes}
