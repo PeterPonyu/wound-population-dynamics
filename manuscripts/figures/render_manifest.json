@@ -1,0 +1,88 @@
+{
+  "renderer": "R + ggplot2/grid + tikzDevice + XeLaTeX",
+  "font": "Arial",
+  "text_colour": "#000000",
+  "text_weight": "bold",
+  "base_font_pt": 8,
+  "tick_font_pt": 7.5,
+  "label_font_pt": 11,
+  "journal_width_mm": 180,
+  "figures": {
+    "figure1_workflow": {
+      "width_mm": 180,
+      "height_mm": 111,
+      "panels": "Study design",
+      "sources": [],
+      "data": "manuscripts/figures/source_data/figure1_workflow_A.csv"
+    },
+    "figure2_wound7_transfer": {
+      "width_mm": 180,
+      "height_mm": 67,
+      "panels": ["Held-out Wound7", "Donor transfer", "Donor–time geometry"],
+      "sources": ["outputs/analysis/human_temporal_flow/report.json", "outputs/analysis/donor_transfer_flow/report.json", "outputs/analysis/donor_geometry_inference/report.json"],
+      "data": ["manuscripts/figures/source_data/figure2_wound7_transfer_A.csv", "manuscripts/figures/source_data/figure2_wound7_transfer_B.csv", "manuscripts/figures/source_data/figure2_wound7_transfer_C.csv"]
+    },
+    "figure3_time_axes": {
+      "width_mm": 180,
+      "height_mm": 70,
+      "panels": "Time parameterization",
+      "sources": "outputs/analysis/time_parameterisation/report.json",
+      "data": "manuscripts/figures/source_data/figure3_time_axes_A.csv"
+    },
+    "figure4_methods_benchmark": {
+      "width_mm": 180,
+      "height_mm": 68,
+      "panels": ["Held-out donor", "Training donors"],
+      "sources": "outputs/analysis/donor_conditioned_benchmark/report.json",
+      "data": ["manuscripts/figures/source_data/figure4_methods_benchmark_A.csv", "manuscripts/figures/source_data/figure4_methods_benchmark_B.csv"]
+    },
+    "figure5_donor_curve_stability": {
+      "width_mm": 180,
+      "height_mm": 70,
+      "panels": ["Donor curve", "Seed stability"],
+      "sources": ["outputs/analysis/donor_curve_seed_stability/report.json", "outputs/analysis/donor_count_curve/report.json", "outputs/analysis/donor_curve_inference/report.json"],
+      "data": ["manuscripts/figures/source_data/figure5_donor_curve_stability_A.csv", "manuscripts/figures/source_data/figure5_donor_curve_stability_B.csv"]
+    },
+    "figure6_mouse_arms": {
+      "width_mm": 180,
+      "height_mm": 66,
+      "panels": ["POD7 audit", "Baseline vs prediction"],
+      "sources": "outputs/analysis/mouse_all_arms_pod7_audit/report.json",
+      "data": ["manuscripts/figures/source_data/figure6_mouse_arms_A.csv", "manuscripts/figures/source_data/figure6_mouse_arms_B.csv"]
+    }
+  },
+  "sources": {
+    "outputs/analysis/human_temporal_flow/report.json": "38ea1097c6df1b7f5126cd455b2b7c5c8592f2eeca8deb1668611ce635294b88",
+    "outputs/analysis/donor_transfer_flow/report.json": "31d716082c9e523b1d9f3bfe7c4a99e784a1dfe5f4a74d48ba13a892fb8f9665",
+    "outputs/analysis/donor_geometry_inference/report.json": "c390b318495616ce133308f76253387af5b510038a1773ba72b945ddf532c505",
+    "outputs/analysis/time_parameterisation/report.json": "555165cddb5c1fbde7082199dab2bb95f62e57abc09e582fbe19a12fcd0f0ce8",
+    "outputs/analysis/donor_conditioned_benchmark/report.json": "06ae2dfe991316bf17bb9c1d0a988f57ed9387b2bdd0cfbaefbd33d5a6a92dac",
+    "outputs/analysis/donor_curve_seed_stability/report.json": "0c79ef90263d3047f5df6e8f4d53354d1170048e074c4095d2b28862fc749ef4",
+    "outputs/analysis/donor_count_curve/report.json": "21b36d1cfacf310a3986fe58e67fca532a2f843bb49907b94604a0f19e44e86f",
+    "outputs/analysis/donor_curve_inference/report.json": "070f593d8a7993b1edd2056af35631246fb851519bf2670f9459154487370607",
+    "outputs/analysis/mouse_all_arms_pod7_audit/report.json": "d5c1faaf864fef8f7a0814db1fa362288e601093484d75aa5626164c02078143"
+  },
+  "R": "R version 4.3.3 (2024-02-29)",
+  "packages": [
+    {
+      "package": "ggplot2",
+      "version": "4.0.3"
+    },
+    {
+      "package": "tikzDevice",
+      "version": "0.12.6"
+    },
+    {
+      "package": "jsonlite",
+      "version": "2.0.0"
+    },
+    {
+      "package": "digest",
+      "version": "0.6.39"
+    }
+  ],
+  "design_sources": {
+    "manuscripts/r_tikz/temporal_design.tikz": "b283075aa518caf5bc4487f2518a3a472f434c08490bbfe929e08ccbce766e32"
+  },
+  "script_sha256": "c37ef5eb66783c6d670fceaf615bd3566e9495938a43b0e3e632b35b14cafb2d"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "report": "outputs/analysis/donor_conditioned_benchmark/report.json",
+    "manuscript_destination": "Figure 4; Tables tab:p2methods, tab:p2methodsbydonor, tab:p2insample",
+    "scope": "All six methods and all six training-donor comparisons retained."
+  },
+  {
+    "report": "outputs/analysis/donor_count_curve/report.json",
+    "manuscript_destination": "Figure 5; Table tab:p2seedcurve",
+    "scope": "Shared CFM and mean-displacement count controls retained."
+  },
+  {
+    "report": "outputs/analysis/donor_curve_inference/report.json",
+    "manuscript_destination": "Figure 5; Table tab:p2curve",
+    "scope": "Three held-donor blocks after averaging seeds; no plateau inference."
+  },
+  {
+    "report": "outputs/analysis/donor_curve_seed_stability/report.json",
+    "manuscript_destination": "Figure 5; Tables tab:p2seedcurve and tab:p2seedconfigs",
+    "scope": "All seeds and all nine configurations; training-SD/split-half ratio retained."
+  },
+  {
+    "report": "outputs/analysis/donor_geometry_inference/report.json",
+    "manuscript_destination": "Figure 2C; Table tab:p2geometrytable",
+    "scope": "Descriptive paired-distance and cosine intervals."
+  },
+  {
+    "report": "outputs/analysis/donor_transfer_flow/report.json",
+    "manuscript_destination": "Figure 2; Table tab:p2folds; geometry text",
+    "scope": "All donor-transfer errors and displacement alignment retained."
+  },
+  {
+    "report": "outputs/analysis/human_temporal_flow/report.json",
+    "manuscript_destination": "Figure 2; Table tab:p2folds",
+    "scope": "All drop-one-donor retained-pair results now numeric; not confused with donor transfer."
+  },
+  {
+    "report": "outputs/analysis/mouse_all_arms_pod7_audit/report.json",
+    "manuscript_destination": "Figure 6; Tables tab:p2mouse and tab:p2mousecounts",
+    "scope": "All three arms, source/target cell counts and split-half distances retained."
+  },
+  {
+    "report": "outputs/analysis/mouse_temporal_flow/report.json",
+    "manuscript_destination": "Figure 6; Tables tab:p2mouse and tab:p2mousecounts",
+    "scope": "NDB included through the all-arm audit; source report retained."
+  },
+  {
+    "report": "outputs/analysis/mouse_temporal_flow_GDB/report.json",
+    "manuscript_destination": "Figure 6; Tables tab:p2mouse and tab:p2mousecounts",
+    "scope": "GDB included through the all-arm audit."
+  },
+  {
+    "report": "outputs/analysis/mouse_temporal_flow_PDB/report.json",
+    "manuscript_destination": "Figure 6; Tables tab:p2mouse and tab:p2mousecounts",
+    "scope": "PDB included through the all-arm audit; adverse ordering check retained."
+  },
+  {
+    "report": "outputs/analysis/time_parameterisation/report.json",
+    "manuscript_destination": "Figure 3; Table tab:p2axes",
+    "scope": "All four axes; nearest 60-step grid-point convention now explicit. Full scans in figure source CSV."
+  },
+  {
+    "report": "outputs/robustness_extensions/report.json",
+    "manuscript_destination": "Supplementary integration and evaluation-sampling tables",
+    "scope": "New retrospective sensitivity analyses; original results are preserved and no new biological replication is claimed."
+  }
+]

@@ -1,0 +1,39 @@
+\supplement
+\section{Protocol and estimator specification}
+Table~\ref{tab:p2protocols} separates the missing-time and missing-donor questions. Training endpoints are paired by donor, while the individual cells drawn from those endpoints are independent. Holding out a sample in an already trained donor is not equivalent to holding out that donor. The representation is frozen before all temporal comparisons.
+\begin{table}[!htbp]\centering\small
+\caption{Training and evaluation information for the six temporal protocols. Human data comprise three donors at Skin, Wound1, Wound7 and Wound30; mouse arms use postoperative days (POD) 0, 2, 7 and 30. Scaling follows the listed training exclusions. Source-only context at test time is permitted for donor-conditioned prediction, while the evaluation target is excluded from fitting in each held-out task. The explicit target column distinguishes prediction for an excluded donor from sensitivity analyses evaluated only in retained donors.}\label{tab:p2protocols}
+\begin{tabularx}{\linewidth}{@{}p{36mm}LL@{}}\toprule
+Protocol & Training data & Evaluation target and interpretation \\\midrule
+Global Wound7 holdout & Skin, Wound1 and Wound30 from the included donors & Their Wound7 distributions; one globally missing measurement time. \\
+Drop-one-donor sensitivity & Same time exclusions after removing one donor & Wound7 in the retained donors; sensitivity to donor composition, not prediction of the omitted donor. \\
+Donor transfer & All four times in the other two donors & Omitted donor's Wound7 from their Wound1 source; observed interval in the training cohort. \\
+Method benchmark & Same donor-transfer folds & Shared/conditioned fields and three non-neural predictors; training-donor fits shown separately. \\
+Donor-count curve & One or two of the available training donors & Same held donor and target; seeds and subsets do not add independent donors. \\
+Mouse POD7 audit & POD0, POD2 and POD30 in one source arm & POD7 from POD2; one animal per time point confounds time and individual. \\\bottomrule
+\end{tabularx}\end{table}
+
+\section{Numerical prediction sequence}
+The reproducible evaluation order is: (1) resolve cell/sample identities and select the lineage; (2) define the held-out cells; (3) fit standardization only on training cells; (4) sample training endpoints and optimize the specified objective; (5) transport source cells with the fixed numerical integrator; (6) compute target distance, stay-still distance and the single split-half reference; (7) aggregate within the stated donor, seed and subset units. Target-distance path scans are diagnostics after prediction and are not used to select the reported target coordinate.
+
+For completeness, the fixed-step RK4 update for step $h$ is
+\begin{align}
+k_1&=v(z_n,s_n),& k_2&=v(z_n+hk_1/2,s_n+h/2),\notag\\
+k_3&=v(z_n+hk_2/2,s_n+h/2),& k_4&=v(z_n+hk_3,s_n+h),\notag\\
+z_{n+1}&=z_n+\frac h6(k_1+2k_2+2k_3+k_4),&h&=(s_b-s_a)/50.\label{eq:p2rk4}
+\end{align}
+Equation~\eqref{eq:p2rk4} gives the numerical update for the direct target predictions. The conditioned field holds the source-derived context fixed throughout this integration. Under standard smoothness assumptions RK4 has fourth-order global convergence, but this property does not establish the actual error of the fitted field or certify the chosen step count in these experiments.
+
+\section{Limits of the noise and geometric checks}
+The finite empirical energy distance is nonzero when two independently sampled subsets represent the same population. The split-half reference therefore indicates one realized scale of target-sampling variation. It changes with cell number, latent scaling and random split, and does not include model-fit uncertainty. Comparing a prediction gain to it is a practical diagnostic with no established frequentist size in this analysis.
+
+Likewise, the endpoint-distance ordering condition cannot show that a point lies on a line or a geodesic. In a metric space, even being closer to both endpoints than the endpoints are to each other is only a necessary-looking geometric screen, not an interpolation identity; here the unsquared-root energy quantity is used by convention and no triangle-inequality argument is invoked. PDB is consequently labelled as failing the ordering screen, not as a proven off-path biological state.
+
+The fitted transport moves probability mass between empirical distributions; it does not model absolute cell expansion, death, migration into a biopsy or clinical closure. These unobserved processes and the non-uniqueness of couplings prevent a mechanistic interpretation of an individual streamline.
+
+\section{Uncertainty and numerical results}
+Tables~\ref{tab:p2folds}--\ref{tab:p2geometrytable} provide target errors, time-axis comparisons, the six-entry benchmark including stay-still, donor-specific method errors, the seed-averaged donor curve, mouse-arm contrasts and descriptive geometry intervals. All five predictive methods meeting a criterion in three folds is not five independent replications, because they share test donors. The lowest observed mean is reported without a population-level method ranking.
+
+In the donor curve, two alternative single-donor fits contribute to each $k=1$ donor/seed value. The three-seed mean improvement is then aggregated over three held donors. Because training sets overlap between folds, the block interval does not estimate calibrated population or predictive uncertainty. Extending the curve requires new independent donors before any plateau rule can be evaluated. There is no statistically identified minimum cohort size from the two observed $k$ values.
+Table~\ref{tab:p2insample} reports all six training-donor comparisons. Tables~\ref{tab:p2seedcurve} and~\ref{tab:p2seedconfigs} separate mean-displacement controls, seed-level means and configuration-specific training variability. Table~\ref{tab:p2mousecounts} lists the cell counts behind each mouse computation; each cell group still represents only one animal. The retained-donor sensitivity rows in Table~\ref{tab:p2folds} evaluate the two donors left in the fit, not the excluded donor.
+\input{tables}

@@ -1,0 +1,24 @@
+{
+  "title": "Held-out wound single-cell population dynamics",
+  "upload_type": "software",
+  "description": "Software for reconstructing a held-out acute human wound distribution and evaluating transfer to held-out donors. The study compares time coordinates, neural and non-neural predictors, training-donor counts, training seeds, mouse model arms, numerical integration and evaluation sampling. Three human donors provide biological replication; the study does not establish diabetic-foot-ulcer prognosis. This Zenodo deposit contains MIT software only. Manuscripts, artwork, source-study data, model weights and completed research outputs are excluded and retain their respective rights.",
+  "creators": [
+    {
+      "name": "Fu, Zeyu"
+    }
+  ],
+  "version": "0.1.0",
+  "license": "mit",
+  "keywords": [
+    "single-cell transcriptomics",
+    "wound healing",
+    "population dynamics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/PeterPonyu/wound-population-dynamics",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+panel,label,estimate,lower_95,upper_95,on_direct_path,scope
+mouse_arm,NDB,-0.014870570743686952,,,True,one animal per timepoint; computational audit
+mouse_arm,PDB,0.3211947321506742,,,False,one animal per timepoint; computational audit
+mouse_arm,GDB,0.5061760109379158,,,True,one animal per timepoint; computational audit
+donor_curve,k=1_mean_energy_distance,0.549636443456014,,,,two-point curve
+donor_curve,k=2_mean_energy_distance,0.38537104924519855,,,,two-point curve
+donor_curve,k1_to_k2_reduction,0.16546312967936197,0.08130407333374023,0.31458409627278644,,three held-out donor blocks; no plateau

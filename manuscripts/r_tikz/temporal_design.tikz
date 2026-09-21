@@ -1,0 +1,45 @@
+\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (3,106) {A};
+\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (10,106) {Missing time point};
+\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (94,106) {B};
+\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (101,106) {New donor: example fold};
+\foreach \offset in {0,91} {
+  \foreach \x/\day in {31/0,45/1,59/7,73/30} {
+    \node[font=\fontsize{7.5}{9}\selectfont\bfseries] at (\x+\offset,98) {Day \day};
+  }
+  \foreach \y/\donor in {88/1,77/2,66/3} {
+    \node[anchor=west,font=\fontsize{7.5}{9}\selectfont\bfseries] at (3+\offset,\y) {Donor \donor};
+  }
+}
+\foreach \y in {88,77,66} {
+  \foreach \x in {31,45,73} {\draw[draw=blue!65,fill=blue!20] (\x-4,\y-3) rectangle (\x+4,\y+3);}
+  \draw[draw=orange,pattern=north east lines,pattern color=orange!60] (55,\y-3) rectangle (63,\y+3);
+  \draw[teal,line width=.8pt] (40,\y-4) rectangle (50,\y+4);
+}
+\foreach \y in {88,77} {\foreach \x in {122,136,150,164} {
+  \draw[draw=blue!65,fill=blue!20] (\x-4,\y-3) rectangle (\x+4,\y+3);
+}}
+\foreach \x in {122,164} {\draw[draw=gray!35,fill=gray!6] (\x-4,63) rectangle (\x+4,69);}
+\draw[draw=teal,line width=.8pt,fill=white] (132,63) rectangle (140,69);
+\draw[draw=orange,pattern=north east lines,pattern color=orange!60] (146,63) rectangle (154,69);
+\node[align=center,text width=79mm,font=\fontsize{7.5}{9}\selectfont\bfseries] at (43,55) {Every day-7 cell is excluded from training.\\All donors contribute the other time points.};
+\node[align=center,text width=80mm,font=\fontsize{7.5}{9}\selectfont\bfseries] at (135,55) {All cells of the test donor are excluded from training.\\Its observed day-1 cells initialize prediction.};
+\draw[draw=blue!65,fill=blue!20] (5,43) rectangle (11,47);
+\node[anchor=west,font=\fontsize{7}{9}\selectfont\bfseries] at (12,45) {Training};
+\draw[draw=teal,line width=.8pt] (42,43) rectangle (48,47);
+\node[anchor=west,font=\fontsize{7}{9}\selectfont\bfseries] at (49,45) {Prediction source};
+\draw[draw=orange,pattern=north east lines,pattern color=orange!60] (94,43) rectangle (100,47);
+\node[anchor=west,font=\fontsize{7}{9}\selectfont\bfseries] at (101,45) {Held-out target};
+\draw[draw=gray!35,fill=gray!6] (148,43) rectangle (154,47);
+\node[anchor=west,font=\fontsize{7}{9}\selectfont\bfseries] at (155,45) {Unused};
+\draw[draw=gray!40] (3,39) -- (177,39);
+\node[anchor=west,font=\fontsize{11}{13}\selectfont\bfseries] at (3,34) {C};
+\node[anchor=west,font=\fontsize{9}{11}\selectfont\bfseries] at (10,34) {Common evaluation and complementary sensitivity analyses};
+\node[draw=blue!45,fill=blue!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (scale) at (23,23) {Frozen expression map\\Training-only scaling};
+\node[draw=teal!45,fill=teal!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (predict) at (68,23) {Day 1 → day 7\\Flow / baselines};
+\node[draw=orange!45,fill=orange!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (distance) at (113,23) {Predicted vs observed\\Energy distance};
+\node[draw=purple!45,fill=purple!5,align=center,rounded corners=.7mm,minimum height=13mm,text width=35mm] (control) at (158,23) {Unchanged source\\Sampling reference};
+\draw[link] (scale.east) -- (predict.west);
+\draw[link] (predict.east) -- (distance.west);
+\draw[link] (control.west) -- (distance.east);
+\node[align=center,font=\fontsize{7.5}{9}\selectfont\bfseries] at (90,9) {Time coordinates · training donors · training seeds · numerical resolution · evaluation sampling};
+\node[align=center,font=\fontsize{7.5}{9}\selectfont\bfseries] at (90,3) {Three healthy human donors; separate mouse comparison; no DFU healing endpoint};

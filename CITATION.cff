@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: Please cite this software when using these analyses.
+type: software
+title: Held-out wound single-cell population dynamics
+authors:
+- family-names: Fu
+  given-names: Zeyu
+version: 0.1.0
+license: MIT
+abstract: Software for reconstructing a held-out acute human wound distribution and
+  evaluating transfer to held-out donors. The study compares time coordinates, neural
+  and non-neural predictors, training-donor counts, training seeds, mouse model arms,
+  numerical integration and evaluation sampling. Three human donors provide biological
+  replication; the study does not establish diabetic-foot-ulcer prognosis.
+repository-code: https://github.com/PeterPonyu/wound-population-dynamics
+keywords:
+- single-cell transcriptomics
+- wound healing
+- population dynamics

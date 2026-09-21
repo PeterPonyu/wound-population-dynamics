@@ -1,0 +1,7 @@
+"arm","type","value","x","color"
+"NDB","Stay-still",1.23411750793457,0.83,"#C5CCD2"
+"PDB","Stay-still",2.43454599380493,1.83,"#C5CCD2"
+"GDB","Stay-still",1.35318517684937,2.83,"#C5CCD2"
+"NDB","Prediction",1.25246953964233,1.17,"#73777B"
+"PDB","Prediction",1.65258264541626,2.17,"#C46A1B"
+"GDB","Prediction",0.668235301971436,3.17,"#2E7D32"

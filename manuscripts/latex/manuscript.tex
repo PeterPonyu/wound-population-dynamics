@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{article}
+\newcommand{\runningtitle}{Held-out population-flow evaluation in acute human wounds}
+\input{layout}
+\hypersetup{pdftitle={Population flow reconstruction of an acute human wound interval: held-out evaluation, time coordinates and donor-count sensitivity}}
+\begin{document}
+\papertitle{Population flow reconstruction of an acute human wound interval: held-out evaluation, time coordinates and donor-count sensitivity}
+\section*{Abstract}
+\noindent A smooth trajectory fitted to cross-sectional single-cell data does not establish prediction of an individual's wound course. We tested whether population fields improve on no motion when a target time point or donor is excluded from fitting.
+Three healthy donors contributed intact skin and acute wounds at days 1, 7 and 30. A frozen expression representation, training-only standardization and donor-paired endpoint sampling supported separate timepoint-holdout and donor-transfer protocols. We compared four time coordinates, shared and donor-conditioned flow matching, three non-neural predictors, two training-donor counts and three training seeds. Three mouse model arms supplied a separate computational audit.
+Pooled Wound7 reconstruction reduced energy distance relative to stay-still by +49.9\%. Excluding each donor preserved the result for the retained donors in 3/3 sensitivity runs; genuine held-out-donor transfer separately improved by a mean +75.9\% in 3/3 donors. Linear days failed at the target (−18.2\%), whereas rank, square-root and log-day coordinates improved. All five predictive methods met the specified split-half-reference criterion in 3/3 donor folds. Shared flow had the smallest mean error, 0.395; conditioning improved all six training-donor comparisons without improving the overall held-out mean. Adding a second training donor reduced seed-0 mean error from 0.5496 to 0.3854. Aggregate reductions were 0.156--0.176 across seeds, with donor-block interval $[0.081,0.315]$, but some individual configurations varied by 0.368. Mouse-arm changes ranged from −1.5\% to +50.6\%, with one animal per arm and time point.
+These experiments support reconstruction of one acute human interval in a three-donor pilot, conditional on the representation and evaluation protocol. They establish neither DFU prognosis nor a population-level method ranking, identifiable biological trajectories, or a required cohort size.
+\par\smallskip\noindent Keywords: conditional flow matching; wound healing; held-out donor; energy distance; time coordinate; donor heterogeneity.
+
+\section{Introduction}
+Wound repair involves changing mixtures of inflammatory, stromal and epithelial states over time \citep{wilkinson2020}. In diabetic foot disease, clinical healing and recurrence are outcomes of interest, but they cannot be inferred directly from a transcriptional trajectory \citep{armstrong2017}. Destructive single-cell sampling measures distributions at selected times rather than following the same cells longitudinally. Trajectory inference can organize these states, yet its conclusions depend on sampling design, topology and modeling assumptions \citep{saelens2019,weinreb2018}.
+
+Optimal transport and continuous-flow models offer ways to connect observed distributions \citep{schiebinger2019,tong2020trajectory,lipman2023,tong2023}. Neural ordinary differential equations parameterize a continuous field, and flow matching learns such a field from chosen probability paths \citep{chen2018ode,lipman2024guide}. Related transport approaches also predict cellular responses to perturbations \citep{bunne2023}. Reconstructing a target distribution and identifying an individual biological trajectory remain distinct objectives because multiple dynamics can produce the same marginals \citep{lavenant2021,weinreb2018}.
+
+A second distinction concerns generalization. Predicting a time point missing from every donor removes different information from predicting an unseen donor whose target time is already represented in training. Both tasks depend on the expression coordinates and preprocessing; transferable latent representations are useful, but do not eliminate representation choice or sampling effects \citep{lopez2018,heumos2023}. Biological replication also remains at the donor level even when many cells enter a distributional comparison \citep{zimmerman2021}.
+
+The public acute human wound atlas offers a bounded setting in which to separate these questions: three healthy volunteers contribute skin and wound samples at four times \citep{liu2025_wound,geo_gse241132}. We ask whether a predicted distribution approaches a held-out target more closely than an unchanged source distribution. We compare missing-time and missing-donor protocols, time coordinates, neural and non-neural predictors, training-donor counts and training seeds. Numerical-resolution and evaluation-sampling analyses test additional sources of computational sensitivity, while three mouse arms supply a separate model comparison. These experiments assess distribution reconstruction and its limits; the available cohorts do not contain a diabetic-foot-ulcer time-to-closure target.
+
+\section{Results}
+\input{results}
+\FloatBarrier
+\input{discussion}
+\input{methods}
+
+\section*{Data and reproducibility}
+Human acute-wound data and author cell annotations are available as GSE241132 \citep{liu2025_wound,geo_gse241132}. GSE165816 supplies the independently frozen expression model \citep{theocharidis2022}; its DFU clinical labels are not used to train the human temporal fields. Mouse data are from GSE326622 \citep{geo_gse326622}. This secondary computational study recruited no participants and performed no new animal experiments. Source-study consent and ethical approvals remain those of the original investigators. Sample identities, preprocessing exclusions, numerical settings and all reported comparisons are defined in the methods and supplementary tables.
+Analysis code is released under the MIT License. Manuscripts, figures and source-study data remain under their respective rights and repository terms. The accompanying software archive, authored by Zeyu Fu, is available at \url{https://github.com/PeterPonyu/wound-population-dynamics}.
+\FloatBarrier
+\bibliographystyle{abbrvnat}
+\bibliography{references}
+\input{supplement}
+\end{document}
