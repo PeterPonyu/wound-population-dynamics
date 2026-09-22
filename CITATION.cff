@@ -6,6 +6,7 @@ authors:
 - family-names: Fu
   given-names: Zeyu
 version: 0.3.0
+doi: 10.5281/zenodo.22884874
 license: MIT
 abstract: Software for reconstructing a held-out acute human wound distribution and
   evaluating transfer to held-out donors. The study compares time coordinates, neural
