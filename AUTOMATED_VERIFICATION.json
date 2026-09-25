@@ -1,0 +1,8 @@
+{
+  "status": "automated-verified",
+  "human_visual_approved": false,
+  "visual_review_status": "not-recorded",
+  "visual_review": "Image inspection was unavailable; automated layout checks are not visual approval.",
+  "manuscript_pdf_sha256": "083b7f64ad8e0e9c9d3032d669a13ed1f5b78f0d65a0907b22851f914a01a870",
+  "model_training_performed": false
+}

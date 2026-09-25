@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Compare time coordinates."""
+"""Historical single-seed sensitivity to four specified time coordinates.
+
+Training excludes the held-out time and pairs endpoints within donor. Axes
+also change optimization targets. Endpoint draws advance between axes, so this
+experiment does not isolate a causal clock effect. The scan reads a nearest
+grid point and uses held-target data to describe an oracle path minimum; that
+minimum is not an independently validated prediction or proof of path shape.
+Use the paired exact-target audit for a newly controlled comparison. Existing
+reports retain their historical values and producing-source fingerprints.
+"""
 import argparse
 import json
 import os
@@ -69,7 +78,7 @@ def main() -> int:
     noise_floor = energy_distance(actual[perm[:half]], actual[perm[half:]])
     log(f"segments {', '.join((f'{a}->{b}' for a, b in segments))}")
     log(f'stand-still baseline d({prior},{args.holdout}) = {ed_standstill:.4f}; noise floor (random split of {args.holdout}) = {noise_floor:.4f}')
-    log(f'a fix must therefore improve on {ed_standstill:.4f} by more than {noise_floor:.4f} to count')
+    log(f'descriptive reference: gain > {noise_floor:.4f}; the split-half distance is not a hypothesis-test threshold')
     pairs = paired_endpoint_pairs(donors, conds, sorted(set(donors)), segments)
     cache = {}
     for donor, src, tgt in pairs:
@@ -123,7 +132,7 @@ def main() -> int:
     diverged = [k for k, v in results.items() if v['diverged']]
     if diverged:
         log()
-        log(f'NUMERICAL NOTE: axis/axes {diverged} diverged. compute_cfm_loss divides the velocity target by the segment span, so when spans differ by ~30x (linear days puts Skin->Wound1 in 3.3% of the axis and Wound1->Wound30 in 96.7%) the shared field must represent velocities that differ by the same factor, and it blows up. This is a property of span-normalised CFM, not of the data.')
+        log(f'Large observed target error for axes {diverged}; the 10x-baseline flag does not identify numerical instability or its cause. Changing a segment span also changes the velocity target.')
     report['diverged_axes'] = diverged
     any_path_works = any((v['beats_standstill_anywhere'] for v in results.values()))
     winners = [k for k, v in results.items() if v['beats_standstill_at_claimed']]
@@ -132,19 +141,19 @@ def main() -> int:
     if winners:
         best_axis = min(winners, key=lambda k: results[k]['ed_at_claimed'])
         w = results[best_axis]
-        log(f"FIX WORKS: the '{best_axis}' time axis places {args.holdout} at {w['claimed_fraction']:.1%} and beats stand-still ({w['ed_at_claimed']:.4f} vs {ed_standstill:.4f}, {w['improvement_at_claimed']:+.1%})")
-        log('Diagnosis: the failure was the TIME AXIS, not the path shape.')
-        verdict = f'time_axis_fix:{best_axis}'
+        log(f"Observed single-fit result: '{best_axis}' places {args.holdout} at {w['claimed_fraction']:.1%} and beats stand-still ({w['ed_at_claimed']:.4f} vs {ed_standstill:.4f}, {w['improvement_at_claimed']:+.1%})")
+        log('This selected observed minimum does not identify a biological clock or path mechanism.')
+        verdict = f'observed_reference_criterion_met:{best_axis}'
     elif any_path_works:
         b = min(results.items(), key=lambda kv: kv[1]['ed_best_on_path'])
         log(f"PARTIAL: no axis places {args.holdout} correctly, but the learned path does pass near it ({b[1]['ed_best_on_path']:.4f} at {b[1]['best_fraction']:.1%} of the segment, axis '{b[0]}', gain {b[1]['gain_best_on_path']:+.4f} vs noise floor {noise_floor:.4f}).")
-        log('Diagnosis: path shape is usable; the placement rule is what fails. A learnable schedule is the right fix and is now justified by data.')
-        verdict = 'path_ok_placement_fails'
+        log('A target-guided path minimum is optimistic; it does not validate a new schedule.')
+        verdict = 'oracle_scan_only_meets_reference'
     else:
         best_gain = max((v['gain_best_on_path'] for v in results.values()))
-        log(f'FIX FAILS. No time axis places the held-out state correctly, and the best point anywhere on any learned path improves on standing still by only {best_gain:+.4f}, which is inside the {noise_floor:.4f} noise floor.')
-        log('Diagnosis: reparameterisation is NOT the fix. The straight conditional path never passes meaningfully close to the held-out state, so the conditional path itself has to become non-linear - a change to the CFM objective, not to the time axis.')
-        verdict = 'reparameterisation_insufficient'
+        log(f'No tested single fit meets the descriptive reference at its target, and the best point anywhere on any learned path improves on standing still by only {best_gain:+.4f}, which is inside the {noise_floor:.4f} noise floor.')
+        log('This result does not separate optimization, representation, clock or path effects.')
+        verdict = 'tested_single_fits_below_descriptive_reference'
     log('=' * 74)
     report['verdict'] = verdict
     report['protocol'] = protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'axis:{name}' for name in time_axes()], extra={'paired_same_donor_endpoints': True, 'holdout_timepoint': args.holdout, 'scaler': scaler, 'steps': args.steps, 'batch_size': args.batch_size})

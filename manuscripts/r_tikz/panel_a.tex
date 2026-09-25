@@ -1,0 +1,74 @@
+% Acute tissue and repeated sampling are conceptual; the bottom modules
+% distinguish frozen encoder coordinates from the fitted temporal field.
+\documentclass[10pt]{standalone}
+\usepackage{fontspec,tikz}
+\usetikzlibrary{arrows.meta}
+\setmainfont{Arial}
+\definecolor{dermis}{HTML}{F5E7D8}
+\definecolor{epidermis}{HTML}{E7C49B}
+\definecolor{edge}{HTML}{AD9071}
+\definecolor{fibro}{HTML}{1F8A8A}
+\definecolor{immune}{HTML}{6B4C9A}
+\definecolor{vessel}{HTML}{DBAAA1}
+\definecolor{dayzero}{HTML}{73777B}
+\definecolor{dayone}{HTML}{4C78A8}
+\definecolor{dayseven}{HTML}{C46A1B}
+\definecolor{modelblue}{HTML}{EAF1F5}
+\begin{document}
+\begin{tikzpicture}[x=1mm,y=1mm,font=\fontsize{7}{8.2}\selectfont,text=black,line width=.3pt]
+\path[use as bounding box] (0,0) rectangle (84.5,57.8667);
+\node at (12,54.8) {Intact skin};
+\node at (32,54.8) {Day 1};
+\node at (52,54.8) {Day 7};
+\node at (72,54.8) {Day 30};
+% Each section retains dermis, epidermis, stromal cells and a dermal vessel.
+\begin{scope}[yscale=.72,yshift=19.8mm]
+\foreach \offset/\depth in {0/0,20/9,40/4,60/0} {
+ \begin{scope}[shift={(\offset,0)}]
+ \filldraw[fill=dermis,draw=edge] (4,51) -- (8,51) -- (10,51-\depth) -- (14,51-\depth) -- (16,51) -- (20,51) -- (20,34) -- (4,34) -- cycle;
+ \ifdim\depth pt=0pt
+  \filldraw[fill=epidermis,draw=edge] (4,49) rectangle (20,51);
+ \else
+  \filldraw[fill=epidermis,draw=edge] (4,49) -- (8.44,49) -- (8,51) -- (4,51) -- cycle;
+  \filldraw[fill=epidermis,draw=edge] (15.56,49) -- (20,49) -- (20,51) -- (16,51) -- cycle;
+ \fi
+ \draw[vessel,line width=1.2pt] (4.5,36.5) -- (19.5,36.5);
+ \draw[white,line width=.4pt] (4.5,36.5) -- (19.5,36.5);
+ \foreach \x/\y in {7/44,17/40,10/38} {
+  \fill[fibro] (\x-1.4,\y-.4) -- (\x+.8,\y+.5) -- (\x+1.9,\y+.1) -- (\x-.2,\y-.6) -- cycle;
+ }
+ \end{scope}
+}
+\foreach \x/\y in {30/43,32/42.8,34/43.8,31/41,53/46.4,50/46.8} {\fill[immune] (\x,\y) circle (.55);}
+\draw[fibro!55,line width=.6pt] (46,41) -- (54,42) (49,39.5) -- (57,40.5) (66,44) -- (77,44.6) (67,41.5) -- (78,42.2);
+\end{scope}
+\node at (42.25,36.8) {Acute repair schematic; not measured histology};
+\node[anchor=west] at (2,32.8) {Donor A};
+\node[anchor=west] at (2,29.0) {Donor B};
+\node[anchor=west] at (2,25.2) {Donor C};
+\foreach \y in {32.8,29.0,25.2} {
+ \draw[dayzero,line width=.6pt] (26,\y) -- (77,\y);
+ \fill[dayzero] (26,\y) circle (1.1);
+ \fill[dayone] (43,\y) circle (1.1);
+ \fill[dayseven] (60,\y) circle (1.1);
+ \fill[fibro] (77,\y) circle (1.1);
+}
+\foreach \x/\label in {26/0,43/1,60/7,77/30} {\node at (\x,22.3) {\label};}
+% One shared computational route, not tracked-cell histories. The global
+% timepoint exclusion and donor-transfer exclusion are distinct protocols.
+\tikzset{module/.style={draw=dayzero!65,fill=modelblue,rounded corners=.5mm,
+    minimum height=8mm,text width=22mm,align=center,inner sep=.6mm},
+    route/.style={-{Latex[length=1.2mm]},dayzero}}
+\node[module,text width=25mm] (input) at (14,16) {7,002-gene input\\5,383 covered};
+\node[module] (encoder) at (44,16) {Frozen μ\\15 dimensions};
+\node[module] (scaler) at (72,16) {Train-only\\scaler};
+\node[module] (field) at (72,5.5) {Shared CFM\\Product endpoints};
+\node[module] (solver) at (44,5.5) {RK4 flow\\50 steps};
+\node[module,text width=25mm] (test) at (14,5.5) {Day-7 marginal test\\held from fitting};
+\draw[route] (input.east)--(encoder.west);
+\draw[route] (encoder.east)--(scaler.west);
+\draw[route] (scaler.south)--(field.north);
+\draw[route] (field.west)--(solver.east);
+\draw[route] (solver.west)--(test.east);
+\end{tikzpicture}
+\end{document}

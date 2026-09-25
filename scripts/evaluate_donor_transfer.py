@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Evaluate donor transfer."""
+"""Leave-one-donor-out distribution reconstruction in acute human wounds.
+
+Training uses all four observed times in the non-held donors. Held-source
+Wound1 cells initialize the field; held Wound7 cells are used for evaluation.
+This information set differs from a globally missing time point. Improvement
+over unchanged source does not establish clinical prediction, identifiable
+cell trajectories, or incremental value beyond a training-target marginal.
+The three donors and split-half reference support descriptive cohort auditing.
+"""
 import argparse
 import json
 import os

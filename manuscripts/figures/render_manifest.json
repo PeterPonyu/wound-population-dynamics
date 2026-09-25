@@ -1,0 +1,162 @@
+{
+  "renderer": "R + ggplot2/grid + tikzDevice + XeLaTeX",
+  "font": "Arial",
+  "text_colour": "#000000",
+  "text_weight": "regular",
+  "panel_label_weight": "bold",
+  "panel_title_alignment": "panel-centred",
+  "base_font_pt": 8,
+  "tick_font_pt": 7.5,
+  "label_font_pt": 11,
+  "journal_width_mm": 180,
+  "figures": {
+    "figure1_workflow": {
+      "width_mm": 180,
+      "height_mm": 204,
+      "panels": ["Biopsies and flow", "Observed fibroblast coordinates", "Donor structure", "Measured temporal expression", "Cells in each biopsy", "Projected model paths"],
+      "headings": ["Biopsies and flow", "Observed fibroblast coordinates", "Donor structure", "Measured temporal expression", "Cells in each biopsy", "Projected model paths"],
+      "panel_labels": ["A", "B", "C", "D", "E", "F"],
+      "label_left_mm": [3, 92.5, 3, 92.5, 3, 92.5],
+      "heading_top_mm": [2, 2, 70.1666666666667, 70.1666666666667, 138.333333333333, 138.333333333333],
+      "panel_width_mm": [84.5, 84.5, 84.5, 84.5, 84.5, 84.5],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [45.25, 134.75, 45.25, 134.75, 45.25, 134.75],
+      "sources": ["outputs/biological_expansion/population/report.json", "outputs/biological_expansion/population/atlas_display.csv", "outputs/biological_expansion/population/marker_expression.csv", "outputs/biological_expansion/population/donor_time_counts.csv", "outputs/biological_expansion/population/projected_prediction.csv", "outputs/biological_expansion/population/projected_model_paths.csv"],
+      "data": ["manuscripts/figures/source_data/figure1_workflow_A.csv", "manuscripts/figures/source_data/figure1_workflow_B.csv", "manuscripts/figures/source_data/figure1_workflow_C.csv", "manuscripts/figures/source_data/figure1_workflow_D.csv", "manuscripts/figures/source_data/figure1_workflow_E.csv", "manuscripts/figures/source_data/figure1_workflow_F.csv"]
+    },
+    "figure2_wound7_transfer": {
+      "width_mm": 180,
+      "height_mm": 67,
+      "panels": ["Held-out Wound7", "Donor transfer", "Donor–time geometry"],
+      "headings": ["Held-out Wound7", "Donor transfer", "Donor–time geometry"],
+      "panel_labels": ["A", "B", "C"],
+      "label_left_mm": [3, 62.6666666666667, 122.333333333333],
+      "heading_top_mm": [2, 2, 2],
+      "panel_width_mm": [54.6666666666667, 54.6666666666667, 54.6666666666667],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [30.3333333333333, 90, 149.666666666667],
+      "sources": ["outputs/analysis/human_temporal_flow/report.json", "outputs/analysis/donor_transfer_flow/report.json", "outputs/analysis/donor_geometry_inference/report.json"],
+      "data": ["manuscripts/figures/source_data/figure2_wound7_transfer_A.csv", "manuscripts/figures/source_data/figure2_wound7_transfer_B.csv", "manuscripts/figures/source_data/figure2_wound7_transfer_C.csv"]
+    },
+    "figure3_interpolation_controls": {
+      "width_mm": 180,
+      "height_mm": 156,
+      "panels": ["Globally withheld day 7", "Globally withheld day 1", "Donor-specific comparison", "Training-seed sensitivity", "Distribution shape diagnostic", "Matched cell-count comparison"],
+      "headings": ["Globally withheld day 7", "Globally withheld day 1", "Donor-specific comparison", "Training-seed sensitivity", "Distribution shape diagnostic", "Matched cell-count comparison"],
+      "panel_labels": ["A", "B", "C", "D", "E", "F"],
+      "label_left_mm": [3, 92.5, 3, 92.5, 3, 92.5],
+      "heading_top_mm": [2, 2, 54.1666666666667, 54.1666666666667, 106.333333333333, 106.333333333333],
+      "panel_width_mm": [84.5, 84.5, 84.5, 84.5, 84.5, 84.5],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [45.25, 134.75, 45.25, 134.75, 45.25, 134.75],
+      "sources": ["outputs/biological_expansion/population/baseline_summary.csv", "outputs/computational_extension/population/report.json", "outputs/computational_extension/population/geometry_summary.csv", "outputs/biological_expansion/population/baseline_by_donor_seed.csv", "outputs/biological_expansion/population/baseline_donor_macro.csv", "outputs/computational_extension/population/matched_cell_summary.csv"],
+      "data": ["manuscripts/figures/source_data/figure3_interpolation_controls_A.csv", "manuscripts/figures/source_data/figure3_interpolation_controls_B.csv", "manuscripts/figures/source_data/figure3_interpolation_controls_C.csv", "manuscripts/figures/source_data/figure3_interpolation_controls_D.csv", "manuscripts/figures/source_data/figure3_interpolation_controls_E.csv", "manuscripts/figures/source_data/figure3_interpolation_controls_F.csv"]
+    },
+    "figure4_time_axes": {
+      "width_mm": 180,
+      "height_mm": 78,
+      "panels": "Paired exact-time comparison",
+      "headings": "Paired exact-time comparison",
+      "panel_labels": [],
+      "label_left_mm": 3,
+      "heading_top_mm": 2,
+      "panel_width_mm": 174,
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": 90,
+      "sources": ["outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json", "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/per_donor_seed.csv"],
+      "data": "manuscripts/figures/source_data/figure4_time_axes_A.csv"
+    },
+    "figure5_methods_benchmark": {
+      "width_mm": 180,
+      "height_mm": 68,
+      "panels": ["Held-out donor", "Training donors"],
+      "headings": ["Held-out donor", "Training donors"],
+      "panel_labels": ["A", "B"],
+      "label_left_mm": [3, 107],
+      "heading_top_mm": [2, 2],
+      "panel_width_mm": [99, 70],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [52.5, 142],
+      "sources": ["outputs/analysis/donor_conditioned_benchmark/report.json", "outputs/scientific_revision_20260922/population/historical_benchmark/report.json"],
+      "data": ["manuscripts/figures/source_data/figure5_methods_benchmark_A.csv", "manuscripts/figures/source_data/figure5_methods_benchmark_B.csv"]
+    },
+    "figure6_donor_curve_stability": {
+      "width_mm": 180,
+      "height_mm": 70,
+      "panels": ["Donor curve", "Seed stability"],
+      "headings": ["Donor curve", "Seed stability"],
+      "panel_labels": ["A", "B"],
+      "label_left_mm": [3, 92.5],
+      "heading_top_mm": [2, 2],
+      "panel_width_mm": [84.5, 84.5],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [45.25, 134.75],
+      "sources": "outputs/scientific_revision_20260922/population/report.json",
+      "data": ["manuscripts/figures/source_data/figure6_donor_curve_stability_A.csv", "manuscripts/figures/source_data/figure6_donor_curve_stability_B.csv"]
+    },
+    "figure7_mouse_arms": {
+      "width_mm": 180,
+      "height_mm": 66,
+      "panels": ["POD7 audit", "Baseline vs prediction"],
+      "headings": ["POD7 audit", "Baseline vs prediction"],
+      "panel_labels": ["A", "B"],
+      "label_left_mm": [3, 92.5],
+      "heading_top_mm": [2, 2],
+      "panel_width_mm": [84.5, 84.5],
+      "heading_alignment": "panel-centred",
+      "heading_centres_mm": [45.25, 134.75],
+      "sources": "outputs/analysis/mouse_all_arms_pod7_audit/report.json",
+      "data": ["manuscripts/figures/source_data/figure7_mouse_arms_A.csv", "manuscripts/figures/source_data/figure7_mouse_arms_B.csv"]
+    }
+  },
+  "sources": {
+    "outputs/biological_expansion/population/report.json": "1aa93a9f0bd38959f50e03e24f9d3250d904112f8f55fc8df2525f5faf0be862",
+    "outputs/biological_expansion/population/atlas_display.csv": "ba018870439d52b305e1e297d6055acde6f6429ec7a6dbced9f4f8799b5f2c0c",
+    "outputs/biological_expansion/population/marker_expression.csv": "e5cf7c0567adbac254a8bca08c03f260e78ad601ba475076fd5d687739513ee0",
+    "outputs/biological_expansion/population/donor_time_counts.csv": "a3270144de9585e7c330c9f44a0874cde1c8232c9a906c623bb768678d824d3b",
+    "outputs/biological_expansion/population/projected_prediction.csv": "d3772d73a4f4886ab8666341c5ad469942851637ed1486e275b11db30b1744f9",
+    "outputs/biological_expansion/population/projected_model_paths.csv": "b850843581c9eb2305caa9eefb4ce5fba1fe0804026c0f1921a0b6f3901194eb",
+    "outputs/analysis/human_temporal_flow/report.json": "7c55cfb13f10c3aa2046ca4a31aeba654b1eb2a9b21a3fbe89541753fb786f57",
+    "outputs/analysis/donor_transfer_flow/report.json": "0eaa760e16ba528047996060acdec84b45c8d45fd6eda10ab45df0c42ae8102d",
+    "outputs/analysis/donor_geometry_inference/report.json": "c390b318495616ce133308f76253387af5b510038a1773ba72b945ddf532c505",
+    "outputs/biological_expansion/population/baseline_summary.csv": "19241a97e84aa40609a9fb4233d5dd6c664e3bcd4f327e2e6d247409270750ea",
+    "outputs/computational_extension/population/report.json": "efd6fa981dd8642f63df8c1337809853a947f1ece8445cbb6ba0f3c4966f8290",
+    "outputs/computational_extension/population/geometry_summary.csv": "7d65469a3a128dd63001e98b77f77d0a87794b2009c6fb6f7d174b8931e12ede",
+    "outputs/biological_expansion/population/baseline_by_donor_seed.csv": "9959057846905f96a6bb33a7e4e506e6042bbb3a3021c5bf4136b4d04bbeff35",
+    "outputs/biological_expansion/population/baseline_donor_macro.csv": "51f1719c1e940039f6fea0970c1d848d466c19ba030ee2e2a49b1e71937beb5c",
+    "outputs/computational_extension/population/matched_cell_summary.csv": "0cf265d936a6892518bb2cd9dd9b55f46deea5194906d139966ba60378545f48",
+    "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json": "b16f13a09871ed23c191d3c538ae95f8c5ae2f13e2713134fc44e2b55cff5e03",
+    "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/per_donor_seed.csv": "4c4b3512a64676fc1fe89ca3b24be9f3fd11cb3129109ab4b401899cc8670978",
+    "outputs/analysis/donor_conditioned_benchmark/report.json": "1f66a4585769b9d30aba453a35249b60d44590e84d1e8f097817a44a9f1e5930",
+    "outputs/scientific_revision_20260922/population/historical_benchmark/report.json": "daad6c8822b00c6a94a61c51e8a853bc511b6aa626c7bfd3def2ab1c040552bb",
+    "outputs/scientific_revision_20260922/population/report.json": "17d5c38eef737f3bad2113e378bf85cfd809f3eeec2792e436cf1714a889dd4a",
+    "outputs/analysis/mouse_all_arms_pod7_audit/report.json": "d5c1faaf864fef8f7a0814db1fa362288e601093484d75aa5626164c02078143"
+  },
+  "R": "R version 4.3.3 (2024-02-29)",
+  "packages": [
+    {
+      "package": "ggplot2",
+      "version": "4.0.3"
+    },
+    {
+      "package": "tikzDevice",
+      "version": "0.12.6"
+    },
+    {
+      "package": "jsonlite",
+      "version": "2.0.0"
+    },
+    {
+      "package": "digest",
+      "version": "0.6.39"
+    }
+  ],
+  "design_sources": {
+    "manuscripts/r_tikz/temporal_design.tikz": "4cbd68977bc40f966db7092dd8d0c4af47b868468f67f8eea1f70f275ed77d9c"
+  },
+  "script_sha256": "000a4e284d48007a386b45704974a1416430e12e2e982b32b711bbbf4529376e",
+  "auxiliary_sources": {
+    "manuscripts/r_tikz/biological_figures.R": "bd892d8891dd8a62a316bdb2b0c094071d73bdc1b1e322041dc4cba5151e93e0",
+    "manuscripts/r_tikz/panel_a.tex": "782adf1f98fc02058e17276d68d0476f0d59944c2a03327ed324dac60bfcf6fb"
+  }
+}

@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Reconstruct held out timepoint."""
+"""Evaluate globally withheld Wound7 in a paired acute human time course.
+
+Training uses Skin, Wound1 and Wound30 within donors. Drop-one-donor runs
+evaluate the retained donors and are sensitivity analyses, not transfer to
+the omitted donor. Independent endpoint cells define a product coupling.
+The geometric ordering screen does not establish a biological geodesic.
+"""
 import argparse
 import json
 import os
@@ -165,7 +171,6 @@ def main() -> int:
         log(f"HUMAN HELD-OUT {args.holdout}: {('BEATS' if overall['beats_baseline'] else 'LOSES TO')} stand-still ({overall['improvement']:+.1%})")
     agree = [v.get('beats_baseline') for v in loo.values() if v]
     log(f'leave-one-donor-out agreement: {sum((1 for a in agree if a))}/{len(agree)} folds beat the baseline')
-
     log('=' * 70)
     obs_f[['gsm', 'donor', 'cond', 'celltype']].to_csv(os.path.join(args.output_dir, 'obs_fibroblast.csv'), index=False)
     np.save(os.path.join(args.output_dir, 'mu.npy'), mu)

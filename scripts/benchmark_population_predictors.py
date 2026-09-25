@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Benchmark population predictors."""
+"""Compare shared and conditioned fields, translations and a transport extension.
+
+Each donor is excluded from fitting and scaling in turn. Source-only context
+may add predictive information; neither donor displacement cosines nor better
+training fit establish the correct model class or a minimum cohort size.
+The target split-half reference is descriptive and is not a significance test.
+"""
 import argparse
 import json
 import os

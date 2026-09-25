@@ -1,13 +1,13 @@
-"donor","cond","cells"
-"Donor A","0",724
-"Donor A","1",255
-"Donor A","30",843
-"Donor A","7",920
-"Donor B","0",521
-"Donor B","1",497
-"Donor B","30",2096
-"Donor B","7",1992
-"Donor C","0",907
-"Donor C","1",260
-"Donor C","30",2335
-"Donor C","7",909
+"donor","day","day_label"
+"Donor C",0,"0"
+"Donor B",0,"0"
+"Donor A",0,"0"
+"Donor C",1,"1"
+"Donor B",1,"1"
+"Donor A",1,"1"
+"Donor C",7,"7"
+"Donor B",7,"7"
+"Donor A",7,"7"
+"Donor C",30,"30"
+"Donor B",30,"30"
+"Donor A",30,"30"

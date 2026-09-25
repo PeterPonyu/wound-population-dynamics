@@ -2,11 +2,11 @@
 \begin{longtable}{@{}p{50mm}p{28mm}p{28mm}p{28mm}p{31mm}@{}}
 \caption{Human Wound7 evaluation in GSE241132. ED denotes the empirical energy-distance V-statistic in training-standardized latent space; lower values indicate closer predicted and observed distributions. The pooled row excludes Wound7 globally. Drop-one rows exclude the named donor and evaluate pooled Wound7 only in the two retained donors. Transfer rows instead evaluate the excluded donor after fitting all four time points of the other donors. Improvement is 100 times (stay-still ED minus predicted ED) divided by stay-still ED. Split-half ED uses one seeded target split and is not a confidence limit. Every row is a point estimate; these dependent fits do not create additional donors.}\label{tab:p2folds}\\
 \toprule
-\textbf{Evaluation} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Split-half ED} & \textbf{Improvement} \\
+Evaluation & Stay-still ED & Predicted ED & Split-half ED & Improvement \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Evaluation} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Split-half ED} & \textbf{Improvement} \\
+Evaluation & Stay-still ED & Predicted ED & Split-half ED & Improvement \\
 \midrule\endhead
 \bottomrule\endfoot
 Pooled time holdout & 1.4069 & 0.7054 & 0.0043 & 49.86\% \\*
@@ -21,13 +21,13 @@ PWH28 transfer & 1.0704 & 0.1634 & 0.0418 & 84.73\% \\
 
 {\small
 \begin{longtable}{@{}p{41mm}p{32mm}p{31mm}p{32mm}p{29mm}@{}}
-\caption{Four time coordinates under global Wound7 holdout. The reference distance is 1.3879 and the split-half distance is 0.0061. ED denotes empirical energy distance in training-standardized latent space. Wound7 time is the global transformed coordinate; the reported target distance is evaluated at the nearest point of the 60-step Wound1-to-Wound30 scan. Improvement is 100 times the gain divided by stay-still distance. Rows use the same three donors, with Wound7 excluded globally; the path minimum is not substituted for target error, and no interval is shown.}\label{tab:p2axes}\\
+\caption{Historical single-seed four-clock diagnostic under global Wound7 holdout; not the revised paired exact-time comparison. The reference distance is 1.3879 and the split-half distance is 0.0061. ED denotes empirical energy distance in training-standardized latent space. Wound7 time is the global transformed coordinate; target distance uses the nearest point of the 60-step Wound1-to-Wound30 scan. Improvement is 100 times gain divided by stay-still distance. The three donors are reused, endpoint draws were not paired across clocks, and the path minimum is not substituted for target error. No interval is shown.}\label{tab:p2axes}\\
 \toprule
-\textbf{Time coordinate} & \textbf{Wound7 time} & \textbf{Target ED} & \textbf{Improvement} & \textbf{Diverged} \\
+Time coordinate & Wound7 time & Target ED & Improvement & Diverged \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Time coordinate} & \textbf{Wound7 time} & \textbf{Target ED} & \textbf{Improvement} & \textbf{Diverged} \\
+Time coordinate & Wound7 time & Target ED & Improvement & Diverged \\
 \midrule\endhead
 \bottomrule\endfoot
 rank & 0.6667 & 0.6994 & 49.61\% & False \\*
@@ -38,14 +38,32 @@ log days & 0.6055 & 0.6344 & 54.29\% & False \\
 }
 
 {\small
+\begin{longtable}{@{}p{25mm}p{23mm}p{42mm}p{26mm}p{26mm}p{23mm}@{}}
+\caption{Paired exact-time clock audit: four transforms, three seeds, 12 fields, three healthy donors. Each fit uses 8,000 steps, batch 256, a training-only scaler excluding all day-7 cells, and common source/target identities capped at 1,200 per donor. ED is energy distance in the common standardized encoder coordinates. Means equally weight donors and seeds. The seed range covers three equal-donor means, not a biological confidence interval. The centroid comparator uses the same donor\textquotesingle s day-1/day-30 means with the relevant time fraction. The final column is the maximum absolute donor/seed ED change from 50 to 200 RK4 steps, not proof of solver convergence. CPU checkpoint reload reproduces the predictions; no clock is selected using the held target.}\label{tab:p2pairedclock}\\
+\toprule
+Clock & Flow ED & Flow seed range & Centroid ED & Unchanged ED & Max refinement change \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Clock & Flow ED & Flow seed range & Centroid ED & Unchanged ED & Max refinement change \\
+\midrule\endhead
+\bottomrule\endfoot
+rank & 0.8104 & 0.8037 to 0.8229 & 0.6667 & 1.4746 & 4.98e-08 \\*
+days & 2.1542 & 1.9740 to 2.3100 & 0.9775 & 1.4746 & 2.13e-06 \\
+sqrt days & 0.8746 & 0.8588 to 0.8924 & 0.7476 & 1.4746 & 2.78e-08 \\*
+log days & 0.7725 & 0.7400 to 0.8120 & 0.6654 & 1.4746 & 7.57e-08 \\
+\end{longtable}
+}
+
+{\small
 \begin{longtable}{@{}p{68mm}p{34mm}p{34mm}p{31mm}@{}}
 \caption{Common Wound1-to-Wound7 benchmark across the three held-out human donors. ED is empirical energy distance in each training-standardized fold; reported means equally weight donors. Gain is stay-still ED minus method ED. Pass count records gains above the single split-half target reference, a descriptive criterion rather than a significance test. CFM denotes conditional flow matching and OT the entropic optimal-transport displacement extension. All methods share test donors; point estimates without confidence intervals do not establish a population ranking.}\label{tab:p2methods}\\
 \toprule
-\textbf{Method} & \textbf{Mean ED} & \textbf{Mean gain} & \textbf{Pass count} \\
+Method & Mean ED & Mean gain & Pass count \\
 \midrule\endfirsthead
 \multicolumn{4}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Method} & \textbf{Mean ED} & \textbf{Mean gain} & \textbf{Pass count} \\
+Method & Mean ED & Mean gain & Pass count \\
 \midrule\endhead
 \bottomrule\endfoot
 Stay-still & 1.4760 & 0.0000 & 0/3 \\*
@@ -61,11 +79,11 @@ Entropic OT extension & 0.7284 & 0.7476 & 3/3 \\
 \begin{longtable}{@{}p{68mm}p{34mm}p{34mm}p{31mm}@{}}
 \caption{Empirical energy distances for each method and held-out human donor in the common benchmark. Each column uses the other two donors for fitting and scaling, the named donor's Wound1 cells as source and its Wound7 cells only for evaluation. Lower is better; stay-still retains the source distribution. CFM means conditional flow matching; OT is the entropic transport displacement extension. Entries are point estimates with a 1,200-cell distance cap. Training draws and this cap differ from separately run transfer experiments, so those point estimates need not coincide.}\label{tab:p2methodsbydonor}\\
 \toprule
-\textbf{Method} & \textbf{PWH26} & \textbf{PWH27} & \textbf{PWH28} \\
+Method & PWH26 & PWH27 & PWH28 \\
 \midrule\endfirsthead
 \multicolumn{4}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Method} & \textbf{PWH26} & \textbf{PWH27} & \textbf{PWH28} \\
+Method & PWH26 & PWH27 & PWH28 \\
 \midrule\endhead
 \bottomrule\endfoot
 Stay-still & 1.8221 & 1.5355 & 1.0704 \\*
@@ -79,35 +97,18 @@ Entropic OT extension & 0.7201 & 0.6228 & 0.8423 \\
 
 {\small
 \begin{longtable}{@{}p{53mm}p{38mm}p{38mm}p{38mm}@{}}
-\caption{Seed-averaged donor-count comparison for shared flow matching. ED is empirical energy distance and k is the number of training donors. At k=1, the two single-training-donor choices are averaged within each held donor and seed; each row then averages seeds 0, 1 and 2. Reduction is k=1 ED minus k=2 ED. The equally weighted mean reduction is 0.1655, with a 4,000-draw percentile 95\% interval [0.0813, 0.3146] from three held-donor blocks. Training sets overlap; this descriptive interval is not a population coverage guarantee or evidence of a learning-curve plateau.}\label{tab:p2curve}\\
+\caption{Seed-averaged donor-count comparison after returning each prediction to the frozen encoder space and scoring in a common reference within held donor. The reference uses both non-held donors and never enters a single-donor fit. ED is empirical energy distance; k is the number of training donors. Single-donor choices are averaged within held donor and seed, followed by seeds 0, 1 and 2. Reduction is k=1 minus k=2. The donor-balanced reduction is 0.1483, with a descriptive three-block percentile 95\% range [0.0732, 0.2727]. Overlapping training sets prevent interpreting this range as a population coverage guarantee.}\label{tab:p2curve}\\
 \toprule
-\textbf{Held donor} & \textbf{k=1 ED} & \textbf{k=2 ED} & \textbf{Reduction} \\
+Held donor & k=1 ED & k=2 ED & Reduction \\
 \midrule\endfirsthead
 \multicolumn{4}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Held donor} & \textbf{k=1 ED} & \textbf{k=2 ED} & \textbf{Reduction} \\
+Held donor & k=1 ED & k=2 ED & Reduction \\
 \midrule\endhead
 \bottomrule\endfoot
-PWH26 & 1.0732 & 0.7586 & 0.3146 \\*
-PWH27 & 0.3373 & 0.2368 & 0.1005 \\*
-PWH28 & 0.2807 & 0.1994 & 0.0813 \\
-\end{longtable}
-}
-
-{\small
-\begin{longtable}{@{}p{22mm}p{36mm}p{36mm}p{34mm}p{37mm}@{}}
-\caption{Mouse POD7 audit for the source-labelled NDB, PDB and GDB arms. Each field uses rank time and POD0, POD2 and POD30 for fitting/scaling, then predicts from POD2 to excluded POD7. ED is empirical energy distance; improvement is 100 times (stay-still ED minus predicted ED) divided by stay-still ED. Each arm covers 4,182/7,002 human-panel genes and has one animal per time point. The ordering check asks whether endpoint distance is at least both endpoint-to-target distances; it is not proof of a geodesic. Values have no confidence intervals, and cell counts do not provide animal replication.}\label{tab:p2mouse}\\
-\toprule
-\textbf{Arm} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} & \textbf{Ordering check} \\
-\midrule\endfirsthead
-\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
-\toprule
-\textbf{Arm} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} & \textbf{Ordering check} \\
-\midrule\endhead
-\bottomrule\endfoot
-NDB & 1.2341 & 1.2525 & -1.49\% & Yes \\*
-PDB & 2.4345 & 1.6526 & 32.12\% & No \\*
-GDB & 1.3532 & 0.6682 & 50.62\% & Yes \\
+PWH26 & 1.0313 & 0.7586 & 0.2727 \\*
+PWH27 & 0.3359 & 0.2368 & 0.0991 \\*
+PWH28 & 0.2726 & 0.1994 & 0.0732 \\
 \end{longtable}
 }
 
@@ -115,11 +116,11 @@ GDB & 1.3532 & 0.6682 & 50.62\% & Yes \\
 \begin{longtable}{@{}p{21mm}p{27mm}p{27mm}p{34mm}p{27mm}p{29mm}@{}}
 \caption{Fibroblast cell counts and target-sampling reference for each mouse arm. POD means postoperative day. POD0, POD2 and POD30 enter training; POD7 is the held-out target. Every arm/timepoint cell group comes from one animal, so these counts quantify distribution sampling and not biological replication. The final column is one seeded split-half POD7 energy distance in the training-standardized space. NDB, PDB and GDB are retained source-study arm labels. All arms share 4,182/7,002 mapped panel genes.}\label{tab:p2mousecounts}\\
 \toprule
-\textbf{Arm} & \textbf{POD0} & \textbf{POD2} & \textbf{POD7 held out} & \textbf{POD30} & \textbf{Split-half ED} \\
+Arm & POD0 & POD2 & POD7 held out & POD30 & Split-half ED \\
 \midrule\endfirsthead
 \multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Arm} & \textbf{POD0} & \textbf{POD2} & \textbf{POD7 held out} & \textbf{POD30} & \textbf{Split-half ED} \\
+Arm & POD0 & POD2 & POD7 held out & POD30 & Split-half ED \\
 \midrule\endhead
 \bottomrule\endfoot
 NDB & 2818 & 8177 & 12914 & 550 & 0.00544 \\*
@@ -129,14 +130,31 @@ GDB & 223 & 2400 & 11590 & 1402 & 0.00617 \\
 }
 
 {\small
+\begin{longtable}{@{}p{22mm}p{36mm}p{36mm}p{34mm}p{37mm}@{}}
+\caption{Mouse POD7 audit for the source-labelled NDB, PDB and GDB arms. Each field uses rank time and POD0, POD2 and POD30 for fitting/scaling, then predicts from POD2 to excluded POD7. ED is empirical energy distance; improvement is 100 times (stay-still ED minus predicted ED) divided by stay-still ED. Each arm covers 4,182/7,002 human-panel genes and has one animal per time point. The ordering check asks whether endpoint distance is at least both endpoint-to-target distances; it is not proof of a geodesic. Values have no confidence intervals, and cell counts do not provide animal replication.}\label{tab:p2mouse}\\
+\toprule
+Arm & Stay-still ED & Predicted ED & Improvement & Ordering check \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Arm & Stay-still ED & Predicted ED & Improvement & Ordering check \\
+\midrule\endhead
+\bottomrule\endfoot
+NDB & 1.2341 & 1.2525 & -1.49\% & Yes \\*
+PDB & 2.4345 & 1.6526 & 32.12\% & No \\*
+GDB & 1.3532 & 0.6682 & 50.62\% & Yes \\
+\end{longtable}
+}
+
+{\small
 \begin{longtable}{@{}p{72mm}p{30mm}p{33mm}p{32mm}@{}}
 \caption{Descriptive geometry for three healthy acute-wound donors. The first estimate divides the median of 18 within-donor between-time energy distances by the median of 12 between-donor same-time distances. The second is the mean of three pairwise cosines between donor Wound1-to-Wound7 mean-displacement vectors. Endpoints are percentile 95\% limits from 10,000 resamples of pairwise distances within class or of cosine pairs. Pairs share donors, so these intervals do not provide independent donor replication or a general population ordering.}\label{tab:p2geometrytable}\\
 \toprule
-\textbf{Summary} & \textbf{Estimate} & \textbf{Lower endpoint} & \textbf{Upper endpoint} \\
+Summary & Estimate & Lower endpoint & Upper endpoint \\
 \midrule\endfirsthead
 \multicolumn{4}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Summary} & \textbf{Estimate} & \textbf{Lower endpoint} & \textbf{Upper endpoint} \\
+Summary & Estimate & Lower endpoint & Upper endpoint \\
 \midrule\endhead
 \bottomrule\endfoot
 time to donor median ratio & 8.4570 & 6.0173 & 13.1114 \\*
@@ -148,11 +166,11 @@ mean displacement cosine & 0.9477 & 0.9432 & 0.9536 \\
 \begin{longtable}{@{}p{32mm}p{47mm}p{29mm}p{27mm}p{30mm}@{}}
 \caption{All six training-donor comparisons for shared and donor-conditioned flow matching. The first column identifies the donor excluded from that fit; the second is a retained training donor whose Wound1-to-Wound7 prediction is evaluated. ED is empirical energy distance in the fold-standardized coordinates. Both source and target of the evaluated donor were available during fitting, so these are fitting-capacity comparisons rather than donor-transfer tests. Conditioned errors are lower in all six rows. The repeated use of three donors prevents interpreting the rows as six independent biological replicates.}\label{tab:p2insample}\\
 \toprule
-\textbf{Excluded donor} & \textbf{Evaluated training donor} & \textbf{Stay-still ED} & \textbf{Shared ED} & \textbf{Conditioned ED} \\
+Excluded donor & Evaluated training donor & Stay-still ED & Shared ED & Conditioned ED \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Excluded donor} & \textbf{Evaluated training donor} & \textbf{Stay-still ED} & \textbf{Shared ED} & \textbf{Conditioned ED} \\
+Excluded donor & Evaluated training donor & Stay-still ED & Shared ED & Conditioned ED \\
 \midrule\endhead
 \bottomrule\endfoot
 PWH26 & PWH27 & 1.6257 & 0.1277 & 0.0369 \\*
@@ -166,42 +184,45 @@ PWH28 & PWH27 & 1.6191 & 0.1190 & 0.0306 \\
 
 {\small
 \begin{longtable}{@{}p{49mm}p{17mm}p{35mm}p{35mm}p{29mm}@{}}
-\caption{Donor-count means by training seed and non-neural control. CFM denotes conditional flow matching, ED empirical energy distance and k the number of training donors. At k=1, two available single-donor fits are averaged within held donor; at k=2 one fit uses both available donors. Means then equally weight the three held donors. Reduction is k=1 minus k=2. CFM evaluation subsamples are fixed across seeds 0, 1 and 2; the mean-displacement control is recorded at seed 0. All nine CFM runs per seed and all six/three control runs at k=1/k=2 meet the descriptive split-half criterion. The control also improves with a second donor.}\label{tab:p2seedcurve}\\
+\caption{Donor-count means in common reference coordinates. CFM denotes conditional flow matching; ED is empirical energy distance. The three CFM seeds reset both endpoint and network random generators. Deterministic controls are listed once. Full target-marginal prediction assigns equal mass to each selected training donor; matched prediction averages 50 draws with the same particle count as the held-source distribution. k=1 averages the two available single-training-donor choices before equally weighting held donors. Evaluation targets and scoring coordinates remain fixed across k and seed. Positive reductions favour k=2; these computational configurations retain three biological donors.}\label{tab:p2seedcurve}\\
 \toprule
-\textbf{Predictor} & \textbf{Seed} & \textbf{k=1 mean ED} & \textbf{k=2 mean ED} & \textbf{Reduction} \\
+Predictor & Seed & k=1 mean ED & k=2 mean ED & Reduction \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Predictor} & \textbf{Seed} & \textbf{k=1 mean ED} & \textbf{k=2 mean ED} & \textbf{Reduction} \\
+Predictor & Seed & k=1 mean ED & k=2 mean ED & Reduction \\
 \midrule\endhead
 \bottomrule\endfoot
-Shared CFM & 0 & 0.5496 & 0.3854 & 0.1643 \\*
-Shared CFM & 1 & 0.6037 & 0.4276 & 0.1761 \\
-Shared CFM & 2 & 0.5380 & 0.3819 & 0.1560 \\*
-Mean displacement & 0 & 0.5325 & 0.4186 & 0.1139 \\
+Shared CFM & 0 & 0.5315 & 0.3854 & 0.1462 \\*
+Mean displacement & Fixed & 0.5095 & 0.4186 & 0.0909 \\
+Target marginal, full & Fixed & 0.2222 & 0.1676 & 0.0546 \\
+Target marginal, matched & Fixed & 0.2332 & 0.1818 & 0.0514 \\
+Unchanged source & Fixed & 1.4760 & 1.4760 & 0.0000 \\
+Shared CFM & 1 & 0.5834 & 0.4276 & 0.1558 \\*
+Shared CFM & 2 & 0.5250 & 0.3819 & 0.1430 \\
 \end{longtable}
 }
 
 {\small
 \begin{longtable}{@{}p{28mm}p{53mm}p{12mm}p{26mm}p{23mm}p{23mm}@{}}
-\caption{Training stochasticity for every held-donor/training-subset configuration. Mean ED, sample SD and range summarize the same fit repeated at seeds 0, 1 and 2; range is maximum minus minimum. Evaluation subsampling and the target split are fixed, so variation reflects training randomness. Averaging the nine configuration SDs gives 0.0717, 3.13 times the mean split-half reference 0.0229; the maximum range is 0.3683. Seeds and overlapping subsets are not independent donors and the single split-half criterion omits this training variability.}\label{tab:p2seedconfigs}\\
+\caption{Training stochasticity in common reference coordinates for every shared-field donor/training-subset configuration. Mean ED, sample SD and range summarize seeds 0, 1 and 2; range is maximum minus minimum. The observed source and target indices, target split and reference scaler are fixed within held donor, so variation within each row reflects fitting randomness. Seeds and overlapping training subsets are not independent donors. The single split-half target reference measures finite-cell sampling and omits fitting variation.}\label{tab:p2seedconfigs}\\
 \toprule
-\textbf{Held donor} & \textbf{Training donors} & \textbf{k} & \textbf{Mean ED} & \textbf{SD} & \textbf{Range} \\
+Held donor & Training donors & k & Mean ED & SD & Range \\
 \midrule\endfirsthead
 \multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Held donor} & \textbf{Training donors} & \textbf{k} & \textbf{Mean ED} & \textbf{SD} & \textbf{Range} \\
+Held donor & Training donors & k & Mean ED & SD & Range \\
 \midrule\endhead
 \bottomrule\endfoot
-PWH26 & PWH27 & 1 & 1.3278 & 0.2070 & 0.3683 \\*
-PWH26 & PWH28 & 1 & 0.8186 & 0.0066 & 0.0125 \\
-PWH26 & PWH27, PWH28 & 2 & 0.7586 & 0.1238 & 0.2334 \\
-PWH27 & PWH26 & 1 & 0.2038 & 0.0291 & 0.0581 \\
-PWH27 & PWH28 & 1 & 0.4709 & 0.1043 & 0.1896 \\
-PWH27 & PWH26, PWH28 & 2 & 0.2368 & 0.0516 & 0.1021 \\
-PWH28 & PWH27 & 1 & 0.3322 & 0.0878 & 0.1757 \\
-PWH28 & PWH26 & 1 & 0.2293 & 0.0325 & 0.0605 \\*
-PWH28 & PWH26, PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
+PWH26 & PWH27 & 1 & 1.2253 & 0.1920 & 0.3377 \\*
+PWH26 & PWH28 & 1 & 0.8373 & 0.0056 & 0.0097 \\
+PWH26 & PWH27|PWH28 & 2 & 0.7586 & 0.1238 & 0.2334 \\
+PWH27 & PWH26 & 1 & 0.1952 & 0.0287 & 0.0573 \\
+PWH27 & PWH28 & 1 & 0.4766 & 0.1098 & 0.1962 \\
+PWH27 & PWH26|PWH28 & 2 & 0.2368 & 0.0516 & 0.1021 \\
+PWH28 & PWH26 & 1 & 0.2468 & 0.0351 & 0.0655 \\
+PWH28 & PWH27 & 1 & 0.2985 & 0.0816 & 0.1633 \\*
+PWH28 & PWH26|PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
 \end{longtable}
 }
 
@@ -209,11 +230,11 @@ PWH28 & PWH26, PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
 \begin{longtable}{@{}p{28mm}p{46mm}p{44mm}p{48mm}@{}}
 \caption{Fixed-field Runge--Kutta resolution comparison for pooled day-7 holdout. A single seed-0 field was refitted with the specified 8,000 optimization steps and 256-cell batches on the saved expression coordinates, excluding day 7 from fitting and scaling. All rows use the same 1,012 day-1 cells and the same 1,500 sampled target cells. Energy distance is the empirical V-statistic evaluated in double precision; improvement is relative to the same unchanged-source baseline (1.406924). RMS is the root-mean-square coordinate difference from the 200-step solution; it is a numerical discrepancy, not a confidence interval. The comparison is conditional on one field and finite-precision arithmetic and does not establish formal convergence to an exact ODE solution.}\label{tab:p2numerics}\\
 \toprule
-\textbf{RK4 steps} & \textbf{Energy distance} & \textbf{Improvement} & \textbf{RMS vs 200 steps} \\
+RK4 steps & Energy distance & Improvement & RMS vs 200 steps \\
 \midrule\endfirsthead
 \multicolumn{4}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{RK4 steps} & \textbf{Energy distance} & \textbf{Improvement} & \textbf{RMS vs 200 steps} \\
+RK4 steps & Energy distance & Improvement & RMS vs 200 steps \\
 \midrule\endhead
 \bottomrule\endfoot
 25 & 0.705395409 & 49.862585\% & 5.46e-07 \\*
@@ -227,11 +248,11 @@ PWH28 & PWH26, PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
 \begin{longtable}{@{}p{34mm}p{17mm}p{37mm}p{42mm}p{37mm}@{}}
 \caption{Evaluation-sampling sensitivity for the same fixed field with 50 RK4 steps. For each cell count, 50 seeded draws sample source and target cells without replacement; prediction and unchanged-source comparisons use identical source indices and identical target indices within a draw. An additional pair of disjoint target subsets at that count defines a split-half reference. Percentages summarize relative improvement over unchanged source; the central 95\% draw range measures Monte Carlo sensitivity conditional on this cohort and field, not patient-level confidence. The final column counts draws whose gain exceeds the split-half reference. Cell count and resampling do not increase the three-donor biological sample size.}\label{tab:p2sampling}\\
 \toprule
-\textbf{Cells per distribution} & \textbf{Draws} & \textbf{Median improvement} & \textbf{Central 95\% draw range} & \textbf{Gain exceeds reference} \\
+Cells per distribution & Draws & Median improvement & Central 95\% draw range & Gain exceeds reference \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Cells per distribution} & \textbf{Draws} & \textbf{Median improvement} & \textbf{Central 95\% draw range} & \textbf{Gain exceeds reference} \\
+Cells per distribution & Draws & Median improvement & Central 95\% draw range & Gain exceeds reference \\
 \midrule\endhead
 \bottomrule\endfoot
 250 & 50 & 48.46\% & 44.24 to 51.57\% & 50/50 \\*
@@ -244,11 +265,11 @@ PWH28 & PWH26, PWH27 & 2 & 0.1994 & 0.0029 & 0.0057 \\
 \begin{longtable}{@{}p{40mm}p{37mm}p{31mm}p{31mm}p{28mm}@{}}
 \caption{Evaluation of the saved pooled 50-step field in training-standardized coordinates, using all 1,012 Wound1 and 3,821 Wound7 cells. ED is the double-precision weighted empirical energy distance, without subsampling. Cell-pooled weights are uniform; donor-balanced weights allocate one third to each donor and equal mass within donor. Predictions retain source weights. The final three rows evaluate training donors separately, not donor-transfer folds. Improvement uses the corresponding unchanged-source ED. These three-donor point estimates have no confidence intervals and differ from capped-distance estimates.}\label{tab:p2weights}\\
 \toprule
-\textbf{Evaluation} & \textbf{Source / target cells} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} \\
+Evaluation & Source / target cells & Stay-still ED & Predicted ED & Improvement \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Evaluation} & \textbf{Source / target cells} & \textbf{Stay-still ED} & \textbf{Predicted ED} & \textbf{Improvement} \\
+Evaluation & Source / target cells & Stay-still ED & Predicted ED & Improvement \\
 \midrule\endhead
 \bottomrule\endfoot
 Cell-pooled & 1012 / 3821 & 1.36146 & 0.68890 & 49.40\% \\*
@@ -263,11 +284,11 @@ PWH28 & 260 / 909 & 1.07483 & 0.64420 & 40.07\% \\
 \begin{longtable}{@{}p{33mm}p{33mm}p{33mm}p{33mm}p{33mm}@{}}
 \caption{Observed author-annotated fibroblasts retained after the sample--barcode join in GSE241132. Donors A, B and C correspond to source donor labels PWH26, PWH27 and PWH28. Each cell-count entry comes from one biopsy; the three donors supply the biological replication. The 12 entries sum to 12,259 cells and provide the material for expression and geometry displays. Day 0 is intact skin, followed by acute wounds at days 1, 7 and 30.}\label{tab:p2biologicalcounts}\\
 \toprule
-\textbf{Donor} & \textbf{Day 0 cells} & \textbf{Day 1 cells} & \textbf{Day 7 cells} & \textbf{Day 30 cells} \\
+Donor & Day 0 cells & Day 1 cells & Day 7 cells & Day 30 cells \\
 \midrule\endfirsthead
 \multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Donor} & \textbf{Day 0 cells} & \textbf{Day 1 cells} & \textbf{Day 7 cells} & \textbf{Day 30 cells} \\
+Donor & Day 0 cells & Day 1 cells & Day 7 cells & Day 30 cells \\
 \midrule\endhead
 \bottomrule\endfoot
 Donor A & 724 & 255 & 920 & 843 \\*
@@ -280,11 +301,11 @@ Donor C & 907 & 260 & 909 & 2335 \\
 \begin{longtable}{@{}p{17mm}p{42mm}p{24mm}p{24mm}p{24mm}p{32mm}@{}}
 \caption{Retrospective global missing-time comparison in three donors. Each error is the equally weighted mean of three within-donor, full-cell empirical energy distances in all 15 training-standardized coordinates. The table gives its mean and range over seeds 0, 1 and 2; deterministic baselines have zero seed range. Improvement is relative to the corresponding unchanged-source error. Withheld day 7 uses day 1 as source and day 30 as anchor; withheld day 1 uses intact skin as source and day 7 as anchor. Both have rank-time interpolation fraction one half. The held-time cells are excluded from scaling, fitting and anchor construction. Seed ranges are not donor confidence intervals, and absolute errors from different tasks use different scalers.}\label{tab:p2interpolation}\\
 \toprule
-\textbf{Held day} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} & \textbf{Mean improvement} \\
+Held day & Predictor & Mean ED & Minimum ED & Maximum ED & Mean improvement \\
 \midrule\endfirsthead
 \multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Held day} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} & \textbf{Mean improvement} \\
+Held day & Predictor & Mean ED & Minimum ED & Maximum ED & Mean improvement \\
 \midrule\endhead
 \bottomrule\endfoot
 7 & Unchanged source & 1.4725 & 1.4725 & 1.4725 & 0.00\% \\*
@@ -302,11 +323,11 @@ Donor C & 907 & 260 & 909 & 2335 \\
 \begin{longtable}{@{}p{17mm}p{24mm}p{48mm}p{24mm}p{24mm}p{24mm}@{}}
 \caption{Every donor-specific error in the two global missing-time tasks, summarized over the three computational seeds. ED is the full 15-dimensional empirical energy distance using all available source-derived predictions and target cells in that donor. The mean, minimum and maximum describe seeds, not independent specimens. The centroid baseline has lower seed-averaged error than the field in all three day-7 donors and two of three day-1 donors. Each donor supplies both training endpoints in this retrospective design; these rows are not held-out-donor transfer.}\label{tab:p2interpolationdonors}\\
 \toprule
-\textbf{Held day} & \textbf{Donor} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} \\
+Held day & Donor & Predictor & Mean ED & Minimum ED & Maximum ED \\
 \midrule\endfirsthead
 \multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
 \toprule
-\textbf{Held day} & \textbf{Donor} & \textbf{Predictor} & \textbf{Mean ED} & \textbf{Minimum ED} & \textbf{Maximum ED} \\
+Held day & Donor & Predictor & Mean ED & Minimum ED & Maximum ED \\
 \midrule\endhead
 \bottomrule\endfoot
 7 & Donor A & Unchanged source & 1.7580 & 1.7580 & 1.7580 \\*
@@ -333,5 +354,178 @@ Donor C & 907 & 260 & 909 & 2335 \\
 1 & Donor C & Centroid translation & 0.8275 & 0.8275 & 0.8275 \\
 1 & Donor C & Independent bridge & 0.9369 & 0.9258 & 0.9525 \\*
 1 & Donor C & Shared flow & 0.9841 & 0.8597 & 1.0585 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{17mm}p{41mm}p{25mm}p{28mm}p{28mm}p{25mm}@{}}
+\caption{Geometry controls for globally withheld days 7 and 1. Entries average seeds within each donor and then weight the three donors equally. ED is full-cell empirical energy distance in the 15 training-standardized coordinates. Centered ED subtracts each distribution\textquotesingle s own mean only for evaluation; it is a separate shape diagnostic and is not an additive error decomposition. Centroid error is Euclidean distance between means. Variance ratio is predicted total coordinate variance divided by observed target variance. Location--scale interpolates only the permitted endpoint means and standard deviations at rank fraction one half; no target mean or dispersion enters prediction. All entries are point estimates, not population uncertainty intervals.}\label{tab:p2shapediagnostics}\\
+\toprule
+Held day & Predictor & ED & Centered ED & Centroid error & Variance ratio \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held day & Predictor & ED & Centered ED & Centroid error & Variance ratio \\
+\midrule\endhead
+\bottomrule\endfoot
+7 & Unchanged source & 1.4725 & 0.1495 & 2.5971 & 0.761 \\*
+7 & Centroid translation & 0.6674 & 0.1495 & 1.5375 & 0.761 \\
+7 & Independent bridge & 0.9284 & 0.2691 & 1.5426 & 0.319 \\
+7 & Shared flow & 0.8110 & 0.1441 & 1.6835 & 0.543 \\
+7 & Location-scale & 0.6982 & 0.1466 & 1.5375 & 0.622 \\
+1 & Unchanged source & 1.3460 & 0.0647 & 2.5213 & 0.990 \\
+1 & Centroid translation & 0.9293 & 0.0647 & 2.0270 & 0.990 \\
+1 & Independent bridge & 1.0959 & 0.1445 & 2.0215 & 0.579 \\
+1 & Shared flow & 1.0571 & 0.1220 & 2.0158 & 0.641 \\*
+1 & Location-scale & 0.9034 & 0.0667 & 2.0270 & 1.107 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{19mm}p{45mm}p{32mm}p{41mm}p{27mm}@{}}
+\caption{Matched evaluation with 200 source and 200 target cells per donor, sampled without replacement in 50 draws with seed 29. Each draw shares indices across all predictors and fit seeds, then averages seeds within donor and donors equally. Entries are shared-flow error minus comparator error; positive differences favor the comparator. Full ranges describe observed-cell resampling sensitivity, not donor confidence intervals or hypothesis tests. The 50 draws still involve only the same three biological donors.}\label{tab:p2matchedsampling}\\
+\toprule
+Held day & Comparator & Mean difference & Full draw range & Comparator lower \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held day & Comparator & Mean difference & Full draw range & Comparator lower \\
+\midrule\endhead
+\bottomrule\endfoot
+7 & Centroid translation & 0.1400 & 0.1132 to 0.1716 & 50/50 \\*
+7 & Location-scale & 0.1102 & 0.0847 to 0.1405 & 50/50 \\
+7 & Independent bridge & -0.1151 & -0.1576 to -0.0741 & 0/50 \\
+1 & Centroid translation & 0.1243 & 0.0977 to 0.1545 & 50/50 \\
+1 & Location-scale & 0.1497 & 0.1194 to 0.1763 & 50/50 \\*
+1 & Independent bridge & -0.0407 & -0.0833 to -0.0070 & 0/50 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{27mm}p{30mm}p{35mm}p{46mm}p{27mm}@{}}
+\caption{Training-target marginal predictor compared with the historical shared-field benchmark. Each target-marginal draw samples the permitted training donors\textquotesingle{} Wound7 cells without replacement, matches the original held-source particle count (255, 497 or 260), and assigns each training donor exactly half of total probability mass. It uses no held-source expression. Scaling and target indices are identical to the original benchmark. Means and full ranges describe 50 draws; they are not donor confidence intervals. The shared-field column is its original saved error, because historical per-cell predictions were unavailable for a new paired evaluation. Across donors the matched marginal mean is 0.1818 versus 0.3947 for the field; lower is better.}\label{tab:p2targetmarginal}\\
+\toprule
+Held donor & Shared-field ED & Target-marginal ED & Full draw range & Marginal lower \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held donor & Shared-field ED & Target-marginal ED & Full draw range & Marginal lower \\
+\midrule\endhead
+\bottomrule\endfoot
+PWH26 & 0.7110 & 0.1569 & 0.1147 to 0.2106 & 50/50 \\*
+PWH27 & 0.2881 & 0.1416 & 0.1055 to 0.1769 & 50/50 \\*
+PWH28 & 0.1850 & 0.2469 & 0.1860 to 0.3340 & 0/50 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{31mm}p{27mm}p{29mm}p{33mm}p{35mm}@{}}
+\caption{Retrospective source-replacement control for the nine saved two-training-donor fields (three held donors by three seeds). All scores are empirical energy distance in the same reference coordinates and on the same held-donor Wound7 target cells; lower is better. Real is the actual held-donor Wound1 distribution. Substituted sources are 50 without-replacement, source-count-matched draws from permitted training donors\textquotesingle{} Wound1 cells, integrated by the identical saved field, with one-half mass assigned to each training donor. The target marginal instead draws from their Wound7 cells without reading the held source; its draw IDs are not paired with substituted-source draws. Draws are averaged within field, then seeds within held donor; the final row equally weights three donors. The difference is substituted minus real, so a negative value favors the substituted input. These are retrospective, dependent computations on three healthy donors, not confidence intervals, new biological replicates or a model-selection test.}\label{tab:p2sourceswap}\\
+\toprule
+Held donor & Real-source ED & Substituted ED & Target marginal ED & Substituted minus real \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held donor & Real-source ED & Substituted ED & Target marginal ED & Substituted minus real \\
+\midrule\endhead
+\bottomrule\endfoot
+PWH26 & 0.7586 & 0.2802 & 0.1569 & -0.4785 \\*
+PWH27 & 0.2368 & 0.2732 & 0.1416 & 0.0363 \\
+PWH28 & 0.1994 & 0.1816 & 0.2469 & -0.0179 \\*
+Three-donor mean & 0.3983 & 0.2450 & 0.1818 & -0.1533 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{35mm}p{33mm}p{33mm}p{33mm}p{33mm}@{}}
+\caption{Exact target-marginal mixture decomposition in fixed held-fold coordinates. Separate ED is the mean of the two single-training-donor target errors; mixed ED scores their equal-mass empirical mixture. Reduction is separate minus mixed and equals one quarter of their mutual ED, independently of the held target. ED denotes the empirical energy discrepancy without its square root. Complete permitted training-Wound7 distributions and the original held-target indices reproduce the earlier full-marginal curve. Maximum identity residual is 0.0000000000000024. The final row equally weights three donors. This identity does not decompose a jointly fitted neural field, and lower mixture error does not itself identify target-relevant information gain.}\label{tab:p2mixtureidentity}\\
+\toprule
+Held donor & Separate ED & Mixed ED & Reduction & Mutual ED / 4 \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held donor & Separate ED & Mixed ED & Reduction & Mutual ED / 4 \\
+\midrule\endhead
+\bottomrule\endfoot
+PWH26 & 0.202462 & 0.137777 & 0.064685 & 0.064685 \\*
+PWH27 & 0.199092 & 0.135287 & 0.063805 & 0.063805 \\
+PWH28 & 0.265045 & 0.229730 & 0.035315 & 0.035315 \\*
+Three-donor mean & 0.222199 & 0.167598 & 0.054601 & 0.054601 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{34mm}p{30mm}p{37mm}p{37mm}p{29mm}@{}}
+\caption{Matched-particle source substitutions in nine existing two-training-donor fields (three held donors, seeds 0--2). Each score uses 200 predicted particles: real held-source cells, one individual permitted training-donor source, or a mixture of 100 cells from each permitted donor. Fifty without-replacement draws share fixed held-target indices and reuse source indices across model seeds. Wrong A/B list actual source donors; their identities vary across held folds, so the final columns average fold-specific substitutions, not a single common donor. Scores average draws within field, then seeds within held donor, then donors equally. The individual-substitution error average is 0.3075. These are point energy discrepancies in common reference coordinates, not confidence intervals or new biological replication. Mixture identities are separately checked on the actual 100-cell components, not by equating them to the 200-cell individual distributions. No model is refitted.}\label{tab:p2mixtureaudit}\\
+\toprule
+Held donor & Real-source ED & Wrong A ED & Wrong B ED & Mixed ED \\
+\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held donor & Real-source ED & Wrong A ED & Wrong B ED & Mixed ED \\
+\midrule\endhead
+\bottomrule\endfoot
+PWH26 & 0.7578 & PWH27: 0.3003 & PWH28: 0.3745 & 0.2799 \\*
+PWH27 & 0.2488 & PWH26: 0.3504 & PWH28: 0.3057 & 0.2877 \\
+PWH28 & 0.2043 & PWH26: 0.2503 & PWH27: 0.2636 & 0.1904 \\*
+Three-donor mean & 0.4036 & 0.3003 & 0.3146 & 0.2527 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{26mm}p{9mm}p{53mm}p{24mm}p{25mm}p{28mm}@{}}
+\caption{Observable-space errors against actual held-donor expression in the same three healthy volunteers. All 5,383 assayed frozen-panel genes are retained without a performance filter; 1,619 absent genes are not observed zeros. Each observed cell or decoded particle is normalized on the common panel before equal-cell averaging. Saved target uses the original held-target identities; all day 7 is a predeclared sensitivity. k counts permitted training donors, not test donors. Twenty-seven saved fits use three computational seeds; no model is trained. Averages weight seeds, then training subsets, then held donors equally. TV is total variation between mean profiles; JS is Jensen--Shannon divergence in natural-log units, not its square root; RMSE is the root mean square error over gene proportions. Lower is better. Observed and decoded baselines are distinct; training marginals use only permitted donors. These are mean-profile errors, not single-cell transitions, full distributional fidelity, absolute-count prediction or biological confidence intervals.}\label{tab:p2observable}\\
+\toprule
+Target set & k & Predictor & TV & JS (nats) & Gene RMSE \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Target set & k & Predictor & TV & JS (nats) & Gene RMSE \\
+\midrule\endhead
+\bottomrule\endfoot
+Saved target & 1 & Decoded shared flow & 0.2934 & 0.0746 & 0.000779 \\*
+Saved target & 1 & Decoded persistence & 0.3529 & 0.0990 & 0.001128 \\
+Saved target & 1 & Decoded mean displacement & 0.2882 & 0.0717 & 0.000759 \\
+Saved target & 1 & Decoded training marginal & 0.2590 & 0.0636 & 0.000600 \\
+Saved target & 1 & Observed persistence & 0.3421 & 0.0928 & 0.001268 \\
+Saved target & 1 & Observed training marginal & 0.1279 & 0.0155 & 0.000370 \\
+Saved target & 2 & Decoded shared flow & 0.2823 & 0.0709 & 0.000694 \\
+Saved target & 2 & Decoded persistence & 0.3529 & 0.0990 & 0.001128 \\
+Saved target & 2 & Decoded mean displacement & 0.2825 & 0.0703 & 0.000714 \\
+Saved target & 2 & Decoded training marginal & 0.2546 & 0.0627 & 0.000571 \\
+Saved target & 2 & Observed persistence & 0.3421 & 0.0928 & 0.001268 \\
+Saved target & 2 & Observed training marginal & 0.1115 & 0.0120 & 0.000322 \\
+All day 7 & 1 & Decoded shared flow & 0.2929 & 0.0744 & 0.000780 \\
+All day 7 & 1 & Decoded persistence & 0.3522 & 0.0988 & 0.001126 \\
+All day 7 & 1 & Decoded mean displacement & 0.2878 & 0.0716 & 0.000760 \\
+All day 7 & 1 & Decoded training marginal & 0.2584 & 0.0634 & 0.000600 \\
+All day 7 & 1 & Observed persistence & 0.3412 & 0.0923 & 0.001265 \\
+All day 7 & 1 & Observed training marginal & 0.1270 & 0.0153 & 0.000369 \\
+All day 7 & 2 & Decoded shared flow & 0.2818 & 0.0707 & 0.000695 \\
+All day 7 & 2 & Decoded persistence & 0.3522 & 0.0988 & 0.001126 \\
+All day 7 & 2 & Decoded mean displacement & 0.2820 & 0.0702 & 0.000714 \\
+All day 7 & 2 & Decoded training marginal & 0.2541 & 0.0624 & 0.000571 \\
+All day 7 & 2 & Observed persistence & 0.3412 & 0.0923 & 0.001265 \\*
+All day 7 & 2 & Observed training marginal & 0.1103 & 0.0118 & 0.000320 \\
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}p{26mm}p{32mm}p{22mm}p{25mm}p{27mm}p{33mm}@{}}
+\caption{Decoder reconstruction reference for the observed held-donor day-7 cells. The frozen encoder means of the target cells themselves are decoded, restricted to the same 5,383 observed panel genes and normalized per cell before averaging. Errors compare this reconstruction with actual mean observed expression, not with another decoded target. TV is total variation; JS is Jensen--Shannon divergence in nats. The missing-mass column reports mean decoder probability on the 1,619 unmeasured panel genes before renormalization. This reference uses held-target information: it is not a forecast, true expression, a competing predictor or a mathematical lower error bound. The two target sets overlap and do not add independent observations.}\label{tab:p2decoderreference}\\
+\toprule
+Held donor & Target set & Cells & TV & JS (nats) & Unmeasured mass \\
+\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Held donor & Target set & Cells & TV & JS (nats) & Unmeasured mass \\
+\midrule\endhead
+\bottomrule\endfoot
+PWH26 & Saved target & 920 & 0.2314 & 0.0553 & 1.59\% \\*
+PWH26 & All day 7 & 920 & 0.2314 & 0.0553 & 1.59\% \\
+PWH27 & Saved target & 1200 & 0.2549 & 0.0655 & 1.62\% \\
+PWH27 & All day 7 & 1992 & 0.2537 & 0.0651 & 1.62\% \\
+PWH28 & Saved target & 909 & 0.2426 & 0.0584 & 1.79\% \\*
+PWH28 & All day 7 & 909 & 0.2426 & 0.0584 & 1.79\% \\
 \end{longtable}
 }

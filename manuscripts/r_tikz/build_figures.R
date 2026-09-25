@@ -6,6 +6,7 @@ suppressPackageStartupMessages({
   library(grid)
   library(jsonlite)
   library(tikzDevice)
+  library(patchwork)
 })
 script <- sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE)[1])
 ROOT <- normalizePath(file.path(dirname(script), "../.."))
@@ -27,12 +28,11 @@ options(tikzDefaultEngine = "xetex",
         tikzMetricsDictionary = file.path(BUILD, "arial-metrics"))
 
 theme_set(theme_classic(base_size = 8, base_family = "Arial") + theme(
-  # Figure lettering is deliberately monochrome and bold. Data marks and
-  # reference lines retain colour; every textual element remains black.
-  text = element_text(colour = "black", face = "bold"),
-  axis.text = element_text(size = 7.5, colour = "black", face = "bold"),
-  axis.title.x = element_text(size = 8, colour = "black", face = "bold", margin = margin(t = 1.4, unit = "mm")),
-  axis.title.y = element_text(size = 8, colour = "black", face = "bold", margin = margin(r = 1.3, unit = "mm")),
+  # Only the separate panel letters are bold; ordinary figure text is regular.
+  text = element_text(colour = "black", face = "plain"),
+  axis.text = element_text(size = 7.5, colour = "black", face = "plain"),
+  axis.title.x = element_text(size = 8, colour = "black", face = "plain", margin = margin(t = 1.4, unit = "mm")),
+  axis.title.y = element_text(size = 8, colour = "black", face = "plain", margin = margin(r = 1.3, unit = "mm")),
   axis.ticks = element_line(linewidth = 0.25, colour = GRAY),
   axis.ticks.length = unit(1, "mm"),
   axis.line = element_line(linewidth = 0.25, colour = GRAY),
@@ -41,7 +41,7 @@ theme_set(theme_classic(base_size = 8, base_family = "Arial") + theme(
   plot.margin = margin(t = 1.8, r = 1.2, b = 1.2, l = 1.2, unit = "mm"),
   plot.background = element_rect(fill = "white", colour = NA),
   legend.position = "bottom",
-  legend.text = element_text(size = 7, colour = "black", face = "bold"),
+  legend.text = element_text(size = 7, colour = "black", face = "plain"),
   legend.title = element_blank(),
   legend.key.size = unit(3.2, "mm"), legend.spacing.x = unit(1.2, "mm"),
   legend.margin = margin(0, 0, 0, 0, unit = "mm"),
@@ -56,8 +56,18 @@ read_report <- function(path) {
   active_sources <<- unique(c(active_sources, path))
   d
 }
-repaired <- function(name) read_report(paste0("outputs/analysis/", name, "/report.json"))
-historical <- function(name) read_report(paste0("outputs/", name, "/report.json"))
+measurement_reports <- c("patient_mapping_equivalence", "representation_benchmark",
+  "representation_inference", "patient_unit_representation_benchmark", "design_power_simulation")
+repaired <- function(name) {
+  prefix <- if (name %in% measurement_reports) "outputs/scientific_revision_20260922/measurement/" else "outputs/analysis/"
+  read_report(paste0(prefix, name, "/report.json"))
+}
+historical <- function(name) {
+  if (name == "cohort_metadata/gse165816_patient_unit_remap")
+    return(read_report("outputs/scientific_revision_20260922/measurement/patient_unit_remap/report.json"))
+  if (name == "representation_benchmark") return(repaired(name))
+  read_report(paste0("outputs/", name, "/report.json"))
+}
 num <- function(rows, key) vapply(rows, function(x) as.numeric(x[[key]]), numeric(1))
 chr <- function(rows, key) vapply(rows, function(x) as.character(x[[key]]), character(1))
 vector <- function(x) as.numeric(unlist(x, use.names = FALSE))
@@ -84,7 +94,7 @@ forest <- function(d, xlabel = "AUC", ref = .5, limits = c(0, 1)) {
     scale_x_continuous(limits = limits, expand = expansion(mult = .025)) +
     labs(x = xlabel, y = NULL) + xgrid()
 }
-record_figure <- function(name, width, height, panels, heading_centres) {
+record_figure <- function(name, width, height, panels, heading_centres, label_lefts, heading_tops, panel_widths = rep(width / max(1, length(panels)), length(panels))) {
   data_files <- character()
   for (i in seq_along(panels)) {
     path <- file.path(DATA, paste0(name, "_", LETTERS[i], ".csv"))
@@ -93,7 +103,10 @@ record_figure <- function(name, width, height, panels, heading_centres) {
   }
   figures[[name]] <<- list(width_mm = width, height_mm = height,
       panels = vapply(panels, `[[`, character(1), "title"),
-      headings = paste(LETTERS[seq_along(panels)], vapply(panels, `[[`, character(1), "title")),
+      headings = vapply(panels, `[[`, character(1), "title"),
+      panel_labels = if (length(panels) > 1) LETTERS[seq_along(panels)] else character(),
+      label_left_mm = label_lefts, heading_top_mm = heading_tops,
+      panel_width_mm = panel_widths, heading_alignment = "panel-centred",
       heading_centres_mm = heading_centres,
       sources = active_sources, data = data_files)
   active_sources <<- character()
@@ -109,25 +122,43 @@ draw_figure <- function(name, panels, height = 82, widths = NULL, nrow = 1, gap 
   tikz(file.path(TEX, paste0(name, ".tex")), width = width / 25.4, height = height / 25.4,
        pointsize = 8, standAlone = TRUE, engine = "xetex", sanitize = TRUE,
        timestamp = FALSE, documentDeclaration = "\\documentclass[10pt]{standalone}",
-       packages = c("\\usepackage{tikz}", font_commands))
+       packages = c("\\usepackage{tikz,graphicx}", font_commands))
   on.exit(dev.off())
   grid.newpage()
   for (i in seq_along(panels)) {
     col <- (i - 1) %% ncol + 1; row <- (i - 1) %/% ncol + 1
     x <- left + sum(head(widths, col - 1)) + gap * (col - 1)
     y <- height - top - (row - 1) * (row_h + row_gap)
-    # One centred text object keeps the panel letter attached to its title.
-    grid.text(paste(LETTERS[i], panels[[i]]$title),
-              unit(x + widths[col] / 2, "mm"), unit(y, "mm"), just = c("centre", "top"),
-              gp = gpar(fontfamily = "Arial", fontsize = 9, fontface = "bold", col = "black"))
+    # Centre every title on its full panel, independently of the left-hand letter.
+    # Single-panel figures have a title only; PDF validation checks both objects.
+    labelled <- length(panels) > 1
+    if (labelled) grid.text(LETTERS[i], unit(x, "mm"), unit(y, "mm"),
+              just = c("left", "top"),
+              gp = gpar(fontfamily = "Arial", fontsize = 11, fontface = "bold", col = "black"))
+    grid.text(panels[[i]]$title,
+              unit(x + widths[col] / 2, "mm"),
+              unit(y - .5, "mm"), just = c("centre", "top"),
+              gp = gpar(fontfamily = "Arial", fontsize = 9, fontface = "plain", col = "black"))
+    if (inherits(panels[[i]]$plot, "vector_panel")) {
+      # Direct PDF inclusion keeps the hand-maintained tissue artwork out of
+      # ggplot scale/clip handling. The same asset is delivered independently.
+      tikzAnnotate(sprintf("\\node[anchor=north west,inner sep=0pt] at (%.6f,%.6f) {\\includegraphics[width=%.6fmm]{../%s.pdf}};",
+                           x * 72.27 / 25.4, (y - 6.3) * 72.27 / 25.4,
+                           widths[col], panels[[i]]$plot$asset))
+      next
+    }
     pushViewport(viewport(x = unit(x, "mm"), y = unit(y - 6.3, "mm"),
                           width = unit(widths[col], "mm"), height = unit(row_h - 6.3, "mm"),
                           just = c("left", "top"), clip = "off"))
-    grid.draw(ggplotGrob(panels[[i]]$plot))
+    grob <- if (inherits(panels[[i]]$plot, "patchwork")) patchworkGrob(panels[[i]]$plot) else ggplotGrob(panels[[i]]$plot)
+    grid.draw(grob)
     popViewport()
   }
   centres <- left + c(0, head(cumsum(widths), -1)) + gap * (seq_len(ncol) - 1) + widths / 2
-  record_figure(name, width, height, panels, rep(centres, nrow))
+  lefts <- centres - widths / 2
+  tops <- top + rep(seq_len(nrow) - 1, each = ncol) * (row_h + row_gap)
+  record_figure(name, width, height, panels,
+                rep(centres, nrow), rep(lefts, nrow), tops, rep(widths, nrow))
 }
 write_workflow <- function(name, height, body, steps, heading_centres) {
   colors <- paste0("\\definecolor{", c("navy", "blue", "teal", "orange", "purple", "green", "gray"),
@@ -142,7 +173,9 @@ write_workflow <- function(name, height, body, steps, heading_centres) {
     "\\end{tikzpicture}", "\\end{document}")
   writeLines(lines, file.path(TEX, paste0(name, ".tex")))
   record_figure(name, 180, height,
-                lapply(steps, function(s) panel(NULL, s, data.frame(step = s))), heading_centres)
+                lapply(steps, function(s) panel(NULL, s, data.frame(step = s))), heading_centres,
+                seq(0, by = 180 / max(1, length(steps)), length.out = length(steps)),
+                rep(2, length(steps)), rep(180 / max(1, length(steps)), length(steps)))
 }
 methods <- c("topic_simplex_theta0", "module_score", "pca", "nmf")
 method_names <- c("Fibroblast\ntopic", "Module", "PCA", "NMF")
@@ -170,28 +203,36 @@ figure2_wound7_transfer <- function() {
     panel(pb, "Donor transfer", b), panel(pc, "Donor–time geometry", c)), height = 67)
 }
 figure4_time_axes <- function() {
-  r <- repaired("time_parameterisation")
+  r <- read_report("outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json")
+  path <- "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/per_donor_seed.csv"
+  sources[[path]] <<- digest::digest(file=file.path(ROOT,path),algo="sha256")
+  active_sources <<- unique(c(active_sources,path))
+  raw <- read.csv(file.path(ROOT,path),stringsAsFactors=FALSE)
   keys <- c("rank", "days", "sqrt_days", "log_days")
   labels <- c("Rank", "Linear days", "Square-root days", "Log days")
-  d <- do.call(rbind, lapply(seq_along(keys), function(i) data.frame(axis = labels[i], fraction = num(r$scans[[keys[i]]], "frac"), ed = num(r$scans[[keys[i]]], "ed"))))
-  target <- data.frame(axis = labels, fraction = num(r$axes_results[keys], "claimed_fraction"), ed = num(r$axes_results[keys], "ed_at_claimed"))
-  p <- ggplot(d, aes(fraction, ed, colour = axis, linetype = axis)) +
-    geom_hline(yintercept = r$standstill, linetype = "dashed", colour = GRAY, linewidth = .35) +
-    geom_line(linewidth = .65) + geom_point(data = target, size = 2) +
-    scale_colour_manual(values = setNames(c(BLUE, RED, GREEN, PURPLE), labels)) +
-    scale_linetype_manual(values = setNames(c("solid", "longdash", "dotted", "dotdash"), labels)) +
-    labs(x = "Fraction along predicted path", y = "Energy distance") +
-    guides(colour = guide_legend(nrow = 1), linetype = guide_legend(nrow = 1))
-  # Retain the complete observed y range; do not truncate the linear-days curve.
-  exported <- rbind(transform(d, point_type = "scan"), transform(target, point_type = "held_out_target"),
-    data.frame(axis = "Stay-still", fraction = NA, ed = r$standstill, point_type = "baseline"))
-  draw_figure("figure4_time_axes", list(panel(p, "Time parameterization", exported)), height = 70)
+  by_seed <- aggregate(cbind(flow_ed,centroid_ed,unchanged_source_ed)~axis+seed,raw,mean)
+  d <- rbind(data.frame(axis=by_seed$axis,seed=by_seed$seed,method="Shared flow",ed=by_seed$flow_ed),
+    data.frame(axis=by_seed$axis,seed=by_seed$seed,method="Centroid translation",ed=by_seed$centroid_ed),
+    data.frame(axis=by_seed$axis,seed=by_seed$seed,method="Unchanged source",ed=by_seed$unchanged_source_ed))
+  d$axis <- factor(d$axis,levels=keys,labels=labels)
+  avg <- aggregate(ed~axis+method,d,mean)
+  p <- ggplot(d,aes(axis,ed,colour=method,group=interaction(method,seed)))+
+    geom_line(linewidth=.30,alpha=.55)+
+    geom_point(aes(shape=factor(seed)),size=1.8)+
+    geom_line(data=avg,aes(group=method),linewidth=.75)+
+    scale_colour_manual(values=c("Shared flow"=NAVY,"Centroid translation"=TEAL,"Unchanged source"=GRAY))+
+    scale_shape_manual(values=c(16,17,15),name="Training seed")+
+    labs(x="Prespecified time coordinate",y="Mean donor energy distance")+
+    guides(colour=guide_legend(nrow=1),shape=guide_legend(nrow=1))
+  draw_figure("figure4_time_axes", list(panel(p,"Paired exact-time comparison",d)),height=78)
 }
 figure5_methods_benchmark <- function() {
   r <- repaired("donor_conditioned_benchmark")
+  baseline <- read_report("outputs/scientific_revision_20260922/population/historical_benchmark/report.json")
   keys <- c("M0_standstill", "M1_shared_cfm", "M2_mean_displacement", "M3_nearest_donor", "M4_conditioned_cfm", "M5_optimal_transport")
-  a <- data.frame(label = c("Stay-\nstill", "Shared\nCFM", "Mean\nshift", "Nearest\ndonor", "Cond.\nCFM", "OT"), value = num(r$summary[keys], "mean_ed"))
-  pa <- columns(a, "Mean energy distance", c(GRAY, NAVY, BLUE, TEAL, PURPLE, ORANGE))
+  a <- data.frame(label = c("Stay-\nstill", "Shared\nCFM", "Mean\nshift", "Nearest\ndonor", "Cond.\nCFM", "OT", "Target\nmarginal"),
+    value = c(num(r$summary[keys], "mean_ed"), baseline$matched_equal_donor$mean))
+  pa <- columns(a, "Mean energy distance", c(GRAY, NAVY, BLUE, TEAL, PURPLE, ORANGE, GREEN))
   b <- do.call(rbind, lapply(names(r$in_sample), function(k) data.frame(fold = k,
     field = c("Shared", "Conditioned"), value = c(r$in_sample[[k]]$shared, r$in_sample[[k]]$conditioned))))
   b$field <- factor(b$field, levels = c("Shared", "Conditioned"))
@@ -201,23 +242,25 @@ figure5_methods_benchmark <- function() {
     panel(pb, "Training donors", b)), height = 68, widths = c(99, 70))
 }
 figure6_donor_curve_stability <- function() {
-  s <- repaired("donor_curve_seed_stability"); c <- repaired("donor_count_curve"); r <- repaired("donor_curve_inference")
-  a <- data.frame(k = rep(1:2, each = 3), seed = rep(names(s$per_seed), 2),
-    value = c(num(s$per_seed, "k1_mean_ed"), num(s$per_seed, "k2_mean_ed")))
-  fixed <- data.frame(k = 1:2, seed = "0", value = c(c$curve$k_1$shared_cfm_mean_ed, c$curve$k_2$shared_cfm_mean_ed))
+  r <- read_report("outputs/scientific_revision_20260922/population/report.json")
+  s <- Filter(function(x) x$method == "Shared CFM", r$curve$by_seed)
+  summary <- Filter(function(x) x$method == "Shared CFM", r$curve$summary)[[1]]
+  a <- data.frame(k = rep(1:2, each = length(s)), seed = rep(chr(s, "seed"), 2),
+    value = c(num(s, "k1_ed"), num(s, "k2_ed")))
+  fixed <- a[a$seed == "0", ]
   pa <- ggplot(a, aes(k, value)) + geom_line(data = fixed, colour = NAVY, linewidth = .6) +
     geom_point(aes(shape = seed), size = 2, colour = BLUE) +
     scale_shape_manual(values = c(16, 17, 15), name = "Seed") +
     scale_x_continuous(breaks = 1:2, labels = c("k = 1", "k = 2"), limits = c(.7, 2.3)) +
-    labs(x = NULL, y = "Held-out energy distance") + theme(legend.title = element_text(size = 7, colour = "black", face = "bold"))
-  b <- data.frame(seed = names(s$per_seed), reduction = vector(s$reduction_across_seeds$values),
-    low = r$aggregate$donor_block_bootstrap_95_ci[[1]], high = r$aggregate$donor_block_bootstrap_95_ci[[2]],
-    mean = r$aggregate$mean_reduction_across_donor_blocks)
+    labs(x = NULL, y = "ED in common reference coordinates") + theme(legend.title = element_text(size = 7, colour = "black", face = "plain"))
+  b <- data.frame(seed = chr(s, "seed"), reduction = num(s, "reduction"),
+    low = summary$descriptive_block_range_lower, high = summary$descriptive_block_range_upper,
+    mean = summary$mean_reduction)
   pb <- ggplot(b, aes(seed, reduction)) +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = b$low[1], ymax = b$high[1], fill = "#DFEAF1", colour = NA) +
     geom_hline(yintercept = 0, colour = GRAY, linewidth = .3) +
     geom_hline(yintercept = b$mean[1], colour = NAVY, linewidth = .55) +
-    geom_point(size = 2.2, colour = ORANGE) + coord_cartesian(ylim = c(-.04, .39)) +
+    geom_point(size = 2.2, colour = ORANGE) +
     labs(x = "Training seed", y = "ED reduction (k=1 − k=2)")
   draw_figure("figure6_donor_curve_stability", list(panel(pa, "Donor curve", a),
     panel(pb, "Seed stability", b)), height = 70)
@@ -257,7 +300,8 @@ selected <- if (length(requested)) requested else names_all
 if (!all(selected %in% names_all)) stop("Unknown figure name")
 for (name in selected) get(name, mode = "function")()
 manifest <- list(renderer = "R + ggplot2/grid + tikzDevice + XeLaTeX", font = "Arial",
-  text_colour = "#000000", text_weight = "bold",
+  text_colour = "#000000", text_weight = "regular", panel_label_weight = "bold",
+  panel_title_alignment = "panel-centred",
   base_font_pt = 8, tick_font_pt = 7.5, label_font_pt = 11, journal_width_mm = 180,
   figures = figures, sources = sources, R = R.version.string,
   packages = lapply(c("ggplot2", "tikzDevice", "jsonlite", "digest"), function(p) list(package = p, version = as.character(packageVersion(p)))),
@@ -265,6 +309,7 @@ manifest <- list(renderer = "R + ggplot2/grid + tikzDevice + XeLaTeX", font = "A
     function(f) digest::digest(file = file.path(ROOT, "manuscripts/r_tikz", f), algo = "sha256")),
     paste0("manuscripts/r_tikz/", c("temporal_design.tikz"))),
   script_sha256 = digest::digest(file = normalizePath(script), algo = "sha256"))
-manifest$auxiliary_sources <- setNames(list(digest::digest(file=file.path(ROOT,"manuscripts/r_tikz/biological_figures.R"),algo="sha256")),"manuscripts/r_tikz/biological_figures.R")
+auxiliary <- c("manuscripts/r_tikz/biological_figures.R", "manuscripts/r_tikz/panel_a.tex")
+manifest$auxiliary_sources <- setNames(lapply(auxiliary,function(f) digest::digest(file=file.path(ROOT,f),algo="sha256")),auxiliary)
 write_json(manifest, file.path(BUILD, "manifest.json"), auto_unbox = TRUE, pretty = TRUE, digits = NA)
 writeLines(capture.output(sessionInfo()), file.path(BUILD, "sessionInfo.txt"))

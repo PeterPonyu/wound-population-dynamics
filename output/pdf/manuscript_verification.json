@@ -1,0 +1,233 @@
+{
+  "wound_population_dynamics": {
+    "pages": 25,
+    "figures": [
+      {
+        "figure": 1,
+        "first_citation_page": 8,
+        "figure_page": 9
+      },
+      {
+        "figure": 2,
+        "first_citation_page": 10,
+        "figure_page": 10
+      },
+      {
+        "figure": 3,
+        "first_citation_page": 10,
+        "figure_page": 11
+      },
+      {
+        "figure": 4,
+        "first_citation_page": 12,
+        "figure_page": 12
+      },
+      {
+        "figure": 5,
+        "first_citation_page": 12,
+        "figure_page": 13
+      },
+      {
+        "figure": 6,
+        "first_citation_page": 13,
+        "figure_page": 13
+      },
+      {
+        "figure": 7,
+        "first_citation_page": 14,
+        "figure_page": 15
+      }
+    ],
+    "raster_objects": 0,
+    "fonts": [
+      "CCTIDA+TeXGyreTermes-Bold-Identity-H",
+      "CWKLIF+Arial-BoldMT",
+      "DJJGAS+ArialMT",
+      "EDDTSN+Arial-BoldMT",
+      "ERPYRJ+TeXGyreTermesMath-Regular-Identity-H",
+      "FYJDHR+Arial-BoldMT",
+      "GUNQPJ+ArialMT",
+      "GVATJN+Arial-BoldMT",
+      "IVUDDY+ArialMT",
+      "JFIWEF+ArialMT",
+      "KXCYVM+LMMono9-Regular-Identity-H",
+      "MFBHQX+LMMono10-Regular-Identity-H",
+      "SSBZCX+TeXGyreTermes-Regular-Identity-H",
+      "UWRZYG+ArialMT",
+      "XYMMOS+ArialMT",
+      "ZKJXUA+ArialMT"
+    ],
+    "figure1_tissue": {
+      "filled_dermal_sections": 4,
+      "required_labels": [
+        "Intact skin",
+        "Day 1",
+        "Day 7",
+        "Day 30",
+        "Donor A",
+        "Donor B",
+        "Donor C",
+        "7,002-gene input",
+        "5,383 covered",
+        "Frozen",
+        "Train-only",
+        "Shared CFM",
+        "Product endpoints",
+        "RK4 flow",
+        "marginal test",
+        "held from fitting"
+      ]
+    },
+    "page_bottom_gaps": [
+      {
+        "page": 1,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 2,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 3,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 4,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 5,
+        "bottom_gap_pt": 42.1
+      },
+      {
+        "page": 6,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 7,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 8,
+        "bottom_gap_pt": 3.4
+      },
+      {
+        "page": 9,
+        "bottom_gap_pt": 27.7
+      },
+      {
+        "page": 10,
+        "bottom_gap_pt": 3.4
+      },
+      {
+        "page": 11,
+        "bottom_gap_pt": 9.9
+      },
+      {
+        "page": 12,
+        "bottom_gap_pt": 35.4
+      },
+      {
+        "page": 13,
+        "bottom_gap_pt": 16.5
+      },
+      {
+        "page": 14,
+        "bottom_gap_pt": 162.8
+      },
+      {
+        "page": 15,
+        "bottom_gap_pt": 13.1
+      },
+      {
+        "page": 16,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 17,
+        "bottom_gap_pt": 3.9
+      },
+      {
+        "page": 18,
+        "bottom_gap_pt": 9.7
+      },
+      {
+        "page": 19,
+        "bottom_gap_pt": 0
+      },
+      {
+        "page": 20,
+        "bottom_gap_pt": 21.3
+      },
+      {
+        "page": 21,
+        "bottom_gap_pt": 42.3
+      },
+      {
+        "page": 22,
+        "bottom_gap_pt": 85.4
+      },
+      {
+        "page": 23,
+        "bottom_gap_pt": 64.1
+      },
+      {
+        "page": 24,
+        "bottom_gap_pt": 77.6
+      },
+      {
+        "page": 25,
+        "bottom_gap_pt": 126.9
+      }
+    ],
+    "resolved_internal_links": 184,
+    "references": 41,
+    "first_citation_order_verified": true,
+    "reference_keys": [
+      "wilkinson2020",
+      "rognoni2018",
+      "shook2018",
+      "armstrong2017",
+      "weinreb2018",
+      "weinreb2020",
+      "saelens2019",
+      "lamanno2018",
+      "bergen2020",
+      "lange2022",
+      "schiebinger2019",
+      "peyre2019",
+      "chen2018ode",
+      "tong2020trajectory",
+      "lipman2023",
+      "tong2023",
+      "lipman2024guide",
+      "benamou2000",
+      "cuturi2013",
+      "flamary2021",
+      "vinyard2025",
+      "bunne2023",
+      "roberts2017",
+      "heumos2023",
+      "lopez2018",
+      "luecken2022",
+      "szekely2013",
+      "sejdinovic2013",
+      "zimmerman2021",
+      "varma2006",
+      "cawley2010",
+      "vabalas2019",
+      "liu2025_wound",
+      "geo_gse241132",
+      "theocharidis2022",
+      "geo_gse326622",
+      "huang2022visualization",
+      "lavenant2021",
+      "hairer1993",
+      "efron1993bootstrap",
+      "bengio2004"
+    ],
+    "equations": 20,
+    "tables": 27,
+    "sha256": "083b7f64ad8e0e9c9d3032d669a13ed1f5b78f0d65a0907b22851f914a01a870"
+  }
+}

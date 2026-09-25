@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Infer donor count sensitivity."""
+"""Uncertainty summary for the two-point donor-count learning curve.
+
+The upstream seed-stability experiment already contains all fits.  This
+script does not train another model.  It pairs k=1 and k=2 runs by held-out
+donor and training seed, then reports donor-block and seed resampling intervals.
+With only k=1 and k=2, no plateau or required donor count is estimable.
+"""
 from __future__ import annotations
 import argparse
 import hashlib

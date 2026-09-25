@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Summarize mouse model arms."""
+"""Aggregate the repaired POD7 audit across the three mouse model arms.
+
+The source reports are independent computational runs of the same frozen human
+encoder and held-out-timepoint protocol.  This script performs no refitting and
+does not pool cells as biological replicates; it only checks protocol
+compatibility and presents the arm-level results together.
+"""
 from __future__ import annotations
 import argparse
 import hashlib

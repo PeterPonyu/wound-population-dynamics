@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
-"""Population flow."""
+"""
+Conditional flow matching with linear endpoint paths and fixed-step integration.
+
+Mathematical Formulation:
+- Source distribution: z_0 ~ N(0, I) or initial state z_early
+- Target distribution: an observed endpoint distribution
+- Linear conditional probability path on the unit interval:
+    z_t = (1 - t) * z_0 + t * z_1,  t in [0, 1]
+    Target velocity: u_t(z_t | z_0, z_1) = z_1 - z_0
+- Flow matching objective:
+    L_CFM(theta) = E_{t ~ U(0,1), z_0, z_1} [ || v_theta(z_t, t) - (z_1 - z_0) ||_2^2 ]
+- Model trajectory integration:
+    dz/dt = v_theta(z, t), solved via Runge-Kutta 4th Order.
+On a segment [a, b], target velocity is (z_1-z_0)/(b-a). The caller
+specifies the endpoint coupling; independent draws are not an optimal
+transport plan. Reconstructed marginals do not identify cell ancestry.
+"""
 import math
 import torch
 import torch.nn as nn

@@ -1,5 +1,5 @@
 % !TEX encoding = UTF-8 Unicode
-\documentclass[10pt]{standalone}\usepackage{tikz}
+\documentclass[10pt]{standalone}\usepackage{tikz,graphicx}
 \usepackage{fontspec}
 \setmainfont{Arial}
 \setsansfont{Arial}\begin{document}
@@ -11,7 +11,9 @@
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.90] at (149.38,181.35) {\bfseries A Held-out donor};
+\node[text=drawColor,anchor=base west,inner sep=0pt, outer sep=0pt, scale=  1.10] at (  8.54,179.91) {\bfseries A};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.90] at (149.38,179.92) {Held-out donor};
 \end{scope}
 \begin{scope}
 \path[clip] (  8.54,  4.27) rectangle (290.22,169.86);
@@ -39,22 +41,25 @@
 	(286.80,160.52);
 \definecolor{fillColor}{RGB}{115,119,123}
 
-\path[fill=fillColor] ( 50.37, 33.43) rectangle ( 73.66,158.49);
+\path[fill=fillColor] ( 48.65, 33.43) rectangle ( 68.69,158.49);
 \definecolor{fillColor}{RGB}{35,78,112}
 
-\path[fill=fillColor] ( 90.51, 33.43) rectangle (113.80, 66.87);
+\path[fill=fillColor] ( 83.21, 33.43) rectangle (103.26, 66.87);
 \definecolor{fillColor}{RGB}{76,120,168}
 
-\path[fill=fillColor] (130.66, 33.43) rectangle (153.94, 68.89);
+\path[fill=fillColor] (117.78, 33.43) rectangle (137.83, 68.89);
 \definecolor{fillColor}{RGB}{31,138,138}
 
-\path[fill=fillColor] (170.80, 33.43) rectangle (194.08, 77.04);
+\path[fill=fillColor] (152.34, 33.43) rectangle (172.39, 77.04);
 \definecolor{fillColor}{RGB}{107,76,154}
 
-\path[fill=fillColor] (210.94, 33.43) rectangle (234.22, 85.76);
+\path[fill=fillColor] (186.91, 33.43) rectangle (206.96, 85.76);
 \definecolor{fillColor}{RGB}{196,106,27}
 
-\path[fill=fillColor] (251.08, 33.43) rectangle (274.36, 95.14);
+\path[fill=fillColor] (221.47, 33.43) rectangle (241.52, 95.14);
+\definecolor{fillColor}{RGB}{46,125,50}
+
+\path[fill=fillColor] (256.04, 33.43) rectangle (276.09, 48.83);
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
@@ -67,13 +72,13 @@
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49, 30.74) {\bfseries 0.0};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49, 30.74) {0.0};
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49, 73.11) {\bfseries 0.5};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49, 73.11) {0.5};
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49,115.47) {\bfseries 1.0};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49,115.47) {1.0};
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49,157.84) {\bfseries 1.5};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 33.49,157.84) {1.5};
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
@@ -102,61 +107,70 @@
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{115,119,123}
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] ( 62.01, 24.33) --
-	( 62.01, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] ( 58.67, 24.33) --
+	( 58.67, 27.17);
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] (102.16, 24.33) --
-	(102.16, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] ( 93.24, 24.33) --
+	( 93.24, 27.17);
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] (142.30, 24.33) --
-	(142.30, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] (127.80, 24.33) --
+	(127.80, 27.17);
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] (182.44, 24.33) --
-	(182.44, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] (162.37, 24.33) --
+	(162.37, 27.17);
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] (222.58, 24.33) --
-	(222.58, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] (196.93, 24.33) --
+	(196.93, 27.17);
 
-\path[draw=drawColor,line width= 0.3pt,line join=round] (262.72, 24.33) --
-	(262.72, 27.17);
+\path[draw=drawColor,line width= 0.3pt,line join=round] (231.50, 24.33) --
+	(231.50, 27.17);
+
+\path[draw=drawColor,line width= 0.3pt,line join=round] (266.06, 24.33) --
+	(266.06, 27.17);
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 62.01, 17.36) {\bfseries Stay-};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 58.67, 17.36) {Stay-};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 62.01,  9.26) {\bfseries still};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 58.67,  9.26) {still};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (102.16, 17.36) {\bfseries Shared};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 93.24, 17.36) {Shared};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (102.16,  9.26) {\bfseries CFM};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 93.24,  9.26) {CFM};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (142.30, 17.36) {\bfseries Mean};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (127.80, 17.36) {Mean};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (142.30,  9.26) {\bfseries shift};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (127.80,  9.26) {shift};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (182.44, 17.36) {\bfseries Nearest};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (162.37, 17.36) {Nearest};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (182.44,  9.26) {\bfseries donor};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (162.37,  9.26) {donor};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (222.58, 17.36) {\bfseries Cond.};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (196.93, 17.36) {Cond.};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (222.58,  9.26) {\bfseries CFM};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (196.93,  9.26) {CFM};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (262.72, 17.36) {\bfseries OT};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (231.50, 17.36) {OT};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (266.06, 17.36) {Target};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (266.06,  9.26) {marginal};
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.80] at ( 17.68, 95.96) {\bfseries Mean energy distance};
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.80] at ( 17.68, 95.96) {Mean energy distance};
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.90] at (404.03,181.35) {\bfseries B Training donors};
+\node[text=drawColor,anchor=base west,inner sep=0pt, outer sep=0pt, scale=  1.10] at (304.44,179.91) {\bfseries B};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.90] at (404.03,179.92) {Training donors};
 \end{scope}
 \begin{scope}
 \path[clip] (304.44,  4.27) rectangle (503.61,169.86);
@@ -236,11 +250,11 @@
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39, 56.76) {\bfseries 0.1};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39, 56.76) {0.1};
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39,104.00) {\bfseries 0.2};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39,104.00) {0.2};
 
-\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39,151.25) {\bfseries 0.3};
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (329.39,151.25) {0.3};
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
@@ -276,15 +290,15 @@
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (379.21,  9.26) {\bfseries Shared};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (379.21,  9.26) {Shared};
 
-\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (454.83,  9.26) {\bfseries Conditioned};
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.75] at (454.83,  9.26) {Conditioned};
 \end{scope}
 \begin{scope}
 \path[clip] (  0.00,  0.00) rectangle (512.15,193.48);
 \definecolor{drawColor}{RGB}{0,0,0}
 
-\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.80] at (313.59, 91.91) {\bfseries Energy distance};
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  0.80] at (313.59, 91.91) {Energy distance};
 \end{scope}
 \end{tikzpicture}
 

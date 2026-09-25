@@ -1,0 +1,201 @@
+{
+  "scope": "Study-specific report coverage with transitive superseded_by provenance. Statuses, historical destinations and interpretations retain their native meaning; sha256 binds exported bytes and native_sha256 binds the producing snapshot. A replacement retained only for provenance is not a current claim of this study.",
+  "entries": [
+    {
+      "source": "outputs/analysis/donor_conditioned_benchmark/report.json",
+      "sha256": "1f66a4585769b9d30aba453a35249b60d44590e84d1e8f097817a44a9f1e5930",
+      "current_use": "Unchanged historical fitted-method and conditioning comparisons, including P2-C05-CONDITIONING. The added matched target-marginal values in P2-C05 and P2-REV-MARGINAL come from the 20260922 historical_benchmark report; this is not their source.",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 5; Tables tab:p2methods, tab:p2methodsbydonor, tab:p2insample",
+      "interpretation": "All six methods and all six training-donor comparisons retained.",
+      "native_sha256": "e8e5098fce9bdf590c12441553df8241831ceed58805f8f8bdf87883792f04a3"
+    },
+    {
+      "source": "outputs/analysis/donor_count_curve/report.json",
+      "sha256": "21b36d1cfacf310a3986fe58e67fca532a2f843bb49907b94604a0f19e44e86f",
+      "superseded_by": "outputs/scientific_revision_20260922/population/report.json",
+      "current_use": "historical_only",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 6; Table tab:p2seedcurve",
+      "interpretation": "Shared CFM and mean-displacement count controls retained.",
+      "native_sha256": "139ea428007313c4dd5f9529cd02eef7ebe5fb7e3cc41d9a4a7b2658a89c27a0"
+    },
+    {
+      "source": "outputs/analysis/donor_curve_inference/report.json",
+      "sha256": "070f593d8a7993b1edd2056af35631246fb851519bf2670f9459154487370607",
+      "superseded_by": "outputs/scientific_revision_20260922/population/report.json",
+      "current_use": "historical_only",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 6; Table tab:p2curve",
+      "interpretation": "Three held-donor blocks after averaging seeds; no plateau inference.",
+      "native_sha256": "9b3712d449dcbf9336661feff7728a064afd7398d3e913d47dc54f50cf321c2e"
+    },
+    {
+      "source": "outputs/analysis/donor_curve_seed_stability/report.json",
+      "sha256": "0c79ef90263d3047f5df6e8f4d53354d1170048e074c4095d2b28862fc749ef4",
+      "superseded_by": "outputs/scientific_revision_20260922/population/report.json",
+      "current_use": "historical_only",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 6; Tables tab:p2seedcurve and tab:p2seedconfigs",
+      "interpretation": "All seeds and all nine configurations; training-SD/split-half ratio retained.",
+      "native_sha256": "a054c725a776de871448f343b55634b19c3739c29c98f7c3a775e0289535bfbe"
+    },
+    {
+      "source": "outputs/analysis/donor_geometry_inference/report.json",
+      "sha256": "c390b318495616ce133308f76253387af5b510038a1773ba72b945ddf532c505",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 2C; Table tab:p2geometrytable",
+      "interpretation": "Descriptive paired-distance and cosine intervals.",
+      "native_sha256": "20d8558437bc746f7f2985566f3fc3c493428c1b5e8639018e548f0ddce3fe79"
+    },
+    {
+      "source": "outputs/analysis/donor_transfer_flow/report.json",
+      "sha256": "0eaa760e16ba528047996060acdec84b45c8d45fd6eda10ab45df0c42ae8102d",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 2; Table tab:p2folds; geometry text",
+      "interpretation": "All donor-transfer errors and displacement alignment retained.",
+      "native_sha256": "2f5c7ea9a3ca833d65b35f1b156378ab8b4b8707f1cf3ef92be60b0cd0ee77cd"
+    },
+    {
+      "source": "outputs/analysis/human_temporal_flow/report.json",
+      "sha256": "7c55cfb13f10c3aa2046ca4a31aeba654b1eb2a9b21a3fbe89541753fb786f57",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 2; Table tab:p2folds",
+      "interpretation": "All drop-one-donor retained-pair results now numeric; not confused with donor transfer.",
+      "native_sha256": "d1ce309aba4978e76d28d178b6d025303f8ac3402fb5ab9fefdb80b063698b6c"
+    },
+    {
+      "source": "outputs/analysis/mouse_all_arms_pod7_audit/report.json",
+      "sha256": "d5c1faaf864fef8f7a0814db1fa362288e601093484d75aa5626164c02078143",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 7; Tables tab:p2mouse and tab:p2mousecounts",
+      "interpretation": "All three arms, source/target cell counts and split-half distances retained.",
+      "native_sha256": "5b43af1181ff46bafb3b42fd9f4bbf530481cc9361af8e14881f0677b44b9538"
+    },
+    {
+      "source": "outputs/analysis/mouse_temporal_flow/report.json",
+      "sha256": "14a61ee50de80892cd111ca100a60ed32fe5d38fec2a3f759722be2676dcb349",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 7; Tables tab:p2mouse and tab:p2mousecounts",
+      "interpretation": "NDB included through the all-arm audit; source report retained.",
+      "native_sha256": "00dcd531d3b02937b731454a327bf7d6370264a095a5b3b05ebdaecb13823aab"
+    },
+    {
+      "source": "outputs/analysis/mouse_temporal_flow_GDB/report.json",
+      "sha256": "6969d81646c3558c549b5540611b75cc58e8bfcb77e903873ad6567cd34fa571",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 7; Tables tab:p2mouse and tab:p2mousecounts",
+      "interpretation": "GDB included through the all-arm audit.",
+      "native_sha256": "bf8a79b3eb1b01dc75a466ad23586729ccbb8a62fa90ed8482d65ec562170879"
+    },
+    {
+      "source": "outputs/analysis/mouse_temporal_flow_PDB/report.json",
+      "sha256": "17004a6c8b66a146bf25442be3bd26c3ebc1218c5929f371bec98313cc408b9a",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 7; Tables tab:p2mouse and tab:p2mousecounts",
+      "interpretation": "PDB included through the all-arm audit; adverse ordering check retained.",
+      "native_sha256": "47990dcfb7f80dcd7531244fd2e3fe740744a6e5b0c57b74c3ce6f843a3c2595"
+    },
+    {
+      "source": "outputs/analysis/time_parameterisation/report.json",
+      "sha256": "555165cddb5c1fbde7082199dab2bb95f62e57abc09e582fbe19a12fcd0f0ce8",
+      "status": "included",
+      "manuscript_destination": "P2 historical table tab:p2axes only; replaced in Figure 4",
+      "interpretation": "All four axes; nearest 60-step grid-point convention now explicit. Full scans in figure source CSV.",
+      "current_use": "historical_comparison_only",
+      "superseded_by": "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json",
+      "native_sha256": "827f5a89b638005c2fa1d3078d37ea2ac4fda5e54df31f6233bd457ff72c4f01"
+    },
+    {
+      "source": "outputs/robustness_extensions/report.json",
+      "sha256": "27c7b6ed82ca3fc0c7dbe33385f20c4b684a778fefeea775f21d9fa76ddba9e1",
+      "superseded_by": "outputs/scientific_revision_20260922/measurement/robustness_extensions/report.json",
+      "current_use": "P2 temporal numerical/sampling diagnostics remain unchanged and support temporal_robustness_extension. The patient section is historical; current P1 patient results use the replacement measurement report.",
+      "status": "included",
+      "manuscript_destination": "P1 patient robustness table; P2 numerical resolution and evaluation-sampling tables",
+      "interpretation": "New retrospective sensitivity analyses; original results are preserved and no new biological replication is claimed.",
+      "native_sha256": "a967adc2481b9ebefae294ca7e210aaa4ad1cbbc298e7224e20cf0afc7301d95"
+    },
+    {
+      "source": "outputs/mathematical_audit/population/report.json",
+      "sha256": "d33acbb9dff60f9d26aa8b2119d76a8d66bcc579fc18a15ccf6ad796bef06981",
+      "status": "included",
+      "manuscript_destination": "P2 Results and Methods; Table tab:p2weights",
+      "interpretation": "Mathematical verification and conditional sensitivity of saved observations; no new biological replication.",
+      "native_sha256": "d33acbb9dff60f9d26aa8b2119d76a8d66bcc579fc18a15ccf6ad796bef06981"
+    },
+    {
+      "source": "outputs/biological_expansion/population/report.json",
+      "sha256": "1aa93a9f0bd38959f50e03e24f9d3250d904112f8f55fc8df2525f5faf0be862",
+      "status": "included",
+      "manuscript_destination": "P2 Results and Methods; Figures 1 and 3; Tables tab:p2biologicalcounts, tab:p2interpolation and tab:p2interpolationdonors",
+      "interpretation": "Observed fibroblast states and two global missing-time comparisons against simple baselines; three donors, three computational seeds, no individual cell tracking.",
+      "native_sha256": "601492c1682c68ac673ccec93feb5fd060ece3be8f229457d06038a98c09aecd"
+    },
+    {
+      "source": "outputs/computational_extension/population/report.json",
+      "sha256": "efd6fa981dd8642f63df8c1337809853a947f1ece8445cbb6ba0f3c4966f8290",
+      "status": "included",
+      "manuscript_destination": "P2 Methods endpoint dispersion; Results interpolation; Figure 3A-B,E-F; Tables tab:p2shapediagnostics and tab:p2matchedsampling",
+      "interpretation": "Endpoint location-scale baseline, full-dimensional shape diagnostics and 50 matched cell-count evaluations per holdout; predictions remain frozen and target information enters only evaluation.",
+      "native_sha256": "01be481bcb080d12d92cfba204ba2d44fac7911735000854b77f8a3d9013b409"
+    },
+    {
+      "source": "outputs/scientific_revision_20260922/measurement/robustness_extensions/report.json",
+      "sha256": "fff69b44b76c97fabee1d4ff1a9114fef6d13a3e67f9a14db688b4e9b78a457e",
+      "status": "partially_included",
+      "manuscript_destination": "P1 patient robustness table; patient_robustness_extension",
+      "interpretation": "Current patient semantic bootstrap and omission summaries plus all-cell influence ranges. Only the patient section is used here; unchanged temporal diagnostics retain their historical P2 source.",
+      "native_sha256": "2e615b5459c8aef0d1330f4278667599ab234a1087526c63169f3793c64f13dd"
+    },
+    {
+      "source": "outputs/scientific_revision_20260922/population/historical_benchmark/report.json",
+      "sha256": "daad6c8822b00c6a94a61c51e8a853bc511b6aa626c7bfd3def2ab1c040552bb",
+      "status": "included",
+      "manuscript_destination": "P2 held-donor matched marginal baseline; P2-C05 and P2-REV-MARGINAL",
+      "interpretation": "Added equal-donor target-marginal draws scored against historical shared predictions; PWH26/PWH27 favor the marginal but PWH28 favors shared. Neither universal ranking nor new biological donors.",
+      "native_sha256": "daad6c8822b00c6a94a61c51e8a853bc511b6aa626c7bfd3def2ab1c040552bb"
+    },
+    {
+      "source": "outputs/scientific_revision_20260922/population/report.json",
+      "sha256": "17d5c38eef737f3bad2113e378bf85cfd809f3eeec2792e436cf1714a889dd4a",
+      "status": "included",
+      "manuscript_destination": "P2 common-reference count/seed/block audit; Tables tab:p2seedcurve, tab:p2seedconfigs and tab:p2curve; P2-C06/C07/C10/C12 and P2-REV-COMMONREF",
+      "interpretation": "27 fits with three computational seeds and three biological donors; shared-field and simple-control errors use the common held-donor-excluding reference. Block ranges are descriptive and two count levels do not identify a plateau.",
+      "native_sha256": "84a3ee6264ae67c355cde8546cd739b484b7906e5c9068283aca70ef249032f0"
+    },
+    {
+      "source": "outputs/scientific_revision_20260922/source_ablation/report.json",
+      "sha256": "00542c46079b47f2a514545a471afddfa2e5cb9e5d51e8dff49d7d4421548afb",
+      "current_use": "P2-REV-SOURCE-ABLATION retains the earlier matched mixed-source diagnostic at the original held-source particle counts. The 20260923 200-particle individual-versus-mixed audit is a separate comparison, not a replacement of these unchanged numbers.",
+      "status": "included",
+      "manuscript_destination": "P2 source-information replacement sensitivity; P2-REV-SOURCE-ABLATION",
+      "interpretation": "Nine saved fields and 50 computational draws each, no new fits or independent donors. Source substitution reduces aggregate error but PWH27 favors real source, leaving consistent incremental source value unestablished.",
+      "native_sha256": "00542c46079b47f2a514545a471afddfa2e5cb9e5d51e8dff49d7d4421548afb"
+    },
+    {
+      "source": "outputs/scientific_revision_20260923/population_mixture/report.json",
+      "sha256": "857f1039ca40b1ebe24bc197e6e588d4de21063930c01ecc4cf2d3eaa3d52a87",
+      "status": "included",
+      "manuscript_destination": "P2 Equation eq:p2mixture; Tables tab:p2mixtureidentity and tab:p2mixtureaudit; P2-MIXTURE-IDENTITY and P2-INDIVIDUAL-SOURCE",
+      "interpretation": "Exact target-marginal convexity identity and separate 200-particle individual-source/mixture sensitivity on three donors and nine saved fields. PWH28 real source beats either individual substitution but not their mixture. Equal-count individual-minus-mixture contrast is not the exact identity on actual mixture component subsets. No new training, independent donors, p values or confidence intervals; verified arithmetic does not establish incremental donor information.",
+      "native_sha256": "4331b884dc797e99bfa7b0624ad843587eca9a6e4f2dd08ed7b150a20dc9ee45"
+    },
+    {
+      "source": "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json",
+      "sha256": "b16f13a09871ed23c191d3c538ae95f8c5ae2f13e2713134fc44e2b55cff5e03",
+      "status": "included",
+      "manuscript_destination": "P2 Figure 4; tab:p2pairedclock; Methods/Results",
+      "interpretation": "Complete paired random-stream exact-time grid; centroid uses the same donor future day30, a retrospective interpolation task. The historical nearest-grid scan is separate. Seed ranges are not biological confidence intervals; no target-guided best clock is selected. This is not clinical validation and does not close the paired-method comparison.",
+      "native_sha256": "b16f13a09871ed23c191d3c538ae95f8c5ae2f13e2713134fc44e2b55cff5e03"
+    },
+    {
+      "source": "outputs/scientific_revision_20260925/population_observable/final-01/report.json",
+      "sha256": "cfb615a1d2a8f157e7b8e936164961015da70a72575cbe64fc8f49d86b04c5c2",
+      "status": "included",
+      "manuscript_destination": "P2 Methods/Results; tab:p2observable; tab:p2decoderreference",
+      "interpretation": "Equal-cell common-panel mean expression against actual held-donor count-derived proportions, not decoded truth. These are not absolute counts and not biological confidence intervals. Decoder reconstruction is not a mathematical lower error bound. POP05 remains partially addressed; this is not clinical or external validation.",
+      "native_sha256": "cfb615a1d2a8f157e7b8e936164961015da70a72575cbe64fc8f49d86b04c5c2"
+    }
+  ]
+}

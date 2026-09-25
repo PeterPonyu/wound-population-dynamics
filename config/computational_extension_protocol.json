@@ -1,0 +1,20 @@
+{
+  "status": "Retrospective sensitivity protocol fixed before this extension was computed; not prospective registration",
+  "population": {
+    "tasks": [
+      "Wound7",
+      "Wound1"
+    ],
+    "inputs": "Existing frozen 15-dimensional coordinates and predictions for seeds 0, 1, 2; target excluded from standardization and predictor construction",
+    "additional_predictor": "Within-donor diagonal location-scale interpolation: interpolate endpoint means and coordinate standard deviations at the fixed rank-time alpha=0.5; preserve source standardized residuals; empirical standard deviations use ddof=0; source coordinates below 1e-8 standard deviation remain centered at the interpolated mean",
+    "metrics": [
+      "full empirical energy distance",
+      "energy distance after centering each distribution by its own mean",
+      "Euclidean centroid error",
+      "predicted-to-target total coordinate variance ratio"
+    ],
+    "matched_sampling": "50 paired draws of 200 source and 200 target cells without replacement per donor/task, seed 29; same indices for all predictors and fit seeds; aggregate donors equally",
+    "interpretation": "Centered energy distance is a separate shape diagnostic, not an additive decomposition of energy distance; target means are used only in evaluation; computational draws and fit seeds do not increase the three-donor sample size"
+  },
+  "historical_reports": "Read-only; write new CSVs and reports to outputs/computational_extension"
+}

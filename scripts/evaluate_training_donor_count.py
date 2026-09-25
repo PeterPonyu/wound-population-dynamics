@@ -1,5 +1,30 @@
 #!/usr/bin/env python3
-"""Evaluate training donor count."""
+"""Is donor count the limiting resource? Measure the first two points.
+
+The retired claim was that population flow fields fail on a new individual
+because the cohort has too few donors. After the barcode-row repair the shared
+field does transfer to every held-out donor, so the resource claim has to be
+re-tested rather than assumed in either direction.
+
+The only falsifiable version available with three donors is a learning curve
+over the number of training donors. For each held-out donor the same protocol
+is run twice: trained on one other donor, and trained on both other donors.
+Everything else is held fixed - segments, steps, batch size, seed, integration,
+energy distance, and the randomized split-half noise floor. The scaler for each
+condition sees only that condition's training donors, so a k=1 run contains
+information from exactly one individual.
+
+A non-neural mean-displacement predictor is run on the identical folds.
+It is a restricted predictor and can also be misspecified. Similar reductions
+do not identify a unique mechanism or prove a neural capacity limitation.
+This historical script scores each training subset in its own standardized
+geometry; absolute cross-k differences confound training and evaluation scale.
+Use the fixed-reference protocol for the current common-scale comparison.
+
+Two points cannot establish a curve shape. The output is a direction and a
+magnitude for the step from one donor to two, plus the explicit statement that
+extrapolating to eight donors from this is not supported.
+"""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -148,7 +173,7 @@ def main() -> int:
         verdict = 'second_donor_reduced_held_out_error'
     else:
         verdict = 'second_donor_increased_held_out_error'
-    report = {'experiment': 'donor_count_learning_curve', 'status': 'completed', 'question': 'Does held-out-donor prediction improve when the training set grows from one donor to two?', 'source': args.source, 'target': args.target, 'donors': donor_list, 'runs': runs, 'curve': curve, 'step_one_to_two_donors': step, 'verdict': verdict, 'scope': {'max_training_donors': 2, 'points_on_curve': 2, 'cohort': 'GSE241132; three healthy volunteers; acute experimental wounds', 'not_supported': ['an extrapolated donor requirement such as >=8', 'a claim that donor count is or is not the binding constraint', 'any transfer to diabetic foot ulcer patients']}, 'protocol': protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'holdout_{d}' for d in donor_list], extra={'paired_same_donor_endpoints': True, 'scaler_uses_only_that_conditions_training_donors': True, 'identical_steps_across_k': True, 'non_neural_control': 'mean displacement over training donors', 'source': args.source, 'target': args.target, 'steps': args.steps, 'batch_size': args.batch_size, 'elapsed_seconds': time.time() - t0})}
+    report = {'experiment': 'donor_count_learning_curve', 'status': 'completed', 'question': 'Does held-out-donor prediction improve when the training set grows from one donor to two?', 'source': args.source, 'target': args.target, 'donors': donor_list, 'runs': runs, 'curve': curve, 'step_one_to_two_donors': step, 'verdict': verdict, 'scope': {'max_training_donors': 2, 'points_on_curve': 2, 'cohort': 'GSE241132; three healthy volunteers; acute experimental wounds', 'not_supported': ['a common-scale absolute error reduction from subset-specific distances', 'an extrapolated donor requirement such as >=8', 'a claim that donor count is or is not the binding constraint', 'any transfer to diabetic foot ulcer patients']}, 'protocol': protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'holdout_{d}' for d in donor_list], extra={'paired_same_donor_endpoints': True, 'scaler_uses_only_that_conditions_training_donors': True, 'identical_steps_across_k': True, 'non_neural_control': 'mean displacement over training donors', 'source': args.source, 'target': args.target, 'steps': args.steps, 'batch_size': args.batch_size, 'elapsed_seconds': time.time() - t0})}
     out = os.path.join(args.output_dir, 'report.json')
     with open(out, 'w') as fh:
         json.dump(report, fh, indent=2, default=str)

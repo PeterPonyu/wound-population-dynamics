@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
-"""Assess training seed stability."""
+"""Does the second training donor still help once training noise is measured?
+
+scripts/evaluate_training_donor_count.py ran each (held-out donor, k) cell once, at seed 0, and reported a
+mean energy-distance reduction of 0.164 from k=1 to k=2 against a noise floor
+of 0.023. That noise floor measures sampling variation inside the held-out
+target, not variation between training runs. A conditional flow matching fit
+is stochastic in its initialisation and minibatch draw, so the reduction is
+only interpretable next to the seed-to-seed spread of the same cell.
+
+This script repeats the whole curve across training seeds with the evaluation
+held fixed: the same paired endpoints, the same energy-distance subsampling
+and the same split-half noise floor. Only network initialisation and minibatch
+sampling change. The deterministic mean-displacement predictor is recomputed
+as an anchor that has no training stochasticity at all.
+
+The question is falsifiable in one direction: if the spread of the k=1 to k=2
+reduction across seeds covers zero, the single-seed result in scripts/evaluate_training_donor_count.py does
+not establish that the second donor helped.
+"""
 from __future__ import annotations
 import argparse
 import hashlib

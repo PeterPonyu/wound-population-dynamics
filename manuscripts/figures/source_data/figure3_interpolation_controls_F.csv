@@ -1,0 +1,7 @@
+"holdout","comparator","draws","flow_minus_comparator_mean","difference_min","difference_max","comparator_lower_count","label"
+"Wound7","Centroid translation",50,0.13999770745938,0.113189675580909,0.171594122659929,50,"Day 7: Centroid translation"
+"Wound7","Location-scale",50,0.110225968935389,0.0846948562037482,0.140547327878487,50,"Day 7: Location-scale"
+"Wound7","Independent bridge",50,-0.11512437332085,-0.157646896885414,-0.0741315533446462,0,"Day 7: Independent bridge"
+"Wound1","Centroid translation",50,0.124341740641441,0.0976691331928767,0.154525008549186,50,"Day 1: Centroid translation"
+"Wound1","Location-scale",50,0.149651059492619,0.119433868901117,0.176272544597954,50,"Day 1: Location-scale"
+"Wound1","Independent bridge",50,-0.040707657781762,-0.0832718777761892,-0.00704334940795004,0,"Day 1: Independent bridge"

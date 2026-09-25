@@ -1,7 +1,5 @@
-# Version 0.3.0
+# Version 0.4.2 — software release
 
-Clarify product endpoint coupling, donor/segment training weights, the weak continuity identity and its regularity conditions, time-coordinate sensitivity and evaluation weights. Correct per-example context masking, distance caps and transport-cost normalization. Add fixed-field equal-donor-mass sensitivity, analytic mathematical tests and the POT dependency already required by the benchmark.
+Export current native code, scientific revision reports, numeric inputs, recursive checkpoints and independent manuscript/figure build dependencies. Clarify product endpoint coupling, donor/segment training weights, the weak continuity identity and its regularity conditions, time-coordinate sensitivity and evaluation weights. Correct per-example context masking, distance caps and transport-cost normalization. Add fixed-field equal-donor-mass sensitivity, analytic mathematical tests and the POT dependency already required by the benchmark.
 
-Both the native manuscript and bibliography have been revised to match the implemented estimands and limits. Correct the wound-repair reference to Wilkinson and Hardman and add method-specific primary references. Original reference reports and frozen models are preserved. New audits use saved inputs; a full raw-count pipeline and all original neural fits were not rerun for this version.
-
-Version 0.1.0 remains available for historical attribution. Software remains MIT; manuscripts and research outputs retain their respective rights.
+Original report bytes and frozen models are preserved as provenance. Packaging does not train models or claim a full raw-count rerun. Historical version 0.3.0 archives remain unchanged. Software remains MIT; manuscripts and research outputs retain their respective rights.

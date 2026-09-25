@@ -1,5 +1,33 @@
 #!/usr/bin/env python3
-"""Evaluate mouse timepoint."""
+"""
+Repaired GSE326622 temporal flow matching experiment.
+
+GSE326622 is the only cohort here with a genuine time axis (POD0/2/7/30 across
+NDB / PDB / GDB mice). With n=1 mouse per model per timepoint it cannot support
+statistical inference, but it can support a *computational* experiment, which
+is what this is: can a latent flow field, trained on a subset of the observed
+timepoints, predict the held-out one?
+
+Two method questions are answered, neither of them about wound biology:
+
+  Q1 CROSS-SPECIES TRANSFER
+     Does the frozen human GSE165816 topic model produce a usable latent for
+     mouse cells when the 7,002-gene panel is mapped by orthologue? Panel
+     coverage and the resulting topic occupancy are reported, not assumed.
+
+  Q2 HELD-OUT TIMEPOINT
+     Train the flow field on POD0 -> POD2 -> POD30 with POD7 withheld, then
+     integrate from POD2 to POD7's position on the time axis and compare the
+     predicted latent distribution against the real POD7 cells.
+     The baseline it must beat is "do not move at all" - i.e. predicting that
+     POD7 looks exactly like POD2. A flow model that cannot beat standing
+     still has learned nothing, and that is the honest failure mode to check.
+
+Time is placed on a rank axis (POD0, 2, 7, 30 -> 0, 1/3, 2/3, 1), not on real
+days.  This repaired run also fits the latent standardisation on training
+timepoints only and uses a random split for the holdout noise floor.  It is a
+method audit on one mouse arm, not a statistical claim about wound healing.
+"""
 import argparse
 import hashlib
 import json

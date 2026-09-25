@@ -1,0 +1,9 @@
+{
+  "status": "release",
+  "version": "0.4.2",
+  "doi": "10.5281/zenodo.22962339",
+  "doi_scope": "software-only; not a manuscript DOI",
+  "repository": "https://github.com/PeterPonyu/wound-population-dynamics",
+  "release_url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/tag/v0.4.2",
+  "archive_record_url": "https://zenodo.org/records/22962339"
+}

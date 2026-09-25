@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Infer donor geometry."""
+"""Uncertainty audit for the acute-human donor/time geometry comparison.
+
+The source reports already contain the pairwise distances and displacement
+directions.  This script adds bootstrap intervals to those descriptive
+summaries without fitting a new flow model.  The analysis is explicitly
+limited to three healthy acute-wound donors and is not a DFU generalization
+test.
+"""
 from __future__ import annotations
 import argparse
 import hashlib

@@ -1,0 +1,209 @@
+{
+  "papers": {
+    "population_dynamics": {
+      "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
+      "claims": [
+        {
+          "id": "P2-C01",
+          "status": "ready",
+          "value": "GSE241132: 3 healthy donors; Skin/Wound1/Wound7/Wound30",
+          "source": "outputs/analysis/human_temporal_flow/report.json",
+          "scope": "acute human wound method test",
+          "allowed_wording": "The human experiment used three healthy donors with four acute-wound time points."
+        },
+        {
+          "id": "P2-C02",
+          "status": "ready",
+          "value": "held-out Wound7 +49.9%; leave-one-donor 3/3",
+          "source": "outputs/analysis/human_temporal_flow/report.json",
+          "scope": "held-out timepoint",
+          "allowed_wording": "Global Wound7 prediction improved by 49.9%; all three drop-one-donor runs improved for the retained donors, not for the omitted donor."
+        },
+        {
+          "id": "P2-C03",
+          "status": "ready",
+          "value": "donor transfer 3/3; mean improvement +75.9%; cosine mean +0.948",
+          "source": "outputs/analysis/donor_transfer_flow/report.json",
+          "scope": "held-out donor acute human cohort",
+          "allowed_wording": "A shared field transferred across the three acute-wound donors under the specified protocol, but this does not establish DFU prediction."
+        },
+        {
+          "id": "P2-C04",
+          "status": "ready",
+          "value": "historical single-seed nearest-grid linear-days improvement -18.2%; retained only in tab:p2axes; current Figure 4 uses P2-PAIRED-CLOCK",
+          "source": "outputs/analysis/time_parameterisation/report.json",
+          "scope": "time-axis ablation",
+          "allowed_wording": "Retained for historical comparison only, not the current Figure 4 and not paired with the revised exact-time fits.",
+          "current_use": "historical_comparison_only",
+          "superseded_by": "P2-PAIRED-CLOCK"
+        },
+        {
+          "id": "P2-C05",
+          "status": "ready",
+          "value": "historical shared CFM mean ED 0.3947; target-marginal matched mean ED 0.1818; target-marginal lower for PWH26/PWH27 but not PWH28",
+          "source": "outputs/scientific_revision_20260922/population/historical_benchmark/report.json",
+          "scope": "historical shared-field benchmark with added matched target-marginal evaluation; not a new fit",
+          "allowed_wording": "The historical shared field and added target-marginal baseline have different donor-specific errors; the marginal baseline is lower on average but not universally."
+        },
+        {
+          "id": "P2-C05-CONDITIONING",
+          "status": "ready",
+          "value": "historical conditioned in-sample gains 6/6; held-out mean ED conditioned 0.6176 versus shared 0.3947",
+          "source": "outputs/analysis/donor_conditioned_benchmark/report.json",
+          "scope": "unchanged historical conditioning comparison split from P2-C05; not a revised fit or independent replication",
+          "allowed_wording": "Conditioned CFM shows 6/6 sample-in gains without a held-out mean advantage over shared CFM in the historical comparison; this does not identify the correct model class."
+        },
+        {
+          "id": "P2-C06",
+          "status": "ready",
+          "value": "common-reference 27-fit shared CFM k=1 mean ED 0.5466; k=2 mean ED 0.3983; mean reduction 0.1483",
+          "source": "outputs/scientific_revision_20260922/population/report.json",
+          "scope": "two-point donor learning curve",
+          "allowed_wording": "Adding a second training donor reduced shared-field mean held-out error under a common scoring reference; simple controls also improved."
+        },
+        {
+          "id": "P2-C07",
+          "status": "ready",
+          "value": "common-reference seed reductions 0.1430-0.1558; max configuration seed range 0.3377; mean within-configuration SD 0.0701",
+          "source": "outputs/scientific_revision_20260922/population/report.json",
+          "scope": "three training seeds",
+          "allowed_wording": "The aggregate common-reference reduction was positive for all three seeds, while individual configurations showed larger run-to-run variation."
+        },
+        {
+          "id": "P2-C08",
+          "status": "ready",
+          "value": "mouse NDB POD7 improvement -1.5%; one animal per time point; panel coverage 59.7%",
+          "source": "outputs/analysis/mouse_temporal_flow/report.json",
+          "scope": "computational mouse audit",
+          "allowed_wording": "The repaired mouse POD7 audit did not beat stay-still by the reported -1.5% margin and is not a species or DFU validation."
+        },
+        {
+          "id": "P2-C09",
+          "status": "exploratory",
+          "value": "Three mouse arms: NDB -1.5%, PDB +32.1% with failed endpoint-distance ordering, GDB +50.6%; 2/3 beat baseline and split-half criterion; 2/3 meet ordering screen",
+          "source": "outputs/analysis/mouse_all_arms_pod7_audit/report.json",
+          "scope": "one-animal-per-timepoint computational arm audit; not statistical inference or DFU validation",
+          "allowed_wording": "The three-arm audit shows model-arm heterogeneity under a common protocol and cannot establish a biological or clinical trajectory."
+        },
+        {
+          "id": "P2-C10",
+          "status": "exploratory",
+          "value": "common-reference donor-block reduction 0.1483; descriptive range [0.0732,0.2727]; plateau unsupported",
+          "source": "outputs/scientific_revision_20260922/population/report.json",
+          "scope": "three held-out donor blocks; two-point curve uncertainty audit",
+          "allowed_wording": "Adding a second donor improved the aggregate common-reference two-point pilot, but the block range and two-point design cannot identify a plateau or required cohort size."
+        },
+        {
+          "id": "P2-C11",
+          "status": "exploratory",
+          "value": "same-donor temporal versus same-time donor median ratio 8.46; bootstrap 95% interval 6.02\u201313.11; mean displacement cosine 0.948 with descriptive interval 0.943\u20130.954",
+          "source": "outputs/analysis/donor_geometry_inference/report.json",
+          "scope": "three healthy acute-wound donors; geometry uncertainty audit",
+          "allowed_wording": "Within this three-donor acute-wound cohort, temporal separation is larger than same-time donor separation and displacement directions are aligned; the interval is descriptive and not a universal donor/time claim."
+        },
+        {
+          "id": "P2-C12",
+          "status": "exploratory",
+          "value": "common-reference mean-displacement k=1 ED 0.5095, k=2 ED 0.4186; reduction 0.0909",
+          "source": "outputs/scientific_revision_20260922/population/report.json",
+          "scope": "Deterministic non-neural control scored in the same common reference across the three-seed, two-point donor-count design; repeated evaluations are not new donors",
+          "allowed_wording": "Adding a second donor also improves mean-displacement prediction, so the observed count benefit is not unique to the neural field."
+        },
+        {
+          "id": "temporal_robustness_extension",
+          "status": "exploratory",
+          "source": "outputs/robustness_extensions/report.json",
+          "claim": "Fixed-field prediction is stable to the tested integration resolutions and evaluation subsamples; no extra independent donors."
+        },
+        {
+          "id": "P2-MATH",
+          "status": "exploratory",
+          "value": "Cell-pooled improvement 49.4000%; equal-donor-mass 49.6939%; donor-specific range 40.0654% to 47.1515%",
+          "source": "outputs/mathematical_audit/population/report.json",
+          "scope": "Same saved pooled time-holdout field and scaler, all source and target cells",
+          "allowed_wording": "Fixed-field improvement persists under equal donor mass; these are not new donor-transfer folds."
+        },
+        {
+          "id": "P2-BIOLOGICAL",
+          "status": "exploratory",
+          "source": "outputs/biological_expansion/population/report.json",
+          "value": "Global day-7 mean donor ED: centroid 0.6674, field 0.8110; day-1 centroid 0.9293, field 1.0571",
+          "scope": "Retrospective global missing-time reconstruction; same-donor future anchor is permitted; three seeds are not donors",
+          "allowed_wording": "Centroid translation has lower mean error than shared flow in both globally missing-time tasks. The separate held-donor ranking does not establish general neural superiority."
+        },
+        {
+          "id": "P2-SHAPE",
+          "status": "exploratory",
+          "source": "outputs/computational_extension/population/report.json",
+          "value": "Location-scale ED 0.6982 at day 7 and 0.9034 at day 1; both deterministic endpoint controls beat flow in all 50 matched cell draws per held time",
+          "scope": "Same three donors and six saved field fits; retrospective endpoint-informed reconstruction",
+          "allowed_wording": "Simple endpoint controls remain competitive under matched evaluation. Centered energy distance shows task-dependent shape errors and is not an additive or causal error decomposition."
+        },
+        {
+          "id": "P2-REV-MARGINAL",
+          "status": "exploratory",
+          "value": "matched target-marginal mean ED 0.1818 versus historical shared 0.3947; PWH28 favors shared field",
+          "source": "outputs/scientific_revision_20260922/population/historical_benchmark/report.json",
+          "scope": "held-donor baseline audit",
+          "allowed_wording": "The target-marginal baseline challenges a universal held-donor method ranking."
+        },
+        {
+          "id": "P2-REV-COMMONREF",
+          "status": "exploratory",
+          "value": "27-fit common-reference shared CFM 0.5466 to 0.3983; 3/3 donor blocks improved",
+          "source": "outputs/scientific_revision_20260922/population/report.json",
+          "scope": "donor-count common-reference audit",
+          "allowed_wording": "Adding a second donor improved the current common-reference pilot, while simple controls also improved."
+        },
+        {
+          "id": "P2-REV-SOURCE-ABLATION",
+          "status": "exploratory",
+          "value": "k=2, three-seed mean ED real held source 0.3983, substituted training Wound1 0.2450, training Wound7 marginal 0.1818; only PWH27 favors real over substituted mean",
+          "source": "outputs/scientific_revision_20260922/source_ablation/report.json",
+          "scope": "Retrospective source-replacement sensitivity of nine saved fields on the same three healthy acute-wound donors; 50 draws per field are computational, not biological replications",
+          "allowed_wording": "In the same-cohort three-seed audit, substituting training-donor source cells reduced aggregate error, with donor-specific heterogeneity; consistent incremental value of the new donor's source has not been established."
+        },
+        {
+          "id": "P2-MIXTURE-IDENTITY",
+          "status": "exploratory",
+          "value": "exact equal-donor target marginal mean ED 0.222199 to 0.167598; reduction 0.054601 = quarter component-pair ED 0.054601; maximum identity residual 2.44e-15; 3 held donors",
+          "source": "outputs/scientific_revision_20260923/population_mixture/report.json",
+          "scope": "Validated empirical energy-distance arithmetic in fixed coordinates; scientific interpretation remains exploratory and uses the same three donors",
+          "allowed_wording": "For equally weighted empirical measures under the unsquared-root energy discrepancy, the mean component error minus mixture error equals one quarter of their mutual discrepancy. The arithmetic identity is verified; it does not establish target-specific information from an additional donor and does not decompose gains from jointly fitted flow fields. No new biological donors, p values or confidence intervals are supplied."
+        },
+        {
+          "id": "P2-INDIVIDUAL-SOURCE",
+          "status": "exploratory",
+          "value": "200-particle audit of 9 saved fits, 50 draws per fit; mean ED real 0.4036, mean individual substituted 0.3075, mixed substituted 0.2527; PWH28 real 0.2043, individual A/B 0.2503/0.2636, mixed 0.1904; real lower than both individual alternatives for PWH27/PWH28; mixed lower than real for PWH26/PWH28",
+          "source": "outputs/scientific_revision_20260923/population_mixture/report.json",
+          "scope": "Same three healthy acute-wound donors and nine saved fields; matched 200-particle predictions and fixed held targets; no new model training or biological replication",
+          "allowed_wording": "Individual source replacement and mixing are distinct comparisons: PWH28 favors its real source over either individual alternative but favors the mixture over its real source. The n-cell individual-error mean minus n-total-cell mixture error is not the exact convexity identity; only the actual mixture-component subsets satisfy that identity. These computational draws do not establish universal absence of source-state value or DFU trajectories; no p values or confidence intervals are supplied."
+        },
+        {
+          "id": "P2-PAIRED-CLOCK",
+          "status": "exploratory",
+          "value": "12 paired exact-time fits; 3 donors; seeds 0/1/2; 8000 steps; rank/days/sqrt_days/log_days flow ED 0.810395/2.154235/0.874603/0.772475; centroid ED 0.666674/0.977479/0.747631/0.665405; unchanged ED 1.474552",
+          "source": "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json",
+          "source_sha256": "b16f13a09871ed23c191d3c538ae95f8c5ae2f13e2713134fc44e2b55cff5e03",
+          "evidence_sha256": {
+            "output_manifest.json": "e8c04c97f0c1bc9b522eb5eb9a0ab1307d7a9661604eb928602394b252bfab18"
+          },
+          "scope": "Complete paired random-stream exact-time grid; centroid uses the same donor future day30, a retrospective interpolation task.",
+          "allowed_wording": "The historical nearest-grid scan is separate. Seed ranges are not biological confidence intervals; no target-guided best clock is selected. This is not clinical validation and does not close the paired-method comparison."
+        },
+        {
+          "id": "P2-OBSERVABLE",
+          "status": "exploratory",
+          "value": "27 saved fits; 3 healthy donors; 12259 observed cells; 5383/7002 genes; no new training; observed-expression TV k1/k2: flow 0.293369/0.282262; mean displacement 0.288159/0.282494; decoded target marginal 0.258958/0.254613; observed target marginal 0.127875/0.111475; decoded persistence 0.352886/0.352886; observed persistence 0.342123/0.342123",
+          "source": "outputs/scientific_revision_20260925/population_observable/final-01/report.json",
+          "source_sha256": "cfb615a1d2a8f157e7b8e936164961015da70a72575cbe64fc8f49d86b04c5c2",
+          "evidence_sha256": {
+            "output_manifest.json": "3aa509447b714cfd2ad99eb00bd5c353199e374f7d10f758ad915903cb676e7e"
+          },
+          "scope": "Equal-cell common-panel mean expression against actual held-donor count-derived proportions, not decoded truth.",
+          "allowed_wording": "These are not absolute counts and not biological confidence intervals. Decoder reconstruction is not a mathematical lower error bound. POP05 remains partially addressed; this is not clinical or external validation."
+        }
+      ]
+    }
+  }
+}

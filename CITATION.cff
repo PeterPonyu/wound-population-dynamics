@@ -1,20 +1,24 @@
 cff-version: 1.2.0
-message: Please cite this software when using these analyses.
+message: Cite this software release using the metadata below. The DOI identifies software,
+  not the manuscript.
 type: software
-title: Held-out wound single-cell population dynamics
+title: 'Conditional flow matching in acute human wounds: analysis software'
 authors:
 - family-names: Fu
   given-names: Zeyu
-version: 0.3.0
-doi: 10.5281/zenodo.22884874
+version: 0.4.2
 license: MIT
-abstract: Software for reconstructing a held-out acute human wound distribution and
-  evaluating transfer to held-out donors. The study compares time coordinates, neural
-  and non-neural predictors, training-donor counts, training seeds, mouse model arms,
-  numerical integration and evaluation sampling. Three human donors provide biological
-  replication; the study does not establish diabetic-foot-ulcer prognosis.
+abstract: Analysis software for a three-donor audit of population reconstruction by
+  conditional flow matching in acute human wounds. Product-coupled fields operate
+  in a frozen 15-dimensional expression representation. The study distinguishes global
+  time holdout from donor transfer and compares endpoint controls, training-target
+  marginals, paired clocks, distribution shape and observed expression. Simple permitted-data
+  predictors outperform flow in important comparisons. The study does not identify
+  individual cell trajectories or validate clinical wound prognosis.
 repository-code: https://github.com/PeterPonyu/wound-population-dynamics
 keywords:
 - single-cell transcriptomics
 - wound healing
 - population dynamics
+doi: 10.5281/zenodo.22962339
+date-released: '2026-09-25'

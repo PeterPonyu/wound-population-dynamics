@@ -1,0 +1,13 @@
+{
+  "scope": "source, manuscript, figures and PDF",
+  "version": "0.4.2",
+  "large_research_outputs": "download the complete reproduction ZIP",
+  "reproduction_zip": "wound-population-dynamics-0.4.2.zip",
+  "sha256": "b1b07202e0838943b56bf0709327a73f7e29e7b26b406ed1ed17e79162998224",
+  "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.4.2/wound-population-dynamics-0.4.2.zip",
+  "not_in_git_checkout": [
+    "outputs",
+    "provenance",
+    "tmp"
+  ]
+}
