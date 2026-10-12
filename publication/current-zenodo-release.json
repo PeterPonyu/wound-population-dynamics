@@ -1,0 +1,624 @@
+{
+  "record_id": 23308074,
+  "doi": "10.5281/zenodo.23308074",
+  "version": "0.5.0",
+  "repository": "PeterPonyu/wound-population-dynamics",
+  "tag": "v0.5.0",
+  "canonical_archive_name": "wound-population-dynamics-0.5.0-full-source.zip",
+  "canonical_archive_sha256": "29d6045135a55e3f4857603773d24dc0d2098f8bc274643c67c50709a37ee7d3",
+  "archive_parts": [
+    "wound-population-dynamics-0.5.0-full-source.zip.part-001",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-002",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-003",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-004",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-005",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-006",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-007",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-008",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-009",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-010",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-011",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-012",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-013",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-014",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-015",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-016",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-017",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-018",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-019",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-020",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-021",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-022",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-023",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-024",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-025",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-026",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-027",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-028",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-029",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-030",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-031",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-032",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-033",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-034",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-035",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-036",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-037",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-038",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-039",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-040",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-041",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-042",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-043",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-044",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-045",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-046",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-047",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-048",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-049",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-050",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-051",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-052",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-053",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-054",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-055",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-056",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-057",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-058",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-059",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-060",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-061",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-062",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-063",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-064",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-065",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-066",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-067",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-068",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-069",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-070",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-071",
+    "wound-population-dynamics-0.5.0-full-source.zip.part-072"
+  ],
+  "files": [
+    {
+      "name": "SHA256SUMS",
+      "bytes": 8970,
+      "sha256": "2be56b22881bcaa43dd63d37f7738e5554781ec19c2eab4554b2dfad1889ed44",
+      "md5": "17b7bbaa020f7afd0562000655b72062",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/SHA256SUMS"
+    },
+    {
+      "name": "REASSEMBLE.md",
+      "bytes": 1180,
+      "sha256": "1e10557e864aba676919c24561685c832e5aeb49358a2876fa5f07af2dfd63fc",
+      "md5": "efb839b2ecf1f391afe622d52ab28901",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/REASSEMBLE.md"
+    },
+    {
+      "name": "PARTS.json",
+      "bytes": 14242,
+      "sha256": "2b42067bbedc3f057797b1e13e986992b118988683b2e0dfaa9022cb55f1658b",
+      "md5": "55465219e2a15e40aa9e54421a713806",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/PARTS.json"
+    },
+    {
+      "name": "scientific-reports-manuscript-inline.pdf",
+      "bytes": 1604693,
+      "sha256": "f2f9976002b1063ee453550e708ae06455a8b960216196b18d5a4a8b2608e6b7",
+      "md5": "2fb9650e667a4aff53ca38f9c502650d",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/scientific-reports-manuscript-inline.pdf"
+    },
+    {
+      "name": "scientific-reports-supplement.pdf",
+      "bytes": 222253,
+      "sha256": "2ed8db300e5c1739f35c58151bc503b32f918dbab17b2a768d9135ef6adedf65",
+      "md5": "a842a0376a48ac42426e07a2618083a3",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/scientific-reports-supplement.pdf"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-001",
+      "bytes": 33554432,
+      "sha256": "bbbf346098393479dc607ae52cc6d8ef6ce458af1cb7e38149e0dc17fc16438d",
+      "md5": "5ad4561edc5882f439b146cea9dc138f",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-001"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-002",
+      "bytes": 33554432,
+      "sha256": "96f946e615613c6e5edb54efa3e673db559f3e56eae4f7112de929af075df464",
+      "md5": "202f96edfa7deb219f63fe1e6ccffec0",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-002"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-003",
+      "bytes": 33554432,
+      "sha256": "ab22b7472fddd3251c83ef8debc98fc7e82b266e3d71ec2bca057775b79464ce",
+      "md5": "43b125f9e78565dd9d60634920deb849",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-003"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-004",
+      "bytes": 33554432,
+      "sha256": "004cfd0bc705d5bde524cc18665ca352ef02fac33087774792aae52efac43a8b",
+      "md5": "be7555f54b1d87cde2155df40de038ca",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-004"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-005",
+      "bytes": 33554432,
+      "sha256": "edd4c87baebe6fdd6a7c813cbf4ef9c41211e9f5f449e514004e263c7e108e5a",
+      "md5": "eaf392ad70c397e9e89dbb151545724d",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-005"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-006",
+      "bytes": 33554432,
+      "sha256": "3b0b863406e504275eee4141106e56150827d1d7f3edb4c19107e452f3fed8ea",
+      "md5": "25f54ad8aef2d892806685cb35ab57d0",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-006"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-007",
+      "bytes": 33554432,
+      "sha256": "067f8c55d2406a823f5e04d6e73fc4bc857b549e4bf6f1b285dc98c239aacfaa",
+      "md5": "a9d5a167a3b34ac6221bf15790727ede",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-007"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-008",
+      "bytes": 33554432,
+      "sha256": "80f4e67eec2a716b436184c2cdf881e21fde0bdaa1a1f95d8f6ff73c3404dd19",
+      "md5": "667ebdb01d27b9c9f0babfb96824c34c",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-008"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-009",
+      "bytes": 33554432,
+      "sha256": "6b45067e573c5217f97b1beda8370fd15baa1515958896b4444c08ae26d3c5c6",
+      "md5": "6680deca2577c353472fe4e2d48d119e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-009"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-010",
+      "bytes": 33554432,
+      "sha256": "47ed3be16edfece4672c6e82e8c1a9cca5b8768d5d582047f49a8188a80b121e",
+      "md5": "5c5b28c2686f9e6058eb2e9e2a602a97",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-010"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-011",
+      "bytes": 33554432,
+      "sha256": "82b63f6fa0cb73b098da0949953946938156285714f34d8d61a61a31d320dcc3",
+      "md5": "a28f0d93f4240e138c5bd9b1fd21ea28",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-011"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-012",
+      "bytes": 33554432,
+      "sha256": "ef95ce65f437f3d6d4d731616723363e60caf749410c063dc0c6ef0110921cd6",
+      "md5": "93a41628e22e7d179ee56d3223d25f74",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-012"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-013",
+      "bytes": 33554432,
+      "sha256": "c86d55a1a6f2a5f6ad7c32eb8b7cd408ac233a527550d2fdcb47aa6e1e01e9e5",
+      "md5": "c913ff803343810bd2ba17f7b09e558e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-013"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-014",
+      "bytes": 33554432,
+      "sha256": "615fbe7c6e39869f8778116cbd9f6ea94c00323f3051f92c7f380e393debc1a4",
+      "md5": "665f6d016fc343377c2695b1b4386a64",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-014"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-015",
+      "bytes": 33554432,
+      "sha256": "3394e885ec027679b93179541e2cb5dfc954df45be882533112ad2b83b878b1d",
+      "md5": "0553b289f88de5de12ce1ffe76e4baa4",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-015"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-016",
+      "bytes": 33554432,
+      "sha256": "0d9dbc48f9b0970f1934963165f81f963c8acb500c759717c78c75aebc00649a",
+      "md5": "b21470fdda718b488b9755979867a5a9",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-016"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-017",
+      "bytes": 33554432,
+      "sha256": "10a36494831ca1c5211e95f8f9f895358d609c7e19d2c3b14e09750559158117",
+      "md5": "06d53deaf884a442dd1723b648ce35a5",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-017"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-018",
+      "bytes": 33554432,
+      "sha256": "bc913154365d50ff5b529fe5f3829d40d858db69981a2aaea7b7bab0ba788f88",
+      "md5": "2be848753ff7f425ccc41d432c3b8ac7",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-018"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-019",
+      "bytes": 33554432,
+      "sha256": "32fdd41054ce4b5e459e6dd15c625bb50b8e2a53b556523ac84c321ac15be757",
+      "md5": "0f35f71b1fe9d2b9c029404cf78f4210",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-019"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-020",
+      "bytes": 33554432,
+      "sha256": "0974e71c7f95335f02d6db655ec08fabd3383a0e4832a2b15049bb5eb2db7cde",
+      "md5": "a5c0421652ec684fd1427112d6291031",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-020"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-021",
+      "bytes": 33554432,
+      "sha256": "51218cdb5acaef2c4cc4ef4c6300dd62fdd521e7c9d7b306648b8cf93f056fa1",
+      "md5": "afa51d8a5340801d57ef8a2279076b37",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-021"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-022",
+      "bytes": 33554432,
+      "sha256": "31ff342e0afbb8ed30e42daa5f935a21b6ee848814c406126b3297345991157f",
+      "md5": "c56f9c520eb60047466c4ecdc0ba2764",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-022"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-023",
+      "bytes": 33554432,
+      "sha256": "3e4457eec104ddd20fa54ca37b9737a52835c25ea08d46482636f952583b691d",
+      "md5": "d3ae5ccb2e3e91ad38b71b82c95ba607",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-023"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-024",
+      "bytes": 33554432,
+      "sha256": "aa84b09a6bcca6a226b13dbdff2e2a7475bcf66a491025e6f2aa58702ad46a1a",
+      "md5": "167cd5381dad3d160cf9d7e144770e96",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-024"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-025",
+      "bytes": 33554432,
+      "sha256": "ce7d1991f54e7133d802553665a5ff622e1a31b4cc82fdd5d71875ffffe5d4eb",
+      "md5": "902ed02ecb9ad97b9b7a667b52e53c22",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-025"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-026",
+      "bytes": 33554432,
+      "sha256": "7064bdd7bc8fad9d447264c5134a69241d91eed327522d511bc1959d6ea4089b",
+      "md5": "dfd274be676f2c4bb7e9ef54f824f9e7",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-026"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-027",
+      "bytes": 33554432,
+      "sha256": "b51e48d94ec747385fe01597c5e7618ce26f838a1f4d90ce98982031bd2b9142",
+      "md5": "797b523b0d806118584bf65e03295b2a",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-027"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-028",
+      "bytes": 33554432,
+      "sha256": "87317ca2e8de7ddb196c02fc862575bca420703a46164942b6d1ab50c9d9947f",
+      "md5": "20903804561d766a0d2a9a514efc743c",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-028"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-029",
+      "bytes": 33554432,
+      "sha256": "4d0bc80806bce475aef55db40a684aa6d2314f6783c005add13b188f1b314cea",
+      "md5": "2532fdb78e4479fa268fd68be8ba9d75",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-029"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-030",
+      "bytes": 33554432,
+      "sha256": "f368011a8ecbaa612699b99a176504b52d2e4e87fca08eb01d83484d687e87b1",
+      "md5": "bf3cd51d5a62ee0483dae3ff4e18befd",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-030"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-031",
+      "bytes": 33554432,
+      "sha256": "a78048019742b324074cf98a27c91068e2789832cf7db968424bb21700548f6b",
+      "md5": "97472ff0ec50dd61edcf4c53c20c3671",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-031"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-032",
+      "bytes": 33554432,
+      "sha256": "d7f4015ae5a5e11fc663119fcff4a15e649fafd650c280971e3d8df82147ccc1",
+      "md5": "8d5a894b41a06949a64782ae1154717b",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-032"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-033",
+      "bytes": 33554432,
+      "sha256": "cf68ff4f6c983ea640f8129f454468c5e1dba4dc8334b5d4a8ed36d253751b27",
+      "md5": "3ccac9fd594230c5a3372092869d8cd1",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-033"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-034",
+      "bytes": 33554432,
+      "sha256": "0704783c39199ed69c3319ce22a0a0f3e4a1bdca6728b0db3c71bccf09471790",
+      "md5": "daf1c50b498a9c3377bce9b2aa7463fe",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-034"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-035",
+      "bytes": 33554432,
+      "sha256": "fa04742aaf77b7e8e9ee2193b1856e6c0c45d338d0599ca94fc5aa21c9eb51ab",
+      "md5": "54e1c03f8152a677650e7b5c3fddd061",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-035"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-036",
+      "bytes": 33554432,
+      "sha256": "773a7cc615837c49a87e558daacbdd6ae257f4d93fc7a57845fcdd5296764196",
+      "md5": "1cd43a6982d28bdc48d9dcd5545f3576",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-036"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-037",
+      "bytes": 33554432,
+      "sha256": "a2795c3cda457aa034361d28b5a8592b941eef97406f8f5aab62c966d88d3a60",
+      "md5": "4a3ae38e4bcb3bd7a40c93ec168bd2cb",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-037"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-038",
+      "bytes": 33554432,
+      "sha256": "6b996a49fdd4c867003124e24fc15ad1430f2667b9321e23cddd5031104e4834",
+      "md5": "6069eab9f822c471d445bdfca6665bb3",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-038"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-039",
+      "bytes": 33554432,
+      "sha256": "0cb0ea65cec64a9e3774e65d8afce45a5ec56053302f2a00cd189bf5198da908",
+      "md5": "09d0f334be6a39161c2dca52093fdcbd",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-039"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-040",
+      "bytes": 33554432,
+      "sha256": "1b8379cf1475018bde7657807d23a3e31c74b7b8773fb7b891ab6b6d61486c9d",
+      "md5": "73f52b854b058620f1f819954d776256",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-040"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-041",
+      "bytes": 33554432,
+      "sha256": "3b6a56b9ec660b0ce6829c61bbcfc2c2c259163c2b9553dff994733ec81aaedb",
+      "md5": "7218a507c23d8c8b6f6c173a95f13d68",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-041"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-042",
+      "bytes": 33554432,
+      "sha256": "a8b29c410e5f770afa657fc8dc14eee49cebfd4f6c71cbaaa53c1e0d87cd9485",
+      "md5": "a74fd0c05c03b0e65b7ddcbe32da2a66",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-042"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-043",
+      "bytes": 33554432,
+      "sha256": "698f202b867145c26aa251a02a429bd470b52ed6000f0259b669a44a3739f8e3",
+      "md5": "ddddd1548671c6ecb14d8e006e334b72",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-043"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-044",
+      "bytes": 33554432,
+      "sha256": "344e1c6575eae46d781bbfa9e334132a18a7e6e6120e02954409eae153be2102",
+      "md5": "9355a4876ad46b14bf5524dba4d6da61",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-044"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-045",
+      "bytes": 33554432,
+      "sha256": "6ea45e8ec222e22fa5148661c5c6cee56b0a1a7907ea29a4de669e363312da13",
+      "md5": "b3e13a5d4f4f6dbc159bfb0887dd0d26",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-045"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-046",
+      "bytes": 33554432,
+      "sha256": "20394330e9eca79bec84bb0267fc6c305830a4fe58fabcc86c9f368ce3493250",
+      "md5": "0962cf6812a7e2c700c447d274c72b9f",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-046"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-047",
+      "bytes": 33554432,
+      "sha256": "041b18ef66362cda3ff10ef6680935f317908de22452e26018588ddf0559de33",
+      "md5": "7d98765f42910949da8ad79cb96f47b9",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-047"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-048",
+      "bytes": 33554432,
+      "sha256": "024d2884ca0d52e617419e9ecfdcb75d93e88d75f8786594900c3ef498b3cedb",
+      "md5": "22337daebd3d9588ecb781b8fc239aac",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-048"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-049",
+      "bytes": 33554432,
+      "sha256": "47b21deb56992cf0470d381f27a6171ebf127b2d5773069471aa4773ca961d50",
+      "md5": "314bc3c16d7f6dedf7f3cd9c448a20cd",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-049"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-050",
+      "bytes": 33554432,
+      "sha256": "dbb089e617a1eb11b8a5880997db16493dcffd368d1514d5395d08bacd078626",
+      "md5": "cea9292d05ee00e128655d3d08fabb5e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-050"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-051",
+      "bytes": 33554432,
+      "sha256": "ca5022f7427f34333209184cc314f43ea4de8acc2400351e56056c1f80e8888a",
+      "md5": "5e8e4b131b09cab05571640fbeb8fa5e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-051"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-052",
+      "bytes": 33554432,
+      "sha256": "60cfc5e7cad1806e9f0e125be537068a7e2d91b120a1e7316f4b4dfaabf6148f",
+      "md5": "c89fcf125bc7e9f00fc6e4652fcf96e6",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-052"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-053",
+      "bytes": 33554432,
+      "sha256": "96974c218801e15a0e505923145b4907f1e66d26d9560734751b4db277928a40",
+      "md5": "c99b3627b49e2ddeecbc58cb1cc6e39b",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-053"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-054",
+      "bytes": 33554432,
+      "sha256": "6b942ddb307a54e2b9c1da77bbea81e8931b0ce3d2fddf2cedcaefce34c32eca",
+      "md5": "661995e6910338d3193d71083aa8d78e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-054"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-055",
+      "bytes": 33554432,
+      "sha256": "10bf77f575187515680004b2a072135922302cbc7eb26122a6977bd6c0a1c997",
+      "md5": "1b46bfb4c48e3c443067a884aaffcb83",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-055"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-056",
+      "bytes": 33554432,
+      "sha256": "772b3d92a16e2647a6bf86345936047fa2f5a20fd5827d543ba956f76c7b5aed",
+      "md5": "8cc79837f526012ad8a6a72d47a1012e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-056"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-057",
+      "bytes": 33554432,
+      "sha256": "12c5024ff886b320fa4756291750bd11c6b50a2b51467fb01b6dfa66b4ca542f",
+      "md5": "e8ad2314e293f1de3692a7dc81c3dbfc",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-057"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-058",
+      "bytes": 33554432,
+      "sha256": "1d28898e6b73ae1127c79ce6c6559eb246fe1b95c8586c71c453e46337523311",
+      "md5": "dd2b5fff1019a613eb5c7f50f8d3a82e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-058"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-059",
+      "bytes": 33554432,
+      "sha256": "37caee46d6275165b3da16d72bf128386d0e51d7c7f985dad7e63dfc7fbfb8e4",
+      "md5": "a190d6f21d919e6b89aa8c9fd47c5862",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-059"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-060",
+      "bytes": 33554432,
+      "sha256": "7a77c792b652b4be28ae42c64471461aa985454a64c1113d82deaa3f4415ba23",
+      "md5": "0c1edb877b0a9de5c64c699021043b16",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-060"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-061",
+      "bytes": 33554432,
+      "sha256": "761cb6305bd4290b50341258cdfcea59f3e5f1a7f90643a3ceaffcb55fa9cbcf",
+      "md5": "25be384601bc2f59ec86d09c39d269a6",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-061"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-062",
+      "bytes": 33554432,
+      "sha256": "6be25d10c8a9853d1ee8919c54e995611f80dafe93805b05ec289f0f75146f2b",
+      "md5": "92da6342fda5df5a786946dd60130d48",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-062"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-063",
+      "bytes": 33554432,
+      "sha256": "d65fe83433fff74a9e90f73da4e9f98ee57c81ce151bd50350db23c1c4fceaa0",
+      "md5": "d885e466b3d8842ec1c7aa5f174be71e",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-063"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-064",
+      "bytes": 33554432,
+      "sha256": "5a5057e78eeb94d2ec3c1316d3a07fa18c40e3147662c3f07b72fd269c349238",
+      "md5": "a6858bd24118888005f7dab8f582d084",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-064"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-065",
+      "bytes": 33554432,
+      "sha256": "5cc5dad7ca7302240470e669d987ed764feec267067d6a48250f0b2aa0a43144",
+      "md5": "8e140123f5286450c6309ea5d3d3b296",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-065"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-066",
+      "bytes": 33554432,
+      "sha256": "b0a5641fa97c43a0c2a898eefa000534f4a3b841c15e9459eb6e348c7e72f331",
+      "md5": "6e7dd436f36d6f5ba055b3617173e3c8",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-066"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-067",
+      "bytes": 33554432,
+      "sha256": "25024b9b365b821c1143f0cbfe779300f246ed05328c65f7159213f41f50b4b0",
+      "md5": "960cac057f870eeb237a4acb89cbec96",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-067"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-068",
+      "bytes": 33554432,
+      "sha256": "f888b8a34677783d63f560a5e704c6155fc0cabfad33731701c339f878c95468",
+      "md5": "f1363243bba663bc473e6febdb9e8151",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-068"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-069",
+      "bytes": 33554432,
+      "sha256": "262f7fa78bf395923f1a506997bfdd49b3b647bbee8f3cb5b7da56fca7acd967",
+      "md5": "70dd952a407e619460ea1281b0b11229",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-069"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-070",
+      "bytes": 33554432,
+      "sha256": "34b1a5ff0e4ecdd6b1e05e2310e0eca6241c7103017d444e455090f663c5ead7",
+      "md5": "053e9bcbd456ce222e410cc678843479",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-070"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-071",
+      "bytes": 33554432,
+      "sha256": "5505d80c44edf6bdb80777f0cca7342017ac928f50a4a1e5dfe94d71306fc780",
+      "md5": "3fb7abf56c37a8be958d576f95cd20de",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-071"
+    },
+    {
+      "name": "wound-population-dynamics-0.5.0-full-source.zip.part-072",
+      "bytes": 7862100,
+      "sha256": "abaad16276cf74692eb48370a988ba669160b79f76a58281073b6c79364cf668",
+      "md5": "4b65fc97af50dcdda00b7760eb858d63",
+      "url": "https://github.com/PeterPonyu/wound-population-dynamics/releases/download/v0.5.0/wound-population-dynamics-0.5.0-full-source.zip.part-072"
+    }
+  ]
+}
