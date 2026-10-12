@@ -1,0 +1,101 @@
+{
+  "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
+  "document_version": "submission-2026-10-12",
+  "software_doi": "10.5281/zenodo.23308074",
+  "software_version": "0.5.0",
+  "numeric_research_outputs_changed": false,
+  "documents": {
+    "manuscript": {
+      "sha256": "fe0e5a7bd25f4ee7636e01684d4390c189c83e16ea3cf1fad7080afa1cedb2ae",
+      "bytes": 1433109,
+      "pages": 12
+    },
+    "supplement": {
+      "sha256": "2e7ac91383f6850149fba0f3a9afbc44b6982c2ff9b1b0d14246d0afa7446e5b",
+      "bytes": 386391,
+      "pages": 34
+    }
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1064,
+      "sha256": "10ef938551816fda8e6981789fd207e905524d51abd3023de441f7aac6dedfd1"
+    },
+    {
+      "path": "journal-figures/paper2_figure1_workflow.pdf",
+      "bytes": 1075805,
+      "sha256": "69c9f4b6739c8d05d8f6c83909af03c15d080045011ad73efb310332437860b2"
+    },
+    {
+      "path": "journal-figures/paper2_figure2_wound7_transfer.pdf",
+      "bytes": 43382,
+      "sha256": "859c8fb2911336ac85c2d99ff5d7453af1f97889eb612b9007828568d2b0f74c"
+    },
+    {
+      "path": "journal-figures/paper2_figure3_interpolation_controls.pdf",
+      "bytes": 84994,
+      "sha256": "79c1b4e06fcb228a3ff6147409d165cfed441bea50fd93417e41c70f33115dc8"
+    },
+    {
+      "path": "journal-figures/paper2_figure4_time_axes.pdf",
+      "bytes": 45255,
+      "sha256": "ff160ceecde93a35954a7d40cec0a7ef586453316a82397df76f47ea80a4ecdb"
+    },
+    {
+      "path": "journal-figures/paper2_figure5_methods_benchmark.pdf",
+      "bytes": 53017,
+      "sha256": "690e58f9801320e26b608d15270a896704a0703e127fe4e1c844fafa3b14ad96"
+    },
+    {
+      "path": "journal-figures/paper2_figure6_donor_curve_stability.pdf",
+      "bytes": 59173,
+      "sha256": "90aa12dcd35ece8feb150c01016beb8ee2cfb9425d76f1d9487c5b50bcbc593c"
+    },
+    {
+      "path": "journal-figures/paper2_figure7_mouse_arms.pdf",
+      "bytes": 44676,
+      "sha256": "4822ed4e22ad2bab7d17b5b1c70fb0b6805f8f0060784e4cba085390735424bd"
+    },
+    {
+      "path": "journal-figures/paper2_figure8_paired_comparison.pdf",
+      "bytes": 54933,
+      "sha256": "9e0b2e0e3e75c1b1a91048066ba87c1e1e2998600b2233b694224f42a600f828"
+    },
+    {
+      "path": "journal-figures/paper2_figure9_followup.pdf",
+      "bytes": 50227,
+      "sha256": "2e46b2bd9a7a4ec02760c3327c73d1578e553249455fa33de743bb585734076a"
+    },
+    {
+      "path": "layout.tex",
+      "bytes": 4317,
+      "sha256": "880ee3607af622f3564820cc1f0469d0d6cc880a74b6687366145df7304a3627"
+    },
+    {
+      "path": "paper_srep_inline.bbl",
+      "bytes": 13787,
+      "sha256": "01f257419ab3314988800c3636c3496122a38db567f2b489d55f39bfb4b70766"
+    },
+    {
+      "path": "paper_srep_inline.tex",
+      "bytes": 35445,
+      "sha256": "6043c950ac448eb75303b34106653dea433c73c437a7def78abc47371f6037d7"
+    },
+    {
+      "path": "references_paper2.bib",
+      "bytes": 18101,
+      "sha256": "84be094b3870439866af7567b1a1889ba62aa998881875236c8568aa1985750c"
+    },
+    {
+      "path": "supporting_srep.bbl",
+      "bytes": 10439,
+      "sha256": "1e8cdbbbeb57df571cc80abd65cbe7cebffeca2bfaf14aa1e65b7da9b8152437"
+    },
+    {
+      "path": "supporting_srep.tex",
+      "bytes": 188237,
+      "sha256": "1b67d33c97e416a41be70631245f217f7f187358991f6c40d9799fe3659b034c"
+    }
+  ]
+}

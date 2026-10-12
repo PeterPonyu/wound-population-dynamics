@@ -1,0 +1,38 @@
+{
+  "document_version": "submission-2026-10-12",
+  "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
+  "software_doi": "10.5281/zenodo.23308074",
+  "software_version": "0.5.0",
+  "software_archive_sha256": "29d6045135a55e3f4857603773d24dc0d2098f8bc274643c67c50709a37ee7d3",
+  "documents": {
+    "manuscript": {
+      "sha256": "fe0e5a7bd25f4ee7636e01684d4390c189c83e16ea3cf1fad7080afa1cedb2ae",
+      "bytes": 1433109,
+      "pages": 12
+    },
+    "supplement": {
+      "sha256": "2e7ac91383f6850149fba0f3a9afbc44b6982c2ff9b1b0d14246d0afa7446e5b",
+      "bytes": 386391,
+      "pages": 34
+    }
+  },
+  "editable_source": {
+    "file": "wound-population-dynamics-submission-2026-10-12-editable-source.zip",
+    "sha256": "c7d4dccaef0d1a0657e5fc35b0d78b9d3f9b61fbe5605dd80f5b822691cb3fca",
+    "bytes": 1561927
+  },
+  "checks": {
+    "mechanical_layout": "PASS",
+    "main_panels_in_first_citation_order": "PASS",
+    "displays_after_first_citation_within_one_page": "PASS",
+    "all_page_overview_and_selected_full_page_review": "PASS",
+    "fresh_source_rebuild_with_network_and_original_author_home_unavailable": "PASS",
+    "rebuild_pdf_text_and_page_identity": "PASS",
+    "new_model_fits": false
+  },
+  "scope": "Document reproduction and preparation checks, not independent human peer review or additional biological validation.",
+  "author_final_journal_reading_certified": false,
+  "journal_submission_performed": false,
+  "Arial_is_installed_licensed_runtime_not_redistributed": true,
+  "software_doi_archives_this_later_editorial_source": false
+}

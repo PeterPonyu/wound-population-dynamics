@@ -1,0 +1,230 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{liu2025_wound}
+\bibinfo{author}{Liu, Z.} \emph{et~al.}
+\newblock \bibinfo{title}{{Spatiotemporal single-cell roadmap of human skin
+  wound healing}}.
+\newblock \emph{\bibinfo{journal}{Cell Stem Cell}}
+  \textbf{\bibinfo{volume}{32}}, \bibinfo{pages}{479--498.e8}
+  (\bibinfo{year}{2025}).
+
+\bibitem{roberts2017}
+\bibinfo{author}{Roberts, D.~R.} \emph{et~al.}
+\newblock \bibinfo{title}{{Cross-validation strategies for data with temporal,
+  spatial, hierarchical, or phylogenetic structure}}.
+\newblock \emph{\bibinfo{journal}{Ecography}} \textbf{\bibinfo{volume}{40}},
+  \bibinfo{pages}{913--929} (\bibinfo{year}{2017}).
+
+\bibitem{schiebinger2019}
+\bibinfo{author}{Schiebinger, G.} \emph{et~al.}
+\newblock \bibinfo{title}{{Optimal-Transport Analysis of Single-Cell Gene
+  Expression Identifies Developmental Trajectories in Reprogramming}}.
+\newblock \emph{\bibinfo{journal}{Cell}} \textbf{\bibinfo{volume}{176}},
+  \bibinfo{pages}{928--943.e22} (\bibinfo{year}{2019}).
+
+\bibitem{tong2020trajectory}
+\bibinfo{author}{Tong, A.}, \bibinfo{author}{Huang, J.}, \bibinfo{author}{Wolf,
+  G.}, \bibinfo{author}{van Dijk, D.} \& \bibinfo{author}{Krishnaswamy, S.}
+\newblock \bibinfo{title}{{TrajectoryNet: A Dynamic Optimal Transport Network
+  for Modeling Cellular Dynamics}}.
+\newblock In \emph{\bibinfo{booktitle}{Proceedings of the 37th International
+  Conference on Machine Learning}}, vol. \bibinfo{volume}{119} of
+  \emph{\bibinfo{series}{Proceedings of Machine Learning Research}},
+  \bibinfo{pages}{9526--9536} (\bibinfo{year}{2020}).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v119/tong20a.html}.
+
+\bibitem{cawley2010}
+\bibinfo{author}{Cawley, G.~C.} \& \bibinfo{author}{Talbot, N. L.~C.}
+\newblock \bibinfo{title}{{On Over-fitting in Model Selection and Subsequent
+  Selection Bias in Performance Evaluation}}.
+\newblock \emph{\bibinfo{journal}{Journal of Machine Learning Research}}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{2079--2107}
+  (\bibinfo{year}{2010}).
+\newblock \urlprefix\url{https://www.jmlr.org/papers/v11/cawley10a.html}.
+
+\bibitem{huang2022visualization}
+\bibinfo{author}{Huang, H.}, \bibinfo{author}{Wang, Y.},
+  \bibinfo{author}{Rudin, C.} \& \bibinfo{author}{Browne, E.~P.}
+\newblock \bibinfo{title}{Towards a comprehensive evaluation of dimension
+  reduction methods for transcriptomic data visualization}.
+\newblock \emph{\bibinfo{journal}{Communications Biology}}
+  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{719} (\bibinfo{year}{2022}).
+
+\bibitem{weinreb2018}
+\bibinfo{author}{Weinreb, C.}, \bibinfo{author}{Wolock, S.},
+  \bibinfo{author}{Tusi, B.~K.}, \bibinfo{author}{Socolovsky, M.} \&
+  \bibinfo{author}{Klein, A.~M.}
+\newblock \bibinfo{title}{{Fundamental limits on dynamic inference from
+  single-cell snapshots}}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{115}}, \bibinfo{pages}{E2467--E2476}
+  (\bibinfo{year}{2018}).
+
+\bibitem{lavenant2021}
+\bibinfo{author}{Lavenant, H.}, \bibinfo{author}{Zhang, S.},
+  \bibinfo{author}{Kim, Y.-H.} \& \bibinfo{author}{Schiebinger, G.}
+\newblock \bibinfo{title}{{Toward a mathematical theory of trajectory
+  inference}}.
+\newblock \emph{\bibinfo{journal}{The Annals of Applied Probability}}
+  \textbf{\bibinfo{volume}{34}} (\bibinfo{year}{2024}).
+
+\bibitem{weinreb2020}
+\bibinfo{author}{Weinreb, C.}, \bibinfo{author}{Rodriguez-Fraticelli, A.},
+  \bibinfo{author}{Camargo, F.~D.} \& \bibinfo{author}{Klein, A.~M.}
+\newblock \bibinfo{title}{{Lineage tracing on transcriptional landscapes links
+  state to fate during differentiation}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{367}},
+  \bibinfo{pages}{eaaw3381} (\bibinfo{year}{2020}).
+
+\bibitem{lamanno2018}
+\bibinfo{author}{La~Manno, G.} \emph{et~al.}
+\newblock \bibinfo{title}{{RNA velocity of single cells}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{560}},
+  \bibinfo{pages}{494--498} (\bibinfo{year}{2018}).
+
+\bibitem{bergen2020}
+\bibinfo{author}{Bergen, V.}, \bibinfo{author}{Lange, M.},
+  \bibinfo{author}{Peidli, S.}, \bibinfo{author}{Wolf, F.~A.} \&
+  \bibinfo{author}{Theis, F.~J.}
+\newblock \bibinfo{title}{{Generalizing RNA velocity to transient cell states
+  through dynamical modeling}}.
+\newblock \emph{\bibinfo{journal}{Nature Biotechnology}}
+  \textbf{\bibinfo{volume}{38}}, \bibinfo{pages}{1408--1414}
+  (\bibinfo{year}{2020}).
+
+\bibitem{lange2022}
+\bibinfo{author}{Lange, M.} \emph{et~al.}
+\newblock \bibinfo{title}{{CellRank for directed single-cell fate mapping}}.
+\newblock \emph{\bibinfo{journal}{Nature Methods}}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{159--170}
+  (\bibinfo{year}{2022}).
+
+\bibitem{vinyard2025}
+\bibinfo{author}{Vinyard, M.~E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Learning cell dynamics with neural differential
+  equations}}.
+\newblock \emph{\bibinfo{journal}{Nature Machine Intelligence}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{1969--1984}
+  (\bibinfo{year}{2025}).
+
+\bibitem{rognoni2018}
+\bibinfo{author}{Rognoni, E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Fibroblast state switching orchestrates dermal
+  maturation and wound healing}}.
+\newblock \emph{\bibinfo{journal}{Molecular Systems Biology}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{e8174} (\bibinfo{year}{2018}).
+
+\bibitem{shook2018}
+\bibinfo{author}{Shook, B.~A.} \emph{et~al.}
+\newblock \bibinfo{title}{{Myofibroblast proliferation and heterogeneity are
+  supported by macrophages during skin repair}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{362}},
+  \bibinfo{pages}{eaar2971} (\bibinfo{year}{2018}).
+
+\bibitem{varma2006}
+\bibinfo{author}{Varma, S.} \& \bibinfo{author}{Simon, R.}
+\newblock \bibinfo{title}{{Bias in error estimation when using cross-validation
+  for model selection}}.
+\newblock \emph{\bibinfo{journal}{BMC Bioinformatics}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{91} (\bibinfo{year}{2006}).
+
+\bibitem{bunne2023}
+\bibinfo{author}{Bunne, C.} \emph{et~al.}
+\newblock \bibinfo{title}{{Learning single-cell perturbation responses using
+  neural optimal transport}}.
+\newblock \emph{\bibinfo{journal}{Nature Methods}}
+  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{1759--1768}
+  (\bibinfo{year}{2023}).
+
+\bibitem{szekely2013}
+\bibinfo{author}{Sz{\'{e}}kely, G.~J.} \& \bibinfo{author}{Rizzo, M.~L.}
+\newblock \bibinfo{title}{{Energy statistics: A class of statistics based on
+  distances}}.
+\newblock \emph{\bibinfo{journal}{Journal of Statistical Planning and
+  Inference}} \textbf{\bibinfo{volume}{143}}, \bibinfo{pages}{1249--1272}
+  (\bibinfo{year}{2013}).
+
+\bibitem{sejdinovic2013}
+\bibinfo{author}{Sejdinovic, D.}, \bibinfo{author}{Sriperumbudur, B.},
+  \bibinfo{author}{Gretton, A.} \& \bibinfo{author}{Fukumizu, K.}
+\newblock \bibinfo{title}{{Equivalence of distance-based and RKHS-based
+  statistics in hypothesis testing}}.
+\newblock \emph{\bibinfo{journal}{The Annals of Statistics}}
+  \textbf{\bibinfo{volume}{41}} (\bibinfo{year}{2013}).
+
+\bibitem{luecken2022}
+\bibinfo{author}{Luecken, M.~D.} \emph{et~al.}
+\newblock \bibinfo{title}{{Benchmarking atlas-level data integration in
+  single-cell genomics}}.
+\newblock \emph{\bibinfo{journal}{Nature Methods}}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{41--50}
+  (\bibinfo{year}{2022}).
+
+\bibitem{zimmerman2021}
+\bibinfo{author}{Zimmerman, K.~D.}, \bibinfo{author}{Espeland, M.~A.} \&
+  \bibinfo{author}{Langefeld, C.~D.}
+\newblock \bibinfo{title}{{A practical solution to pseudoreplication bias in
+  single-cell studies}}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{738} (\bibinfo{year}{2021}).
+
+\bibitem{hairer1993}
+\bibinfo{author}{Hairer, E.}, \bibinfo{author}{N{\o}rsett, S.~P.} \&
+  \bibinfo{author}{Wanner, G.}
+\newblock \emph{\bibinfo{title}{{Solving Ordinary Differential Equations I:
+  Nonstiff Problems}}} (\bibinfo{publisher}{Springer}, \bibinfo{year}{1993}),
+  \bibinfo{edition}{2} edn.
+
+\bibitem{efron1993bootstrap}
+\bibinfo{author}{Efron, B.} \& \bibinfo{author}{Tibshirani, R.~J.}
+\newblock \emph{\bibinfo{title}{{An Introduction to the Bootstrap}}}
+  (\bibinfo{publisher}{Chapman and Hall}, \bibinfo{address}{New York},
+  \bibinfo{year}{1993}).
+
+\bibitem{bengio2004}
+\bibinfo{author}{Bengio, Y.} \& \bibinfo{author}{Grandvalet, Y.}
+\newblock \bibinfo{title}{{No Unbiased Estimator of the Variance of K-Fold
+  Cross-Validation}}.
+\newblock \emph{\bibinfo{journal}{Journal of Machine Learning Research}}
+  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{1089--1105}
+  (\bibinfo{year}{2004}).
+\newblock \urlprefix\url{https://www.jmlr.org/papers/v5/grandvalet04a.html}.
+
+\bibitem{vabalas2019}
+\bibinfo{author}{Vabalas, A.}, \bibinfo{author}{Gowen, E.},
+  \bibinfo{author}{Poliakoff, E.} \& \bibinfo{author}{Casson, A.~J.}
+\newblock \bibinfo{title}{{Machine learning algorithm validation with a limited
+  sample size}}.
+\newblock \emph{\bibinfo{journal}{PLOS ONE}} \textbf{\bibinfo{volume}{14}},
+  \bibinfo{pages}{e0224365} (\bibinfo{year}{2019}).
+
+\bibitem{armstrong2017}
+\bibinfo{author}{Armstrong, D.~G.}, \bibinfo{author}{Boulton, A.~J.} \&
+  \bibinfo{author}{Bus, S.~A.}
+\newblock \bibinfo{title}{{Diabetic Foot Ulcers and Their Recurrence}}.
+\newblock \emph{\bibinfo{journal}{New England Journal of Medicine}}
+  \textbf{\bibinfo{volume}{376}}, \bibinfo{pages}{2367--2375}
+  (\bibinfo{year}{2017}).
+
+\bibitem{berryman2026mechanotransduction}
+\bibinfo{author}{Berryman, K.~S.} \emph{et~al.}
+\newblock \bibinfo{title}{Mechanotransduction unifies healthy nondiabetic wound
+  healing over time by promoting a {Cd14+/C1qa+} fibroblast subpopulation}.
+\newblock \emph{\bibinfo{journal}{Journal of Investigative Dermatology}}
+  \textbf{\bibinfo{volume}{146}}, \bibinfo{pages}{2872--2885.e3}
+  (\bibinfo{year}{2026}).
+
+\bibitem{mascharak2022multiomic}
+\bibinfo{author}{Mascharak, S.} \emph{et~al.}
+\newblock \bibinfo{title}{Multi-omic analysis reveals divergent molecular
+  events in scarring and regenerative wound healing}.
+\newblock \emph{\bibinfo{journal}{Cell Stem Cell}}
+  \textbf{\bibinfo{volume}{29}}, \bibinfo{pages}{315--327.e6}
+  (\bibinfo{year}{2022}).
+
+\end{thebibliography}
