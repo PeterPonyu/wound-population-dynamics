@@ -1,17 +1,21 @@
-# Software and reproduction archives
+# Archive scope and verification
 
-Version 0.4.2 belongs to Conditional flow matching in acute human wounds: analysis software.
+`wound-population-dynamics-0.5.0-full-source.zip` is the complete standalone reproduction release.
+It contains authored software, corrected journal documents and editable sources,
+public processed inputs, saved research states, tables and provenance. It is a
+mixed-rights archive governed by NOTICE; it is not a software-only payload.
 
-- Software DOI: https://doi.org/10.5281/zenodo.22962339
-- Source and release history: https://github.com/PeterPonyu/wound-population-dynamics
-- Versioned files: https://github.com/PeterPonyu/wound-population-dynamics/releases/tag/v0.4.2
+Reserved software/reproduction DOI: 10.5281/zenodo.23308074. The DOI was reserved at local
+archive assembly; publication and uploads are handled separately. The prior
+software-only DOI 10.5281/zenodo.22884874 identifies its immutable historical snapshot.
+Neither identifier is a manuscript or preprint DOI.
 
-`wound-population-dynamics-code-0.4.2.zip` contains MIT software, tests and execution documentation.
-`wound-population-dynamics-0.4.2.zip` contains the complete reproduction materials: manuscript,
-editable figures, numerical results, frozen models and their provenance. Research
-materials retain the rights stated in NOTICE. Both downloads are public without an
-author access request. Source-study human raw-read access restrictions still apply.
+MANIFEST.sha256.json binds every archived file except itself. The external ZIP
+SHA-256 binds that manifest, and the final receipt records ZIP CRC, manifest
+verification and fresh-extraction smoke/saved-input checks. Python caches,
+working temporary builds, local Git state and obsolete outer manifests are excluded.
+Native producing manifests and historical source fingerprints remain evidence.
 
-Each ZIP has its own exact file manifest. Extract the ZIP and run
-`python3 verify_archive.py --smoke`. The software DOI identifies the software snapshot,
-not the manuscript or a new clinical validation. Earlier published files are immutable.
+After extraction, run `python3 verify_archive.py --smoke`, then the saved-input
+commands in REPRODUCIBILITY.md. These checks do not certify full retraining,
+universal numerical portability or biological/clinical validation.

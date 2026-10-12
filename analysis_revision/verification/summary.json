@@ -1,0 +1,75 @@
+{
+  "status": "passed_with_recorded_runtime_qualification",
+  "scope": "Portable imports, safe CLI, deterministic-control arithmetic, historical finite-budget scalar reconstruction, 31 coordinate reproductions and 363 saved prediction/weight artifact checks; no neural field reintegration or refit.",
+  "deterministic_rows": 2700,
+  "deterministic_max_abs_energy_error": 4.440892098500626e-16,
+  "historical_budget_pairs": 180,
+  "historical_budget_numeric_values": 1013,
+  "historical_budget_max_abs_error": 0,
+  "coordinate_matrices": 31,
+  "coordinate_max_abs_error": 0,
+  "original_fields": 354,
+  "selected_outer_fields": 9,
+  "cuda_replay_performed": false,
+  "strict_saved_field_cpu_replay_certified": false,
+  "numeric_threading": {
+    "successful_default_openblas_threads": 24,
+    "retained_two_thread_pca_failure_max_abs": 0.00011897087097167969,
+    "retained_one_thread_pca_failure_max_abs": 0.00016021728515625,
+    "tolerances_changed": false
+  },
+  "saved_table_comparisons": [
+    {
+      "table": "representation_donor.csv",
+      "rows": 414,
+      "max_abs_numeric_error": 0.0
+    },
+    {
+      "table": "representation_macro.csv",
+      "rows": 138,
+      "max_abs_numeric_error": 0.0
+    },
+    {
+      "table": "nested_donor.csv",
+      "rows": 99,
+      "max_abs_numeric_error": 0.0
+    },
+    {
+      "table": "nested_draws.csv.gz",
+      "rows": 1350,
+      "max_abs_numeric_error": 0.0
+    },
+    {
+      "table": "alpha_diagnostic.csv",
+      "rows": 72,
+      "max_abs_numeric_error": 0.0
+    }
+  ],
+  "commands": [
+    "python3 verify_revision.py --smoke --saved-checks --output-dir tmp/reproduction-check-02",
+    "python3 scripts/audit_followup_integration.py --output-dir tmp/full-saved-audit-03 --nested-dir output/followup-integration-20261011-r1/p2/nested-refits"
+  ],
+  "remaining_central_input_gap": "The earlier 48 finite-budget diagnostic fields were never retained as reloadable weights. Its exact saved predictions, source snapshot and scalar reporting inputs are included; strict field replay is unavailable for that historical experiment.",
+  "scientific_replay_limits": [
+    "Historical original training-time input hashes for the 354 original follow-up fields were not recorded; retrospective hashes and original-CUDA replay evidence are included.",
+    "The full alpha grid was not replayed.",
+    "The prior strict saved-field CPU replay failure remains unresolved."
+  ],
+  "requested_agent_runtime": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max"
+  },
+  "actual_agent_runtime": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max",
+    "verification": "Directly verified from the subagent session metadata and turn_context, separately from requested parameters.",
+    "session_id": "01a12e0f-2d3d-7601-9c19-e75b17d96372",
+    "source_agent_path": "/root/wound_release_closure",
+    "runtime_evidence": "/home/zeyufu/.codex/sessions/2026/10/11/rollout-2026-10-11T20-01-48-01a12e0f-2d3d-7601-9c19-e75b17d96372.jsonl"
+  },
+  "model_training_performed": false,
+  "downloads_performed": false,
+  "published": false,
+  "sealed": false,
+  "manuscript_overlay_and_final_archive_handled_by_parent": true
+}

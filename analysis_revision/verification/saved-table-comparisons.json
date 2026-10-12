@@ -1,0 +1,27 @@
+[
+  {
+    "table": "representation_donor.csv",
+    "rows": 414,
+    "max_abs_numeric_error": 0.0
+  },
+  {
+    "table": "representation_macro.csv",
+    "rows": 138,
+    "max_abs_numeric_error": 0.0
+  },
+  {
+    "table": "nested_donor.csv",
+    "rows": 99,
+    "max_abs_numeric_error": 0.0
+  },
+  {
+    "table": "nested_draws.csv.gz",
+    "rows": 1350,
+    "max_abs_numeric_error": 0.0
+  },
+  {
+    "table": "alpha_diagnostic.csv",
+    "rows": 72,
+    "max_abs_numeric_error": 0.0
+  }
+]

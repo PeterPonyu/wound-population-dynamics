@@ -156,7 +156,7 @@ def main() -> int:
         verdict = 'tested_single_fits_below_descriptive_reference'
     log('=' * 74)
     report['verdict'] = verdict
-    report['protocol'] = protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'axis:{name}' for name in time_axes()], extra={'paired_same_donor_endpoints': True, 'holdout_timepoint': args.holdout, 'scaler': scaler, 'steps': args.steps, 'batch_size': args.batch_size})
+    report['protocol'] = protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'axis:{name}' for name in time_axes()], extra={'paired_same_donor_endpoints': True, 'holdout_timepoint': args.holdout, 'scaler': scaler, 'steps': args.steps, 'batch_size': args.batch_size}, output_dir=args.output_dir)
     out = os.path.join(args.output_dir, 'report.json')
     with open(out, 'w') as fh:
         json.dump(report, fh, indent=2, default=str)

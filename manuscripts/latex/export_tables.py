@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """Export numerical supplementary tables from completed reports; no model fitting."""
 from pathlib import Path
-import csv,json
+import csv,json,sys
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT))
+from manuscripts.saved_diagnostics import population_table_rows, population_detail_rows
 HERE=Path(__file__).resolve().parent
 ANALYSIS=ROOT/'outputs/analysis'
+PROVENANCE_REPAIR=ROOT/'outputs/scientific_revision_20260926/provenance_repair'
 REVISION=ROOT/'outputs/scientific_revision_20260922'
 LATEST=ROOT/'outputs/scientific_revision_20260923'
 AUDIT=ROOT/'outputs/scientific_revision_20260925'
 MEASUREMENT=REVISION/'measurement'
+PATIENT_COVARIATES=ROOT/'output/paper-science-priority-20261001-r1/patient-covariates'
 MEASUREMENT_REPORTS={'patient_mapping_equivalence','representation_benchmark','representation_inference','patient_unit_representation_benchmark','design_power_simulation'}
 TOPIC_LABELS=['TIMP1/COL3A1', 'JUNB/DNAJB1', 'COL1A1/COL1A2', 'IGFBP7/IGFBP5', 'TAGLN/ACTA2', 'KRT14/KRT10', 'CFD/APOD', 'DCN/CFD', 'DCD/SAT1', 'IGFBP7/SPARCL1', 'FOS/IGFBP7', 'HLA-DRA/CD74', 'IGFBP7/TAGLN', 'FOS/JUNB', 'DNAJB1/FOS']
-def report(n):return json.loads(((MEASUREMENT if n in MEASUREMENT_REPORTS else ANALYSIS)/n/'report.json').read_text())
+ACTIVE_PROVENANCE_REPAIRS={'time_parameterisation','donor_transfer_flow','donor_count_curve'}
+def report(n):
+ base = PROVENANCE_REPAIR if n in ACTIVE_PROVENANCE_REPAIRS else (MEASUREMENT if n in MEASUREMENT_REPORTS else ANALYSIS)
+ return json.loads((base/n/'report.json').read_text())
 def esc(x):
  return str(x).replace('&',r'\&').replace('%',r'\%').replace('_',r'\_').replace('#',r'\#')
 def historical(n):
@@ -34,7 +41,7 @@ def table(label,caption,headers,rows,widths,break_before=None):
    lines.append(r'\pagebreak')
   lines.append(' & '.join(esc(c) for c in row)+(r' \\*' if len(rows)>1 and i in (0,len(rows)-2) else r' \\'))
  body='\n'.join(lines)
- return '\n'.join([r'{\small',r'\begin{longtable}{'+col+'}',r'\caption{'+caption+r'}\label{'+label+r'}\\',r'\toprule',header,r'\midrule\endfirsthead',r'\multicolumn{'+str(len(headers))+r'}{l}{\tablename\ \thetable\ (continued)}\\',r'\toprule',header,r'\midrule\endhead',r'\bottomrule\endfoot',body,r'\end{longtable}',r'}'])
+ return '\n'.join([r'{\small',r'\begin{longtable}{'+col+'}',r'\caption{'+caption+r'}\label{'+label+r'}\\',r'\toprule',header,r'\midrule\endfirsthead',r'\multicolumn{'+str(len(headers))+r'}{l}{\tablename\ \thetable\ (continued)}\\[6pt]',r'\toprule',header,r'\midrule\endhead',r'\bottomrule\endfoot',body,r'\end{longtable}',r'}'])
 def csvrows(n):
  folder=MEASUREMENT/'tables' if n in {'paper1_representation_inference.csv','paper1_patient_unit_and_anatomy.csv','paper1_representation_cross_method.csv'} else ROOT/'manuscripts/tables'
  return list(csv.DictReader((folder/n).open()))
@@ -67,7 +74,7 @@ p2.append(table('tab:p2methodsbydonor','Empirical energy distances for each meth
 curve=json.loads((REVISION/'population/report.json').read_text())['curve']
 cfm=next(r for r in curve['summary'] if r['method']=='Shared CFM')
 rows=[[r['held_donor'],f(r['k1_ed']),f(r['k2_ed']),f(r['reduction'])] for r in curve['donor_blocks'] if r['method']=='Shared CFM']
-p2.append(table('tab:p2curve',r'Seed-averaged donor-count comparison after returning each prediction to the frozen encoder space and scoring in a common reference within held donor. The reference uses both non-held donors and never enters a single-donor fit. ED is empirical energy distance; k is the number of training donors. Single-donor choices are averaged within held donor and seed, followed by seeds 0, 1 and 2. Reduction is k=1 minus k=2. The donor-balanced reduction is '+f(cfm['mean_reduction'])+r', with a descriptive three-block percentile 95\% range ['+f(cfm['descriptive_block_range_lower'])+', '+f(cfm['descriptive_block_range_upper'])+r']. Overlapping training sets prevent interpreting this range as a population coverage guarantee.',['Held donor','k=1 ED','k=2 ED','Reduction'],rows,[53,38,38,38]))
+p2.append(table('tab:p2curve',r'Seed-averaged donor-count comparison after returning each prediction to the frozen encoder space and scoring in a common reference within held donor. The reference uses both non-held donors and never enters a single-donor fit. ED is empirical energy distance; k is the number of training donors. Single-donor choices are averaged within held donor and seed, followed by seeds 0, 1 and 2. Reduction is k=1 minus k=2. The donor-balanced reduction is '+f(cfm['mean_reduction'])+r'. The interval ['+f(cfm['descriptive_block_range_lower'])+', '+f(cfm['descriptive_block_range_upper'])+r'] is the minimum and maximum of the three donor reductions; with three blocks a percentile bootstrap returns those endpoints, so it is not a calibrated 95\% population interval. Overlapping training sets add a further reason not to read it as population coverage.',['Held donor','k=1 ED','k=2 ED','Reduction'],rows,[53,38,38,38]))
 d=report('mouse_all_arms_pod7_audit')
 rows=[[n,f(v['energy_distance_standstill']),f(v['energy_distance_predicted']),f(100*v['improvement_fraction'],2)+'%', 'Yes' if v['holdout_on_direct_path'] else 'No'] for n,v in d['arms'].items()]
 p2.append(table('tab:p2mouse','Mouse POD7 audit for the source-labelled NDB, PDB and GDB arms. Each field uses rank time and POD0, POD2 and POD30 for fitting/scaling, then predicts from POD2 to excluded POD7. ED is empirical energy distance; improvement is 100 times (stay-still ED minus predicted ED) divided by stay-still ED. Each arm covers 4,182/7,002 human-panel genes and has one animal per time point. The ordering check asks whether endpoint distance is at least both endpoint-to-target distances; it is not proof of a geodesic. Values have no confidence intervals, and cell counts do not provide animal replication.',['Arm','Stay-still ED','Predicted ED','Improvement','Ordering check'],rows,[22,36,36,34,37]))
@@ -146,10 +153,15 @@ for target in ('original_evaluation','all_day7'):
   for method,label in observable_names.items():
    v=next(x for x in observable['macro'] if x['target_set']==target and x['k']==k and x['method']==method)
    rows.append(['Saved target' if target=='original_evaluation' else 'All day 7',str(k),label,f(v['total_variation']),f(v['js_divergence_nats']),f(v['gene_rmse'],6)])
+# Preserve all 24 rows with repeated continuation headers, without inheriting
+# the forced final-page break from the shorter historical supplement.
 p2.append(table('tab:p2observable',r'Observable-space errors against actual held-donor expression in the same three healthy volunteers. All 5,383 assayed frozen-panel genes are retained without a performance filter; 1,619 absent genes are not observed zeros. Each observed cell or decoded particle is normalized on the common panel before equal-cell averaging. Saved target uses the original held-target identities; all day 7 is a predeclared sensitivity. k counts permitted training donors, not test donors. Twenty-seven saved fits use three computational seeds; no model is trained. Averages weight seeds, then training subsets, then held donors equally. TV is total variation between mean profiles; JS is Jensen--Shannon divergence in natural-log units, not its square root; RMSE is the root mean square error over gene proportions. Lower is better. Observed and decoded baselines are distinct; training marginals use only permitted donors. These are mean-profile errors, not single-cell transitions, full distributional fidelity, absolute-count prediction or biological confidence intervals.',['Target set','k','Predictor','TV','JS (nats)','Gene RMSE'],rows,[26,9,53,24,25,28]))
 rows=[]
 for v in observable['decoder_reference']:
  rows.append([v['held_donor'],'Saved target' if v['target_set']=='original_evaluation' else 'All day 7',str(v['n_target']),f(v['total_variation']),f(v['js_divergence_nats']),f(100*v['missing_panel_mass_mean'],2)+'%'])
 p2.append(table('tab:p2decoderreference',r'Decoder reconstruction reference for the observed held-donor day-7 cells. The frozen encoder means of the target cells themselves are decoded, restricted to the same 5,383 observed panel genes and normalized per cell before averaging. Errors compare this reconstruction with actual mean observed expression, not with another decoded target. TV is total variation; JS is Jensen--Shannon divergence in nats. The missing-mass column reports mean decoder probability on the 1,619 unmeasured panel genes before renormalization. This reference uses held-target information: it is not a forecast, true expression, a competing predictor or a mathematical lower error bound. The two target sets overlap and do not add independent observations.',['Held donor','Target set','Cells','TV','JS (nats)','Unmeasured mass'],rows,[26,32,22,25,27,33]))
+saved_population=json.loads((ROOT/'output/submission-preparation-20261002-r1/population/report.json').read_text())
+p2.append(table('tab:p2budgetdiagnostic',r'Saved finite-budget diagnostic: flow minus the fixed seed-0 training-target draw in each donor fold. Positive differences indicate higher error for the flow. Each cell equally averages three observed-source adjacent intervals and two computational seeds within that donor and budget. Training-only HVG200/PCA15 coordinates, 64-unit two-layer fields, time embedding 16 and batch size 64 differ from the primary frozen neural-coordinate experiment. Equal steps do not imply equal wall time. Fold-specific PCA scales are not pooled into a cross-donor effect, and the baseline sampling is not symmetric with two flow seeds. OT is minibatch optimal-transport coupling; SB is the entropic bridge variant. None of the four flows has lower within-donor mean energy at either budget, but individual intervals may favor flow. No p values, population ranking or new donor replication are claimed.',['Held donor','Steps','Independent','Minibatch OT','SB','Conditioned'],population_table_rows(saved_population),[29,16,31,32,27,30]))
+p2.append(table('tab:p2budgetdetails',r'Complete saved within-donor method/budget means behind the diagnostic. Energy is the capped empirical V-distance in that fold\textquotesingle{}s training-only PCA coordinates (200 cells per distribution); lower values are better within a fold. Flow rows average three time pairs and two seeds (six records); baseline rows average three pairs at seed 0 (three records). These are 48 flow fits and 12 baseline jobs with 180 dependent predictions from three donors, not 180 biological replicates. All pairs start from their observed source rather than an autonomous day-0 rollout. SB retained all 4,320 training batches, including 20 failing the frozen two-sided marginal L1 tolerance of 0.001; maximum row and column residuals were 0.002061 and 0.00001014. Prediction-plus-target adaptive MMD is diagnostic only and is not used to rank methods. The historical diagnostic saved predictions, not reloadable fields.',['Held donor','Method','Steps','Records','Mean Energy'],population_detail_rows(saved_population),[30,48,23,25,36]))
 (HERE/'tables.tex').write_text('\n\n'.join(p2)+'\n')
 print('Exported supplementary numerical tables from reports without fitting models.')

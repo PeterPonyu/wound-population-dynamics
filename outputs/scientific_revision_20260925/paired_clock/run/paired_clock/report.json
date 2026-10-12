@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "biological_donors": 3,
+  "independent_new_data": false,
+  "fits": 12,
+  "paired_random_streams_verified": true,
+  "exact_target_time": true,
+  "holdout_excluded_from_scaling_and_fitting": true,
+  "summary": [
+    {
+      "axis": "rank",
+      "flow_ed": 0.8103948932484397,
+      "refined_flow_ed": 0.8103949077038912,
+      "unchanged_source_ed": 1.4745521637336647,
+      "centroid_ed": 0.6666735855769881
+    },
+    {
+      "axis": "days",
+      "flow_ed": 2.154234544070503,
+      "refined_flow_ed": 2.154235101922959,
+      "unchanged_source_ed": 1.4745521637336647,
+      "centroid_ed": 0.9774794965166582
+    },
+    {
+      "axis": "sqrt_days",
+      "flow_ed": 0.8746027202227435,
+      "refined_flow_ed": 0.8746027263155761,
+      "unchanged_source_ed": 1.4745521637336647,
+      "centroid_ed": 0.7476311081754575
+    },
+    {
+      "axis": "log_days",
+      "flow_ed": 0.7724753721709654,
+      "refined_flow_ed": 0.7724753809994336,
+      "unchanged_source_ed": 1.4745521637336647,
+      "centroid_ed": 0.6654048918804444
+    }
+  ],
+  "scope": "Retrospective same-cohort clock sensitivity; no independent clock selection or clinical validation",
+  "evaluation": "Equal donor and seed averaging, fixed per-donor source/target rows across axes; energy V-statistic",
+  "limitations": [
+    "Three donors",
+    "Fixed discovery representation",
+    "Optimization targets change with clock",
+    "Numerical refinement must be examined for each clock",
+    "No target-guided best clock is selected"
+  ],
+  "runtime": {
+    "torch": "2.12.0+cu130",
+    "numpy": "2.2.6",
+    "device": "cuda"
+  }
+}

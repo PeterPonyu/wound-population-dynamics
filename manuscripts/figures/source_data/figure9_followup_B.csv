@@ -1,0 +1,11 @@
+"rep","task_group","comparator","method","log2_ratio","donors","donors_below"
+"Sum-zero","MT_day7","mean_shift","Independent",0.508934110649516,3,0
+"Sum-zero","MT_day7","mean_shift","OT-CFM",0.220797262108875,3,1
+"Centered","MT_day7","mean_shift","Independent",0.377743344430344,3,0
+"Centered","MT_day7","mean_shift","OT-CFM",0.121139050808774,3,1
+"Standardized","MT_day7","mean_shift","Independent",0.507523468902768,3,0
+"Standardized","MT_day7","mean_shift","OT-CFM",0.215471091154718,3,1
+"Whitened","MT_day7","mean_shift","Independent",0.50892615920489,3,0
+"Whitened","MT_day7","mean_shift","OT-CFM",0.318947785964204,3,0
+"PCA30","MT_day7","mean_shift","Independent",0.230675723949809,3,0
+"PCA30","MT_day7","mean_shift","OT-CFM",0.0989080575950298,3,0

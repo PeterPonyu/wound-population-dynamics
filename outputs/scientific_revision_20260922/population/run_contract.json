@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "outputs/analysis/human_temporal_flow/mu.npy": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+    "outputs/analysis/human_temporal_flow/obs_fibroblast.csv": "4323b852d234396b61ee865749d2b7a4c2f96f644159b5e4c4e0459c6ca2cb76",
+    "data/raw/GSE241132/GSE241132_cell_metadata.txt.gz": "59f216e582d1e06c049eb9fe676aa1a693298c0160769ff324ffcc4ab72b3d22",
+    "outputs/analysis/donor_conditioned_benchmark/report.json": "e8e5098fce9bdf590c12441553df8241831ceed58805f8f8bdf87883792f04a3",
+    "outputs/analysis/donor_curve_seed_stability/report.json": "a054c725a776de871448f343b55634b19c3739c29c98f7c3a775e0289535bfbe",
+    "scripts/repair_population_protocol.py": "4db8d30a5f4339a27cacf49bf67114a70cdbac18f6f0cf38b2150d296409c60a",
+    "scripts/evaluate_training_donor_count.py": "6564a22c72fc27db5a5e9afb9155ef2b50fbce8a8ed8c78921e7a647a6d48e90",
+    "wound_models/human_wound_data.py": "7bb0f61d031ca14363114ef59a208a7d127be8c42078df755d17bfe74345e9e6",
+    "wound_models/population_flow.py": "9973da05925dae4fbb5526a0d8c5be4e39c6e6d7cd0da51a63d9a333f9213f64",
+    "scripts/audit_population_math.py": "8a7615b1488828efbd585be09c42d0fe7ad1280b5b5b8442f075d0e3906bdc62",
+    "data/raw/GSE241132/per_gsm/GSM7717079_PWH26D0.zip": "8d96f8a7f2f14d48acf7693ed8105e87035a19c0f9cb86f81bafa725d30909ae",
+    "data/raw/GSE241132/per_gsm/GSM7717080_PWH26D1.zip": "4306d0e32a9c522d27ea42a9cbff3685d31b875d5d9ad6018da0e21e32390353",
+    "data/raw/GSE241132/per_gsm/GSM7717081_PWH26D7.zip": "ca1cda90497cb24dcf5392cced591ae8ae5c6ef0c1ffc2281d341ed6b69ab354",
+    "data/raw/GSE241132/per_gsm/GSM7717082_PWH26D30.zip": "5bb952ca8583437e6908fa7cf59be96ed98f136c0f92763d7246de454816a518",
+    "data/raw/GSE241132/per_gsm/GSM7717083_PWH27D0.zip": "cdd52cf31fe0f170d3306178dbbd131f35d2d807a81e1c7b26d98dfe5ed671f4",
+    "data/raw/GSE241132/per_gsm/GSM7717084_PWH27D1.zip": "64e949d80e128b578b1127ae084604db0d9d1b32e1f6334a4f1320dfc6d94f77",
+    "data/raw/GSE241132/per_gsm/GSM7717085_PWH27D7.zip": "a38908a9f9d70e9c09d56e33dd81c064e8c132fece2f0f1d1ac97297968f09c8",
+    "data/raw/GSE241132/per_gsm/GSM7717086_PWH27D30.zip": "3b8bbf00b74d9ea1605523cdff7183ac15bd6885798f5ca972e8d497cfa47768",
+    "data/raw/GSE241132/per_gsm/GSM7717087_PWH28D0.zip": "232d5510afe7f2dc419e236aa06963dd2892fe41e0501f2f989eaf06c3ee6c50",
+    "data/raw/GSE241132/per_gsm/GSM7717088_PWH28D1.zip": "33a3b6e4a6f69e35178dbcbd5f0296d1cf03fc39d8bcde7415fb0d1492bfa9ef",
+    "data/raw/GSE241132/per_gsm/GSM7717089_PWH28D7.zip": "aef48e8a3dbcd8253314efd6cff147cc6a7e4def748f96dcab637adab54a6739",
+    "data/raw/GSE241132/per_gsm/GSM7717090_PWH28D30.zip": "de3c42d6e8cebdaee51792b7a02dc48fe337a74a0b8cfc654d7e1d1bae1c5261"
+  },
+  "steps": 8000,
+  "batch_size": 256,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cuda",
+  "rk4_steps": 50,
+  "evaluation_seed": 0,
+  "marginal_draws": 50,
+  "target_cap": 1200
+}

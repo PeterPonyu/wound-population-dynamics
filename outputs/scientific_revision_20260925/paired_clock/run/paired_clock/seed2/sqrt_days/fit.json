@@ -1,0 +1,16 @@
+{
+  "seed": 2,
+  "axis": "sqrt_days",
+  "random_streams": {
+    "endpoint_draws_sha256": "b8e6a871409f826cc2b6fc6d2deb7b504407e68426c55b33017aaa9087965c9b",
+    "initial_weights_sha256": "9ebd1de6fd07f630e0c4c2b5139276a2bf864e44cba3bfdf28b663f0b6acd98f",
+    "initial_interpolation_rng_sha256": "b1535c7783ea8829b6b0cf67704539798b4d16c39bf0bfe09494c5d9f12eee30",
+    "final_training_loss": 2.2990105152130127
+  },
+  "artifacts": {
+    "PWH26.npz": "525f436c29e1270c0239d860d6efdc5741fca3d6fef86179d2369a9f138a054e",
+    "PWH27.npz": "3b34e02a4118e8edd4f491c0d28f1dc487dbbb26364f327f069c8f81bf99203b",
+    "PWH28.npz": "9d72490c052f12d736d2f3fa90a6ef9df581d1ca219908eb6fb7a1a17309ee02",
+    "field.pt": "b7a7b6393b09a07658719e5f5147f1a7bf47097fc34356a7b7e412eaeda09043"
+  }
+}

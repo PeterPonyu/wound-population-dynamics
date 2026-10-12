@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "9cedc82cc6485793e238162448240dbc34b37ac3a4adeac7218042c4f27605b5",
+  "fit.json": "1b0565a1fda3c661da8b7054db13e7a93bbfff0da4b734c390ace66cc8e92b5b",
+  "model_replay.npz": "bf2ff1cf7f5cd1fbc80af1c049b0fc946beebcb4b822240b463ada5a43963356"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-mean_shift-seed0",
+  "method": "mean_shift",
+  "seed": 0
+ }
+}

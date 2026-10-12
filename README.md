@@ -1,57 +1,59 @@
-# Conditional flow matching in acute human wounds: analysis software
+# Conditional flow matching in acute human wounds: analysis software and reproduction archive
 
-Author: Zeyu Fu. Software version: 0.4.2.
+**Read the [corrected inline main manuscript](journal/scientific-reports-manuscript-inline.pdf).**
+The [submission-layout main manuscript](journal/scientific-reports-manuscript.pdf)
+and [Supplementary Information](journal/scientific-reports-supplement.pdf) are also included.
 
-Analysis software for a three-donor audit of population reconstruction by conditional flow matching in acute human wounds. Product-coupled fields operate in a frozen 15-dimensional expression representation. The study distinguishes global time holdout from donor transfer and compares endpoint controls, training-target marginals, paired clocks, distribution shape and observed expression. Simple permitted-data predictors outperform flow in important comparisons. The study does not identify individual cell trajectories or validate clinical wound prognosis.
+Software/reproduction version: **0.5.0**. DOI **10.5281/zenodo.23308074** was reserved at archive
+assembly; remote publication is a separate operation. That identifier identifies
+the software/reproduction release, not a manuscript or preprint. The immutable
+prior software-only snapshot has DOI 10.5281/zenodo.22884874 and does not archive this revision.
 
-The acute human time course contains three donors. The mouse comparison has one animal per arm and time point. Numerical resolutions, seeds and evaluation draws do not increase the donor count. Bootstrap draws and cells are not additional independent patients.
+A three-donor audit of population reconstruction by conditional flow matching in acute human wounds. The release includes the producing programs, public processed counts, frozen coordinates, saved fields and predictions, numerical evidence, protocols and corrected journal documents. It distinguishes global time holdout from donor transfer, retains adverse control comparisons and records strict replay limits. The analysis does not identify individual cell trajectories or validate clinical wound prognosis.
 
-[Source code](https://github.com/PeterPonyu/wound-population-dynamics) · [Versioned downloads](https://github.com/PeterPonyu/wound-population-dynamics/releases/tag/v0.4.2) · [Software DOI](https://doi.org/10.5281/zenodo.22962339)
+The full archive includes exact producing analysis code, recursive local imports,
+public processed inputs, saved states, numerical tables, gene/mapping lists and
+protocols. Current native paths are preserved beneath `analysis_revision/`.
+Start with [the reproduction guide](REPRODUCIBILITY.md) and
+[the current analysis guide](analysis_revision/REPRODUCIBILITY.md).
 
-Read the [manuscript](output/pdf/wound_population_dynamics.pdf) and the [figure collection](manuscripts/figures/figures.pdf). The package contains 7 editable R/TikZ vector figures, numerical tables, completed reports, and its own copy of the frozen expression model. RESULTS_INDEX.json maps numerical reports to manuscript use. A copy of the model is included here so the project runs independently.
-
-![Study design](manuscripts/figures/figure1_workflow.png)
-
-## Rebuild from saved numerical inputs
-
-First download and extract the complete reproduction ZIP from the versioned Releases page. The commands below run from that extracted root, not the lightweight Git checkout.
+After downloading and extracting the complete version archive, run:
 
 ```sh
 python3 verify_archive.py --smoke
-python3 manuscripts/latex/export_tables.py
-python3 manuscripts/build_main_figures.py
-python3 manuscripts/latex/build.py --render
-python3 -m pytest -p no:cacheprovider tests -q
 ```
 
-The figure and PDF commands require R with ggplot2, patchwork, tikzDevice, jsonlite and digest; XeLaTeX/BibTeX/latexmk; Poppler; and installed Arial and TeX Gyre fonts. Fonts are not redistributed. Python package versions are recorded in requirements.txt and environment.json. CPU CLI smoke checks and saved-input rendering do not train models. Some optional analysis commands below fit models; they are not part of the release verification workflow.
+The checksum/import/CLI smoke performs no fitting or downloads. Run the saved-input
+checks documented in REPRODUCIBILITY.md using fresh output directories. The exact
+journal source, figures, font contracts and build configuration are in
+`journal/source/population/`; journal/README.md describes a fresh-copy rebuild.
 
-## Rights
+The frozen representation and source data retain their original shared provenance.
+Independent packaging does not add statistical independence or biological donors.
+Original-CUDA replay evidence, prior CPU/PCA failures and historical state-retention limits remain in the analysis verification records. Imports and checksum checks do not certify strict saved-field CPU replay or full retraining.
 
-The MIT License applies to software, including analysis and rendering programs. Manuscripts, figures, tables, saved models, numerical results and source-study data retain their respective rights as set out in NOTICE. The full reproduction ZIP and the software-only Zenodo ZIP are different artifacts with separate manifests and checksums.
+MIT applies to authored software. Scholarly documents, figures, saved research
+outputs, source-study materials and third-party fonts retain the rights stated in
+[NOTICE](NOTICE). Public processed count files are distinct from controlled human
+sequencing reads; the latter were not used or redistributed. Font binaries and
+third-party assets are documented with their own license/availability contracts.
 
-## Citation and software archiving
+Historical manuscript/analysis snapshots remain as provenance. The corrected
+documents linked above are the default reading products for this release.
 
-Use CITATION.cff for software attribution: [10.5281/zenodo.22962339](https://doi.org/10.5281/zenodo.22962339). This software DOI does not identify the manuscript. ARCHIVING.md describes artifact scopes and checksum verification.
 
-## Data and research-material availability
+## Complete versioned reproduction package
 
-Public processed count matrices and author annotations are available from these source records:
+This Git checkout and the source-and-documents asset provide current producing
+source, corrected manuscripts and compact saved results. Large numerical arrays,
+model states and inputs are in the complete version archive at
+[software DOI 10.5281/zenodo.23308074](https://doi.org/10.5281/zenodo.23308074).
+The public record determines publication status; the sealed package was assembled
+while its DOI was reserved. Download every numbered ZIP part and follow
+REASSEMBLE.md and SHA256SUMS. The reconstructed ZIP has SHA256
+`29d6045135a55e3f4857603773d24dc0d2098f8bc274643c67c50709a37ee7d3`.
 
-- [GSE165816](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165816)
-- [GSE241132](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241132)
-- [GSE326622](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326622)
-
-REPRODUCIBILITY.md describes downloads, input locations and analysis order. Public study materials require no request to the author. Source-study permissions remain in force: processed public matrices are not the same as unrestricted human sequencing reads. The complete reproduction package includes derived numerical reports, frozen weights, editable figures and the manuscript; these materials are openly downloadable from this repository's versioned Releases page without author approval or an access request. They retain the rights stated in NOTICE; public availability does not relicense source-study data.
-
-## Mathematical verification
-
-Version 0.4.2 corrects method descriptions and adds explicit estimands, analytic unit tests and a frozen-input sensitivity report. Read METHODS_CONTRACT.md and CHANGELOG.md for the interpretation and provenance boundaries. Recompute the added analysis with `python3 scripts/audit_population_math.py --output-dir outputs/reruns/mathematical_audit`. This uses saved inputs and does not refit the original representation or temporal fields.
-
-## Observed-cell and experimental extension
-
-Version 0.4.2 adds observed-cell maps, raw-count expression context and explicitly bounded experiments. Two globally missing times are compared against unchanged source, within-donor centroid translation and an independent-endpoint bridge across three seeds. The centroid predictor has lower mean donor error in both tasks; the earlier held-donor ranking is task-specific. The frozen original reports remain unchanged.
-
-## Complete reproduction download
-
-Download [wound-population-dynamics-0.4.2.zip](https://github.com/PeterPonyu/wound-population-dynamics/releases/tag/v0.4.2) for the exact manuscript, figures, frozen models, completed numerical reports and checksum manifest. The Git source checkout excludes large research-output directories; extract the complete ZIP before running saved-input figure/PDF rebuilds. The software-only ZIP is sufficient for code inspection and CPU import/unit tests, but is not a pretrained-result bundle.
+Extract the full archive before running full-manifest checks or scripts that use
+the large inputs. The full archive's release-manifest.json describes that archive;
+SOURCE_DOCUMENTS_MANIFEST.json describes this compact source/docs selection.
+The DOI identifies software and research sources, not a manuscript publication.

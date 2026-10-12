@@ -1,0 +1,21 @@
+{
+ "approved": false,
+ "approved_by": "",
+ "approved_utc": "",
+ "code_digest": "ab109504d42ec1e58bb2",
+ "dataset_ids": [
+  "GSE241132"
+ ],
+ "dataset_sha256": {
+  "GSE241132": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848"
+ },
+ "input_sha256": {},
+ "jobs_sha256": "056655883df818878270528a2fd9569afc6133a4e674a5d43c9d0fe0abc4f03a",
+ "protocol_hash": "4bd7932aac356804539d",
+ "purpose": "stage_b_execution",
+ "review_material_sha256": "17ac924da67a4dd2fa1a397c356cbb8e02fc16de76ee8a7f8894f407c5cc0725",
+ "review_notes": "",
+ "reviewed_dataset_ids": [],
+ "schema_version": 1,
+ "stage_a_reviewed": false
+}

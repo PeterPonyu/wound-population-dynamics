@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
+  "title_words": 13,
+  "abstract_words": 177,
+  "main_figures": 8,
+  "main_tables": 0,
+  "supplementary_figures": 1,
+  "supplementary_tables": 42,
+  "moved_displays": {
+    "fig:p2f6": [
+      "figure",
+      1
+    ]
+  },
+  "main_text_words": 3442,
+  "main_text_section_words": {
+    "introduction": 1004,
+    "results": 1903,
+    "discussion": 535
+  },
+  "main_text_count_method": "TeXcount prose words in Introduction, Results and Discussion; excludes Abstract, Methods, references, headings, equations and figure legends.",
+  "main_text_recommendation_met": true,
+  "title_recommendation_met": true,
+  "title_page_and_declaration_order": "PASS",
+  "supplement_title_matches": true,
+  "canonical_source_sha256": "6417d2de272ca0276e244bd06994e79f32d4c117ebec7c5caef7cde4958bba2b",
+  "canonical_supplement_sha256": "4977f4784531765f8e98233b89ef76d1a5fbd4fdde4c38f4e3cca4de161b9825",
+  "configuration_sha256": "f0296146fe75b008f3784a27f401b40ac2ee47f948e33a281a03e7772a40f31d",
+  "generator_sha256": "62839ea28caad14c2bdc75d80a59b3164f41a220e76510639fd72616f6c9a6e4",
+  "documents": {
+    "manuscript": {
+      "path": "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-manuscript.pdf",
+      "sha256": "b1a22f23816212b651db5db06273385740a5bf415a3fc4b037bb9a7dc52ae166",
+      "pages": 24,
+      "source_sha256": "ce8003c238e8e29a8457f2479329a0d38bd5d1e0605055fbb49ff459cf5a7376",
+      "bytes": 1605920
+    },
+    "supplement": {
+      "path": "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-supplement.pdf",
+      "sha256": "2ed8db300e5c1739f35c58151bc503b32f918dbab17b2a768d9135ef6adedf65",
+      "pages": 24,
+      "source_sha256": "2f4ebce58cccd6d09b531ed573fac89d0113540f8422d81ffd3943c22dc511d0",
+      "bytes": 222253
+    },
+    "manuscript-inline": {
+      "path": "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-manuscript-inline.pdf",
+      "sha256": "f2f9976002b1063ee453550e708ae06455a8b960216196b18d5a4a8b2608e6b7",
+      "pages": 21,
+      "source_sha256": "e1032c3882e78c79ff8d854d4ab6478ab08de8404f736b4a14f39bdcccb4d1ef",
+      "bytes": 1604693
+    }
+  },
+  "inline_layout": {
+    "fig:p2f1": {
+      "display": "Figure 1",
+      "first_citation_page": 10,
+      "display_page": 11,
+      "pages_after_first_citation": 1
+    },
+    "fig:p2f2": {
+      "display": "Figure 2",
+      "first_citation_page": 12,
+      "display_page": 12,
+      "pages_after_first_citation": 0
+    },
+    "fig:p2f3": {
+      "display": "Figure 3",
+      "first_citation_page": 12,
+      "display_page": 13,
+      "pages_after_first_citation": 1
+    },
+    "fig:p2f4": {
+      "display": "Figure 4",
+      "first_citation_page": 13,
+      "display_page": 14,
+      "pages_after_first_citation": 1
+    },
+    "fig:p2f5": {
+      "display": "Figure 5",
+      "first_citation_page": 13,
+      "display_page": 15,
+      "pages_after_first_citation": 2
+    },
+    "fig:p2f7": {
+      "display": "Figure 6",
+      "first_citation_page": 15,
+      "display_page": 16,
+      "pages_after_first_citation": 1
+    },
+    "fig:p2f8": {
+      "display": "Figure 7",
+      "first_citation_page": 16,
+      "display_page": 17,
+      "pages_after_first_citation": 1
+    },
+    "fig:p2f9": {
+      "display": "Figure 8",
+      "first_citation_page": 17,
+      "display_page": 18,
+      "pages_after_first_citation": 1
+    }
+  },
+  "layouts": {
+    "manuscript": "journal-checklist layout: legends, figures and the table follow the references",
+    "manuscript-inline": "reading layout: each figure and table floats after the paragraph that first cites it"
+  },
+  "scope": "Journal document conversion and mechanical checks; no new experiments or independent peer review.",
+  "guidelines": "https://www.nature.com/srep/author-instructions/submission-guidelines",
+  "checklist": "https://www.nature.com/documents/srep-checklist-for-initial-submissions.pdf"
+}

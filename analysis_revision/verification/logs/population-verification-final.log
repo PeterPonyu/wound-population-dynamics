@@ -1,0 +1,84 @@
+{'Wound7': {'unchanged_source': 1.4724762061265302, 'translation': 0.6674204410636548, 'per_donor_unchanged': [1.7580284658395158, 1.5845662153158733, 1.0748339372242013], 'per_donor_translation': [0.705820683439951, 0.6898344741297668, 0.6066061656212467]}, 'Wound1': {'unchanged_source': 1.3460169798645598, 'translation': 0.9292727374829651, 'per_donor_unchanged': [1.1341395830364265, 1.5517124269806004, 1.3521989295766526], 'per_donor_translation': [0.8703744657884611, 1.0899749088091717, 0.8274688378512627]}}
+matched rows 2700 missing 0 max abs diff 4.440892098500626e-16
+{
+  "study": "wound-population-dynamics",
+  "file_hashes": 1886,
+  "provenance_gaps": [],
+  "model_training_performed": false,
+  "network_access_performed": false,
+  "full_refit_performed": false,
+  "strict_saved_field_cpu_replay_certified": false,
+  "import_smoke": "passed",
+  "cli_smoke": "passed",
+  "imported": [
+    "core_engines.data_adapter",
+    "core_engines.topic_simplex_engine",
+    "expansion.common.io",
+    "expansion.common.rng",
+    "expansion.population.worker",
+    "expansion.population.methods",
+    "p2common"
+  ],
+  "cli_commands": [
+    [
+      "scripts/audit_followup_integration.py",
+      "--help"
+    ],
+    [
+      "scripts/complete_followup_nested.py",
+      "--help"
+    ],
+    [
+      "scripts/external_gse186527.py",
+      "--help"
+    ]
+  ],
+  "saved_result_checks": {
+    "rows": 2700,
+    "missing": 0,
+    "max_abs_energy_difference": 4.440892098500626e-16,
+    "methods": [
+      "identity",
+      "location_scale",
+      "mean_shift",
+      "target_marginal"
+    ],
+    "original_fields": 354,
+    "selected_outer_fields": 9,
+    "table_s25": {
+      "Wound7": {
+        "unchanged_source": 1.4724762061265302,
+        "translation": 0.6674204410636548,
+        "per_donor_unchanged": [
+          1.7580284658395158,
+          1.5845662153158733,
+          1.0748339372242013
+        ],
+        "per_donor_translation": [
+          0.705820683439951,
+          0.6898344741297668,
+          0.6066061656212467
+        ]
+      },
+      "Wound1": {
+        "unchanged_source": 1.3460169798645598,
+        "translation": 0.9292727374829651,
+        "per_donor_unchanged": [
+          1.1341395830364265,
+          1.5517124269806004,
+          1.3521989295766526
+        ],
+        "per_donor_translation": [
+          0.8703744657884611,
+          1.0899749088091717,
+          0.8274688378512627
+        ]
+      }
+    },
+    "historical_budget_prediction_pairs": 180,
+    "historical_budget_numeric_values": 1013,
+    "historical_budget_max_abs_error": 0
+  },
+  "output_dir": "tmp/reproduction-check-02",
+  "elapsed_seconds": 6.523998260498047
+}

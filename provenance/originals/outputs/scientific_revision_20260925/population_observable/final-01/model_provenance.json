@@ -1,0 +1,9 @@
+{
+  "requested_model": "gpt-6-astra",
+  "runtime_reported_model": "gpt-6-astra",
+  "runtime_metadata_available": true,
+  "verification": "local session turn_context, not just requested parameter",
+  "runtime_timestamp_utc": "2026-09-25T08:40:30.662Z",
+  "metadata_source": "/home/zeyufu/.codex/sessions/2026/09/22/rollout-2026-09-22T18-14-24-01a0cbd4-0315-7181-b647-78b9b57c56ba.jsonl",
+  "matches_request": true
+}

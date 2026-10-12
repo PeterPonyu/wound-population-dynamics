@@ -1,0 +1,171 @@
+{
+  "status": "complete",
+  "biological_donors": 3,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "historical_max_error_difference": 2.220446049250313e-16,
+  "geometry": [
+    {
+      "holdout": "Wound7",
+      "method": "Unchanged source",
+      "energy_distance": 1.4724762061265302,
+      "centered_energy": 0.14946049802856307,
+      "centroid_error": 2.5971064959632617,
+      "variance_ratio": 0.7605740356089137
+    },
+    {
+      "holdout": "Wound7",
+      "method": "Centroid translation",
+      "energy_distance": 0.6674204410636548,
+      "centered_energy": 0.14946049821496565,
+      "centroid_error": 1.5375270890147992,
+      "variance_ratio": 0.760574033766753
+    },
+    {
+      "holdout": "Wound7",
+      "method": "Independent bridge",
+      "energy_distance": 0.9284083532248393,
+      "centered_energy": 0.26906723213902367,
+      "centroid_error": 1.5426379124530782,
+      "variance_ratio": 0.3185223748783665
+    },
+    {
+      "holdout": "Wound7",
+      "method": "Shared flow",
+      "energy_distance": 0.8109591043238384,
+      "centered_energy": 0.14411412479281527,
+      "centroid_error": 1.6834837747904396,
+      "variance_ratio": 0.5431817871302955
+    },
+    {
+      "holdout": "Wound7",
+      "method": "Location-scale",
+      "energy_distance": 0.698167315352307,
+      "centered_energy": 0.1465543038994633,
+      "centroid_error": 1.5375271969387834,
+      "variance_ratio": 0.622434027885274
+    },
+    {
+      "holdout": "Wound1",
+      "method": "Unchanged source",
+      "energy_distance": 1.3460169798645598,
+      "centered_energy": 0.06473766612059784,
+      "centroid_error": 2.5213301405297552,
+      "variance_ratio": 0.9903707514516468
+    },
+    {
+      "holdout": "Wound1",
+      "method": "Centroid translation",
+      "energy_distance": 0.9292727374829651,
+      "centered_energy": 0.0647376666072527,
+      "centroid_error": 2.027034180063006,
+      "variance_ratio": 0.9903707583189907
+    },
+    {
+      "holdout": "Wound1",
+      "method": "Independent bridge",
+      "energy_distance": 1.0958876106901418,
+      "centered_energy": 0.14447246338906172,
+      "centroid_error": 2.02150096307373,
+      "variance_ratio": 0.5791955739556625
+    },
+    {
+      "holdout": "Wound1",
+      "method": "Shared flow",
+      "energy_distance": 1.0571220028489516,
+      "centered_energy": 0.1219560076021182,
+      "centroid_error": 2.0158152540456467,
+      "variance_ratio": 0.6411175584509544
+    },
+    {
+      "holdout": "Wound1",
+      "method": "Location-scale",
+      "energy_distance": 0.9033928269441367,
+      "centered_energy": 0.06670765490023782,
+      "centroid_error": 2.0270341299989267,
+      "variance_ratio": 1.1065181192932325
+    }
+  ],
+  "matched_sampling": [
+    {
+      "holdout": "Wound7",
+      "comparator": "Centroid translation",
+      "draws": 50,
+      "flow_minus_comparator_mean": 0.1399977074593795,
+      "difference_min": 0.11318967558090898,
+      "difference_max": 0.17159412265992913,
+      "comparator_lower_count": 50
+    },
+    {
+      "holdout": "Wound7",
+      "comparator": "Location-scale",
+      "draws": 50,
+      "flow_minus_comparator_mean": 0.11022596893538861,
+      "difference_min": 0.08469485620374817,
+      "difference_max": 0.14054732787848734,
+      "comparator_lower_count": 50
+    },
+    {
+      "holdout": "Wound7",
+      "comparator": "Independent bridge",
+      "draws": 50,
+      "flow_minus_comparator_mean": -0.1151243733208497,
+      "difference_min": -0.15764689688541356,
+      "difference_max": -0.07413155334464616,
+      "comparator_lower_count": 0
+    },
+    {
+      "holdout": "Wound1",
+      "comparator": "Centroid translation",
+      "draws": 50,
+      "flow_minus_comparator_mean": 0.12434174064144081,
+      "difference_min": 0.09766913319287673,
+      "difference_max": 0.15452500854918616,
+      "comparator_lower_count": 50
+    },
+    {
+      "holdout": "Wound1",
+      "comparator": "Location-scale",
+      "draws": 50,
+      "flow_minus_comparator_mean": 0.14965105949261928,
+      "difference_min": 0.1194338689011174,
+      "difference_max": 0.17627254459795405,
+      "comparator_lower_count": 50
+    },
+    {
+      "holdout": "Wound1",
+      "comparator": "Independent bridge",
+      "draws": 50,
+      "flow_minus_comparator_mean": -0.040707657781762024,
+      "difference_min": -0.08327187777618916,
+      "difference_max": -0.007043349407950039,
+      "comparator_lower_count": 0
+    }
+  ],
+  "limits": "Retrospective endpoint-informed reconstruction; centered ED is not an additive decomposition; draw ranges are not donor confidence intervals",
+  "provenance": {
+    "script_sha256": "5590a1a4e7e15f8bb6ae3ed1c54130ddf6aee1b71b340daf7f386a1eb4ea63bf",
+    "protocol_sha256": "eeb51bbacde72bc079f2b37876c59dd78da6cbf971dc7cc76b1b5c30f7df330b",
+    "input_sha256": {
+      "outputs/repaired_20260918/human_temporal_flow/mu.npy": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+      "outputs/repaired_20260918/human_temporal_flow/obs_fibroblast.csv": "4323b852d234396b61ee865749d2b7a4c2f96f644159b5e4c4e0459c6ca2cb76",
+      "scripts/expand_biological_evidence.py": "e007b728fab165abb38855d42c67e5cb29ba2d469a6f2dc15327f1c7bf9793ed",
+      "outputs/biological_expansion/population/Wound7_seed0_prediction.npy": "0c35c527f676cef1818d777622343f6a0d195ecdc7a3e31730c3a76b0e7acf73",
+      "outputs/biological_expansion/population/Wound7_seed1_prediction.npy": "c1a6e0b9ae16a05d5a3131559a614a9e8beac3087ccfaebed20a7b60543cbcb2",
+      "outputs/biological_expansion/population/Wound7_seed2_prediction.npy": "17c5ed1bfcb2b80d3a652dec7e0121e8d20479e37aa7e4a28e8f9afb623fdb9b",
+      "outputs/biological_expansion/population/Wound1_seed0_prediction.npy": "4b5be427d78790206b81df8dfcc0e4e1be601b4b09cb8adfcdddf955a7184545",
+      "outputs/biological_expansion/population/Wound1_seed1_prediction.npy": "ce34fc17ce3599b892a98534d38459faa6521daaeca8b0fe1935fb8f686ddfcf",
+      "outputs/biological_expansion/population/Wound1_seed2_prediction.npy": "f5a496f14f3a8c561dd64f0f1d727ba36b7a3c92398210dfea4f5a25f6e9af27",
+      "outputs/biological_expansion/population/baseline_by_donor_seed.csv": "9959057846905f96a6bb33a7e4e506e6042bbb3a3021c5bf4136b4d04bbeff35"
+    },
+    "output_sha256": {
+      "geometry_by_donor_seed.csv": "f2c7f5a798d157c2a7747de0102b7ddec5bd0e83660f79c7fd362f6e7c9e5d7d",
+      "geometry_summary.csv": "7d65469a3a128dd63001e98b77f77d0a87794b2009c6fb6f7d174b8931e12ede",
+      "matched_cell_draws.csv": "bef59d8c650831cc5df96b24b5f21ddeab8c0086d850db3e39f2849b7072d018",
+      "matched_cell_summary.csv": "0cf265d936a6892518bb2cd9dd9b55f46deea5194906d139966ba60378545f48"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "relevant_input_manifests_verified": true,
+  "verified_population_files": 58,
+  "verified_ablation_files": 10,
+  "manifest_scope": "Only named inputs consumed by this audit; other artifacts and prose were not read or certified",
+  "fit_grid_verified": true,
+  "donor_and_time_exclusions_verified": true,
+  "scalers_recalculated": true,
+  "shared_target_and_cross_seed_draw_indices": true,
+  "checkpoint_reload_tolerance": 5e-05,
+  "checkpoint_checks": [
+    {
+      "held_donor": "PWH26",
+      "seed": 0,
+      "checkpoint_sha256": "a22563e61ecaf62cc3067f652891ab38309978484469d332ae4a1a578f9f808e",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 1.9073486328125e-06,
+      "wrong_checkpoint_max_abs_error": 4.76837158203125e-07,
+      "cached_metric_max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "held_donor": "PWH26",
+      "seed": 1,
+      "checkpoint_sha256": "36e6602ebf0fd2dcc717c27c1d9a74873138dc9adf0c21a7ccc80b789ba37579",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 2.86102294921875e-06,
+      "wrong_checkpoint_max_abs_error": 4.76837158203125e-07,
+      "cached_metric_max_abs_error": 0.0
+    },
+    {
+      "held_donor": "PWH26",
+      "seed": 2,
+      "checkpoint_sha256": "16fa6433a2c6485c48d830d7a5749e7fa46e90a77fa3fe83a4cae55ff3f367e4",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 6.67572021484375e-06,
+      "wrong_checkpoint_max_abs_error": 4.76837158203125e-07,
+      "cached_metric_max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 0,
+      "checkpoint_sha256": "d3339e70c995cca6797613b19c713210a4cfa6668f1e9bcae6c07fc02c0be60a",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 1.9073486328125e-06,
+      "wrong_checkpoint_max_abs_error": 7.450580596923828e-07,
+      "cached_metric_max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 1,
+      "checkpoint_sha256": "6b0fdd52b5d49bd8a384e66dca7ec9b4ee9506a279a1a11bf5ba640648657346",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 4.76837158203125e-06,
+      "wrong_checkpoint_max_abs_error": 4.76837158203125e-07,
+      "cached_metric_max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 2,
+      "checkpoint_sha256": "3fad41161ada71999398b385a4b7f0954dc46eed523a80f0c4a2d6b423121cba",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 3.337860107421875e-06,
+      "wrong_checkpoint_max_abs_error": 4.76837158203125e-07,
+      "cached_metric_max_abs_error": 2.6645352591003757e-15
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 0,
+      "checkpoint_sha256": "dbb03973a13bb124c45ddc0a67870e51585bae9cb6ac28b8f821c01baca193e8",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 2.1457672119140625e-06,
+      "wrong_checkpoint_max_abs_error": 1.1920928955078125e-07,
+      "cached_metric_max_abs_error": 5.329070518200751e-15
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 1,
+      "checkpoint_sha256": "129740bc6be2b0204694bc84c797c670ca27512c4b3bd3488a3f12dcc1493f8b",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 2.86102294921875e-06,
+      "wrong_checkpoint_max_abs_error": 1.1920928955078125e-07,
+      "cached_metric_max_abs_error": 3.552713678800501e-15
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 2,
+      "checkpoint_sha256": "02b94c2566ac48befa7d607a88ee91732a570f5f60ebdba48a0c6673e2f850f9",
+      "inverse_transform_max_abs_error": 0.0,
+      "saved_score_abs_error": 0.0,
+      "real_checkpoint_max_abs_error": 1.1920928955078125e-06,
+      "wrong_checkpoint_max_abs_error": 2.9802322387695312e-08,
+      "cached_metric_max_abs_error": 5.329070518200751e-15
+    }
+  ],
+  "no_new_training": true,
+  "maximum_marginal_identity_residual": 2.4424906541753444e-15,
+  "maximum_sampled_identity_residual": 7.105427357601002e-15,
+  "maximum_donor_mass_error": 5.551115123125783e-17
+}

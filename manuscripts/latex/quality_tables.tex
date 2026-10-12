@@ -1,0 +1,121 @@
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{14mm}p{18mm}p{36mm}p{24mm}p{32mm}p{39mm}@{}}
+\caption{Complete missing-time paired energy comparisons against mean translation. Values are mean log2(method error/comparator error), averaging matched draws within fit and then training seeds within donor/interval. Negative values favor the listed method. Seed ranges span draw means, whereas draw ranges span the paired values across all fit seeds. Deterministic methods use one fit seed; neural fields use three. These computational ranges are not donor confidence intervals. No raw distance is averaged across fold-specific standardization.}\label{tab:p2qualitymissing}\\
+\toprule
+Donor & Days & Method & Log2 ratio & Seed range & Paired draw range\\\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Donor & Days & Method & Log2 ratio & Seed range & Paired draw range\\\midrule\endhead
+\bottomrule\endfoot
+26 & 0 to 1 & Context CFM & 0.108 & 0.027, 0.151 & -0.059, 0.255\\
+26 & 0 to 1 & Shared CFM & -0.001 & -0.087, 0.057 & -0.184, 0.154\\
+26 & 0 to 1 & Persistence & 0.372 & 0.372, 0.372 & 0.277, 0.473\\
+26 & 0 to 1 & Location--scale & -0.067 & -0.067, -0.067 & -0.100, -0.030\\
+26 & 0 to 1 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+26 & 0 to 1 & OT displacement & 0.072 & 0.072, 0.072 & -0.039, 0.218\\
+27 & 0 to 1 & Context CFM & 0.229 & 0.218, 0.236 & 0.131, 0.309\\
+27 & 0 to 1 & Shared CFM & 0.345 & 0.309, 0.397 & 0.237, 0.464\\
+27 & 0 to 1 & Persistence & 0.499 & 0.499, 0.499 & 0.392, 0.599\\
+27 & 0 to 1 & Location--scale & -0.028 & -0.028, -0.028 & -0.064, -0.001\\
+27 & 0 to 1 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+27 & 0 to 1 & OT displacement & 0.083 & 0.083, 0.083 & 0.010, 0.177\\
+28 & 0 to 1 & Context CFM & 0.164 & 0.130, 0.213 & 0.027, 0.355\\
+28 & 0 to 1 & Shared CFM & 0.240 & 0.217, 0.282 & 0.123, 0.433\\
+28 & 0 to 1 & Persistence & 0.693 & 0.693, 0.693 & 0.595, 0.794\\
+28 & 0 to 1 & Location--scale & -0.018 & -0.018, -0.018 & -0.045, 0.015\\
+28 & 0 to 1 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+28 & 0 to 1 & OT displacement & 0.053 & 0.053, 0.053 & -0.068, 0.132\\
+26 & 1 to 7 & Context CFM & 0.527 & 0.401, 0.666 & 0.329, 0.759\\
+26 & 1 to 7 & Shared CFM & 0.367 & 0.284, 0.452 & 0.178, 0.531\\
+26 & 1 to 7 & Persistence & 1.271 & 1.271, 1.271 & 1.154, 1.405\\
+26 & 1 to 7 & Location--scale & 0.026 & 0.026, 0.026 & 0.010, 0.041\\
+26 & 1 to 7 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+26 & 1 to 7 & OT displacement & 0.013 & 0.013, 0.013 & -0.053, 0.094\\
+27 & 1 to 7 & Context CFM & 0.465 & 0.387, 0.505 & 0.272, 0.637\\
+27 & 1 to 7 & Shared CFM & 0.489 & 0.467, 0.514 & 0.339, 0.660\\
+27 & 1 to 7 & Persistence & 1.162 & 1.162, 1.162 & 0.985, 1.384\\
+27 & 1 to 7 & Location--scale & 0.105 & 0.105, 0.105 & 0.054, 0.152\\
+27 & 1 to 7 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+27 & 1 to 7 & OT displacement & 0.257 & 0.257, 0.257 & 0.144, 0.338\\
+28 & 1 to 7 & Context CFM & 0.552 & 0.428, 0.769 & 0.325, 0.915\\
+28 & 1 to 7 & Shared CFM & 0.666 & 0.494, 0.860 & 0.392, 1.045\\
+28 & 1 to 7 & Persistence & 0.790 & 0.790, 0.790 & 0.559, 1.007\\
+28 & 1 to 7 & Location--scale & 0.056 & 0.056, 0.056 & 0.039, 0.067\\
+28 & 1 to 7 & Mean shift & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+28 & 1 to 7 & OT displacement & 0.389 & 0.389, 0.389 & 0.286, 0.572\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{14mm}p{18mm}p{36mm}p{24mm}p{32mm}p{39mm}@{}}
+\caption{Complete held-donor paired energy comparisons against the target marginal. Values are mean log2(method error/comparator error), averaging matched draws within fit and then training seeds within donor/interval. Negative values favor the listed method. Seed ranges span draw means, whereas draw ranges span the paired values across all fit seeds. Deterministic methods use one fit seed; neural fields use three. These computational ranges are not donor confidence intervals. No raw distance is averaged across fold-specific standardization.}\label{tab:p2qualitydonor}\\
+\toprule
+Donor & Days & Method & Log2 ratio & Seed range & Paired draw range\\\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Donor & Days & Method & Log2 ratio & Seed range & Paired draw range\\\midrule\endhead
+\bottomrule\endfoot
+26 & 0 to 1 & Context CFM & -0.338 & -0.636, -0.129 & -1.032, 0.237\\
+26 & 0 to 1 & Shared CFM & -0.489 & -0.539, -0.451 & -0.965, -0.061\\
+26 & 0 to 1 & Persistence & 1.806 & 1.806, 1.806 & 1.518, 2.349\\
+26 & 0 to 1 & Location--scale & -0.357 & -0.357, -0.357 & -0.596, 0.122\\
+26 & 0 to 1 & Mean shift & -0.354 & -0.354, -0.354 & -0.574, 0.141\\
+26 & 0 to 1 & Population OT & 1.186 & 1.186, 1.186 & 0.949, 1.570\\
+26 & 0 to 1 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+27 & 0 to 1 & Context CFM & 0.145 & -0.031, 0.430 & -0.413, 0.744\\
+27 & 0 to 1 & Shared CFM & 0.196 & 0.064, 0.331 & -0.217, 0.700\\
+27 & 0 to 1 & Persistence & 2.183 & 2.183, 2.183 & 1.725, 2.546\\
+27 & 0 to 1 & Location--scale & 0.160 & 0.160, 0.160 & -0.163, 0.447\\
+27 & 0 to 1 & Mean shift & 0.214 & 0.214, 0.214 & -0.113, 0.501\\
+27 & 0 to 1 & Population OT & 1.304 & 1.304, 1.304 & 1.036, 1.544\\
+27 & 0 to 1 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+28 & 0 to 1 & Context CFM & 1.502 & 0.997, 1.984 & 0.507, 2.798\\
+28 & 0 to 1 & Shared CFM & 2.229 & 1.684, 2.678 & 1.241, 3.282\\
+28 & 0 to 1 & Persistence & 2.616 & 2.616, 2.616 & 2.212, 3.100\\
+28 & 0 to 1 & Location--scale & -0.077 & -0.077, -0.077 & -0.580, 0.486\\
+28 & 0 to 1 & Mean shift & 0.334 & 0.334, 0.334 & -0.049, 0.901\\
+28 & 0 to 1 & Population OT & 1.530 & 1.530, 1.530 & 1.096, 2.015\\
+28 & 0 to 1 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+26 & 1 to 7 & Context CFM & 2.518 & 2.073, 2.848 & 1.329, 3.353\\
+26 & 1 to 7 & Shared CFM & 2.372 & 2.342, 2.410 & 1.659, 2.934\\
+26 & 1 to 7 & Persistence & 3.377 & 3.377, 3.377 & 2.761, 3.916\\
+26 & 1 to 7 & Location--scale & 1.700 & 1.700, 1.700 & 1.077, 2.252\\
+26 & 1 to 7 & Mean shift & 1.739 & 1.739, 1.739 & 1.108, 2.311\\
+26 & 1 to 7 & Population OT & 2.049 & 2.049, 2.049 & 1.348, 2.665\\
+26 & 1 to 7 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+27 & 1 to 7 & Context CFM & 2.740 & 2.611, 2.947 & 1.904, 3.737\\
+27 & 1 to 7 & Shared CFM & 3.123 & 2.825, 3.375 & 2.278, 4.204\\
+27 & 1 to 7 & Persistence & 3.282 & 3.282, 3.282 & 2.601, 3.832\\
+27 & 1 to 7 & Location--scale & 1.218 & 1.218, 1.218 & 0.640, 1.951\\
+27 & 1 to 7 & Mean shift & 1.288 & 1.288, 1.288 & 0.786, 1.964\\
+27 & 1 to 7 & Population OT & 2.082 & 2.082, 2.082 & 1.394, 2.647\\
+27 & 1 to 7 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+28 & 1 to 7 & Context CFM & -0.105 & -0.346, 0.280 & -1.238, 0.831\\
+28 & 1 to 7 & Shared CFM & -0.419 & -0.570, -0.135 & -1.554, 0.298\\
+28 & 1 to 7 & Persistence & 2.007 & 2.007, 2.007 & 1.274, 2.750\\
+28 & 1 to 7 & Location--scale & 0.202 & 0.202, 0.202 & -0.452, 0.620\\
+28 & 1 to 7 & Mean shift & 0.420 & 0.420, 0.420 & -0.231, 0.813\\
+28 & 1 to 7 & Population OT & 1.585 & 1.585, 1.585 & 1.053, 2.090\\
+28 & 1 to 7 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+26 & 7 to 30 & Context CFM & 0.121 & -0.183, 0.311 & -1.544, 1.088\\
+26 & 7 to 30 & Shared CFM & -0.006 & -0.610, 0.520 & -1.925, 1.153\\
+26 & 7 to 30 & Persistence & 1.573 & 1.573, 1.573 & 0.437, 2.975\\
+26 & 7 to 30 & Location--scale & 0.714 & 0.714, 0.714 & -0.471, 1.634\\
+26 & 7 to 30 & Mean shift & 0.803 & 0.803, 0.803 & -0.510, 1.881\\
+26 & 7 to 30 & Population OT & 1.114 & 1.114, 1.114 & 0.190, 2.232\\
+26 & 7 to 30 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+27 & 7 to 30 & Context CFM & 1.248 & 0.848, 1.552 & -0.457, 2.607\\
+27 & 7 to 30 & Shared CFM & 0.600 & 0.250, 0.949 & -0.655, 1.828\\
+27 & 7 to 30 & Persistence & 3.648 & 3.648, 3.648 & 2.962, 4.433\\
+27 & 7 to 30 & Location--scale & 1.103 & 1.103, 1.103 & 0.454, 1.846\\
+27 & 7 to 30 & Mean shift & 1.502 & 1.502, 1.502 & 0.885, 2.224\\
+27 & 7 to 30 & Population OT & 1.466 & 1.466, 1.466 & 0.274, 2.249\\
+27 & 7 to 30 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+28 & 7 to 30 & Context CFM & 3.454 & 2.931, 3.779 & 1.645, 4.944\\
+28 & 7 to 30 & Shared CFM & 3.543 & 2.995, 3.969 & 1.834, 5.233\\
+28 & 7 to 30 & Persistence & 4.353 & 4.353, 4.353 & 3.295, 5.710\\
+28 & 7 to 30 & Location--scale & 2.994 & 2.994, 2.994 & 1.882, 4.241\\
+28 & 7 to 30 & Mean shift & 3.108 & 3.108, 3.108 & 2.043, 4.338\\
+28 & 7 to 30 & Population OT & 2.784 & 2.784, 2.784 & 1.701, 4.173\\
+28 & 7 to 30 & Target marginal & 0.000 & 0.000, 0.000 & 0.000, 0.000\\
+\end{longtable}
+}

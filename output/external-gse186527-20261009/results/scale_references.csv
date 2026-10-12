@@ -1,0 +1,7 @@
+analysis,arm,reference,mouse,energy
+Lin+,PBS,held_mouse_vs_other_held_mice,1,0.16773238459636453
+Lin+,PBS,held_mouse_vs_other_held_mice,2,0.4805876695189619
+Lin+,PBS,held_mouse_vs_other_held_mice,3,0.24750827928415298
+Lin+,PBS,held_mouse_vs_other_held_mice,4,2.3745919951467895
+Lin+,PBS,source_day_vs_held_day,pooled,0.4407885909552949
+Lin+,PBS,anchor_day_vs_held_day,pooled,0.6100193732881651

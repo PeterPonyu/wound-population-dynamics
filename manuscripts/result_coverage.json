@@ -2,6 +2,22 @@
   "scope": "Study-specific report coverage with transitive superseded_by provenance. Statuses, historical destinations and interpretations retain their native meaning; sha256 binds exported bytes and native_sha256 binds the producing snapshot. A replacement retained only for provenance is not a current claim of this study.",
   "entries": [
     {
+      "source": "output/publication-quality-20261009/p2/report.json",
+      "sha256": "db445f0a9d23f4d7039a0003da7b228bfe44f11afd7bcdc98c63a56e11ea7073",
+      "status": "included",
+      "manuscript_destination": "P2 Abstract/Methods/Results/Discussion; Figure 8; Tables tab:p2qualitymissing and tab:p2qualitydonor",
+      "interpretation": "All 107 jobs and 24150 paired evaluation rows; current receipt, inputs, code, run, report and scalar-table hashes are bound. Fold/draw-matched ratios retain donor heterogeneity, adverse comparisons, predictor warnings, unresolved OT residual and fit-only cost limits. Original-CUDA replay passes with zero discrepancy; the failed CPU portability gate remains failed. Three donors, no method ranking, new biological replication, clinical or lineage validation.",
+      "native_sha256": "f0b434a408e0d2b4736fb4ae89f1b5be50ddd27181c93d94992b7b316557a890"
+    },
+    {
+      "source": "output/submission-preparation-20261002-r1/population/report.json",
+      "sha256": "36c5fd58f7752ff65ba34514d1906d0fd32214da4879086501a0b4b17c0981f3",
+      "status": "included",
+      "manuscript_destination": "P2 Methods/Results/Discussion; Tables tab:p2budgetdiagnostic and tab:p2budgetdetails",
+      "interpretation": "Authenticated saved 48-flow/12-baseline/180-pair scalar reporting, no new fit or integration. Training-HVG200/PCA15 small-budget diagnostic separate from primary frozen coordinates; retain fold-specific units, single baseline draw, 20 failed SB batches and adaptive-MMD limits. Not population ranking or new donor replication.",
+      "native_sha256": "36c5fd58f7752ff65ba34514d1906d0fd32214da4879086501a0b4b17c0981f3"
+    },
+    {
       "source": "outputs/analysis/donor_conditioned_benchmark/report.json",
       "sha256": "1f66a4585769b9d30aba453a35249b60d44590e84d1e8f097817a44a9f1e5930",
       "current_use": "Unchanged historical fitted-method and conditioning comparisons, including P2-C05-CONDITIONING. The added matched target-marginal values in P2-C05 and P2-REV-MARGINAL come from the 20260922 historical_benchmark report; this is not their source.",
@@ -19,6 +35,15 @@
       "manuscript_destination": "P2 Figure 6; Table tab:p2seedcurve",
       "interpretation": "Shared CFM and mean-displacement count controls retained.",
       "native_sha256": "139ea428007313c4dd5f9529cd02eef7ebe5fb7e3cc41d9a4a7b2658a89c27a0"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/donor_count_curve/report.json",
+      "sha256": "1f173efed4bb55e679da0394257e2af4d9dbe96c57aac0b59b9e2a3b6aec26ce",
+      "status": "included",
+      "current_use": "current_provenance_diagnostic_only",
+      "manuscript_destination": "Internal provenance record; not the P2-C06 common-reference estimand",
+      "interpretation": "Fresh runtime-pinned rerun of the historical subset-specific donor-count script. The k=1 to k=2 direction is retained as a protocol diagnostic; it is not substituted for the 20260922 common-reference report, and two donor-count points cannot identify a plateau or required cohort size.",
+      "native_sha256": "95db78f1e3af0a6fb21e4f4a1fe97bd395f32ac8d2baade8b68d436bc572d73d"
     },
     {
       "source": "outputs/analysis/donor_curve_inference/report.json",
@@ -51,10 +76,21 @@
     {
       "source": "outputs/analysis/donor_transfer_flow/report.json",
       "sha256": "0eaa760e16ba528047996060acdec84b45c8d45fd6eda10ab45df0c42ae8102d",
-      "status": "included",
+      "superseded_by": "outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json",
+      "current_use": "historical_only",
+      "status": "superseded",
       "manuscript_destination": "P2 Figure 2; Table tab:p2folds; geometry text",
       "interpretation": "All donor-transfer errors and displacement alignment retained.",
       "native_sha256": "2f5c7ea9a3ca833d65b35f1b156378ab8b4b8707f1cf3ef92be60b0cd0ee77cd"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json",
+      "sha256": "4656381cf5a8a434cac5c6574cb661f4813b192e667ef2eff695b3a2e1e62a64",
+      "status": "included",
+      "current_use": "current_runtime_pinned",
+      "manuscript_destination": "P2 Figure 2; Table tab:p2folds; geometry text",
+      "interpretation": "Current runtime-pinned rerun of the corrected donor-transfer protocol. Scientific values agree with the prior repaired result; the old 20260918 report remains immutable historical evidence.",
+      "native_sha256": "c5c990f313a629c10939cb89f4244d3a1eda4a2f17dae0ca03b2027b78fa06b0"
     },
     {
       "source": "outputs/analysis/human_temporal_flow/report.json",
@@ -99,12 +135,23 @@
     {
       "source": "outputs/analysis/time_parameterisation/report.json",
       "sha256": "555165cddb5c1fbde7082199dab2bb95f62e57abc09e582fbe19a12fcd0f0ce8",
-      "status": "included",
+      "superseded_by": "outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json",
+      "current_use": "historical_only",
+      "status": "superseded",
       "manuscript_destination": "P2 historical table tab:p2axes only; replaced in Figure 4",
       "interpretation": "All four axes; nearest 60-step grid-point convention now explicit. Full scans in figure source CSV.",
+      "historical_replacement": "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json",
+      "native_sha256": "827f5a89b638005c2fa1d3078d37ea2ac4fda5e54df31f6233bd457ff72c4f01"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json",
+      "sha256": "ae04b5b9b5cc7d5c32267bb5cae309abe85f12c02e6a73dc93f1ae04a10a42ad",
+      "status": "included",
       "current_use": "historical_comparison_only",
       "superseded_by": "outputs/scientific_revision_20260925/paired_clock/run/paired_clock/report.json",
-      "native_sha256": "827f5a89b638005c2fa1d3078d37ea2ac4fda5e54df31f6233bd457ff72c4f01"
+      "manuscript_destination": "P2 historical table tab:p2axes only; replaced in Figure 4",
+      "interpretation": "Fresh runtime-pinned rerun of the four-axis nearest-grid diagnostic. It preserves the historical comparison boundary and does not replace the paired exact-time Figure 4 audit.",
+      "native_sha256": "534ba23f2b4bdd20ff27e362dedee2ef75cfa1b85b01e5e69629e6c3c2b345c7"
     },
     {
       "source": "outputs/robustness_extensions/report.json",
@@ -196,6 +243,38 @@
       "manuscript_destination": "P2 Methods/Results; tab:p2observable; tab:p2decoderreference",
       "interpretation": "Equal-cell common-panel mean expression against actual held-donor count-derived proportions, not decoded truth. These are not absolute counts and not biological confidence intervals. Decoder reconstruction is not a mathematical lower error bound. POP05 remains partially addressed; this is not clinical or external validation.",
       "native_sha256": "cfb615a1d2a8f157e7b8e936164961015da70a72575cbe64fc8f49d86b04c5c2"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/report.json",
+      "sha256": "f2687377d1518864cc5150f8566348a9197827368f7c8f62fd43e3cc5af3a0c4",
+      "status": "included",
+      "manuscript_destination": "P2 Abstract/Methods/Results/Discussion; supplement tables tab:p2extlibraries, tab:p2extgroups, tab:p2extresults and tab:p2extscale",
+      "interpretation": "Frozen-protocol external check on GSE186527: hashtag audit, admission floors, one admitted Lin+ PBS population and nine permitted methods with three seeds. Descriptive only; arms, gates and mice are not an inferential sample.",
+      "native_sha256": "f2687377d1518864cc5150f8566348a9197827368f7c8f62fd43e3cc5af3a0c4"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/report.json",
+      "sha256": "38918e0eb007bdb83343a64ab0eb38d2d79ffad08570c390baacd83584d854a1",
+      "status": "included",
+      "manuscript_destination": "P2 external Results; tab:p2extrepeat; P2-EXTERNAL-REEXECUTION",
+      "interpretation": "All 19 nominal-protocol repeat fits are reported alongside the original grid. Fresh fitted-state CUDA replay is exact, but retraining is not identical to the original unsaved weights; the largest paired energy change is 0.011673. This is computational sensitivity on the same admitted cells and mice, not biological replication, CPU portability or an independent method ranking.",
+      "native_sha256": "961b014b7478e203487cb4f26b567dbb05c6a67473ca4b1f2ff81242f461adbc"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/report.json",
+      "sha256": "e745b8fbae5153d07cdbe3042a76d493ef4942eef7994c1d3d9469dcf63c8c4b",
+      "status": "included",
+      "manuscript_destination": "P2 Abstract/Methods/Results/Discussion; Figure 9; Tables tab:p2followcoupling, tab:p2followrepresentation, tab:p2follownested, tab:p2followalpha, tab:p2followshrinkage, tab:p2followdecode",
+      "interpretation": "Computational follow-up using the same three donors and discovery-trained frozen encoder. Not biological replication, a new clock-fit study, full alpha-grid replay, retrospective proof of historical training inputs, convergence, CPU portability or unrestricted superiority. Alternate couplings and longer training did not beat translation in at least two of three day-7 donors. Nested selection reduced errors but still lost to the target marginal in two donors. Keep unequal search budgets, coordinate dependence, target-informed alpha oracle status, ratio-of-means versus mean-log estimands and empirical-decoder limitations.",
+      "native_sha256": "e745b8fbae5153d07cdbe3042a76d493ef4942eef7994c1d3d9469dcf63c8c4b"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/e0-reproduction/receipt.json",
+      "sha256": "09c587beab78b3110f9e9b2a931027d8a60c9ab2d2a329cad770111880048869",
+      "status": "included",
+      "manuscript_destination": "P2 late follow-up Results; historical full-cell controls in Table tab:p2interpolation",
+      "interpretation": "Same local input and deterministic controls; not new biological evidence, exact retraining of historical fields, CPU field-portability certification or an alpha-grid replay. Full-cell controls and all saved deterministic draw scores reproduce within floating-point roundoff, while the distinction between full-cell energy and paired sampled comparisons remains explicit.",
+      "native_sha256": "68e11225c060c3ec13eb335df211e190613da118665342f155c1708dadd14296"
     }
   ]
 }

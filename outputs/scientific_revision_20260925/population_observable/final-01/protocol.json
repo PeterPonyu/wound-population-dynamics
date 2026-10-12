@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "protocol_id": "POP05-observable-20260925-v1",
+  "design": "Retrospective, frozen-prediction audit; prospectively locked for this new observable-space analysis, not a prospective biological study.",
+  "requested_agent_model": "gpt-6-astra",
+  "expected": {
+    "donors": [
+      "PWH26",
+      "PWH27",
+      "PWH28"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fits": 27,
+    "latent_cells": 12259,
+    "topics": 15,
+    "panel_genes": 7002,
+    "common_genes": 5383
+  },
+  "population_directory": "outputs/scientific_revision_20260922/population",
+  "latent_path": "outputs/analysis/human_temporal_flow/mu.npy",
+  "observation_path": "outputs/analysis/human_temporal_flow/obs_fibroblast.csv",
+  "projection_report": "outputs/analysis/human_temporal_flow/report.json",
+  "discovery_directory": "outputs/expression_representation",
+  "raw_directory": "data/raw/GSE241132/per_gsm",
+  "metadata_path": "data/raw/GSE241132/GSE241132_cell_metadata.txt.gz",
+  "source_condition": "Wound1",
+  "target_condition": "Wound7",
+  "features": {
+    "primary": "Every frozen-panel gene present in the feature catalogues of all twelve archives, in frozen panel order. No expression, variance, significance or favourable-performance filter.",
+    "missing_panel_genes": "The 1619 genes absent from the assay are unscored, not observed zeros. Report their decoded probability mass separately.",
+    "duplicate_symbols": "Sum counts of distinct feature IDs sharing a gene symbol using the original data-adapter contract."
+  },
+  "normalization": {
+    "observed": "Normalize each real count row by its common-panel count total, then average cells with equal weight. This is a mean cellular composition, not a library-size-weighted pseudobulk count estimator.",
+    "prediction": "Invert the fit-specific training scaler: mu = training_z * training_scale + training_mean. Apply softmax to each mu, multiply by the full saved beta, retain the common genes, normalize each particle on that set, then average particles. Do not normalize beta rows on the common panel before mixing topics.",
+    "zero_totals": "Fail explicitly if any retained observed cell has zero common-panel counts or any decoded particle has zero retained mass. No silent cell dropping.",
+    "absolute_counts": "Not identifiable from this decoder; never evaluate or claim absolute transcript or library-size prediction."
+  },
+  "target_sets": {
+    "original_evaluation": "Primary: exact saved held-Wound7 evaluation identities, original seed-0 cap1200 draw; same identities for all methods/seeds/subsets.",
+    "all_day7": "Predeclared sensitivity: all author-annotated held-donor Wound7 fibroblasts; no new fit or feature selection."
+  },
+  "methods": [
+    "shared_cfm_decoded",
+    "persistence_decoded",
+    "mean_displacement_decoded",
+    "training_target_marginal_decoded_exact",
+    "persistence_observed",
+    "training_target_marginal_observed_exact"
+  ],
+  "baselines": {
+    "persistence": "Use only held day1 source cells, either their frozen decoded mu or their actual normalized expression; label these two baselines separately.",
+    "mean_displacement": "Use each saved fit's same training subset, mean/scale and saved mean-displacement prediction; validate against training-only mean day1-to-day7 displacement.",
+    "target_marginal": "Use only Wound7 cells of the SAME permitted training donor subset. Each training donor has total mass 1/k, with equal cell weight within donor. Decode mu and directly observed expression are separate methods.",
+    "matched_draws": "Not used: this analysis scores exact sample-average profiles, not a cell-distribution distance requiring matched prediction-particle draws."
+  },
+  "metrics": {
+    "primary": "total_variation",
+    "all": [
+      "total_variation",
+      "js_divergence_nats",
+      "gene_rmse"
+    ],
+    "total_variation": "0.5 * sum_g abs(predicted_mean_g - observed_mean_g); lower is better.",
+    "js_divergence_nats": "0.5 KL(p || (p+q)/2) + 0.5 KL(q || (p+q)/2), natural log, 0*log(0)=0; NOT the square-root Jensen-Shannon distance. No pseudocount.",
+    "gene_rmse": "sqrt(mean_g (predicted_mean_g - observed_mean_g)^2) across every common-panel gene."
+  },
+  "signatures": {
+    "purpose": "Secondary training-derived expression-change summaries, not validated biological pathways, clinical signatures or independent endpoints.",
+    "genes_per_direction": 25,
+    "selection": "For each held donor and each permitted training subset, compute equally donor-weighted paired day7-minus-day1 differences in observed mean cell proportions; take the 25 largest strictly positive differences and 25 most negative differences. Break ties lexicographically by gene symbol. Fail if insufficient positive/negative genes. Never use held expression values to select features.",
+    "score": "Report sums of gene proportions for up and down sets, and their signed difference. Evaluate absolute predicted-versus-observed endpoint-score error; also save source-centred changes. No significance threshold or performance-based feature adjustment."
+  },
+  "reconstruction_reference": "Decode the observed held day7 mu with the frozen decoder and same per-cell common-panel renormalization. Report its error against real observed expression separately, and predicted-versus-decoded-target diagnostics separately. This uses held target data, is NOT a forecast, NOT an observed-expression truth, and NOT a proven error floor.",
+  "aggregation": "Average seeds equally within held-donor/training-subset, then average the two k1 subsets equally within held donor. Report k1 and k2 separately, and equal-weight macro means over exactly three held donors. Pair method contrasts within held donor. Save all per-fit scores and donor blocks. Computational seed/subset ranges are not biological confidence intervals.",
+  "inference": {
+    "biological_donors": 3,
+    "new_biological_donors": 0,
+    "confidence_intervals": "None; no pseudo-cell bootstrap, seed-as-donor interval, or hypothesis test.",
+    "claims": "Observed common-panel sample-average expression validation within the existing healthy-wound cohort only. No clinical validity, absolute counts, cell-level trajectory, full distributional fidelity, external cohort generalization or complete resolution of POP05."
+  },
+  "checks": {
+    "inverse_max_abs": 1e-12,
+    "scaler_max_abs": 0.0,
+    "checkpoint_beta_max_abs": 1e-06,
+    "cpu_encoder_mu_max_abs": 5e-05,
+    "mean_displacement_z_max_abs": 1e-06,
+    "probability_sum_atol": 2e-06
+  },
+  "execution": "CPU only; BLAS/OpenMP/Torch are capped at four threads. --prepare writes protocol, code/input hashes, all-gene feature list, training-only signature definitions and raw-data alignment/projection checks before any predictive scores. --run refuses changed inputs/code/protocol, incomplete preparation, or existing results. No retraining or new dependencies."
+}

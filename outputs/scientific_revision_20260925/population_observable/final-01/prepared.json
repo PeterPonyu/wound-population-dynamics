@@ -1,0 +1,13 @@
+{
+  "status": "prepared",
+  "timestamp_utc": "2026-09-25T08:44:47.911463+00:00",
+  "no_predictive_scores_computed": true,
+  "common_genes": 5383,
+  "panel_genes": 7002,
+  "fit_count": 27,
+  "training_only_signatures": 9,
+  "raw_count_cells": 12259,
+  "biological_donors": 3,
+  "input_files": 192,
+  "no_new_training": true
+}

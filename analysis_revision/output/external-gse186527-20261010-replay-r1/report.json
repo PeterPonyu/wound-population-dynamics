@@ -1,0 +1,240 @@
+{
+ "analyses": {
+  "Lin+": {
+   "arms": [
+    "PBS"
+   ],
+   "cells": 719,
+   "representation": {
+    "kind": "pca_train",
+    "n_components": 30,
+    "n_fit_cells": 326,
+    "n_fit_mask": 326,
+    "n_hvg": 2000,
+    "seed": 0
+   },
+   "status": "run"
+  },
+  "Lin-": {
+   "arms_not_admitted": [
+    "PBS",
+    "Verteporfin"
+   ],
+   "reason": "floors failed",
+   "status": "not_admitted"
+  }
+ },
+ "device": "cuda",
+ "not_admitted": {
+  "Lin-": {
+   "arms_not_admitted": [
+    "PBS",
+    "Verteporfin"
+   ],
+   "reason": "floors failed",
+   "status": "not_admitted"
+  }
+ },
+ "protocol_sha256": "ad60dcb0ed7245eea3b602ca14bf00aab698937e4053d88267e9a1a49a1da5bc",
+ "scale_references": [
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 0.167732,
+   "mouse": "1",
+   "reference": "held_mouse_vs_other_held_mice"
+  },
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 0.480588,
+   "mouse": "2",
+   "reference": "held_mouse_vs_other_held_mice"
+  },
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 0.247508,
+   "mouse": "3",
+   "reference": "held_mouse_vs_other_held_mice"
+  },
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 2.374593,
+   "mouse": "4",
+   "reference": "held_mouse_vs_other_held_mice"
+  },
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 0.440789,
+   "mouse": "pooled",
+   "reference": "source_day_vs_held_day"
+  },
+  {
+   "analysis": "Lin+",
+   "arm": "PBS",
+   "energy": 0.610019,
+   "mouse": "pooled",
+   "reference": "anchor_day_vs_held_day"
+  }
+ ],
+ "summary": {
+  "Lin+|log_days|PBS": {
+   "per_mouse_energy": {
+    "cfm_independent": {
+     "max": 2.3585,
+     "mean": 0.940724,
+     "min": 0.248644
+    },
+    "location_scale": {
+     "max": 2.185443,
+     "mean": 0.942096,
+     "min": 0.306429
+    }
+   },
+   "population_energy": {
+    "cfm_independent": {
+     "count": 3,
+     "log_ratio_to_comparator": -0.179967,
+     "max": 0.291564,
+     "mean": 0.283652,
+     "min": 0.270625,
+     "std": 0.011368
+    },
+    "location_scale": {
+     "count": 1,
+     "log_ratio_to_comparator": 0.0,
+     "max": 0.339581,
+     "mean": 0.339581,
+     "min": 0.339581,
+     "std": null
+    }
+   }
+  },
+  "Lin+|rank|PBS": {
+   "per_mouse_energy": {
+    "cfm_independent": {
+     "max": 2.434448,
+     "mean": 0.975706,
+     "min": 0.276317
+    },
+    "cfm_ot": {
+     "max": 2.152279,
+     "mean": 0.851624,
+     "min": 0.199217
+    },
+    "cfm_sb": {
+     "max": 2.152217,
+     "mean": 0.857569,
+     "min": 0.207018
+    },
+    "gaussian_geodesic": {
+     "max": 2.178231,
+     "mean": 0.921771,
+     "min": 0.280878
+    },
+    "identity": {
+     "max": 2.161293,
+     "mean": 1.017374,
+     "min": 0.408011
+    },
+    "location_scale": {
+     "max": 2.198415,
+     "mean": 0.947585,
+     "min": 0.309922
+    },
+    "mean_shift": {
+     "max": 2.211651,
+     "mean": 0.961966,
+     "min": 0.324745
+    },
+    "ot_displacement": {
+     "max": 2.142791,
+     "mean": 0.860185,
+     "min": 0.217707
+    },
+    "quantile_map": {
+     "max": 2.210238,
+     "mean": 0.964042,
+     "min": 0.323456
+    }
+   },
+   "population_energy": {
+    "cfm_independent": {
+     "count": 3,
+     "log_ratio_to_comparator": -0.102546,
+     "max": 0.331738,
+     "mean": 0.309682,
+     "min": 0.286497,
+     "std": 0.022641
+    },
+    "cfm_ot": {
+     "count": 3,
+     "log_ratio_to_comparator": -0.387689,
+     "max": 0.239879,
+     "mean": 0.232852,
+     "min": 0.223168,
+     "std": 0.008667
+    },
+    "cfm_sb": {
+     "count": 3,
+     "log_ratio_to_comparator": -0.35447,
+     "max": 0.245786,
+     "mean": 0.240717,
+     "min": 0.237884,
+     "std": 0.0044
+    },
+    "gaussian_geodesic": {
+     "count": 1,
+     "log_ratio_to_comparator": -0.084345,
+     "max": 0.31537,
+     "mean": 0.31537,
+     "min": 0.31537,
+     "std": null
+    },
+    "identity": {
+     "count": 1,
+     "log_ratio_to_comparator": 0.250475,
+     "max": 0.440789,
+     "mean": 0.440789,
+     "min": 0.440789,
+     "std": null
+    },
+    "location_scale": {
+     "count": 1,
+     "log_ratio_to_comparator": 0.0,
+     "max": 0.343124,
+     "mean": 0.343124,
+     "min": 0.343124,
+     "std": null
+    },
+    "mean_shift": {
+     "count": 1,
+     "log_ratio_to_comparator": 0.041781,
+     "max": 0.357763,
+     "mean": 0.357763,
+     "min": 0.357763,
+     "std": null
+    },
+    "ot_displacement": {
+     "count": 1,
+     "log_ratio_to_comparator": -0.325553,
+     "max": 0.247779,
+     "mean": 0.247779,
+     "min": 0.247779,
+     "std": null
+    },
+    "quantile_map": {
+     "count": 1,
+     "log_ratio_to_comparator": 0.047682,
+     "max": 0.359881,
+     "mean": 0.359881,
+     "min": 0.359881,
+     "std": null
+    }
+   }
+  }
+ }
+}

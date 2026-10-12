@@ -1,0 +1,195 @@
+{
+ "analysis": {
+  "inferential_unit": "none_three_dependent_donor_blocks",
+  "paired_evaluation_descriptive_only": true,
+  "primary_comparators": {
+   "T-LIO": "target_marginal",
+   "T-MT": "mean_shift"
+  },
+  "report_mode": "diagnostic_only"
+ },
+ "budget_policy": {
+  "ddp": false,
+  "equal_compute_claim": false,
+  "initial_gpus": 1,
+  "initial_jobs": 1,
+  "max_logical_cpus": 4,
+  "measure_actual_cost_first": true,
+  "numeric_threads": 1,
+  "post_write_free_fraction": 0.3,
+  "workers": 1
+ },
+ "clock": {
+  "primary": "rank",
+  "sensitivity": [],
+  "sensitivity_methods": []
+ },
+ "datasets": {
+  "tier_G": [],
+  "tier_W": [
+   "GSE241132"
+  ]
+ },
+ "evaluation": {
+  "caps": {
+   "c2st": 200,
+   "energy": 200,
+   "exact_w2": 200,
+   "sliced_w2": 200
+  },
+  "contract": {
+   "bandwidth_cap": 1000,
+   "bandwidth_seed": 29,
+   "draw_seed": 20261005,
+   "draws": 50,
+   "identity_columns": [
+    "individual",
+    "sample",
+    "time",
+    "time_value"
+   ],
+   "name": "train-side-paired-v2",
+   "sample_size": 200
+  },
+  "primary_metric": "energy",
+  "secondary_metrics": [
+   "mmd",
+   "sliced_w2",
+   "mean_error",
+   "bures"
+  ],
+  "sliced_projections": 128
+ },
+ "execution_authorized": false,
+ "flow_defaults": {
+  "batch_size": 512,
+  "context_dropout": 0.2,
+  "depth": 3,
+  "grad_clip": 1.0,
+  "hidden": 256,
+  "lr": 0.001,
+  "profile_stages": true,
+  "rk4_steps_per_interval": 50,
+  "steps": 8000,
+  "time_dim": 32
+ },
+ "frozen_date": "2026-10-05",
+ "kind": "population",
+ "methods": {
+  "cfm_conditioned": {
+   "tasks": [
+    "T-MT",
+    "T-LIO"
+   ]
+  },
+  "cfm_independent": {
+   "tasks": [
+    "T-MT",
+    "T-LIO"
+   ]
+  },
+  "identity": {
+   "tasks": [
+    "T-MT",
+    "T-LIO"
+   ]
+  },
+  "location_scale": {
+   "tasks": [
+    "T-MT",
+    "T-LIO"
+   ]
+  },
+  "mean_shift": {
+   "tasks": [
+    "T-MT",
+    "T-LIO"
+   ]
+  },
+  "ot_displacement": {
+   "params": {
+    "cap": 500,
+    "k": 15
+   },
+   "tasks": [
+    "T-MT"
+   ]
+  },
+  "population_ot": {
+   "params": {
+    "cap": 500,
+    "epsilon": 0.05,
+    "iterations": 2000,
+    "k": 15
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "target_marginal": {
+   "tasks": [
+    "T-LIO"
+   ]
+  }
+ },
+ "min_cells_per_group": 50,
+ "not_claims": [
+  "No new independent donors are created by draws or seeds.",
+  "T-MT later anchors imply retrospective interpolation, not prospective prediction.",
+  "The fixed encoder and panel condition interpretation; distances across folds are not a common physical unit.",
+  "GSE175634 developmental cell lines cannot validate diabetic-foot outcomes.",
+  "Cross-k inference and independent clinical/mechanistic validation remain separate."
+ ],
+ "protocol_id": "wound-paired-comparison-20261005-v2",
+ "question": "Do neural fields consistently improve paired held-distribution reconstruction over permitted simple alternatives? Negative results satisfy completion.",
+ "representation": {
+  "primary": "frozen_topic_mu"
+ },
+ "representation_seed": 0,
+ "representations": {
+  "frozen_topic_mu": {
+   "key": "X_frozen_mu",
+   "kind": "obsm_standardized"
+  }
+ },
+ "schema_version": 1,
+ "seeds": {
+  "deterministic": [
+   0
+  ],
+  "stochastic": [
+   0,
+   1,
+   2
+  ]
+ },
+ "stage_gate": {
+  "stage_a_stops": true,
+  "stage_b_requires": "new source-pinned plan, reviewed input/protocol, user approval, certification and single-card measured-cost gate"
+ },
+ "status": "implementation_prepared_execution_not_authorized",
+ "tasks": {
+  "T-K": {
+   "enabled": false
+  },
+  "T-LIO": {
+   "enabled": true,
+   "max_held_individuals": 3,
+   "min_individuals": 3
+  },
+  "T-MT": {
+   "enabled": true
+  },
+  "T-SRC": {
+   "enabled": true,
+   "max_substitutes": 2,
+   "methods": [
+    "identity",
+    "mean_shift",
+    "location_scale",
+    "cfm_independent",
+    "cfm_conditioned"
+   ]
+  }
+ }
+}

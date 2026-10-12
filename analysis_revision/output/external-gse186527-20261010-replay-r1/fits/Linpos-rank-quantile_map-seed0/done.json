@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "df8408c5daea687f42fed043b4156a7f321f4871c092cb4973a73abdafd3ac21",
+  "fit.json": "dbeaf5a91aa9ada13331283d635b434ea335c1e7adc6dc2a8bed3f129d44c2b0",
+  "model_replay.npz": "ba04cbe60050b9a65e6b04c7e7bae1508ee93c8963f2a49426b95521e4dad797"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-quantile_map-seed0",
+  "method": "quantile_map",
+  "seed": 0
+ }
+}

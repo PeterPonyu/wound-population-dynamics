@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "949e7b181267ff596bfcdf22577015bf78d5a578f5ca055f0b9920440facd959",
+  "fit.json": "a6c00973844174965c2929102c8d5f124b0288e6d5ab00f63b58fd636840e1a0",
+  "model_replay.npz": "c807b1a24a407098dbd3ec353e4c8014c4ebc634a19b999baa1572543bd52424"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-cfm_sb-seed2",
+  "method": "cfm_sb",
+  "seed": 2
+ }
+}

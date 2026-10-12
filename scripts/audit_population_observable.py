@@ -18,8 +18,6 @@ from pathlib import Path
 import re
 import sys
 import zipfile
-for _thread_variable in ['OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'NUMEXPR_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'BLIS_NUM_THREADS']:
-    os.environ[_thread_variable] = '4'
 import numpy as np
 import pandas as pd
 import scipy
@@ -575,6 +573,8 @@ def main():
     args = parser.parse_args()
     out = args.output_dir.resolve()
     require(out == OUTPUT or OUTPUT in out.parents, 'Output must remain within the owned observable audit directory')
+    for variable in ('OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'NUMEXPR_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'BLIS_NUM_THREADS'):
+        os.environ[variable] = '4'
     with threadpool_limits(limits=4):
         (prepare if args.prepare else run)(args.protocol.resolve(), out, args.runtime_log)
 if __name__ == '__main__':

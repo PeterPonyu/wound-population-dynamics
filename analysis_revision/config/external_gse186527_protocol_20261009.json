@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "kind": "population_external_cross_sectional",
+  "protocol_id": "external-gse186527-tmt-20261009-a",
+  "frozen_utc": "2026-10-10T03:00:00Z",
+  "status": "frozen_before_any_rna_level_analysis",
+  "authorisation": "The author approved acquiring GSE186527_RAW.tar and running an external P2 benchmark in chat on 2026-10-09 (answer: download and run).",
+  "question": "In a destructive cross-sectional mouse wound series, do neural flow fields reconstruct a withheld sampling day better than permitted simple alternatives, treating each treatment arm as a population?",
+  "inputs": {
+    "series": "GSE186527",
+    "archive": "GSE186527_RAW.tar",
+    "archive_bytes": 72949760,
+    "archive_sha256": "5c8203131c00b23db625ade6def19c66f6ade9e6a00a380cf0c618e8f41f2efb",
+    "soft_sha256": "1109a6bcc86991373cb5fbb486cd57a1e639079a65ae29c15847104ec2029f45",
+    "primary_paper": "Mascharak et al., Cell Stem Cell 29:315-327 (2022), doi:10.1016/j.stem.2021.12.011"
+  },
+  "unit_definitions": {
+    "individual": "treatment arm (PBS or Verteporfin), as for GSE326622 in population-benchmark-v1; NOT a mouse",
+    "population": "cells of one arm, one library (day) and one FACS gate, pooled over mice",
+    "mouse": "HTO-labelled animal inside a library; nested within (arm, day); each mouse is sampled at one day only",
+    "gate": "Lin- (fibroblast-enriched) or Lin+ (other cells), from the author's HTO dictionary"
+  },
+  "time_and_arm_assignment": {
+    "rule": "day and arm come from the library (GSM5429656 T-7P=POD7 PBS, T-7V=POD7 Verteporfin, T-14P, T-14V, T-30P, T-30V); mouse and gate come from the HTO via the author's dictionary",
+    "excluded_libraries": ["GSM5429653 (T1)", "GSM5429654 (T2)", "GSM5429655 (T3)"],
+    "exclusion_reason": "These unwounded + POD2 libraries mix three conditions that are distinguishable only through HTOs. The admission audit found zero HTO counts in every cell of all three released matrices, so no cell can be assigned to unwounded/POD2/PBS/Verteporfin. Their day annotations also disagree (GEO characteristics 2, 3 and 4 days for the same POD2 dictionary labels).",
+    "mouse5_conflict": "The dictionary labels both HTO9 and HTO10 of mouse 5 as Lin+. Neither is relabelled. Mouse 5 (HTO9 and HTO10) is excluded from the Lin+ analysis and contributes nothing to Lin-."
+  },
+  "hto_demultiplexing": {
+    "feature_selection": "the ten 'Antibody Capture' features, located by feature type and name, never by row index",
+    "singlet_rule_primary": {"min_top_count": 20, "min_top_over_second": 5.0},
+    "doublet_rule": "second-highest count >= max(20, top/5)",
+    "negative_rule": "top count < 20",
+    "sensitivity_rules": [{"min_top_count": 10, "min_top_over_second": 3.0}, {"min_top_count": 50, "min_top_over_second": 10.0}],
+    "reporting": "per library: cells, any-HTO cells, singlet/doublet/negative counts under all three rules and the fraction of primary singlets whose label changes under each sensitivity rule"
+  },
+  "admission_floors": {
+    "min_cells_per_group": 50,
+    "min_mice_per_group": 2,
+    "applies_to": "each (arm, day, gate) population used by a task; a task whose source, held or anchor population fails is NOT admitted and is reported as such",
+    "no_floor_lowering_after_inspection": true
+  },
+  "tasks": {
+    "T-MT": {"individuals": ["PBS", "Verteporfin"], "times": [7, 14, 30], "held_time": 14, "source_time": 7, "anchor_time": 30,
+             "note": "Retrospective interpolation using the later day; it is not prospective prediction."},
+    "T-LIO": "excluded: arm is not an individual; no animal is sampled twice",
+    "T-K": "excluded for the same reason",
+    "analyses": ["Lin- (primary)", "Lin+ (secondary, mouse 5 excluded)"]
+  },
+  "representation": {"primary": "pca_train", "n_hvg": 2000, "n_components": 30, "max_fit_cells": 50000, "seed": 0,
+                     "fit_cells": "cells of the analysed gate whose day is not the held day, from both arms",
+                     "note": "Mouse-local, train-only. No human-to-mouse ortholog map is used."},
+  "clock": {"primary": "rank", "sensitivity": ["log_days"], "sensitivity_methods": ["location_scale", "cfm_independent"]},
+  "methods": ["identity", "mean_shift", "location_scale", "quantile_map", "ot_displacement", "gaussian_geodesic", "cfm_independent", "cfm_ot", "cfm_sb"],
+  "method_params": {"ot_displacement": {"cap": 2000, "k": 15}, "cfm_sb": {"sb_sigma_scale": 0.25}},
+  "flow_defaults": {"hidden": 256, "depth": 3, "time_dim": 32, "steps": 8000, "batch_size": 512, "lr": 0.001, "rk4_steps_per_interval": 50, "grad_clip": 1.0, "sinkhorn_iterations": 300},
+  "seeds": {"stochastic": [0, 1, 2], "deterministic": [0]},
+  "evaluation": {"primary_metric": "energy", "secondary_metrics": ["mmd", "sliced_w2", "mean_error", "bures"],
+                 "caps": {"energy": 2000, "exact_w2": 1000, "sliced_w2": 4000, "c2st": 2000}, "sliced_projections": 128,
+                 "target": "all cells of the held (arm, day, gate) population",
+                 "mouse_level": "additionally score the prediction against each held mouse's cells separately; report the per-mouse mean and range"},
+  "analysis": {"primary_comparator": "location_scale", "report_mode": "diagnostic_only",
+               "summary": "per arm and gate: energy of every method, log ratio to the comparator, and the same ratios per held mouse; no p-values, no ranking of methods, no pooling of arms or gates into an inferential unit",
+               "practical_delta_log": 0.1823},
+  "not_claims": [
+    "Mice are nested in (arm, day): no animal is observed twice, so no cell or animal trajectory is reconstructed.",
+    "Lin-/Lin+ proportions are set by sorting and carry no whole-wound composition.",
+    "Libraries are batch-confounded with day and arm; arm-level differences cannot be separated from batch.",
+    "Two arms and one held day are not an inferential sample; seeds and draws are computational repetitions.",
+    "Nothing here validates the human wound or diabetic-foot findings."
+  ]
+}

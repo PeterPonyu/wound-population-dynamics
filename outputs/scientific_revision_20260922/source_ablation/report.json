@@ -1,0 +1,188 @@
+{
+  "status": "completed",
+  "scope": "Retrospective source-replacement audit; three healthy acute-wound donors only",
+  "protocol": {
+    "model": "Existing k=2, 3-seed fields, no training or target-dependent selection",
+    "sources": "Real held Wound1 versus source-count-matched equal-donor Wound1 draw from permitted training donors; 50 without-replacement draws per field",
+    "target": "Identical saved held-donor Wound7 indices in every comparison",
+    "metric": "Float64 weighted empirical energy distance in the same held-fold reference coordinates",
+    "marginal": "Existing matched training Wound7 target-marginal draw scores for the same held folds; its draw IDs are not paired cell samples with wrong-source draws",
+    "inference": "Seeds and cell draws are dependent computational repetitions, not independent donors, hypothesis-test p values, or confirmation of source-specific biological trajectories"
+  },
+  "draws_per_fit": 50,
+  "fits": 9,
+  "per_donor": [
+    {
+      "held_donor": "PWH26",
+      "real_ed": 0.7586466518850825,
+      "wrong_ed": 0.28018885347701045,
+      "marginal_ed": 0.15688201205405627,
+      "wrong_minus_real": -0.47845779840807207,
+      "real_minus_marginal": 0.6017646398310262
+    },
+    {
+      "held_donor": "PWH27",
+      "real_ed": 0.23684926072107496,
+      "wrong_ed": 0.2731877392687535,
+      "marginal_ed": 0.14155599490337906,
+      "wrong_minus_real": 0.03633847854767853,
+      "real_minus_marginal": 0.09529326581769591
+    },
+    {
+      "held_donor": "PWH28",
+      "real_ed": 0.1994252155131034,
+      "wrong_ed": 0.18156831168359241,
+      "marginal_ed": 0.24689214774809484,
+      "wrong_minus_real": -0.017856903829511005,
+      "real_minus_marginal": -0.04746693223499141
+    }
+  ],
+  "per_fit": [
+    {
+      "held_donor": "PWH26",
+      "seed": 0,
+      "real_ed": 0.7110390192728717,
+      "wrong_mean_ed": 0.2788722469840191,
+      "wrong_min_ed": 0.22052584075779702,
+      "wrong_max_ed": 0.4110008938537817,
+      "marginal_mean_ed": 0.15688201205405627,
+      "wrong_worse_draws": 0,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": -0.43216677228885264,
+      "real_minus_marginal": 0.5541570072188154
+    },
+    {
+      "held_donor": "PWH26",
+      "seed": 1,
+      "real_ed": 0.8991565597890698,
+      "wrong_mean_ed": 0.3021440460948744,
+      "wrong_min_ed": 0.2539625479729173,
+      "wrong_max_ed": 0.43593338377982427,
+      "marginal_mean_ed": 0.15688201205405627,
+      "wrong_worse_draws": 0,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": -0.5970125136941955,
+      "real_minus_marginal": 0.7422745477350136
+    },
+    {
+      "held_donor": "PWH26",
+      "seed": 2,
+      "real_ed": 0.665744376593306,
+      "wrong_mean_ed": 0.2595502673521379,
+      "wrong_min_ed": 0.21095699381274002,
+      "wrong_max_ed": 0.3768455809423559,
+      "marginal_mean_ed": 0.15688201205405627,
+      "wrong_worse_draws": 0,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": -0.4061941092411681,
+      "real_minus_marginal": 0.5088623645392497
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 0,
+      "real_ed": 0.24583068827619936,
+      "wrong_mean_ed": 0.333227829131294,
+      "wrong_min_ed": 0.3216281560777867,
+      "wrong_max_ed": 0.34402964862980845,
+      "marginal_mean_ed": 0.14155599490337906,
+      "wrong_worse_draws": 50,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": 0.08739714085509465,
+      "real_minus_marginal": 0.1042746933728203
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 1,
+      "real_ed": 0.18129991844855287,
+      "wrong_mean_ed": 0.215397589993269,
+      "wrong_min_ed": 0.20866529856331528,
+      "wrong_max_ed": 0.22588173002444645,
+      "marginal_mean_ed": 0.14155599490337906,
+      "wrong_worse_draws": 50,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": 0.03409767154471613,
+      "real_minus_marginal": 0.03974392354517381
+    },
+    {
+      "held_donor": "PWH27",
+      "seed": 2,
+      "real_ed": 0.28341717543847267,
+      "wrong_mean_ed": 0.2709377986816975,
+      "wrong_min_ed": 0.2630043198032279,
+      "wrong_max_ed": 0.2798917572257258,
+      "marginal_mean_ed": 0.14155599490337906,
+      "wrong_worse_draws": 0,
+      "wrong_better_than_marginal_draws": 0,
+      "draws": 50,
+      "wrong_minus_real": -0.012479376756775185,
+      "real_minus_marginal": 0.1418611805350936
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 0,
+      "real_ed": 0.19924465269691716,
+      "wrong_mean_ed": 0.16775583412182585,
+      "wrong_min_ed": 0.1354727167495744,
+      "wrong_max_ed": 0.20331910802285247,
+      "marginal_mean_ed": 0.24689214774809481,
+      "wrong_worse_draws": 1,
+      "wrong_better_than_marginal_draws": 50,
+      "draws": 50,
+      "wrong_minus_real": -0.03148881857509131,
+      "real_minus_marginal": -0.04764749505117766
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 1,
+      "real_ed": 0.20238983250769582,
+      "wrong_mean_ed": 0.17745300545192427,
+      "wrong_min_ed": 0.14066382015196854,
+      "wrong_max_ed": 0.21934070870674294,
+      "marginal_mean_ed": 0.24689214774809481,
+      "wrong_worse_draws": 2,
+      "wrong_better_than_marginal_draws": 50,
+      "draws": 50,
+      "wrong_minus_real": -0.02493682705577155,
+      "real_minus_marginal": -0.04450231524039899
+    },
+    {
+      "held_donor": "PWH28",
+      "seed": 2,
+      "real_ed": 0.19664116133469722,
+      "wrong_mean_ed": 0.19949609547702707,
+      "wrong_min_ed": 0.16356279514585648,
+      "wrong_max_ed": 0.24487387438387653,
+      "marginal_mean_ed": 0.24689214774809481,
+      "wrong_worse_draws": 28,
+      "wrong_better_than_marginal_draws": 46,
+      "draws": 50,
+      "wrong_minus_real": 0.0028549341423298458,
+      "real_minus_marginal": -0.05025098641339759
+    }
+  ],
+  "macro_equal_donor": {
+    "real_ed": 0.3983070427064203,
+    "wrong_ed": 0.24498163480978544,
+    "marginal_ed": 0.18177671823517672,
+    "wrong_minus_real": -0.15332540789663485,
+    "real_minus_marginal": 0.21653032447124357
+  },
+  "checks": {
+    "input_manifest_verified": true,
+    "fit_checkpoint_hashes_verified": true,
+    "source_target_identity_verified": true,
+    "real_score_reproduced": true,
+    "no_new_fit": true,
+    "n_independent_biological_donors": 3
+  },
+  "source_sha256": {
+    "mu": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+    "script": "f8cb0d2371ad94e722f5cf79d3c83da5a0e0800a3418aaf4047a4f892c28e515",
+    "verified_input_manifest": "8a8eb8265b2e1401f4108e8f5daa222720a4e313be221b69648741db5ade5d49"
+  }
+}

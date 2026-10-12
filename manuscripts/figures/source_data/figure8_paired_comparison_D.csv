@@ -1,0 +1,108 @@
+"job_id","kind","family","method","seed","fit_seconds"
+"530e29fc699486661c61","T-MT","missing_time","Persistence",0,2.41500001720851e-05
+"3f57d39efd10a1669f3b","T-MT","missing_time","Mean shift",0,2.50899993261555e-05
+"b081d6f98bcc749d308a","T-MT","missing_time","Location-scale",0,1.94959993677912e-05
+"043493fb4ce8a1285b13","T-MT","missing_time","OT displacement",0,2.26060001295991e-05
+"27a90068c1ad980f2a52","T-MT","missing_time","Shared CFM",0,11.5353801710007
+"13fb0ff41d84d9b21aed","T-MT","missing_time","Shared CFM",1,13.6326840490001
+"6ea5aad4425b94662a6e","T-MT","missing_time","Shared CFM",2,9.92920646399944
+"c7c00a7aac1d7d8eb19c","T-MT","missing_time","Context CFM",0,9.30206717999863
+"4fc815251852f8735f3a","T-MT","missing_time","Context CFM",1,18.7060979510006
+"3bb2f87f8f494b69cf36","T-MT","missing_time","Context CFM",2,11.8934959060007
+"84a6f61e134e72533961","T-MT","missing_time","Persistence",0,2.02880000870209e-05
+"8f4bad4a77dba8b1c0e0","T-MT","missing_time","Mean shift",0,1.71769988810411e-05
+"045bb9949820280730fd","T-MT","missing_time","Location-scale",0,2.05799988179933e-05
+"9f395449deb8559b26a9","T-MT","missing_time","OT displacement",0,2.11840015253983e-05
+"b90e986ce637e5d83ba3","T-MT","missing_time","Shared CFM",0,8.6517995059985
+"013d946e26462c85980d","T-MT","missing_time","Shared CFM",1,9.94254613000157
+"831ba6c5885d33f46c81","T-MT","missing_time","Shared CFM",2,8.95187805000023
+"c343d2782b738e6a533f","T-MT","missing_time","Context CFM",0,8.87027996500001
+"5f9d1ae0718455e34f8a","T-MT","missing_time","Context CFM",1,9.90665840699876
+"7b8c28d12caebd91bc64","T-MT","missing_time","Context CFM",2,9.45066626799962
+"4ef2ef5106ce78fb489c","T-LIO","leave_individual","Persistence",0,2.31590001931181e-05
+"72c3193320435426c164","T-LIO","leave_individual","Mean shift",0,2.51330002356553e-05
+"23403cdb0c07ebd2df3a","T-LIO","leave_individual","Location-scale",0,2.58589989243774e-05
+"76624d1707cb75223db7","T-LIO","leave_individual","Target marginal",0,2.91619999188697e-05
+"dd85cc267386c96cf732","T-LIO","leave_individual","Population OT",0,1.87309997272678e-05
+"d102e9d060fb654ef446","T-LIO","leave_individual","Shared CFM",0,8.53654106199974
+"795238a8d1ad3bb6f664","T-LIO","leave_individual","Shared CFM",1,9.4413804779997
+"1af9e35afea4687ebf6c","T-LIO","leave_individual","Shared CFM",2,10.0827855759999
+"eecad024eab325c21209","T-LIO","leave_individual","Context CFM",0,9.16153035199932
+"39fda05dc116bf53eccb","T-LIO","leave_individual","Context CFM",1,12.1540363059994
+"e7225c5c96e58f96f38f","T-LIO","leave_individual","Context CFM",2,9.45185585900072
+"f99976f235e0ab730ca0","T-LIO","leave_individual","Persistence",0,2.15429990930716e-05
+"f90310fcdcb6094705b5","T-LIO","leave_individual","Mean shift",0,2.08830006158678e-05
+"27be2eb4246ff9e274c8","T-LIO","leave_individual","Location-scale",0,2.4176999431802e-05
+"01f99cb7f63f778e74e8","T-LIO","leave_individual","Target marginal",0,2.70000000455184e-05
+"cbf698e0f359aeb9dc45","T-LIO","leave_individual","Population OT",0,1.79310009116307e-05
+"b3d0d823f173969aabd7","T-LIO","leave_individual","Shared CFM",0,8.57460782700036
+"422e82eebde6731d63f0","T-LIO","leave_individual","Shared CFM",1,11.5231326909998
+"79ed57f97e25a3580fb0","T-LIO","leave_individual","Shared CFM",2,8.92321856699891
+"f2a83746410e8edf0662","T-LIO","leave_individual","Context CFM",0,9.32162621499992
+"7deca90b3b5edc9c6ce4","T-LIO","leave_individual","Context CFM",1,9.73771588800082
+"567f67f98e104fcd64fd","T-LIO","leave_individual","Context CFM",2,12.1205655199992
+"e02ba0f4c6aa19129e8f","T-LIO","leave_individual","Persistence",0,1.96439996216213e-05
+"50d19a5728d8e94ac8c4","T-LIO","leave_individual","Mean shift",0,2.35630013776245e-05
+"6322af60b1414ae65f75","T-LIO","leave_individual","Location-scale",0,2.46910003625089e-05
+"978c2d506859aa042c24","T-LIO","leave_individual","Target marginal",0,2.03540002985392e-05
+"4727016d861775f181ef","T-LIO","leave_individual","Population OT",0,2.34079998335801e-05
+"349e9f2474177922dd64","T-LIO","leave_individual","Shared CFM",0,15.7701512650001
+"629994fd15c8ee7742d3","T-LIO","leave_individual","Shared CFM",1,12.1366722160001
+"56228df87b443f3a609f","T-LIO","leave_individual","Shared CFM",2,11.2295139779999
+"1e7ccaa390b113ceb9bc","T-LIO","leave_individual","Context CFM",0,10.2270807200002
+"c933101d05bb244ab5fa","T-LIO","leave_individual","Context CFM",1,9.02285588300037
+"eef24622781bcfdc53a5","T-LIO","leave_individual","Context CFM",2,8.98225228599949
+"0949328fbaabca61a21e","T-LIO","source_swap","Persistence",0,2.14539995795349e-05
+"b4f15638b32c02ccafbd","T-LIO","source_swap","Mean shift",0,2.09310001082486e-05
+"e9c59fbf708c23bf1a26","T-LIO","source_swap","Location-scale",0,2.12560007639695e-05
+"6b1e2ee781677a1c9d28","T-LIO","source_swap","Shared CFM",0,9.64214933999938
+"3d33730e1701ef70eca1","T-LIO","source_swap","Shared CFM",1,11.2695319329996
+"b2a4829a522df75aa17e","T-LIO","source_swap","Shared CFM",2,8.89586548199986
+"825418a851afe92e2bce","T-LIO","source_swap","Context CFM",0,9.49138116699942
+"ee5b259c1658816d56f8","T-LIO","source_swap","Context CFM",1,9.16541011300069
+"0381fa7b7523cbc4c381","T-LIO","source_swap","Context CFM",2,9.45343390200105
+"d875e1e506557ecf80c6","T-LIO","source_swap","Persistence",0,1.94280000869185e-05
+"7729561d7e2b696cda97","T-LIO","source_swap","Mean shift",0,2.3261000023922e-05
+"4fb7a1cc36c7f89c4191","T-LIO","source_swap","Location-scale",0,2.4461000066367e-05
+"202c9eb40855cd85e6a1","T-LIO","source_swap","Shared CFM",0,10.5323662610008
+"5052153931fe33be5db5","T-LIO","source_swap","Shared CFM",1,12.6317076320011
+"751e625d0cef71dd808b","T-LIO","source_swap","Shared CFM",2,12.7151803839988
+"d46f86ca84b4fb0f7ec2","T-LIO","source_swap","Context CFM",0,8.76870162799969
+"8105f7eb5ac828594fe1","T-LIO","source_swap","Context CFM",1,9.51397203800116
+"6a59fe4d06065773ca20","T-LIO","source_swap","Context CFM",2,14.9756242919993
+"f03d59c60c63050d0af2","T-LIO","source_swap","Persistence",0,2.04120005946606e-05
+"eb06247cde076f0b2c2d","T-LIO","source_swap","Mean shift",0,2.08009987545665e-05
+"0ce4aa8b752dce567bb9","T-LIO","source_swap","Location-scale",0,2.11799997487105e-05
+"e6689c7b59635b28b7df","T-LIO","source_swap","Shared CFM",0,8.91294532900065
+"03b74b01618ca1ecc449","T-LIO","source_swap","Shared CFM",1,9.3060892350004
+"e8a256633d5168068072","T-LIO","source_swap","Shared CFM",2,8.92072617799931
+"8a8ac5c641428b459c75","T-LIO","source_swap","Context CFM",0,9.19292141299957
+"36698fbe557d16899d6b","T-LIO","source_swap","Context CFM",1,11.9194114999991
+"2fdc53f36aff5b266ccc","T-LIO","source_swap","Context CFM",2,16.6578975869998
+"fcaab3e93e3ba4d5f2e7","T-LIO","source_swap","Persistence",0,1.96359997062245e-05
+"d654165636f606823518","T-LIO","source_swap","Mean shift",0,2.0036999558215e-05
+"0b534c593d6cc04554b2","T-LIO","source_swap","Location-scale",0,2.14320007216884e-05
+"cb73ca4f149a89fccfb2","T-LIO","source_swap","Shared CFM",0,8.48544417100129
+"bd7ac560e1d76e12a4e1","T-LIO","source_swap","Shared CFM",1,8.65431195200108
+"14f9be89a98b0d9b4ede","T-LIO","source_swap","Shared CFM",2,10.2666224470013
+"716242cd27f34e73ba37","T-LIO","source_swap","Context CFM",0,9.2906687880004
+"b6fae0f3cbdf93e4681a","T-LIO","source_swap","Context CFM",1,9.18644070200025
+"888f5a212b67d8634f63","T-LIO","source_swap","Context CFM",2,9.42849469499924
+"0f731d04c1859d838678","T-LIO","source_swap","Persistence",0,2.22750004468253e-05
+"472e5a580d9ad54b2bfc","T-LIO","source_swap","Mean shift",0,2.41889993048972e-05
+"e6745bd2d8b54c3009c2","T-LIO","source_swap","Location-scale",0,2.11259994102875e-05
+"17b868eb02eaab2fdbdc","T-LIO","source_swap","Shared CFM",0,9.96304407199932
+"f0e71b9fca51b2b0f5cb","T-LIO","source_swap","Shared CFM",1,8.75293308399887
+"2436e5ff59a3eedfac01","T-LIO","source_swap","Shared CFM",2,11.7584902029994
+"89cfd7b822dd717d83ac","T-LIO","source_swap","Context CFM",0,9.33020636800029
+"a120d574d17160761eff","T-LIO","source_swap","Context CFM",1,9.43625824599985
+"59825c2170d646911d4a","T-LIO","source_swap","Context CFM",2,12.0903633529997
+"4ed7829797e8cffdf63a","T-LIO","source_swap","Persistence",0,2.26309985009721e-05
+"8d9f3b01a4cc541a79ea","T-LIO","source_swap","Mean shift",0,1.93480009329505e-05
+"5793cb25ab0f076264d9","T-LIO","source_swap","Location-scale",0,2.39340006373823e-05
+"9f6e2687bda8876f96f5","T-LIO","source_swap","Shared CFM",0,8.70367382899894
+"ace88d7fa57211febbc3","T-LIO","source_swap","Shared CFM",1,9.12833270100055
+"6c66cc4bfb31128f8ac7","T-LIO","source_swap","Shared CFM",2,9.25666491399897
+"7cce8fec9a5bb84484cc","T-LIO","source_swap","Context CFM",0,9.55417293899882
+"7256ebfaa8f6245e43fd","T-LIO","source_swap","Context CFM",1,9.77075417299966
+"bafe5808060d36defd92","T-LIO","source_swap","Context CFM",2,9.11549667800136

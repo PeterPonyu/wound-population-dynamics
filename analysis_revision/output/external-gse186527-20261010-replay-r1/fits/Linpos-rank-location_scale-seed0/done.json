@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "861b038b7f9ab6752665a3d7ee3fd3c771b69b76f0badf78a33b202fe375377b",
+  "fit.json": "c9139410b18e39bb525e240e8d69dd81087af71b7849cb69fde835b980f551b7",
+  "model_replay.npz": "ed234bedf4677765c18fb8a529b91f36818cc62293f76d9dce68a07cf92b060f"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-location_scale-seed0",
+  "method": "location_scale",
+  "seed": 0
+ }
+}

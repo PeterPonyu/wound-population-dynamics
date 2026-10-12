@@ -1,0 +1,173 @@
+{
+ "all_planned_fits": 19,
+ "atol": 1e-05,
+ "backend": "cuda",
+ "input_revalidated": true,
+ "jobs": [
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-identity-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "identity",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-mean_shift-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "mean_shift",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-location_scale-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "location_scale",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-quantile_map-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "quantile_map",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-ot_displacement-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "ot_displacement",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-gaussian_geodesic-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "gaussian_geodesic",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed1",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed2",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_ot",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed1",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_ot",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed2",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_ot",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_sb",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed1",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_sb",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed2",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_sb",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-location_scale-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "location_scale",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed0",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed1",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed2",
+   "max_abs_prediction_difference": 0.0,
+   "method": "cfm_independent",
+   "seed": 2
+  }
+ ],
+ "manifest_sha256": "f976af6009d902f0e37fc0a1d50d6d11a1530e25ec4c3bf7273607afb206029c",
+ "max_abs_prediction_difference": 0.0,
+ "mouse_score_rows_revalidated": 76,
+ "population_score_rows_revalidated": 19,
+ "predictor_refitted": false,
+ "representation_fit_rows_revalidated": true,
+ "rtol": 1e-05,
+ "schema": "external-population-replay-receipt-v1",
+ "scope": "Input-backed saved-state/prediction/metric consistency, not optimizer provenance, CPU portability on another backend, or biological validation.",
+ "score_recomputed": true,
+ "status_sha256": "e9656bf501bcea2dda1ce5b4a53748d9423cc7fcd212d2d725f4b86d6d62cab2",
+ "submission_ready": false,
+ "wall_seconds": 4.898012424004264
+}

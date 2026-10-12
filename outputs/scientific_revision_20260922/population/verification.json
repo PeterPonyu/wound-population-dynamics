@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "saved_fit_count": 27,
+  "unique_cell_ids": true,
+  "training_donor_exclusion": true,
+  "reference_excludes_held_donor": true,
+  "source_target_ids_checked": true,
+  "maximum_inverse_transform_difference": 0.0,
+  "maximum_score_reproduction_difference": 0.0,
+  "maximum_cpu_checkpoint_prediction_difference": 7.62939453125e-06,
+  "checkpoint_reload_tolerance": 5e-05,
+  "explanation": "Every saved checkpoint re-integrated on CPU; original fits use the reported device. Small float32 CPU/GPU differences are expected."
+}

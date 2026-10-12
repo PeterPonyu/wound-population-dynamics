@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "actual_output_directory": "output/followup-integration-20261011-r1/p2/e0-reproduction",
+  "inputs": {
+    "output/data-smoke-20260929/data/standardized/GSE241132/standard.h5ad": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848",
+    "outputs/repaired_20260918/human_temporal_flow/mu.npy": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+    "outputs/repaired_20260918/human_temporal_flow/obs_fibroblast.csv": "4323b852d234396b61ee865749d2b7a4c2f96f644159b5e4c4e0459c6ca2cb76",
+    "outputs/followup_20261010/paper2/scripts/e0_reproduce.py": "d33901dc435a1479f2e3370397c007fd0826d062d0b292d3fd9e7565147740d0",
+    "outputs/followup_20261010/paper2/scripts/p2common.py": "ef8141703cb3fba3883749c6166633159b649e3b48a856ac365100ba034f410d",
+    "scripts/expand_biological_evidence.py": "e007b728fab165abb38855d42c67e5cb29ba2d469a6f2dc15327f1c7bf9793ed",
+    "core_engines/gse241132.py": "d1a6176d906e53cdcf9f619870d7e96f04a0188f56b0df05a4bb9b0c21e87fc0",
+    "output/publication-quality-20261009/p2/scalar_records.csv.gz": "e469bff475e68f5f5d2d0a77e48fa61c6a481f2b64a70aceb3b55835a4a29881"
+  },
+  "result_sha256": "4e45e1451d79e4cffee9eca7b1dfb6b2765bf32e338598a0c20e20308d12dbd9",
+  "result": {
+    "table_s25_full_cell": {
+      "Wound7": {
+        "unchanged_source": 1.4724762061265302,
+        "translation": 0.6674204410636548,
+        "per_donor_unchanged": [
+          1.7580284658395158,
+          1.5845662153158733,
+          1.0748339372242013
+        ],
+        "per_donor_translation": [
+          0.705820683439951,
+          0.6898344741297668,
+          0.6066061656212467
+        ]
+      },
+      "Wound1": {
+        "unchanged_source": 1.3460169798645598,
+        "translation": 0.9292727374829651,
+        "per_donor_unchanged": [
+          1.1341395830364265,
+          1.5517124269806004,
+          1.3521989295766526
+        ],
+        "per_donor_translation": [
+          0.8703744657884611,
+          1.0899749088091717,
+          0.8274688378512627
+        ]
+      }
+    },
+    "harness_reproduction": {
+      "rows": 2700,
+      "missing": 0,
+      "max_abs_energy_difference": 4.440892098500626e-16,
+      "methods": [
+        "identity",
+        "location_scale",
+        "mean_shift",
+        "target_marginal"
+      ]
+    }
+  }
+}

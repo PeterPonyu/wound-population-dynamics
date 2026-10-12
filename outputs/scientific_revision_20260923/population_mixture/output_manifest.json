@@ -1,0 +1,14 @@
+{
+  "PWH26_sampled_indices.npz": "1b136e4f18e650127e895e4c7497b93aad8d256ba10d148f92e84aad6a5e3055",
+  "PWH27_sampled_indices.npz": "565a5d72ce4d891aea7ccfd15210eac7fd73d9440b4599f9fe54e1b45c43bb3a",
+  "PWH28_sampled_indices.npz": "60e9f93b7ad71487d20dcc9b813a5b5e0afc8608ec24c0f3c743b629be4e5b0c",
+  "exact_marginal_decomposition.csv": "27a745a143b669065189a759281a9cd1a7733b20b5c2e333efc655a11db2031a",
+  "input_sha256.json": "1f0368e60a1ee44e998b772c765218e2e14450c4d1eb3249d387602457f4a7f9",
+  "protocol.json": "c84ad55fec112cba214be12884f8c036aec81d4e884a1a4115efe98b04236ddd",
+  "report.json": "857f1039ca40b1ebe24bc197e6e588d4de21063930c01ecc4cf2d3eaa3d52a87",
+  "source_macro.csv": "178be5bd89cd72547b020cb4408d2afe98d5995aa9c8184a811a79e7ebc359f1",
+  "source_per_donor.csv": "7ea29f1d53ab0794e7b93568aa63dcbf3e29934ff0224e6cd896ea2e94975bee",
+  "source_per_draw.csv": "75315118fcb16c516364fd9db88badf9775b4500cd555e99358981f76ef3d534",
+  "source_per_fit.csv": "5172ea0d70a7078a3fbf08b611bff56d7d4a9bbe1e8f67b5d34464dca64d1208",
+  "verification.json": "e7d9038beaf90b3a9accab6de90701528d6495bc98fa5eccb437f9797d09991b"
+}

@@ -1,0 +1,13 @@
+cells_primary,mice_primary,cells_sensitivity_a,mice_sensitivity_a,cells_sensitivity_b,mice_sensitivity_b,analysis,arm,day,admitted
+131,4,133,4,126,4,Lin-,PBS,7,True
+228,4,237,4,222,4,Lin-,PBS,14,True
+34,2,34,2,33,2,Lin-,PBS,30,False
+205,4,214,4,197,4,Lin-,Verteporfin,7,True
+143,4,152,4,133,4,Lin-,Verteporfin,14,True
+27,2,35,2,26,2,Lin-,Verteporfin,30,False
+264,4,282,4,250,3,Lin+,PBS,7,True
+393,4,399,4,375,4,Lin+,PBS,14,True
+62,4,68,4,53,3,Lin+,PBS,30,True
+349,4,359,4,325,4,Lin+,Verteporfin,7,True
+119,4,128,4,109,4,Lin+,Verteporfin,14,True
+26,3,29,3,23,3,Lin+,Verteporfin,30,False

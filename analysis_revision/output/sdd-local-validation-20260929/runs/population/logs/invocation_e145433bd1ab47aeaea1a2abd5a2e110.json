@@ -1,0 +1,40 @@
+{
+ "authorization": {
+  "approval_required": true,
+  "receipt": {
+   "approved": true,
+   "approved_by": "user_explicit_current_thread_scope_recorded_by_codex",
+   "approved_utc": "2026-09-30T02:35:03.045740+00:00",
+   "code_digest": "705cf34f73f26ad2925e",
+   "dataset_ids": [
+    "GSE241132"
+   ],
+   "dataset_sha256": {
+    "GSE241132": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848"
+   },
+   "input_sha256": {},
+   "jobs_sha256": "1d1eda25ec63b68a06c8d4b723c9f11b96d9797d04db276bee730ea8a56e36e9",
+   "protocol_hash": "7dd8a2755744e518b789",
+   "purpose": "stage_b_execution",
+   "review_material_sha256": "17ac924da67a4dd2fa1a397c356cbb8e02fc16de76ee8a7f8894f407c5cc0725",
+   "review_notes": "我需要你把剩下的需要额外的很大的网络流量下载的那几个数据给我充分地计划好，并把它们涉及到的实验给我编排好。在此之外呢，我还需要你把现在能够额外补充上去的实验都给我处理掉。 Local fixed SDD diagnostic only; excludes payload downloads, remote GPU, formal grid, publication and outcome tuning. Leader reviewed current inputs/Stage A; this operator receipt is not an external clinical/author signature.",
+   "reviewed_dataset_ids": [
+    "GSE241132"
+   ],
+   "schema_version": 1,
+   "stage_a_reviewed": true
+  },
+  "receipt_sha256": "98417476b7a1b409c54bb6a60055fc48c9a3198b78973c59c631d2b073b3c931",
+  "scope": "approved_real_data"
+ },
+ "code_digest": "705cf34f73f26ad2925e",
+ "device": "cuda",
+ "invocation_id": "e145433bd1ab47aeaea1a2abd5a2e110",
+ "jobs_sha256": "1d1eda25ec63b68a06c8d4b723c9f11b96d9797d04db276bee730ea8a56e36e9",
+ "protocol_hash": "7dd8a2755744e518b789",
+ "shard": [
+  0,
+  1
+ ],
+ "started_utc": "2026-09-30T02:45:54Z"
+}

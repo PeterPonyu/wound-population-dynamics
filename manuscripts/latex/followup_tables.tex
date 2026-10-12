@@ -1,0 +1,138 @@
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{30mm}p{62mm}p{23mm}p{23mm}p{23mm}@{}}
+\caption{Coupling and optimizer-budget follow-up under the original standardized frozen coordinates. Values are donor-specific means of matched-draw log2 energy ratios to mean translation; draws are averaged within fit, then three seeds within donor for fitted fields. Negative values favor the listed predictor. Exact OT interpolation samples from a full endpoint transport plan; the barycentric map uses its row means. Fifty draws reuse the same three donors. Longer training is an optimization diagnostic, not a convergence certificate.}\label{tab:p2followcoupling}\\
+\toprule
+Task & Predictor & PWH26 & PWH27 & PWH28\\\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Task & Predictor & PWH26 & PWH27 & PWH28\\\midrule\endhead
+\bottomrule\endfoot
+Missing day 7 & Independent CFM & 0.367 & 0.489 & 0.666\\
+Missing day 7 & Independent CFM, 40k & 0.548 & 0.501 & 0.650\\
+Missing day 7 & OT-CFM & -0.026 & 0.321 & 0.351\\
+Missing day 7 & SB-CFM & 0.016 & 0.284 & 0.192\\
+Missing day 7 & Exact OT interpolation & -0.014 & 0.255 & 0.367\\
+Missing day 7 & OT barycentric map & 0.023 & 0.277 & 0.392\\
+Missing day 7 & Independent bridge & 0.270 & 0.467 & 0.617\\
+Missing day 7 & Location--scale & 0.026 & 0.105 & 0.056\\
+Missing day 1 & Independent CFM & -0.001 & 0.345 & 0.240\\
+Missing day 1 & Independent CFM, 40k & -0.008 & 0.308 & 0.184\\
+Missing day 1 & OT-CFM & -0.145 & 0.183 & 0.122\\
+Missing day 1 & SB-CFM & -0.106 & 0.170 & 0.114\\
+Missing day 1 & Exact OT interpolation & 0.078 & 0.079 & 0.040\\
+Missing day 1 & OT barycentric map & 0.094 & 0.101 & 0.041\\
+Missing day 1 & Independent bridge & 0.255 & 0.246 & 0.188\\
+Missing day 1 & Location--scale & -0.067 & -0.028 & -0.018\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{34mm}p{42mm}p{26mm}p{17mm}p{25mm}p{17mm}@{}}
+\caption{Representation sensitivity. Each row first averages the paired log2 ratios within donor, then gives the three-donor mean and count of donors below zero. Missing-time comparators are mean translation; held-donor comparators are training target marginals. Scaling, whitening and PCA preparation use permitted training cells only. Raw distances across these geometries are not commensurate. Sign agreement does not provide independent validation.}\label{tab:p2followrepresentation}\\
+\toprule
+Coordinates & Task & Independent & Below 0 & OT-CFM & Below 0\\\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Coordinates & Task & Independent & Below 0 & OT-CFM & Below 0\\\midrule\endhead
+\bottomrule\endfoot
+Standardized encoder & Missing day 7 & 0.508 & 0/3 & 0.215 & 1/3\\
+Standardized encoder & Missing day 1 & 0.195 & 1/3 & 0.054 & 1/3\\
+Standardized encoder & Held donor, day 1--7 & 1.692 & 1/3 & 0.956 & 1/3\\
+Centered encoder & Missing day 7 & 0.378 & 0/3 & 0.121 & 1/3\\
+Centered encoder & Missing day 1 & 0.146 & 1/3 & 0.114 & 1/3\\
+Centered encoder & Held donor, day 1--7 & 1.285 & 1/3 & 1.500 & 0/3\\
+Whitened encoder & Missing day 7 & 0.509 & 0/3 & 0.319 & 0/3\\
+Whitened encoder & Missing day 1 & 0.316 & 0/3 & 0.163 & 0/3\\
+Whitened encoder & Held donor, day 1--7 & 1.753 & 1/3 & 1.240 & 0/3\\
+Sum-zero encoder & Missing day 7 & 0.509 & 0/3 & 0.221 & 1/3\\
+Sum-zero encoder & Missing day 1 & 0.185 & 1/3 & 0.048 & 1/3\\
+Sum-zero encoder & Held donor, day 1--7 & 1.719 & 1/3 & 0.955 & 1/3\\
+Training PCA30 & Missing day 7 & 0.231 & 0/3 & 0.099 & 0/3\\
+Training PCA30 & Missing day 1 & 0.215 & 0/3 & 0.097 & 0/3\\
+Training PCA30 & Held donor, day 1--7 & 0.910 & 1/3 & 0.995 & 1/3\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{23mm}p{37mm}p{17mm}p{24mm}p{21mm}p{21mm}p{18mm}@{}}
+\caption{Nested model selection and fresh outer refits for held-donor day-1-to-day-7 prediction. Each held donor is excluded from both inner folds. The search contains 28 configurations with unequal grids across coupling families, scored with seed 0 on the two inner held donors. The selected configuration is refitted on both permitted donors with three seeds before outer evaluation. Last columns compare the default and selected fields with the same training target marginal using matched-draw log2 ratios. The bounded search does not equate optimization costs or exhaust all possible configurations.}\label{tab:p2follownested}\\
+\toprule
+Held donor & Selected family & Width & Steps & Rate & Default & Selected\\\midrule\endfirsthead
+\multicolumn{7}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Held donor & Selected family & Width & Steps & Rate & Default & Selected\\\midrule\endhead
+\bottomrule\endfoot
+PWH26 & OT-CFM & 256 & 2000 & 3e-04 & 2.372 & 1.991\\
+PWH27 & Independent CFM & 64 & 20000 & 3e-04 & 3.123 & 0.825\\
+PWH28 & Independent CFM & 64 & 8000 & 1e-03 & -0.419 & -0.471\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{30mm}p{40mm}p{24mm}p{22mm}p{22mm}p{23mm}@{}}
+\caption{Target-informed alpha scan of fixed rank-clock fields and endpoint controls. Alpha spans 0 to 1 in increments of 0.05 along the permitted source-to-anchor segment. Each optimum uses the held target and is therefore an oracle diagnostic, not an independently chosen prediction time. Rank-alpha is 0.5; day-alpha is 6/29 for withheld day 7 and 1/7 for withheld day 1. Evaluating a rank-trained field at another alpha is not retraining under a different biological clock. Original saved alpha grids are retained without a new full-grid replay certificate.}\label{tab:p2followalpha}\\
+\toprule
+Task & Predictor & Oracle alpha & Oracle ED & Rank ED & Day-alpha ED\\\midrule\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Task & Predictor & Oracle alpha & Oracle ED & Rank ED & Day-alpha ED\\\midrule\endhead
+\bottomrule\endfoot
+Missing day 7 & Mean translation & 0.550 & 0.700 & 0.705 & 1.015\\
+Missing day 7 & Location--scale & 0.550 & 0.734 & 0.736 & 1.031\\
+Missing day 7 & Independent CFM & 0.450 & 0.986 & 1.000 & 1.126\\
+Missing day 7 & OT-CFM & 0.450 & 0.817 & 0.819 & 1.047\\
+Missing day 7 & SB-CFM & 0.500 & 0.790 & 0.790 & 1.063\\
+Missing day 1 & Mean translation & 0.450 & 0.954 & 0.956 & 1.156\\
+Missing day 1 & Location--scale & 0.500 & 0.932 & 0.932 & 1.151\\
+Missing day 1 & Independent CFM & 0.550 & 1.108 & 1.108 & 1.225\\
+Missing day 1 & OT-CFM & 0.450 & 0.998 & 1.004 & 1.175\\
+Missing day 1 & SB-CFM & 0.450 & 0.998 & 1.007 & 1.169\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{47mm}p{28mm}p{23mm}p{25mm}p{38mm}@{}}
+\caption{Nested mixture shrinkage for all three adjacent intervals and both transported-source families. Prediction mixes transported source with the training target marginal using weight w chosen from 0, 0.05, ..., 1 in the two inner donor folds, then applied to the outer held donor. Ratios are log2 of draw-averaged energies, then averaged over seeds; they differ from the mean of per-draw log ratios in the other follow-up tables. Zero weight recovers the marginal; negative ratios favor the selected mixture. Target-informed oracle weights are not used to make the selected predictions.}\label{tab:p2followshrinkage}\\
+\toprule
+Transport & Held donor & Days & Selected w & Mixture/marginal\\\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Transport & Held donor & Days & Selected w & Mixture/marginal\\\midrule\endhead
+\bottomrule\endfoot
+Independent CFM & PWH26 & 0--1 & 0.000 & 0.000\\
+Independent CFM & PWH26 & 1--7 & 0.100 & -0.029\\
+Independent CFM & PWH26 & 7--30 & 0.100 & -0.039\\
+Independent CFM & PWH27 & 0--1 & 0.350 & -0.066\\
+Independent CFM & PWH27 & 1--7 & 0.100 & 0.045\\
+Independent CFM & PWH27 & 7--30 & 0.000 & 0.000\\
+Independent CFM & PWH28 & 0--1 & 0.450 & 0.849\\
+Independent CFM & PWH28 & 1--7 & 0.100 & -0.143\\
+Independent CFM & PWH28 & 7--30 & 0.000 & 0.000\\
+Mean translation & PWH26 & 0--1 & 0.200 & -0.245\\
+Mean translation & PWH26 & 1--7 & 0.300 & 0.192\\
+Mean translation & PWH26 & 7--30 & 0.100 & -0.092\\
+Mean translation & PWH27 & 0--1 & 0.650 & -0.033\\
+Mean translation & PWH27 & 1--7 & 0.200 & -0.196\\
+Mean translation & PWH27 & 7--30 & 0.000 & 0.000\\
+Mean translation & PWH28 & 0--1 & 0.550 & -0.164\\
+Mean translation & PWH28 & 1--7 & 0.150 & -0.173\\
+Mean translation & PWH28 & 7--30 & 0.250 & 0.822\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{67mm}p{21mm}p{21mm}p{25mm}p{27mm}@{}}
+\caption{Held-donor expression evaluation by the mean profiles of 15 nearest permitted training cells. Each metric is averaged over fitted seeds within donor and then equally over the three donors. Expression uses per-cell proportions on 5,383 common genes. Fold-change Spearman correlations use 2,000 training-selected variable genes or a training-selected 50-gene signature. TV is total variation and JS uses natural logarithms. The decoded observed target is a decoder reference, not a predictor or a universal error lower bound. NA marks undefined fold-change comparisons for the unchanged observed source.}\label{tab:p2followdecode}\\
+\toprule
+Predictor & TV & JS & HVG rho & Signature rho\\\midrule\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\[6pt]
+\toprule
+Predictor & TV & JS & HVG rho & Signature rho\\\midrule\endhead
+\bottomrule\endfoot
+Independent CFM & 0.171 & 0.030 & 0.775 & 0.942\\
+Independent CFM, 40k & 0.196 & 0.041 & 0.743 & 0.942\\
+OT-CFM & 0.149 & 0.020 & 0.829 & 0.944\\
+SB-CFM & 0.150 & 0.020 & 0.825 & 0.942\\
+Persistence & 0.316 & 0.077 & 0.442 & 0.775\\
+Location--scale & 0.144 & 0.019 & 0.821 & 0.927\\
+Mean translation & 0.148 & 0.019 & 0.822 & 0.918\\
+Observed persistence & 0.341 & 0.092 & NA & NA\\
+Target decoding reference & 0.084 & 0.008 & 0.896 & 0.962\\
+Training target marginal & 0.113 & 0.013 & 0.858 & 0.942\\
+\end{longtable}
+}

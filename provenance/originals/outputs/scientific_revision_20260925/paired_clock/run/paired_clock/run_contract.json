@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/outputs/repaired_20260918/human_temporal_flow/mu.npy": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/outputs/repaired_20260918/human_temporal_flow/obs_fibroblast.csv": "4323b852d234396b61ee865749d2b7a4c2f96f644159b5e4c4e0459c6ca2cb76",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/scripts/52_paired_clock_audit.py": "58245cbf08c44d015933e96bfab4c85fd34d89161c6baa0e5bc66deaea4bc02f",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/core_engines/flow_matching_engine.py": "9973da05925dae4fbb5526a0d8c5be4e39c6e6d7cd0da51a63d9a333f9213f64",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/core_engines/gse241132.py": "7bb0f61d031ca14363114ef59a208a7d127be8c42078df755d17bfe74345e9e6",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/scripts/30_donor_count_curve.py": "fa9cd8836ff2836e02749fc439efbf545c956bf9c786b29ad83df24a128d1937",
+    "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/population-gpu-handoff-20260923-final/scripts/audit_population_math.py": "8a7615b1488828efbd585be09c42d0fe7ad1280b5b5b8442f075d0e3906bdc62"
+  },
+  "holdout": "Wound7",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "steps": 8000,
+  "batch_size": 256,
+  "device": "cuda",
+  "rk4_steps": 50,
+  "evaluation_cap": 1200,
+  "axes": {
+    "rank": {
+      "Skin": 0.0,
+      "Wound1": 0.3333333333333333,
+      "Wound7": 0.6666666666666666,
+      "Wound30": 1.0
+    },
+    "days": {
+      "Skin": 0.0,
+      "Wound1": 0.03333333333333333,
+      "Wound7": 0.23333333333333334,
+      "Wound30": 1.0
+    },
+    "sqrt_days": {
+      "Skin": 0.0,
+      "Wound1": 0.18257418583505536,
+      "Wound7": 0.48304589153964794,
+      "Wound30": 1.0
+    },
+    "log_days": {
+      "Skin": 0.0,
+      "Wound1": 0.20184908658209985,
+      "Wound7": 0.6055472597462995,
+      "Wound30": 1.0
+    }
+  },
+  "target_used_for_model_selection": false
+}

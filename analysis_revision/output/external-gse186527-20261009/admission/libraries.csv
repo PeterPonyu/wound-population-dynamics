@@ -1,0 +1,10 @@
+library,gsm,cells,genes,hto_features,cells_with_any_hto,total_hto_counts,usable_hto_measurements,admitted,reason,singlet_primary,doublet_primary,negative_primary,singlet_sensitivity_a,doublet_sensitivity_a,negative_sensitivity_a,singlet_sensitivity_b,doublet_sensitivity_b,negative_sensitivity_b,primary_singlets_kept_sensitivity_a,primary_singlets_relabelled_sensitivity_a,primary_singlets_kept_sensitivity_b,primary_singlets_relabelled_sensitivity_b,arm,day
+T1,GSM5429653,5353,31053,10,0,0,False,False,protocol exclusion; zero HTO counts,,,,,,,,,,,,,,,
+T2,GSM5429654,655,31053,10,0,0,False,False,protocol exclusion; zero HTO counts,,,,,,,,,,,,,,,
+T3,GSM5429655,335,31053,10,0,0,False,False,protocol exclusion; zero HTO counts,,,,,,,,,,,,,,,
+T-7P,GSM5429656,589,31053,10,501,1184236,True,True,,399.0,65.0,125.0,420.0,46.0,123.0,380.0,62.0,147.0,1.0,0.0,0.9523809523809523,0.0,PBS,7.0
+T-7V,GSM5429657,952,31053,10,892,1440235,True,True,,603.0,259.0,90.0,641.0,230.0,81.0,557.0,161.0,234.0,1.0,0.0,0.9237147595356551,0.0,Verteporfin,7.0
+T-14P,GSM5429658,906,31053,10,836,2431490,True,True,,661.0,120.0,125.0,688.0,116.0,102.0,623.0,88.0,195.0,1.0,0.0,0.9425113464447806,0.0,PBS,14.0
+T-14V,GSM5429659,470,31053,10,431,1165904,True,True,,294.0,97.0,79.0,320.0,86.0,64.0,263.0,65.0,142.0,1.0,0.0,0.8945578231292517,0.0,Verteporfin,14.0
+T-30P,GSM5429660,474,31053,10,218,182443,True,True,,96.0,76.0,302.0,102.0,71.0,301.0,86.0,55.0,333.0,1.0,0.0,0.8958333333333334,0.0,PBS,30.0
+T-30V,GSM5429661,452,31053,10,217,185324,True,True,,57.0,72.0,323.0,70.0,61.0,321.0,50.0,50.0,352.0,1.0,0.0,0.8771929824561403,0.0,Verteporfin,30.0

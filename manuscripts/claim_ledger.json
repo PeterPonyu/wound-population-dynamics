@@ -4,6 +4,15 @@
       "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
       "claims": [
         {
+          "id": "P2-QUALITY-PAIRED",
+          "status": "diagnostic_only",
+          "source": "output/publication-quality-20261009/p2/report.json",
+          "source_sha256": "f0b434a408e0d2b4736fb4ae89f1b5be50ddd27181c93d94992b7b316557a890",
+          "value": "107 completed and original-backend replayed jobs; 24150 paired evaluation rows; 3 existing donors; 3 neural seeds; 50 matched draws; failed CPU portability retained",
+          "scope": "Fold/draw-matched log2 ratios with draws averaged within fit and seeds within donor/task; not population ranking, seed/draw biological replication, CPU portability, identified trajectories or DFU clinical validation.",
+          "allowed_wording": "Missing-day-7 neural donor means favored translation; day-7 donor transfer favored flow over target marginals in one donor and the marginal in the other two. Original-backend replay passed; the unchanged CPU replay gate remains failed."
+        },
+        {
           "id": "P2-C01",
           "status": "ready",
           "value": "GSE241132: 3 healthy donors; Skin/Wound1/Wound7/Wound30",
@@ -23,15 +32,15 @@
           "id": "P2-C03",
           "status": "ready",
           "value": "donor transfer 3/3; mean improvement +75.9%; cosine mean +0.948",
-          "source": "outputs/analysis/donor_transfer_flow/report.json",
+          "source": "outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json",
           "scope": "held-out donor acute human cohort",
-          "allowed_wording": "A shared field transferred across the three acute-wound donors under the specified protocol, but this does not establish DFU prediction."
+          "allowed_wording": "Within the three acute-wound donors and the prespecified held-out-donor protocol, the shared field transferred across donor blocks relative to the unchanged-source baseline; this bounded comparison does not establish general method superiority and does not establish DFU prediction."
         },
         {
           "id": "P2-C04",
           "status": "ready",
           "value": "historical single-seed nearest-grid linear-days improvement -18.2%; retained only in tab:p2axes; current Figure 4 uses P2-PAIRED-CLOCK",
-          "source": "outputs/analysis/time_parameterisation/report.json",
+          "source": "outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json",
           "scope": "time-axis ablation",
           "allowed_wording": "Retained for historical comparison only, not the current Figure 4 and not paired with the revised exact-time fits.",
           "current_use": "historical_comparison_only",
@@ -59,7 +68,7 @@
           "value": "common-reference 27-fit shared CFM k=1 mean ED 0.5466; k=2 mean ED 0.3983; mean reduction 0.1483",
           "source": "outputs/scientific_revision_20260922/population/report.json",
           "scope": "two-point donor learning curve",
-          "allowed_wording": "Adding a second training donor reduced shared-field mean held-out error under a common scoring reference; simple controls also improved."
+          "allowed_wording": "Adding a second training donor reduced shared-field mean held-out error under the common scoring reference in this two-point pilot. The target-marginal mixture identity and improvement in simple controls show that the reduction is not sufficient evidence of information gain, a donor-count plateau, or a required cohort size."
         },
         {
           "id": "P2-C07",
@@ -202,6 +211,63 @@
           },
           "scope": "Equal-cell common-panel mean expression against actual held-donor count-derived proportions, not decoded truth.",
           "allowed_wording": "These are not absolute counts and not biological confidence intervals. Decoder reconstruction is not a mathematical lower error bound. POP05 remains partially addressed; this is not clinical or external validation."
+        },
+        {
+          "id": "P2-FINITE-BUDGET-DIAGNOSTIC",
+          "status": "exploratory",
+          "source": "output/submission-preparation-20261002-r1/population/report.json",
+          "source_sha256": "36c5fd58f7752ff65ba34514d1906d0fd32214da4879086501a0b4b17c0981f3",
+          "value": "48 saved flow fits / 12 baseline jobs / 180 dependent prediction pairs; 3 donors; train-HVG200/PCA15; 120/600 steps; four flow within-donor means above seed0 target draw at both budgets; 20/4320 SB batches fail tolerance",
+          "scope": "Separate small-architecture finite-budget observed-source adjacent-interval diagnostic, not repeated primary frozen-coordinate comparison",
+          "allowed_wording": "Fold-specific energy scores are interpreted within donor without raw cross-fold pooling. Single seed0 target draws and adaptive prediction-plus-target MMD do not establish symmetric stochastic stability or a population method ranking. All coupling failures and individual-interval exceptions retained; equal steps are not equal wall time, and 180 predictions are not new biological donors. Historical saved predictions do not certify field reload."
+        },
+        {
+          "id": "P2-EXTERNAL-GSE186527",
+          "status": "diagnostic_only",
+          "source": "output/external-gse186527-20261009/results/report.json",
+          "source_sha256": "f2687377d1518864cc5150f8566348a9197827368f7c8f62fd43e3cc5af3a0c4",
+          "value": "9 libraries audited; 3 unwounded/POD2 libraries have zero HTO counts; 1 of 4 arm-gate tasks admitted (Lin+ PBS; 264/393/62 cells, 4 mice each); held POD14 energy: stay-still 0.441, location-scale 0.343, OT displacement 0.248, OT-coupled flow 0.235, bridge flow 0.241, independent flow 0.310",
+          "scope": "One admitted population and four nested mice from a cross-sectional series with libraries confounded with day and arm; retrospective interpolation using a later anchor; not an animal or cell trajectory, method ranking, batch-free comparison, whole-wound composition or validation of the human and diabetic-foot findings.",
+          "allowed_wording": "The frozen admission rules admitted one of four mouse populations. There, transport-based predictors reduced held-day energy relative to location-scale and non-neural OT displacement matched them; nothing about individual animals, ranking or human healing follows."
+        },
+        {
+          "id": "P2-EXTERNAL-REEXECUTION",
+          "status": "diagnostic_only",
+          "source": "output/external-gse186527-20261010-replay-r1/report.json",
+          "source_sha256": "961b014b7478e203487cb4f26b567dbb05c6a67473ca4b1f2ff81242f461adbc",
+          "evidence_sha256": {
+            "replay-cuda.json": "ecd3b2ee4643a5a25cd4bd5a447a322c4a254aa473c64f939bf09f36f69e100c",
+            "population_scores.csv": "aa1d036d2562d8b3b72a7def5ab87cc13b669e179af014c33849430d70c67a90",
+            "mouse_scores.csv": "8481dc249a2194c9b482d3f3f374d8e2bd0c753a82ea760133f6ca19f341c8c0"
+          },
+          "value": "19 repeated fits; OT-coupled flow mean energy 0.233 (0.223--0.240) versus original 0.235 (0.229--0.241); maximum paired-fit energy change 0.011673; input-backed CUDA prediction replay maximum absolute difference 0.0",
+          "scope": "Same admitted cells, mice and nominal frozen protocol/seeds. Not exact retraining reproduction of the original unsaved weights, optimizer-resume qualification, CPU portability, biological replication or independent validation.",
+          "allowed_wording": "The repeated execution changes individual fitted results while preserving the practical-comparator interpretation. Exact replay applies to the newly saved fitted states only; retain both grids and do not replace the original result series silently."
+        },
+        {
+          "id": "P2-FOLLOWUP-COMPLETED-20261011",
+          "status": "diagnostic_only",
+          "source": "output/followup-integration-20261011-r1/p2/audit/report.json",
+          "source_sha256": "e745b8fbae5153d07cdbe3042a76d493ef4942eef7994c1d3d9469dcf63c8c4b",
+          "value": "354 original and 9 fresh selected outer fits; 363 input-backed CUDA field replays and 31 coordinate rederivations with zero maximum discrepancy; three biological donors; nested selected day1-to-day7 log2 ratios to training marginal 1.9908, 0.8247, -0.4712",
+          "scope": "Computational follow-up using the same three donors and discovery-trained frozen encoder. Not biological replication, a new clock-fit study, full alpha-grid replay, retrospective proof of historical training inputs, convergence, CPU portability or unrestricted superiority.",
+          "allowed_wording": "Alternate couplings and longer training did not beat translation in at least two of three day-7 donors. Nested selection reduced errors but still lost to the target marginal in two donors. Keep unequal search budgets, coordinate dependence, target-informed alpha oracle status, ratio-of-means versus mean-log estimands and empirical-decoder limitations.",
+          "evidence_sha256": {
+            "output/followup-integration-20261011-r1/p2/audit/representation_donor.csv": "6f786b00de107040018a7f24cf7f72bfc7e3ba62aa0fc1031fd37853a58065d0",
+            "output/followup-integration-20261011-r1/p2/audit/representation_macro.csv": "5977c15f76e38b090730df7b8ae0f132bacd1fa14229a8d100e995ec2060c17d",
+            "output/followup-integration-20261011-r1/p2/audit/nested_donor.csv": "c695d97db9ad48ae3b054afc3c177c260a5cb68b518a08a58b5d37ef6d9432f2",
+            "output/followup-integration-20261011-r1/p2/audit/nested_draws.csv.gz": "4a286a08aea1501f283b7e9ab4cf08a197d839dde78c4e3d23f2d78911b41ee6",
+            "output/followup-integration-20261011-r1/p2/audit/alpha_diagnostic.csv": "7f383a2e8a5b874650d5f60305b68a23c02f9a9cf3fe501ffd4d46a10aae9322"
+          }
+        },
+        {
+          "id": "P2-FOLLOWUP-E0-20261011",
+          "status": "diagnostic_only",
+          "source": "output/followup-integration-20261011-r1/p2/e0-reproduction/receipt.json",
+          "source_sha256": "68e11225c060c3ec13eb335df211e190613da118665342f155c1708dadd14296",
+          "value": "Full-cell missing-day translation controls reproduced: day7 identity=1.472476, translation=0.667420; day1 identity=1.346017, translation=0.929273; 2700 control draw rows, missing=0, maximum energy difference 4.44e-16",
+          "scope": "Same local input and deterministic controls; not new biological evidence, exact retraining of historical fields, CPU field-portability certification or an alpha-grid replay.",
+          "allowed_wording": "Full-cell controls and all saved deterministic draw scores reproduce within floating-point roundoff, while the distinction between full-cell energy and paired sampled comparisons remains explicit."
         }
       ]
     }

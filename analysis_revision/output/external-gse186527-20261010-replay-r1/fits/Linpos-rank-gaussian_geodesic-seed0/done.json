@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "bda79769891a044be66987649aa950acb2ff06620a5e87e731208c79815bc2c6",
+  "fit.json": "f1e6dabe6158dde5fb8654f1ce55fd8da494e9711f313ff681504e6c7ed9299f",
+  "model_replay.npz": "5c8729cb74ccf8f10af336df59fd3309dfbcb5e0f51ecf5690d146f5f2e81059"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-gaussian_geodesic-seed0",
+  "method": "gaussian_geodesic",
+  "seed": 0
+ }
+}

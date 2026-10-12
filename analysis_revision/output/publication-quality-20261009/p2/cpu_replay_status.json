@@ -1,0 +1,10 @@
+{
+ "atol": 1e-05,
+ "backend": "cpu",
+ "captured_output_truncated": true,
+ "checked_jobs": 107,
+ "failure_log_sha256": "9900c3e82e6d7d0cf23e92af88699a80597e60c5f70c2e0c025ac21266109a20",
+ "interpretation": "CPU/CUDA portability is not certified; failures remain unresolved pending original-backend and cross-backend diagnostics.",
+ "rtol": 1e-05,
+ "status": "failed"
+}

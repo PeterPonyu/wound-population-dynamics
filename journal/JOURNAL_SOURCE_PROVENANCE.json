@@ -1,0 +1,247 @@
+{
+  "status": "corrected_parent_build_PASS",
+  "copied_without_scientific_or_numerical_changes": true,
+  "files": [
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/paper_srep_inline.tex",
+      "destination": "source/population/paper_srep_inline.tex",
+      "sha256": "e1032c3882e78c79ff8d854d4ab6478ab08de8404f736b4a14f39bdcccb4d1ef"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/paper_srep.tex",
+      "destination": "source/population/paper_srep.tex",
+      "sha256": "ce8003c238e8e29a8457f2479329a0d38bd5d1e0605055fbb49ff459cf5a7376"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/supporting_srep.tex",
+      "destination": "source/population/supporting_srep.tex",
+      "sha256": "2f4ebce58cccd6d09b531ed573fac89d0113540f8422d81ffd3943c22dc511d0"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/supporting.tex",
+      "destination": "source/population/supporting.tex",
+      "sha256": "4977f4784531765f8e98233b89ef76d1a5fbd4fdde4c38f4e3cca4de161b9825"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/paper.tex",
+      "destination": "source/population/paper.tex",
+      "sha256": "6417d2de272ca0276e244bd06994e79f32d4c117ebec7c5caef7cde4958bba2b"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/layout.tex",
+      "destination": "source/population/layout.tex",
+      "sha256": "880ee3607af622f3564820cc1f0469d0d6cc880a74b6687366145df7304a3627"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/references_paper2.bib",
+      "destination": "source/population/references_paper2.bib",
+      "sha256": "b9e15c065e97df58a0d6aa9da4156ec3718173bed201b93eef21990c376f0fb7"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/scientific-reports.json",
+      "destination": "source/population/scientific-reports.json",
+      "sha256": "f0296146fe75b008f3784a27f401b40ac2ee47f948e33a281a03e7772a40f31d"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-style-report.json",
+      "destination": "source/population/journal-style-report.json",
+      "sha256": "334f69d618c200d3995e43c735ad618dd3b0e6f2e241bf1a89ba937ddd292a76"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/LICENSE",
+      "destination": "source/population/LICENSE",
+      "sha256": "10ef938551816fda8e6981789fd207e905524d51abd3023de441f7aac6dedfd1"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/scripts/style_journal_figures.py",
+      "destination": "source/population/scripts/style_journal_figures.py",
+      "sha256": "bc83a67cbcb37059b85e34f0c14280dbc94e4b881143e1a74577c355cdf50513"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/scripts/build_scientific_reports.py",
+      "destination": "source/population/scripts/build_scientific_reports.py",
+      "sha256": "62839ea28caad14c2bdc75d80a59b3164f41a220e76510639fd72616f6c9a6e4"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure3_interpolation_controls.pdf",
+      "destination": "source/population/figures/paper2_figure3_interpolation_controls.pdf",
+      "sha256": "169c86c9a3d5d2c1b3ae9bc4c81ac629088eaf425e5d6c1cd969f09b50afbe04"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure8_paired_comparison.pdf",
+      "destination": "source/population/figures/paper2_figure8_paired_comparison.pdf",
+      "sha256": "88b0caf0a191afb3b8829557d37542291cc10d98df169bab173d04a3e5a4e451"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure9_followup.pdf",
+      "destination": "source/population/figures/paper2_figure9_followup.pdf",
+      "sha256": "caf12b51f9602674c9456433f0a01b55353bbfe241b868bde2636854c76a4daf"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure2_wound7_transfer.pdf",
+      "destination": "source/population/figures/paper2_figure2_wound7_transfer.pdf",
+      "sha256": "a9bd3b63e9ac0471c232cd2e0b7b5492bdb8c1dab55a3cabc8a986b7fb309389"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure4_time_axes.pdf",
+      "destination": "source/population/figures/paper2_figure4_time_axes.pdf",
+      "sha256": "b21fd0511ad3639e25c95195b90495e23c58ed84ab89a7d34773a5082c63a02c"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure1_workflow.pdf",
+      "destination": "source/population/figures/paper2_figure1_workflow.pdf",
+      "sha256": "86ecf3aaec3060da1578b11487b865ac36da25fc105ad406a5fe70572ca5cd04"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure7_mouse_arms.pdf",
+      "destination": "source/population/figures/paper2_figure7_mouse_arms.pdf",
+      "sha256": "d634cece9dba13d8b55564b6b4f0ba2c912ef72630da4aadd4b74a246f6c86c2"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure6_donor_curve_stability.pdf",
+      "destination": "source/population/figures/paper2_figure6_donor_curve_stability.pdf",
+      "sha256": "7079d0f53c5a5d7b5b0985829e5f327644dc5994d9b2aba4ee2802f4695fcf95"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/figures/paper2_figure5_methods_benchmark.pdf",
+      "destination": "source/population/figures/paper2_figure5_methods_benchmark.pdf",
+      "sha256": "0f3e782514d1ecb8090050e9922feda5d75668550404526175890741e334ae1f"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure3_interpolation_controls.pdf",
+      "destination": "source/population/journal-figures/paper2_figure3_interpolation_controls.pdf",
+      "sha256": "79c1b4e06fcb228a3ff6147409d165cfed441bea50fd93417e41c70f33115dc8"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure8_paired_comparison.pdf",
+      "destination": "source/population/journal-figures/paper2_figure8_paired_comparison.pdf",
+      "sha256": "9e0b2e0e3e75c1b1a91048066ba87c1e1e2998600b2233b694224f42a600f828"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure9_followup.pdf",
+      "destination": "source/population/journal-figures/paper2_figure9_followup.pdf",
+      "sha256": "2e46b2bd9a7a4ec02760c3327c73d1578e553249455fa33de743bb585734076a"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure2_wound7_transfer.pdf",
+      "destination": "source/population/journal-figures/paper2_figure2_wound7_transfer.pdf",
+      "sha256": "859c8fb2911336ac85c2d99ff5d7453af1f97889eb612b9007828568d2b0f74c"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure4_time_axes.pdf",
+      "destination": "source/population/journal-figures/paper2_figure4_time_axes.pdf",
+      "sha256": "ff160ceecde93a35954a7d40cec0a7ef586453316a82397df76f47ea80a4ecdb"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure1_workflow.pdf",
+      "destination": "source/population/journal-figures/paper2_figure1_workflow.pdf",
+      "sha256": "69c9f4b6739c8d05d8f6c83909af03c15d080045011ad73efb310332437860b2"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure7_mouse_arms.pdf",
+      "destination": "source/population/journal-figures/paper2_figure7_mouse_arms.pdf",
+      "sha256": "4822ed4e22ad2bab7d17b5b1c70fb0b6805f8f0060784e4cba085390735424bd"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure6_donor_curve_stability.pdf",
+      "destination": "source/population/journal-figures/paper2_figure6_donor_curve_stability.pdf",
+      "sha256": "90aa12dcd35ece8feb150c01016beb8ee2cfb9425d76f1d9487c5b50bcbc593c"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal-figures/paper2_figure5_methods_benchmark.pdf",
+      "destination": "source/population/journal-figures/paper2_figure5_methods_benchmark.pdf",
+      "sha256": "690e58f9801320e26b608d15270a896704a0703e127fe4e1c844fafa3b14ad96"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-supplement.pdf",
+      "destination": "scientific-reports-supplement.pdf",
+      "sha256": "2ed8db300e5c1739f35c58151bc503b32f918dbab17b2a768d9135ef6adedf65"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-manuscript.pdf",
+      "destination": "scientific-reports-manuscript.pdf",
+      "sha256": "b1a22f23816212b651db5db06273385740a5bf415a3fc4b037bb9a7dc52ae166"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/journal/scientific-reports-manuscript-inline.pdf",
+      "destination": "scientific-reports-manuscript-inline.pdf",
+      "sha256": "f2f9976002b1063ee453550e708ae06455a8b960216196b18d5a4a8b2608e6b7"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/qa/scientific-reports/format-check.json",
+      "destination": "verification/format-check.json",
+      "sha256": "4bb6ccbd762daa7af92aad083ad8a50c42ab9086ca90fd92f874743bf414da86"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/qa/scientific-reports/manuscript-build.txt",
+      "destination": "verification/manuscript-build.txt",
+      "sha256": "3a43c55a6c1be7c2efe7abe48ec09936b665c8b0570444e8db2045aed1f62c0e"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/qa/scientific-reports/manuscript-inline-build.txt",
+      "destination": "verification/manuscript-inline-build.txt",
+      "sha256": "80dda1b2b8e831522ac95c3236737dcde01eb380e2164a0d51e038a1010caf43"
+    },
+    {
+      "source": "output/scientific-reports-readiness-20261011-r2/final-documents/population/qa/scientific-reports/supplement-build.txt",
+      "destination": "verification/supplement-build.txt",
+      "sha256": "040c9aadfeae9a834f490a05d259322281a3151f2f723ade00e870481e3f5b61"
+    },
+    {
+      "source": "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf",
+      "destination": "source/population/fonts/texgyretermes-regular.otf",
+      "sha256": "cc3fe7c707b81428d23d54df3eadd9228a2bf6a4d43125d94df56f5f63134659",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bolditalic.otf",
+      "destination": "source/population/fonts/texgyretermes-bolditalic.otf",
+      "sha256": "1bf6af99cb0e26c12951317032d79b96ae009551e59ccf02a5b24f325ecfec87",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf",
+      "destination": "source/population/fonts/texgyretermes-bold.otf",
+      "sha256": "2fb3e952065fa153c7e4e64e04b98b9d79225739b6025aa3f0f0782d299ff61e",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-italic.otf",
+      "destination": "source/population/fonts/texgyretermes-italic.otf",
+      "sha256": "6dd103a1672e50568cd2f8a706ccd48443d44d7d073a59d2286f4e6f746575d6",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyretermes-math.otf",
+      "destination": "source/population/fonts/texgyretermes-math.otf",
+      "sha256": "e5ce42b4fe826b7ea4c0874359decf0b294439355c511a4794107a9924e2cd5a",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/doc/fonts/tex-gyre/GUST-FONT-LICENSE.txt",
+      "destination": "source/population/fonts/GUST-FONT-LICENSE.txt",
+      "sha256": "2bd69affc3da00715116f713f57eab9707e96daf3562ad0215987b15b9c16f73",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/doc/fonts/tex-gyre/README-TeX-Gyre-Termes.txt",
+      "destination": "source/population/fonts/README-TeX-Gyre-Termes.txt",
+      "sha256": "2ca38f2af08da678b2cdb4ac99f8b3ff72fb7bdcc785ace290cd8ef1b2b947ab",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/doc/fonts/tex-gyre/MANIFEST-TeX-Gyre-Termes.txt",
+      "destination": "source/population/fonts/MANIFEST-TeX-Gyre-Termes.txt",
+      "sha256": "f68e1704d13ab91fb1ef3c9f14e1db94c066c53aa2ac686879213e3619214bc7",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    },
+    {
+      "source": "/usr/share/texmf/doc/fonts/tex-gyre-math/README-TeX-Gyre-Termes-Math.txt",
+      "destination": "source/population/fonts/README-TeX-Gyre-Termes-Math.txt",
+      "sha256": "88ba1d5940d2eaa7aa55a36becdbb2561edcf93e096a1b23ec7fd2c7ae666baa",
+      "license": "GUST Font License / LPPL 1.3c-or-later"
+    }
+  ],
+  "default_document": "scientific-reports-manuscript-inline.pdf",
+  "native_title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction"
+}

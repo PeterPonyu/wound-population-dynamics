@@ -1,0 +1,91 @@
+label,state,library,hto,tag,gate,mouse,arm,day
+Unwounded Lin+ Mouse 1,Unwounded,T1,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,none,0
+Unwounded Lin- Mouse 1,Unwounded,T1,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,none,0
+Unwounded Lin+ Mouse 2,Unwounded,T1,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,none,0
+Unwounded Lin- Mouse 2,Unwounded,T1,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,none,0
+Unwounded Lin+ Mouse 3,Unwounded,T1,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,none,0
+Unwounded Lin- Mouse 3,Unwounded,T1,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,none,0
+Unwounded Lin+ Mouse 4,Unwounded,T3,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,none,0
+Unwounded Lin- Mouse 4,Unwounded,T3,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,none,0
+Unwounded Lin+ Mouse 5,Unwounded,T2,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,none,0
+Unwounded Lin+ Mouse 5,Unwounded,T2,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,none,0
+POD2 PBS-treated Lin+ Mouse 1,POD2 PBS-treated,T2,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,PBS,2
+POD2 PBS-treated Lin- Mouse 1,POD2 PBS-treated,T2,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,PBS,2
+POD2 PBS-treated Lin+ Mouse 2,POD2 PBS-treated,T2,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,PBS,2
+POD2 PBS-treated Lin- Mouse 2,POD2 PBS-treated,T2,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,PBS,2
+POD2 PBS-treated Lin+ Mouse 3,POD2 PBS-treated,T2,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,PBS,2
+POD2 PBS-treated Lin- Mouse 3,POD2 PBS-treated,T2,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,PBS,2
+POD2 PBS-treated Lin+ Mouse 4,POD2 PBS-treated,T1,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,PBS,2
+POD2 PBS-treated Lin- Mouse 4,POD2 PBS-treated,T1,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,PBS,2
+POD2 PBS-treated Lin+ Mouse 5,POD2 PBS-treated,T3,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,PBS,2
+POD2 PBS-treated Lin+ Mouse 5,POD2 PBS-treated,T3,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,PBS,2
+POD2 Verteporfin-treated Lin+ Mouse 1,POD2 Verteporfin-treated,T3,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,Verteporfin,2
+POD2 Verteporfin-treated Lin- Mouse 1,POD2 Verteporfin-treated,T3,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,Verteporfin,2
+POD2 Verteporfin-treated Lin+ Mouse 2,POD2 Verteporfin-treated,T3,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,Verteporfin,2
+POD2 Verteporfin-treated Lin- Mouse 2,POD2 Verteporfin-treated,T3,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,Verteporfin,2
+POD2 Verteporfin-treated Lin+ Mouse 3,POD2 Verteporfin-treated,T3,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,Verteporfin,2
+POD2 Verteporfin-treated Lin- Mouse 3,POD2 Verteporfin-treated,T3,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,Verteporfin,2
+POD2 Verteporfin-treated Lin+ Mouse 4,POD2 Verteporfin-treated,T2,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,Verteporfin,2
+POD2 Verteporfin-treated Lin- Mouse 4,POD2 Verteporfin-treated,T2,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,Verteporfin,2
+POD2 Verteporfin-treated Lin+ Mouse 5,POD2 Verteporfin-treated,T1,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,Verteporfin,2
+POD2 Verteporfin-treated Lin+ Mouse 5,POD2 Verteporfin-treated,T1,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,Verteporfin,2
+POD7 PBS-treated Lin+ Mouse 1,POD7 PBS-treated,T-7P,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,PBS,7
+POD7 PBS-treated Lin- Mouse 1,POD7 PBS-treated,T-7P,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,PBS,7
+POD7 PBS-treated Lin+ Mouse 2,POD7 PBS-treated,T-7P,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,PBS,7
+POD7 PBS-treated Lin- Mouse 2,POD7 PBS-treated,T-7P,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,PBS,7
+POD7 PBS-treated Lin+ Mouse 3,POD7 PBS-treated,T-7P,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,PBS,7
+POD7 PBS-treated Lin- Mouse 3,POD7 PBS-treated,T-7P,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,PBS,7
+POD7 PBS-treated Lin+ Mouse 4,POD7 PBS-treated,T-7P,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,PBS,7
+POD7 PBS-treated Lin- Mouse 4,POD7 PBS-treated,T-7P,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,PBS,7
+POD7 PBS-treated Lin+ Mouse 5,POD7 PBS-treated,T-7P,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,PBS,7
+POD7 PBS-treated Lin+ Mouse 5,POD7 PBS-treated,T-7P,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,PBS,7
+POD7 Verteporfin-treated Lin+ Mouse 1,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,Verteporfin,7
+POD7 Verteporfin-treated Lin- Mouse 1,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,Verteporfin,7
+POD7 Verteporfin-treated Lin+ Mouse 2,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,Verteporfin,7
+POD7 Verteporfin-treated Lin- Mouse 2,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,Verteporfin,7
+POD7 Verteporfin-treated Lin+ Mouse 3,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,Verteporfin,7
+POD7 Verteporfin-treated Lin- Mouse 3,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,Verteporfin,7
+POD7 Verteporfin-treated Lin+ Mouse 4,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,Verteporfin,7
+POD7 Verteporfin-treated Lin- Mouse 4,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,Verteporfin,7
+POD7 Verteporfin-treated Lin+ Mouse 5,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,Verteporfin,7
+POD7 Verteporfin-treated Lin+ Mouse 5,POD7 Verteporfin-treated,T-7V,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,Verteporfin,7
+POD14 PBS-treated Lin+ Mouse 1,POD14 PBS-treated,T-14P,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,PBS,14
+POD14 PBS-treated Lin- Mouse 1,POD14 PBS-treated,T-14P,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,PBS,14
+POD14 PBS-treated Lin+ Mouse 2,POD14 PBS-treated,T-14P,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,PBS,14
+POD14 PBS-treated Lin- Mouse 2,POD14 PBS-treated,T-14P,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,PBS,14
+POD14 PBS-treated Lin+ Mouse 3,POD14 PBS-treated,T-14P,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,PBS,14
+POD14 PBS-treated Lin- Mouse 3,POD14 PBS-treated,T-14P,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,PBS,14
+POD14 PBS-treated Lin+ Mouse 4,POD14 PBS-treated,T-14P,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,PBS,14
+POD14 PBS-treated Lin- Mouse 4,POD14 PBS-treated,T-14P,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,PBS,14
+POD14 PBS-treated Lin+ Mouse 5,POD14 PBS-treated,T-14P,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,PBS,14
+POD14 PBS-treated Lin+ Mouse 5,POD14 PBS-treated,T-14P,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,PBS,14
+POD14 Verteporfin-treated Lin+ Mouse 1,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,Verteporfin,14
+POD14 Verteporfin-treated Lin- Mouse 1,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,Verteporfin,14
+POD14 Verteporfin-treated Lin+ Mouse 2,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,Verteporfin,14
+POD14 Verteporfin-treated Lin- Mouse 2,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,Verteporfin,14
+POD14 Verteporfin-treated Lin+ Mouse 3,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,Verteporfin,14
+POD14 Verteporfin-treated Lin- Mouse 3,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,Verteporfin,14
+POD14 Verteporfin-treated Lin+ Mouse 4,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,Verteporfin,14
+POD14 Verteporfin-treated Lin- Mouse 4,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,Verteporfin,14
+POD14 Verteporfin-treated Lin+ Mouse 5,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,Verteporfin,14
+POD14 Verteporfin-treated Lin+ Mouse 5,POD14 Verteporfin-treated,T-14V,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,Verteporfin,14
+POD30 PBS-treated Lin+ Mouse 1,POD30 PBS-treated,T-30P,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,PBS,30
+POD30 PBS-treated Lin- Mouse 1,POD30 PBS-treated,T-30P,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,PBS,30
+POD30 PBS-treated Lin+ Mouse 2,POD30 PBS-treated,T-30P,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,PBS,30
+POD30 PBS-treated Lin- Mouse 2,POD30 PBS-treated,T-30P,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,PBS,30
+POD30 PBS-treated Lin+ Mouse 3,POD30 PBS-treated,T-30P,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,PBS,30
+POD30 PBS-treated Lin- Mouse 3,POD30 PBS-treated,T-30P,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,PBS,30
+POD30 PBS-treated Lin+ Mouse 4,POD30 PBS-treated,T-30P,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,PBS,30
+POD30 PBS-treated Lin- Mouse 4,POD30 PBS-treated,T-30P,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,PBS,30
+POD30 PBS-treated Lin+ Mouse 5,POD30 PBS-treated,T-30P,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,PBS,30
+POD30 PBS-treated Lin+ Mouse 5,POD30 PBS-treated,T-30P,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,PBS,30
+POD30 Verteporfin-treated Lin+ Mouse 1,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0301,MouseHashTag1--M1-42_30-F11-TSB,Lin+,1,Verteporfin,30
+POD30 Verteporfin-treated Lin- Mouse 1,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0302,MouseHashTag2--M1-42_30-F11-TSB,Lin-,1,Verteporfin,30
+POD30 Verteporfin-treated Lin+ Mouse 2,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0303,MouseHashTag3--M1-42_30-F11-TSB,Lin+,2,Verteporfin,30
+POD30 Verteporfin-treated Lin- Mouse 2,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0304,MouseHashTag4--M1-42_30-F11-TSB,Lin-,2,Verteporfin,30
+POD30 Verteporfin-treated Lin+ Mouse 3,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0305,MouseHashTag5--M1-42_30-F11-TSB,Lin+,3,Verteporfin,30
+POD30 Verteporfin-treated Lin- Mouse 3,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0306,MouseHashTag6--M1-42_30-F11-TSB,Lin-,3,Verteporfin,30
+POD30 Verteporfin-treated Lin+ Mouse 4,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0307,MouseHashTag7--M1-42_30-F11-TSB,Lin+,4,Verteporfin,30
+POD30 Verteporfin-treated Lin- Mouse 4,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0308,MouseHashTag8--M1-42_30-F11-TSB,Lin-,4,Verteporfin,30
+POD30 Verteporfin-treated Lin+ Mouse 5,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0309,MouseHashTag9--M1-42_30-F11-TSB,Lin+,5,Verteporfin,30
+POD30 Verteporfin-treated Lin+ Mouse 5,POD30 Verteporfin-treated,T-30V,TotalSeq-B-0310,MouseHashTag10--M1-42_30-F11-TSB,Lin+,5,Verteporfin,30

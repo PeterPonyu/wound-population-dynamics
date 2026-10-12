@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "6934b574baadda19a29383e93b02b3177d4158932fc50ef0cd8fd2c183789b0f",
+  "fit.json": "3f7c7aac3db9a59b9f9480878177e3dfe0c85d421db2a44b724fb2267096df33",
+  "model_replay.npz": "b3c3b1d78f0ae1ea6418d4d52928f8c5cf682f3b964dbd6f8ad53f950a4505b6"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "log_days",
+  "job_id": "Linpos-log_days-location_scale-seed0",
+  "method": "location_scale",
+  "seed": 0
+ }
+}

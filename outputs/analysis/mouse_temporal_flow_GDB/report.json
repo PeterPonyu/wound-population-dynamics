@@ -1,0 +1,57 @@
+{
+  "experiment": "repaired_mouse_temporal_flow",
+  "status": "completed",
+  "model_arm": "GDB",
+  "holdout": "POD7",
+  "pod_time_axis": {
+    "POD0": 0.0,
+    "POD2": 0.3333333333333333,
+    "POD7": 0.6666666666666666,
+    "POD30": 1.0
+  },
+  "Q1_cross_species": {
+    "panel_size": 7002,
+    "covered": 4182,
+    "fraction": 0.5972579263067695,
+    "n_fibroblasts": 15615,
+    "dominant_topic_fraction": 0.9998719180275376,
+    "mean_perplexity": 5.246579647064209
+  },
+  "Q3_geometry": {
+    "d_prior_holdout": 1.3531851768493652,
+    "d_holdout_last": 0.6599845886230469,
+    "d_prior_last": 1.998466968536377,
+    "holdout_on_direct_path": true
+  },
+  "Q2_holdout": {
+    "prior_timepoint": "POD2",
+    "holdout": "POD7",
+    "n_cells": {
+      "POD0": 223,
+      "POD2": 2400,
+      "POD7": 11590,
+      "POD30": 1402
+    },
+    "energy_distance_predicted": 0.6682353019714355,
+    "energy_distance_standstill": 1.3531851768493652,
+    "energy_distance_noise_floor": 0.006168365478515625,
+    "improvement_fraction": 0.5061760109379158,
+    "beats_baseline": true,
+    "gain_over_standstill": 0.6849498748779297,
+    "passes_noise_gate": true,
+    "caveat": "n=1 animal per model per timepoint; this is a computational trajectory experiment, not a statistical result about wound healing. Cells within a timepoint share one animal."
+  },
+  "protocol": {
+    "seed": 0,
+    "steps": 6000,
+    "batch_size": 256,
+    "holdout_timepoint_excluded_from_fit": "POD7",
+    "scaler_fit_on_training_timepoints_only": true,
+    "noise_floor_split": "randomized_split_half",
+    "time_axis": "rank",
+    "script_sha256": "c1ddf417ed1cfebafcfc595d44a648391f882df6bc8f20e3971e94f2cf52eaa5",
+    "panel_sha256": "85f7f9110c895c918d6e55ff8dd84c7de3f61b46bfbde2d70028cebf46d713c4",
+    "model_sha256": "c54e78d7ebfd26b0d00436e928db3779d93ffd4133a768114698072fb0538ae9",
+    "scope": "one GDB mouse arm; one animal per timepoint; computational audit only"
+  }
+}

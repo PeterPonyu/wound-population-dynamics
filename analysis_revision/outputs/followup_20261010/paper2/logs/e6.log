@@ -1,0 +1,49 @@
+    held             design     training  energy_to_training_day1  knn15_to_training_day1  knn15_reference_between_training_donors held_donor  real_ed  individual_wrong_mean_ed  individual_wrong_minus_real  mixed_wrong_minus_real
+0  PWH26  B_two_donor_field  PWH27,PWH28                   0.3116                  2.4187                                   2.5253      PWH26   0.7578                    0.3374                      -0.4204                 -0.4779
+1  PWH27  B_two_donor_field  PWH26,PWH28                   0.3027                  2.3990                                   2.5693      PWH27   0.2488                    0.3281                       0.0793                  0.0389
+2  PWH28  B_two_donor_field  PWH26,PWH27                   0.1994                  2.2326                                   2.7884      PWH28   0.2043                    0.2570                       0.0527                 -0.0138
+    held                design training substitute  energy_own_to_training_day1  energy_sub_to_training_day1  knn15_own  knn15_sub  log2_sub_over_own_cfm_conditioned  log2_sub_over_own_cfm_independent  log2_sub_over_own_identity  log2_sub_over_own_location_scale  log2_sub_over_own_mean_shift  ood_difference_energy_own_minus_sub
+0  PWH26  A_single_donor_field    PWH28      PWH27                       0.2946                       0.3006     2.6356     2.5762                             1.0252                             0.9133                     -0.0768                           -0.2620                       -0.1118                              -0.0061
+1  PWH26  A_single_donor_field    PWH27      PWH28                       0.5888                       0.4151     2.8027     2.5049                            -0.7478                            -1.4399                     -0.1351                           -0.1917                       -0.2986                               0.1737
+2  PWH27  A_single_donor_field    PWH28      PWH26                       0.3006                       0.2946     2.5762     2.6356                            -0.8901                            -0.8043                      0.2042                            0.5616                        0.4716                               0.0061
+3  PWH27  A_single_donor_field    PWH26      PWH28                       0.4770                       0.2890     2.7870     2.5296                            -1.1240                            -1.1266                     -0.0212                           -0.2587                       -0.2238                               0.1880
+4  PWH28  A_single_donor_field    PWH27      PWH26                       0.4151                       0.5888     2.5049     2.8027                             1.1456                             1.5430                      0.2579                            0.4172                        0.4669                              -0.1737
+5  PWH28  A_single_donor_field    PWH26      PWH27                       0.2890                       0.4770     2.5296     2.7870                             1.4983                             1.4603                      0.2724                            0.7489                        0.6233                              -0.1880
+pairwise day-1 energy (MT_day7 scaler): {'PWH26|PWH27': 0.5072639270158508, 'PWH26|PWH28': 0.2948847061402251, 'PWH27|PWH28': 0.34690682388602134}
+mean_shift PWH26 0 0.2
+mean_shift PWH26 1 0.3
+mean_shift PWH26 2 0.1
+mean_shift PWH27 0 0.65
+mean_shift PWH27 1 0.2
+mean_shift PWH27 2 0.0
+mean_shift PWH28 0 0.55
+mean_shift PWH28 1 0.15
+mean_shift PWH28 2 0.25
+cfm_independent PWH26 0 0.0
+cfm_independent PWH26 1 0.1
+cfm_independent PWH26 2 0.1
+cfm_independent PWH27 0 0.35
+cfm_independent PWH27 1 0.1
+cfm_independent PWH27 2 0.0
+cfm_independent PWH28 0 0.45
+cfm_independent PWH28 1 0.1
+cfm_independent PWH28 2 0.0
+          transport   held  source_time  target_time  w_selected  w_oracle  log2_selected_vs_marginal  log2_transport_vs_marginal
+0   cfm_independent  PWH26          0.0          1.0        0.00    0.7667                     0.0000                     -0.4864
+1   cfm_independent  PWH26          1.0          7.0        0.10    0.0667                    -0.0292                      2.3456
+2   cfm_independent  PWH26          7.0         30.0        0.10    0.4667                    -0.0387                     -0.0148
+3   cfm_independent  PWH27          0.0          1.0        0.35    0.3000                    -0.0657                      0.1961
+4   cfm_independent  PWH27          1.0          7.0        0.10    0.0500                     0.0446                      3.1052
+5   cfm_independent  PWH27          7.0         30.0        0.00    0.2667                     0.0000                      0.6131
+6   cfm_independent  PWH28          0.0          1.0        0.45    0.0167                     0.8488                      2.2216
+7   cfm_independent  PWH28          1.0          7.0        0.10    0.6500                    -0.1432                     -0.4302
+8   cfm_independent  PWH28          7.0         30.0        0.00    0.0000                     0.0000                      3.4273
+9        mean_shift  PWH26          0.0          1.0        0.20    0.6500                    -0.2449                     -0.3558
+10       mean_shift  PWH26          1.0          7.0        0.30    0.0500                     0.1918                      1.7124
+11       mean_shift  PWH26          7.0         30.0        0.10    0.2500                    -0.0917                      0.7350
+12       mean_shift  PWH27          0.0          1.0        0.65    0.3500                    -0.0334                      0.2110
+13       mean_shift  PWH27          1.0          7.0        0.20    0.2000                    -0.1956                      1.2638
+14       mean_shift  PWH27          7.0         30.0        0.00    0.1500                     0.0000                      1.4813
+15       mean_shift  PWH28          0.0          1.0        0.55    0.3500                    -0.1644                      0.3276
+16       mean_shift  PWH28          1.0          7.0        0.15    0.3500                    -0.1734                      0.4035
+17       mean_shift  PWH28          7.0         30.0        0.25    0.0000                     0.8220                      2.9892

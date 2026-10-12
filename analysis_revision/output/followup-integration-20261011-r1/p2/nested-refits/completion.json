@@ -1,0 +1,77 @@
+{
+  "completed": 9,
+  "records": [
+    {
+      "held": "PWH26",
+      "seed": 0,
+      "method": "cfm_ot",
+      "fit_seconds": 47.065162678976776,
+      "predictions_sha256": "8dae1d6a8f03b53ebb348dd378b895efb87417efcb57a8833a5e98407cee01a4",
+      "weights_sha256": "b8014d7cdac3c09ad220eab33aded583b9a930832a928c0d8897339d4be81630"
+    },
+    {
+      "held": "PWH26",
+      "seed": 1,
+      "method": "cfm_ot",
+      "fit_seconds": 45.576758128008805,
+      "predictions_sha256": "7d196aab5ea87088dc285b162cec80b99cd463b1b70c5effb424274bd34d1977",
+      "weights_sha256": "5d022dbf6a8d83a810c900f8f4db0e42b520a1f4c5dd7a89bcdd17d0e3a6ba60"
+    },
+    {
+      "held": "PWH26",
+      "seed": 2,
+      "method": "cfm_ot",
+      "fit_seconds": 44.88389234300121,
+      "predictions_sha256": "f1b4a7f9d26196b0d96695fb1d1f62b17663ce9ac51e947601037f8aea5a0e93",
+      "weights_sha256": "bdd1720e63d6089fdb6a6b4990668306a1161b7891c31b730235baea4860f1a8"
+    },
+    {
+      "held": "PWH27",
+      "seed": 0,
+      "method": "cfm_independent",
+      "fit_seconds": 20.363626261008903,
+      "predictions_sha256": "b28a1ffcbd2732f0bd54d216eb73bc414353847e80fea7b198a1130dc81140fc",
+      "weights_sha256": "67f180b3fe2d6ffd34c5a206ea8ab06b2ca56fdc23d266cb08fe1f6ae77256ba"
+    },
+    {
+      "held": "PWH27",
+      "seed": 1,
+      "method": "cfm_independent",
+      "fit_seconds": 20.89648226997815,
+      "predictions_sha256": "b828499c1846b8024337857897340e9a000ba22fa6f77340652815db89a6ccb0",
+      "weights_sha256": "8ca5fc331f74689a9a9b6f7c7bffba6f980b80b5dffe9a1ec2c4901d060c089d"
+    },
+    {
+      "held": "PWH27",
+      "seed": 2,
+      "method": "cfm_independent",
+      "fit_seconds": 20.879565228009596,
+      "predictions_sha256": "996f618d0be95d3bf6aeba6a336c80e6a7f5766f6f1eab0f5fb13df769ebca8c",
+      "weights_sha256": "1f23ff2891bad0f3f1ce03a49ed2e794f891fd906963e8e876f8cc48d655d115"
+    },
+    {
+      "held": "PWH28",
+      "seed": 0,
+      "method": "cfm_independent",
+      "fit_seconds": 8.322280994994799,
+      "predictions_sha256": "a4ca86646b4dddf0f60d8769b6e5f44e607415de4174c7378a9398c1075a6381",
+      "weights_sha256": "465a3c3af303dc52257566fa9500295d160f4177cedf7529a4142762c3734605"
+    },
+    {
+      "held": "PWH28",
+      "seed": 1,
+      "method": "cfm_independent",
+      "fit_seconds": 8.535622212977614,
+      "predictions_sha256": "1f494eb6495c1424a2a954c31b1f3bba77b8e37c050027110ee71376019e69ad",
+      "weights_sha256": "d86e87f01c157edc009bf049b6e63f88fd87c1db26e6a4db32fcc307b6867b86"
+    },
+    {
+      "held": "PWH28",
+      "seed": 2,
+      "method": "cfm_independent",
+      "fit_seconds": 8.288160135998623,
+      "predictions_sha256": "115374f2cd9a64e00fa9a15c9e178b245585c5cc113c15bdf90756f614fcba59",
+      "weights_sha256": "d0c8ab04585bd83464a81cc7ee03a5255502cfd6191f9a9b48cbbd5278a7e7ef"
+    }
+  ]
+}

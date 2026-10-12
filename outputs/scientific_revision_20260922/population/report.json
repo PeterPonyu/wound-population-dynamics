@@ -1,0 +1,968 @@
+{
+  "status": "completed",
+  "experiment": "fixed_reference_donor_curve_and_target_marginal",
+  "schema_version": 1,
+  "biological_donors": 3,
+  "independent_new_data": false,
+  "fits": 27,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "training": "Same scripts/evaluate_training_donor_count.py train_shared_field and integrate used by scripts/assess_training_seed_stability.py; 8000 steps, batch256, Adam1e-3, same paired donor-segment product coupling, rank clock, 50 RK4 by default.",
+    "randomness": "Every fit resets torch.manual_seed(seed) and np.random.default_rng(seed) inside reused training function. Controls use separate draw RNGs; a new controlled computation, not a replacement of historical outputs.",
+    "scaling": "Own scaler uses the specified training subset only. Reference scaler uses both non-held donors at all times, only to evaluate inverse-transformed predictions. Never supplied to k1 training.",
+    "evaluation": "All held-source cells; original seed0 target sample capped1200; same reference geometry/target/source identities for all k and methods within held donor; float64 energy V-statistic.",
+    "marginal": "Equal donor empirical target measure; exact score and source-count-matched50 draw average reported separately; no held-source expression used.",
+    "scope": "Retrospective same-cohort protocol audit; computational seeds/subsets/draws are not independent biological units; no clinical/new-patient validation."
+  },
+  "historical_baseline": {
+    "original_shared_cfm_mean_ed": 0.3947008450826009,
+    "matched_equal_donor": {
+      "mean": 0.18177671823517677,
+      "minimum": 0.14790582754440637,
+      "maximum": 0.21495265028781763
+    },
+    "matched_uniform": {
+      "mean": 0.18177497366452544,
+      "minimum": 0.14779374506779183,
+      "maximum": 0.21507860232681905
+    },
+    "exact_marginal_mean_ed": 0.16759806972263114,
+    "n_macro_draws_lower_than_shared": 50,
+    "maximum_original_score_reproduction_error": 4.014732356338868e-06,
+    "donor_summary": [
+      {
+        "held_donor": "PWH26",
+        "shared_cfm_ed": 0.7110385894775391,
+        "matched_equal_donor_mean_ed": 0.1568820120540563,
+        "matched_equal_donor_min_ed": 0.11471401082826649,
+        "matched_equal_donor_max_ed": 0.2106471141267905,
+        "marginal_lower_draws": 50,
+        "draws": 50
+      },
+      {
+        "held_donor": "PWH27",
+        "shared_cfm_ed": 0.288055419921875,
+        "matched_equal_donor_mean_ed": 0.14155599490337908,
+        "matched_equal_donor_min_ed": 0.10552254832153896,
+        "matched_equal_donor_max_ed": 0.17694819411976592,
+        "marginal_lower_draws": 50,
+        "draws": 50
+      },
+      {
+        "held_donor": "PWH28",
+        "shared_cfm_ed": 0.18500852584838867,
+        "matched_equal_donor_mean_ed": 0.2468921477480949,
+        "matched_equal_donor_min_ed": 0.18595683957367282,
+        "matched_equal_donor_max_ed": 0.3340001953725835,
+        "marginal_lower_draws": 0,
+        "draws": 50
+      }
+    ],
+    "interpretation": "50 draws characterize evaluation sampling in the same three donors, not biological replication; original shared-field values are historical, not newly trained."
+  },
+  "curve": {
+    "summary": [
+      {
+        "method": "Shared CFM",
+        "n_donor_blocks": 3,
+        "k1_mean_ed": 0.5466340900531097,
+        "k2_mean_ed": 0.3983070427064203,
+        "mean_reduction": 0.14832704734668942,
+        "descriptive_block_range_lower": 0.07322056200935245,
+        "descriptive_block_range_upper": 0.2726825855554367,
+        "donor_blocks_improved": 3,
+        "seed_reduction_min": 0.14302860521041305,
+        "seed_reduction_max": 0.15578202078374673,
+        "k1_relative_improvement": 0.6535014765647299,
+        "k2_relative_improvement": 0.7476954337874103
+      },
+      {
+        "method": "Mean displacement",
+        "n_donor_blocks": 3,
+        "k1_mean_ed": 0.5094915676196706,
+        "k2_mean_ed": 0.4185882558611966,
+        "mean_reduction": 0.0909033117584741,
+        "descriptive_block_range_lower": 0.07977834991379629,
+        "descriptive_block_range_upper": 0.10912751118036423,
+        "donor_blocks_improved": 3,
+        "seed_reduction_min": 0.0909033117584741,
+        "seed_reduction_max": 0.0909033117584741,
+        "k1_relative_improvement": 0.6480414003686331,
+        "k2_relative_improvement": 0.7148118195158867
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "n_donor_blocks": 3,
+        "k1_mean_ed": 0.222199490686378,
+        "k2_mean_ed": 0.16759806972263114,
+        "mean_reduction": 0.05460142096374687,
+        "descriptive_block_range_lower": 0.03531455203341727,
+        "descriptive_block_range_upper": 0.06468513188622937,
+        "donor_blocks_improved": 3,
+        "seed_reduction_min": 0.05460142096374687,
+        "seed_reduction_max": 0.05460142096374687,
+        "k1_relative_improvement": 0.8372048063926125,
+        "k2_relative_improvement": 0.8738865877686752
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "n_donor_blocks": 3,
+        "k1_mean_ed": 0.23316477258761226,
+        "k2_mean_ed": 0.18177671823517674,
+        "mean_reduction": 0.051388054352435486,
+        "descriptive_block_range_lower": 0.03682585196428653,
+        "descriptive_block_range_upper": 0.060756326639688885,
+        "donor_blocks_improved": 3,
+        "seed_reduction_min": 0.051388054352435486,
+        "seed_reduction_max": 0.051388054352435486,
+        "k1_relative_improvement": 0.8286779961156272,
+        "k2_relative_improvement": 0.8636862961089365
+      },
+      {
+        "method": "Unchanged source",
+        "n_donor_blocks": 3,
+        "k1_mean_ed": 1.4759993073409035,
+        "k2_mean_ed": 1.4759993073409035,
+        "mean_reduction": 0.0,
+        "descriptive_block_range_lower": 0.0,
+        "descriptive_block_range_upper": 0.0,
+        "donor_blocks_improved": 0,
+        "seed_reduction_min": 0.0,
+        "seed_reduction_max": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      }
+    ],
+    "by_seed": [
+      {
+        "method": "Shared CFM",
+        "seed": 0,
+        "k1_ed": 0.5315419694612379,
+        "k2_ed": 0.3853714534153294,
+        "reduction": 0.1461705160459085,
+        "k1_relative_improvement": 0.6597629173334774,
+        "k2_relative_improvement": 0.7545111145569566
+      },
+      {
+        "method": "Mean displacement",
+        "seed": 0,
+        "k1_ed": 0.5094915676196706,
+        "k2_ed": 0.4185882558611966,
+        "reduction": 0.0909033117584741,
+        "k1_relative_improvement": 0.6480414003686331,
+        "k2_relative_improvement": 0.7148118195158867
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "seed": 0,
+        "k1_ed": 0.222199490686378,
+        "k2_ed": 0.16759806972263114,
+        "reduction": 0.05460142096374687,
+        "k1_relative_improvement": 0.8372048063926126,
+        "k2_relative_improvement": 0.8738865877686752
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "seed": 0,
+        "k1_ed": 0.23316477258761226,
+        "k2_ed": 0.18177671823517674,
+        "reduction": 0.051388054352435486,
+        "k1_relative_improvement": 0.8286779961156272,
+        "k2_relative_improvement": 0.8636862961089364
+      },
+      {
+        "method": "Unchanged source",
+        "seed": 0,
+        "k1_ed": 1.4759993073409035,
+        "k2_ed": 1.4759993073409035,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      },
+      {
+        "method": "Shared CFM",
+        "seed": 1,
+        "k1_ed": 0.5833974576988529,
+        "k2_ed": 0.4276154369151062,
+        "reduction": 0.15578202078374673,
+        "k1_relative_improvement": 0.630198429143458,
+        "k2_relative_improvement": 0.7331268441756994
+      },
+      {
+        "method": "Mean displacement",
+        "seed": 1,
+        "k1_ed": 0.5094915676196706,
+        "k2_ed": 0.4185882558611966,
+        "reduction": 0.0909033117584741,
+        "k1_relative_improvement": 0.6480414003686331,
+        "k2_relative_improvement": 0.7148118195158867
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "seed": 1,
+        "k1_ed": 0.222199490686378,
+        "k2_ed": 0.16759806972263114,
+        "reduction": 0.05460142096374687,
+        "k1_relative_improvement": 0.8372048063926126,
+        "k2_relative_improvement": 0.8738865877686752
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "seed": 1,
+        "k1_ed": 0.23316477258761226,
+        "k2_ed": 0.18177671823517674,
+        "reduction": 0.051388054352435486,
+        "k1_relative_improvement": 0.8286779961156272,
+        "k2_relative_improvement": 0.8636862961089364
+      },
+      {
+        "method": "Unchanged source",
+        "seed": 1,
+        "k1_ed": 1.4759993073409035,
+        "k2_ed": 1.4759993073409035,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      },
+      {
+        "method": "Shared CFM",
+        "seed": 2,
+        "k1_ed": 0.5249628429992383,
+        "k2_ed": 0.3819342377888253,
+        "reduction": 0.14302860521041305,
+        "k1_relative_improvement": 0.6705430832172544,
+        "k2_relative_improvement": 0.7554483426295749
+      },
+      {
+        "method": "Mean displacement",
+        "seed": 2,
+        "k1_ed": 0.5094915676196706,
+        "k2_ed": 0.4185882558611966,
+        "reduction": 0.0909033117584741,
+        "k1_relative_improvement": 0.6480414003686331,
+        "k2_relative_improvement": 0.7148118195158867
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "seed": 2,
+        "k1_ed": 0.222199490686378,
+        "k2_ed": 0.16759806972263114,
+        "reduction": 0.05460142096374687,
+        "k1_relative_improvement": 0.8372048063926126,
+        "k2_relative_improvement": 0.8738865877686752
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "seed": 2,
+        "k1_ed": 0.23316477258761226,
+        "k2_ed": 0.18177671823517674,
+        "reduction": 0.051388054352435486,
+        "k1_relative_improvement": 0.8286779961156272,
+        "k2_relative_improvement": 0.8636862961089364
+      },
+      {
+        "method": "Unchanged source",
+        "seed": 2,
+        "k1_ed": 1.4759993073409035,
+        "k2_ed": 1.4759993073409035,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      }
+    ],
+    "donor_blocks": [
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH26",
+        "k1_ed": 1.0313292374405192,
+        "k2_ed": 0.7586466518850825,
+        "reduction": 0.2726825855554367,
+        "k1_relative_improvement": 0.4339937612999531,
+        "k2_relative_improvement": 0.5836453361862297
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH26",
+        "k1_ed": 0.6471775062395166,
+        "k2_ed": 0.5673991563257204,
+        "reduction": 0.07977834991379629,
+        "k1_relative_improvement": 0.6448209817196894,
+        "k2_relative_improvement": 0.6886043266740773
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH26",
+        "k1_ed": 0.20246213950159087,
+        "k2_ed": 0.1377770076153615,
+        "reduction": 0.06468513188622937,
+        "k1_relative_improvement": 0.8888862742388133,
+        "k2_relative_improvement": 0.9243862745002261
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH26",
+        "k1_ed": 0.21346399650738734,
+        "k2_ed": 0.1568820120540563,
+        "reduction": 0.05658198445333104,
+        "k1_relative_improvement": 0.882848319067465,
+        "k2_relative_improvement": 0.9139012118159474
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH26",
+        "k1_ed": 1.8221163777437948,
+        "k2_ed": 1.8221163777437948,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH27",
+        "k1_ed": 0.33592725519635414,
+        "k2_ed": 0.23684926072107496,
+        "reduction": 0.09907799447527917,
+        "k1_relative_improvement": 0.7812219163164359,
+        "k2_relative_improvement": 0.8457480702119939
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH27",
+        "k1_ed": 0.43338837684696774,
+        "k2_ed": 0.34958430266570595,
+        "reduction": 0.08380407418126179,
+        "k1_relative_improvement": 0.7177487771217349,
+        "k2_relative_improvement": 0.7723275422282905
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH27",
+        "k1_ed": 0.1990915337979069,
+        "k2_ed": 0.13528695482631292,
+        "reduction": 0.06380457897159397,
+        "k1_relative_improvement": 0.87033840342467,
+        "k2_relative_improvement": 0.9118921722889519
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH27",
+        "k1_ed": 0.20231232154306797,
+        "k2_ed": 0.14155599490337908,
+        "reduction": 0.060756326639688885,
+        "k1_relative_improvement": 0.8682408130686093,
+        "k2_relative_improvement": 0.9078093580683722
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH27",
+        "k1_ed": 1.5354703247251766,
+        "k2_ed": 1.5354703247251766,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH28",
+        "k1_ed": 0.27264577752245583,
+        "k2_ed": 0.1994252155131034,
+        "reduction": 0.07322056200935245,
+        "k1_relative_improvement": 0.7452887520778009,
+        "k2_relative_improvement": 0.8136928949640074
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH28",
+        "k1_ed": 0.4479088197725276,
+        "k2_ed": 0.3387813085921634,
+        "reduction": 0.10912751118036423,
+        "k1_relative_improvement": 0.5815544422644752,
+        "k2_relative_improvement": 0.6835035896452921
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH28",
+        "k1_ed": 0.26504479875963627,
+        "k2_ed": 0.229730246726219,
+        "reduction": 0.03531455203341727,
+        "k1_relative_improvement": 0.7523897415143544,
+        "k2_relative_improvement": 0.7853813165168476
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH28",
+        "k1_ed": 0.28371799971238143,
+        "k2_ed": 0.2468921477480949,
+        "reduction": 0.03682585196428653,
+        "k1_relative_improvement": 0.7349448562108072,
+        "k2_relative_improvement": 0.76934831844249
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH28",
+        "k1_ed": 1.0704112195537387,
+        "k2_ed": 1.0704112195537387,
+        "reduction": 0.0,
+        "k1_relative_improvement": 0.0,
+        "k2_relative_improvement": 0.0
+      }
+    ],
+    "configuration_stability": [
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 1.225328350310795,
+        "training_sd": 0.19196192948012586,
+        "training_range": 0.33773712316592697,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.6792348066976492,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.14219746377151932,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.1539966896978289,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 1.8221163777437948,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.8373301245702433,
+        "training_sd": 0.0055955421713232995,
+        "training_range": 0.009733807714760623,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.615120205781384,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.2627268152316624,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.2729313033169458,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH26",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 1.8221163777437948,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH26",
+        "k": 2,
+        "training_donors": "PWH27|PWH28",
+        "mean_ed": 0.7586466518850825,
+        "training_sd": 0.1237747018912089,
+        "training_range": 0.23341218319576384,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH26",
+        "k": 2,
+        "training_donors": "PWH27|PWH28",
+        "mean_ed": 0.5673991563257204,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH26",
+        "k": 2,
+        "training_donors": "PWH27|PWH28",
+        "mean_ed": 0.1377770076153615,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH26",
+        "k": 2,
+        "training_donors": "PWH27|PWH28",
+        "mean_ed": 0.1568820120540563,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH26",
+        "k": 2,
+        "training_donors": "PWH27|PWH28",
+        "mean_ed": 1.8221163777437948,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.01707478701951093
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.1952138826612456,
+        "training_sd": 0.028745916285779417,
+        "training_range": 0.0573351830257689,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.434928266297435,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.15460377570578832,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.15609233384837912,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 1.5354703247251766,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.4766406277314627,
+        "training_sd": 0.10976369943554473,
+        "training_range": 0.1961925278537926,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.4318484873965005,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.24357929189002547,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 0.24853230923775682,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH27",
+        "k": 1,
+        "training_donors": "PWH28",
+        "mean_ed": 1.5354703247251766,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH27",
+        "k": 2,
+        "training_donors": "PWH26|PWH28",
+        "mean_ed": 0.23684926072107496,
+        "training_sd": 0.051647682179186825,
+        "training_range": 0.1021172569899198,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH27",
+        "k": 2,
+        "training_donors": "PWH26|PWH28",
+        "mean_ed": 0.34958430266570595,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH27",
+        "k": 2,
+        "training_donors": "PWH26|PWH28",
+        "mean_ed": 0.13528695482631292,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH27",
+        "k": 2,
+        "training_donors": "PWH26|PWH28",
+        "mean_ed": 0.14155599490337908,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH27",
+        "k": 2,
+        "training_donors": "PWH26|PWH28",
+        "mean_ed": 1.5354703247251766,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.009553198379394168
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.24677272912025425,
+        "training_sd": 0.03505347871978392,
+        "training_range": 0.06549276604661802,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.46271667689031837,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.2658584406933331,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 0.28424678292588595,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH26",
+        "mean_ed": 1.0704112195537387,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.29851882592465745,
+        "training_sd": 0.08163349164390395,
+        "training_range": 0.16325074254882033,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.43310096265473685,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.26423115682593945,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 0.2831892164988769,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH28",
+        "k": 1,
+        "training_donors": "PWH27",
+        "mean_ed": 1.0704112195537387,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Shared CFM",
+        "held_donor": "PWH28",
+        "k": 2,
+        "training_donors": "PWH26|PWH27",
+        "mean_ed": 0.1994252155131034,
+        "training_sd": 0.0028785859830406527,
+        "training_range": 0.005748671172998598,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Mean displacement",
+        "held_donor": "PWH28",
+        "k": 2,
+        "training_donors": "PWH26|PWH27",
+        "mean_ed": 0.3387813085921634,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (exact)",
+        "held_donor": "PWH28",
+        "k": 2,
+        "training_donors": "PWH26|PWH27",
+        "mean_ed": 0.229730246726219,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Training-target marginal (matched)",
+        "held_donor": "PWH28",
+        "k": 2,
+        "training_donors": "PWH26|PWH27",
+        "mean_ed": 0.2468921477480949,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      },
+      {
+        "method": "Unchanged source",
+        "held_donor": "PWH28",
+        "k": 2,
+        "training_donors": "PWH26|PWH27",
+        "mean_ed": 1.0704112195537387,
+        "training_sd": 0.0,
+        "training_range": 0.0,
+        "n_seeds": 3,
+        "split_half_reference": 0.041832072020898003
+      }
+    ],
+    "training_stochasticity": {
+      "mean_configuration_sd": 0.07011722530998862,
+      "maximum_configuration_range": 0.33773712316592697,
+      "mean_split_half_reference": 0.022820019139934367,
+      "sd_to_split_half_ratio": 3.0726190403269875
+    },
+    "uncertainty": "4000 percentile resamples of three held-donor blocks after averaging seeds. Descriptive only: training sets overlap. Seeds/subsets/draws are computational repetitions."
+  },
+  "verification": {
+    "status": "passed",
+    "saved_fit_count": 27,
+    "unique_cell_ids": true,
+    "training_donor_exclusion": true,
+    "reference_excludes_held_donor": true,
+    "source_target_ids_checked": true,
+    "maximum_inverse_transform_difference": 0.0,
+    "maximum_score_reproduction_difference": 0.0,
+    "maximum_cpu_checkpoint_prediction_difference": 7.62939453125e-06,
+    "checkpoint_reload_tolerance": 5e-05,
+    "explanation": "Every saved checkpoint re-integrated on CPU; original fits use the reported device. Small float32 CPU/GPU differences are expected."
+  },
+  "provenance": {
+    "inputs": {
+      "outputs/analysis/human_temporal_flow/mu.npy": "0ac3ff419ee8108cd3a2b0e45e8b8b7832c989c76e189bc4f8aa47e809c8ac71",
+      "outputs/analysis/human_temporal_flow/obs_fibroblast.csv": "4323b852d234396b61ee865749d2b7a4c2f96f644159b5e4c4e0459c6ca2cb76",
+      "data/raw/GSE241132/GSE241132_cell_metadata.txt.gz": "59f216e582d1e06c049eb9fe676aa1a693298c0160769ff324ffcc4ab72b3d22",
+      "outputs/analysis/donor_conditioned_benchmark/report.json": "e8e5098fce9bdf590c12441553df8241831ceed58805f8f8bdf87883792f04a3",
+      "outputs/analysis/donor_curve_seed_stability/report.json": "a054c725a776de871448f343b55634b19c3739c29c98f7c3a775e0289535bfbe",
+      "scripts/repair_population_protocol.py": "4db8d30a5f4339a27cacf49bf67114a70cdbac18f6f0cf38b2150d296409c60a",
+      "scripts/evaluate_training_donor_count.py": "6564a22c72fc27db5a5e9afb9155ef2b50fbce8a8ed8c78921e7a647a6d48e90",
+      "wound_models/human_wound_data.py": "7bb0f61d031ca14363114ef59a208a7d127be8c42078df755d17bfe74345e9e6",
+      "wound_models/population_flow.py": "9973da05925dae4fbb5526a0d8c5be4e39c6e6d7cd0da51a63d9a333f9213f64",
+      "scripts/audit_population_math.py": "8a7615b1488828efbd585be09c42d0fe7ad1280b5b5b8442f075d0e3906bdc62",
+      "data/raw/GSE241132/per_gsm/GSM7717079_PWH26D0.zip": "8d96f8a7f2f14d48acf7693ed8105e87035a19c0f9cb86f81bafa725d30909ae",
+      "data/raw/GSE241132/per_gsm/GSM7717080_PWH26D1.zip": "4306d0e32a9c522d27ea42a9cbff3685d31b875d5d9ad6018da0e21e32390353",
+      "data/raw/GSE241132/per_gsm/GSM7717081_PWH26D7.zip": "ca1cda90497cb24dcf5392cced591ae8ae5c6ef0c1ffc2281d341ed6b69ab354",
+      "data/raw/GSE241132/per_gsm/GSM7717082_PWH26D30.zip": "5bb952ca8583437e6908fa7cf59be96ed98f136c0f92763d7246de454816a518",
+      "data/raw/GSE241132/per_gsm/GSM7717083_PWH27D0.zip": "cdd52cf31fe0f170d3306178dbbd131f35d2d807a81e1c7b26d98dfe5ed671f4",
+      "data/raw/GSE241132/per_gsm/GSM7717084_PWH27D1.zip": "64e949d80e128b578b1127ae084604db0d9d1b32e1f6334a4f1320dfc6d94f77",
+      "data/raw/GSE241132/per_gsm/GSM7717085_PWH27D7.zip": "a38908a9f9d70e9c09d56e33dd81c064e8c132fece2f0f1d1ac97297968f09c8",
+      "data/raw/GSE241132/per_gsm/GSM7717086_PWH27D30.zip": "3b8bbf00b74d9ea1605523cdff7183ac15bd6885798f5ca972e8d497cfa47768",
+      "data/raw/GSE241132/per_gsm/GSM7717087_PWH28D0.zip": "232d5510afe7f2dc419e236aa06963dd2892fe41e0501f2f989eaf06c3ee6c50",
+      "data/raw/GSE241132/per_gsm/GSM7717088_PWH28D1.zip": "33a3b6e4a6f69e35178dbcbd5f0296d1cf03fc39d8bcde7415fb0d1492bfa9ef",
+      "data/raw/GSE241132/per_gsm/GSM7717089_PWH28D7.zip": "aef48e8a3dbcd8253314efd6cff147cc6a7e4def748f96dcab637adab54a6739",
+      "data/raw/GSE241132/per_gsm/GSM7717090_PWH28D30.zip": "de3c42d6e8cebdaee51792b7a02dc48fe337a74a0b8cfc654d7e1d1bae1c5261"
+    },
+    "runtime": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scipy": "1.16.3",
+      "torch": "2.12.0+cu130",
+      "cuda": "13.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU"
+    },
+    "elapsed_seconds": 198.01676796696847
+  }
+}

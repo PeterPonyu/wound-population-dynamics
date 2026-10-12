@@ -1,0 +1,240 @@
+{
+  "protocol_sha256": "ad60dcb0ed7245eea3b602ca14bf00aab698937e4053d88267e9a1a49a1da5bc",
+  "device": "cuda",
+  "analyses": {
+    "Lin-": {
+      "status": "not_admitted",
+      "reason": "floors failed",
+      "arms_not_admitted": [
+        "PBS",
+        "Verteporfin"
+      ]
+    },
+    "Lin+": {
+      "status": "run",
+      "arms": [
+        "PBS"
+      ],
+      "cells": 719,
+      "representation": {
+        "kind": "pca_train",
+        "n_hvg": 2000,
+        "n_components": 30,
+        "n_fit_cells": 326,
+        "seed": 0,
+        "n_fit_mask": 326
+      }
+    }
+  },
+  "summary": {
+    "Lin+|log_days|PBS": {
+      "population_energy": {
+        "cfm_independent": {
+          "mean": 0.283653,
+          "std": 0.011336,
+          "min": 0.270664,
+          "max": 0.291556,
+          "count": 3,
+          "log_ratio_to_comparator": -0.179964
+        },
+        "location_scale": {
+          "mean": 0.339582,
+          "std": NaN,
+          "min": 0.339582,
+          "max": 0.339582,
+          "count": 1,
+          "log_ratio_to_comparator": 0.0
+        }
+      },
+      "per_mouse_energy": {
+        "cfm_independent": {
+          "mean": 0.940689,
+          "min": 0.248706,
+          "max": 2.358391
+        },
+        "location_scale": {
+          "mean": 0.942096,
+          "min": 0.30643,
+          "max": 2.185443
+        }
+      }
+    },
+    "Lin+|rank|PBS": {
+      "population_energy": {
+        "cfm_independent": {
+          "mean": 0.309668,
+          "std": 0.022579,
+          "min": 0.286543,
+          "max": 0.331658,
+          "count": 3,
+          "log_ratio_to_comparator": -0.102589
+        },
+        "cfm_ot": {
+          "mean": 0.234774,
+          "std": 0.006024,
+          "min": 0.228718,
+          "max": 0.240765,
+          "count": 3,
+          "log_ratio_to_comparator": -0.379466
+        },
+        "cfm_sb": {
+          "mean": 0.240701,
+          "std": 0.004397,
+          "min": 0.237873,
+          "max": 0.245767,
+          "count": 3,
+          "log_ratio_to_comparator": -0.354534
+        },
+        "gaussian_geodesic": {
+          "mean": 0.31537,
+          "std": NaN,
+          "min": 0.31537,
+          "max": 0.31537,
+          "count": 1,
+          "log_ratio_to_comparator": -0.084346
+        },
+        "identity": {
+          "mean": 0.440789,
+          "std": NaN,
+          "min": 0.440789,
+          "max": 0.440789,
+          "count": 1,
+          "log_ratio_to_comparator": 0.250475
+        },
+        "location_scale": {
+          "mean": 0.343124,
+          "std": NaN,
+          "min": 0.343124,
+          "max": 0.343124,
+          "count": 1,
+          "log_ratio_to_comparator": 0.0
+        },
+        "mean_shift": {
+          "mean": 0.357763,
+          "std": NaN,
+          "min": 0.357763,
+          "max": 0.357763,
+          "count": 1,
+          "log_ratio_to_comparator": 0.04178
+        },
+        "ot_displacement": {
+          "mean": 0.247779,
+          "std": NaN,
+          "min": 0.247779,
+          "max": 0.247779,
+          "count": 1,
+          "log_ratio_to_comparator": -0.325554
+        },
+        "quantile_map": {
+          "mean": 0.35988,
+          "std": NaN,
+          "min": 0.35988,
+          "max": 0.35988,
+          "count": 1,
+          "log_ratio_to_comparator": 0.047681
+        }
+      },
+      "per_mouse_energy": {
+        "cfm_independent": {
+          "mean": 0.975685,
+          "min": 0.27631,
+          "max": 2.434407
+        },
+        "cfm_ot": {
+          "mean": 0.853723,
+          "min": 0.201527,
+          "max": 2.153876
+        },
+        "cfm_sb": {
+          "mean": 0.857567,
+          "min": 0.207009,
+          "max": 2.152264
+        },
+        "gaussian_geodesic": {
+          "mean": 0.921771,
+          "min": 0.280878,
+          "max": 2.178231
+        },
+        "identity": {
+          "mean": 1.017374,
+          "min": 0.408011,
+          "max": 2.161292
+        },
+        "location_scale": {
+          "mean": 0.947585,
+          "min": 0.309922,
+          "max": 2.198415
+        },
+        "mean_shift": {
+          "mean": 0.961966,
+          "min": 0.324745,
+          "max": 2.21165
+        },
+        "ot_displacement": {
+          "mean": 0.860185,
+          "min": 0.217707,
+          "max": 2.14279
+        },
+        "quantile_map": {
+          "mean": 0.964042,
+          "min": 0.323456,
+          "max": 2.210238
+        }
+      }
+    }
+  },
+  "scale_references": [
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "held_mouse_vs_other_held_mice",
+      "mouse": "1",
+      "energy": 0.167732
+    },
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "held_mouse_vs_other_held_mice",
+      "mouse": "2",
+      "energy": 0.480588
+    },
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "held_mouse_vs_other_held_mice",
+      "mouse": "3",
+      "energy": 0.247508
+    },
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "held_mouse_vs_other_held_mice",
+      "mouse": "4",
+      "energy": 2.374592
+    },
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "source_day_vs_held_day",
+      "mouse": "pooled",
+      "energy": 0.440789
+    },
+    {
+      "analysis": "Lin+",
+      "arm": "PBS",
+      "reference": "anchor_day_vs_held_day",
+      "mouse": "pooled",
+      "energy": 0.610019
+    }
+  ],
+  "not_admitted": {
+    "Lin-": {
+      "status": "not_admitted",
+      "reason": "floors failed",
+      "arms_not_admitted": [
+        "PBS",
+        "Verteporfin"
+      ]
+    }
+  }
+}

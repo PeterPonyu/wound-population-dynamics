@@ -1,0 +1,12 @@
+{
+  "device": "cpu",
+  "cpu_threads": 4,
+  "checkpoint_beta_max_abs_error": 2.980232238769531e-07,
+  "beta_tolerance": 1e-06,
+  "all_cells_encoder_mu_max_abs_error": 1.9073486328125e-06,
+  "mu_tolerance": 5e-05,
+  "checked_cells": 12259,
+  "saved_beta_used_for_scores": true,
+  "no_model_training": true,
+  "checkpoint_inputs_and_batch_outputs_explicitly_finite": true
+}

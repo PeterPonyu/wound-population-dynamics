@@ -1,0 +1,33 @@
+coordinates mu_std/LIO_PWH26: max_abs=0
+coordinates mu_std/LIO_PWH27: max_abs=0
+coordinates mu_std/LIO_PWH28: max_abs=0
+coordinates mu_std/MT_day1: max_abs=0
+coordinates mu_std/MT_day7: max_abs=0
+coordinates mu_std/INNER_PWH26_evalPWH27: max_abs=0
+coordinates mu_std/INNER_PWH26_evalPWH28: max_abs=0
+coordinates mu_std/INNER_PWH27_evalPWH26: max_abs=0
+coordinates mu_std/INNER_PWH27_evalPWH28: max_abs=0
+coordinates mu_std/INNER_PWH28_evalPWH26: max_abs=0
+coordinates mu_std/INNER_PWH28_evalPWH27: max_abs=0
+coordinates mu_raw/LIO_PWH26: max_abs=0
+coordinates mu_raw/LIO_PWH27: max_abs=0
+coordinates mu_raw/LIO_PWH28: max_abs=0
+coordinates mu_raw/MT_day1: max_abs=0
+coordinates mu_raw/MT_day7: max_abs=0
+coordinates mu_white/LIO_PWH26: max_abs=0
+coordinates mu_white/LIO_PWH27: max_abs=0
+coordinates mu_white/LIO_PWH28: max_abs=0
+coordinates mu_white/MT_day1: max_abs=0
+coordinates mu_white/MT_day7: max_abs=0
+coordinates mu_clr_std/LIO_PWH26: max_abs=0
+coordinates mu_clr_std/LIO_PWH27: max_abs=0
+coordinates mu_clr_std/LIO_PWH28: max_abs=0
+coordinates mu_clr_std/MT_day1: max_abs=0
+coordinates mu_clr_std/MT_day7: max_abs=0
+Traceback (most recent call last):
+  File "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/studies-candidate-20261011-readiness/base/portable-checks-r1/wound-population-dynamics/analysis_revision/scripts/audit_followup_integration.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "/home/zeyufu/Desktop/ortho-diabetic-wound-insilico/output/studies-candidate-20261011-readiness/base/portable-checks-r1/wound-population-dynamics/analysis_revision/scripts/audit_followup_integration.py", line 84, in main
+    raise ValueError(f"Coordinate reproduction failed: {rep}/{name}: {delta}")
+ValueError: Coordinate reproduction failed: pca30/LIO_PWH26: 0.00016021728515625

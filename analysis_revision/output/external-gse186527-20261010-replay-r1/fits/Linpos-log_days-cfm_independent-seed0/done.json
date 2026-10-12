@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "6af73f93c67a712acbb32e9f2d1789583bc389bda47172458b44d1bb58ec7b79",
+  "fit.json": "575e525c8551775f3c8127c3dea9f4ad1078494c186ae69963b64cd85de09ada",
+  "model_replay.npz": "d50dd3c81c3a9a3444be581e686eab88cb85af1505af23b61d1ea66f0eb8aaf5"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "log_days",
+  "job_id": "Linpos-log_days-cfm_independent-seed0",
+  "method": "cfm_independent",
+  "seed": 0
+ }
+}

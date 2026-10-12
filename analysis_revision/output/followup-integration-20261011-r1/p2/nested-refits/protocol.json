@@ -1,0 +1,149 @@
+{
+  "selection": {
+    "PWH26": {
+      "tag": "cfm_ot_h256_st2000_lr3e-4",
+      "method": "cfm_ot",
+      "hidden": 256,
+      "steps": 2000,
+      "lr": 0.0003,
+      "inner_energy": 0.3393402552515575,
+      "configs": 28,
+      "default_config_inner_energy": 1.5669388728324267,
+      "top5": [
+        {
+          "tag": "cfm_ot_h256_st2000_lr3e-4",
+          "inner_energy": 0.3393402552515575
+        },
+        {
+          "tag": "cfm_ot_h64_st2000_lr1e-3",
+          "inner_energy": 0.3636431013980956
+        },
+        {
+          "tag": "cfm_sb_h256_st2000_lr1e-3",
+          "inner_energy": 0.37277256436025435
+        },
+        {
+          "tag": "cfm_ot_h64_st8000_lr3e-4",
+          "inner_energy": 0.40788990231876154
+        },
+        {
+          "tag": "cfm_ot_h256_st8000_lr3e-4",
+          "inner_energy": 0.4116916662652683
+        }
+      ]
+    },
+    "PWH27": {
+      "tag": "cfm_independent_h64_st20000_lr3e-4",
+      "method": "cfm_independent",
+      "hidden": 64,
+      "steps": 20000,
+      "lr": 0.0003,
+      "inner_energy": 0.48065856706618415,
+      "configs": 28,
+      "default_config_inner_energy": 1.0349355997053387,
+      "top5": [
+        {
+          "tag": "cfm_independent_h64_st20000_lr3e-4",
+          "inner_energy": 0.48065856706618415
+        },
+        {
+          "tag": "cfm_independent_h128_st2000_lr1e-3",
+          "inner_energy": 0.5099310622734087
+        },
+        {
+          "tag": "cfm_independent_h64_st2000_lr1e-3",
+          "inner_energy": 0.5227774921409218
+        },
+        {
+          "tag": "cfm_ot_h64_st2000_lr3e-4",
+          "inner_energy": 0.543844484349371
+        },
+        {
+          "tag": "cfm_ot_h64_st2000_lr1e-3",
+          "inner_energy": 0.5560062738637236
+        }
+      ]
+    },
+    "PWH28": {
+      "tag": "cfm_independent_h64_st8000_lr1e-3",
+      "method": "cfm_independent",
+      "hidden": 64,
+      "steps": 8000,
+      "lr": 0.001,
+      "inner_energy": 0.5224631145143934,
+      "configs": 28,
+      "default_config_inner_energy": 1.0740424986358916,
+      "top5": [
+        {
+          "tag": "cfm_independent_h64_st8000_lr1e-3",
+          "inner_energy": 0.5224631145143934
+        },
+        {
+          "tag": "cfm_independent_h128_st8000_lr3e-4",
+          "inner_energy": 0.5509709710046572
+        },
+        {
+          "tag": "cfm_independent_h256_st8000_lr3e-4",
+          "inner_energy": 0.5675739090549397
+        },
+        {
+          "tag": "cfm_independent_h128_st8000_lr1e-3",
+          "inner_energy": 0.6130322217204354
+        },
+        {
+          "tag": "cfm_ot_h64_st8000_lr3e-4",
+          "inner_energy": 0.634293096774602
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "output/data-smoke-20260929/data/standardized/GSE241132/standard.h5ad": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848",
+    "outputs/followup_20261010/paper2/results/e3b_selection.json": "77a21ab8aaff5794aaf7954406265191d4e1170927917feaec358175f6109e5b",
+    "outputs/followup_20261010/paper2/results/e3b_inner_scores.csv": "f56b61111406b20da53586d60e08c1226c696cbbefebcd9af40def0ee21e9461",
+    "output/local-p2-20261009/protocol.json": "3a036ea6e0ee4705f448d7ad220155ac6b8f7b78f10100a0fe24ba78aacdc45e",
+    "output/local-p2-20261009/jobs.jsonl": "056655883df818878270528a2fd9569afc6133a4e674a5d43c9d0fe0abc4f03a",
+    "scripts/complete_followup_nested.py": "dc9d2add4f4098abaefb10c6af9ee3ac6b2ac981aed8db4f37fb8200a2ba21e0",
+    "outputs/followup_20261010/paper2/scripts/e0_reproduce.py": "d33901dc435a1479f2e3370397c007fd0826d062d0b292d3fd9e7565147740d0",
+    "outputs/followup_20261010/paper2/scripts/e3_alpha.py": "c839f456baa09f52904f297395f5149e3c025202ff8df402971683deefae26eb",
+    "outputs/followup_20261010/paper2/scripts/e3b_nested.py": "552765de757f37617644849cd428e4bb8fed682c773a3b9c9a3b13742dac89b9",
+    "outputs/followup_20261010/paper2/scripts/e6_covariate_shift.py": "87f7f610ba4c407b80665ddbd9f5abd93f2ae0dd24c26532c3662da7bac881ea",
+    "outputs/followup_20261010/paper2/scripts/e7_knn_decode.py": "9594c6953968c597e901182c96faf7e4d36fc6093a634fe39d93afd73252c309",
+    "outputs/followup_20261010/paper2/scripts/eval_methods.py": "d8e427e0cb149e05147ecdd4aa075809dfa38ce1d3cfacccc840f2f9fffc861e",
+    "outputs/followup_20261010/paper2/scripts/existing_tables.py": "c636c33ca652f4dab7b5e1bf990380a88a0022c48d9c3563e84791f7f1164be6",
+    "outputs/followup_20261010/paper2/scripts/fit_worker.py": "92d1566045e1c72a7eef61311cb11d03909a435cc9605f70106f695dd8b28f47",
+    "outputs/followup_20261010/paper2/scripts/manifest.py": "218bc4324f371b59c7fdd7d73b7616e7df1737c840ad34f438654f1e5d9fbec4",
+    "outputs/followup_20261010/paper2/scripts/p2common.py": "ef8141703cb3fba3883749c6166633159b649e3b48a856ac365100ba034f410d",
+    "outputs/followup_20261010/paper2/scripts/prep_coords.py": "d2eaf1c264fc84d778c169ccd73f3ca19dac3f49e88c8e97c0af1de76ce99d78",
+    "outputs/followup_20261010/paper2/scripts/run_fits.py": "6792b236130a031fa580c093d4316334db035912da286633b5b7a7312315f232",
+    "outputs/followup_20261010/paper2/scripts/summarize_e1.py": "7205fa3a5c6e3427a2759e587576978c8a3840944dc6e82b2260d8ed17bdcc57",
+    "outputs/followup_20261010/paper2/scripts/summarize_e2.py": "1385d379deab5fb82f939e68fe15fad962dda8a96ea97ef2c325fcb4ff5016be",
+    "expansion/population/__init__.py": "f5f08cfcba0bdf49399fc3efb39505e4fc1db4f0a1516417681c300346f78e11",
+    "expansion/population/infosets.py": "b3c5de4d34a6c18e7c6347d75e7f7d344ddb49c36201c9ccbe90d19305d5d491",
+    "expansion/population/methods/__init__.py": "d5dae1b8dc7fc9eebd83f19e13f1099c371ca04b661e8b7ddb5db582c5faaebc",
+    "expansion/population/methods/base.py": "1b8926fc060901e150f539da8d78d0522f247c98ad8bc342fb83a0ef3000d818",
+    "expansion/population/methods/baselines.py": "9e55ba12cad9fcc4b6bc68e914e1a3d43c26e702ece40302e568644a3431aee9",
+    "expansion/population/methods/flows.py": "c7e955a6a62afbfb686f92b327a4fbd770c9e1e16143e957814f5c9b8bf1ca66",
+    "expansion/population/metrics.py": "9cfc2fcddcb56d20fb07b4d38918b957980fa47d0a5ef08e3650b2c15f0b2bb5",
+    "expansion/population/paired.py": "218aafd26ca08c3a95ff7a3875fdbdff0dd95222e3368770bf5a84b7f4dcbbc2",
+    "expansion/population/represent.py": "fa2df9340f38cf66cd159265e59fb435700398313386409cc7a8a00aaa48a2e6",
+    "expansion/population/tasks.py": "bc21f742ad0e7056768db775d115b8ed1b521b6a974776dc3ef8b8e2fe39d4c2",
+    "expansion/population/worker.py": "72e1377f26241d1f51b2458cad86ac87259705c2ab04ea8f6110fbd5d9745a62",
+    "expansion/common/rng.py": "5699d784a3e1b9e29eca69c6ec0dc8d6e1ceeaffc147cbc6558d06dbbac438ce",
+    "expansion/common/io.py": "e85eddff2dbaa507bbd226671d0574a8554e163c069661651619f93e11daa9ce",
+    "outputs/followup_20261010/paper2/results/coords/mu_std/LIO_PWH26.npy": "e252d53626e2dc37e569b57c1d9ed723d887170ee6c28a58955b9a0d2154423c",
+    "outputs/followup_20261010/paper2/results/coords/mu_std/LIO_PWH27.npy": "6dc8e19590b79bcd551eb12f717e686df94b0cd3d7c04b2fa201628af5ff1689",
+    "outputs/followup_20261010/paper2/results/coords/mu_std/LIO_PWH28.npy": "953a366831aad02143d0a3d9c21dd778e2f2bd0bb16c24a9d87bddd3b05b7a22"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "selection_scope": "inner leave-one-training-donor-out, seed 0",
+  "outer_target_used_for_selection": false,
+  "device": "cuda",
+  "torch_version": "2.12.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "biological_donors": 3
+}

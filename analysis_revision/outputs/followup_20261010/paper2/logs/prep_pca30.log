@@ -1,0 +1,5 @@
+pca30 LIO_PWH26 {'rep': 'pca30', 'n_fit': 9517, 'n_hvg': 2000, 'n_components': 30, 'n_fit_cells': 9517, 'seed': 0}
+pca30 LIO_PWH27 {'rep': 'pca30', 'n_fit': 7153, 'n_hvg': 2000, 'n_components': 30, 'n_fit_cells': 7153, 'seed': 0}
+pca30 LIO_PWH28 {'rep': 'pca30', 'n_fit': 7848, 'n_hvg': 2000, 'n_components': 30, 'n_fit_cells': 7848, 'seed': 0}
+pca30 MT_day1 {'rep': 'pca30', 'n_fit': 11247, 'n_hvg': 2000, 'n_components': 30, 'n_fit_cells': 11247, 'seed': 0}
+pca30 MT_day7 {'rep': 'pca30', 'n_fit': 8438, 'n_hvg': 2000, 'n_components': 30, 'n_fit_cells': 8438, 'seed': 0}

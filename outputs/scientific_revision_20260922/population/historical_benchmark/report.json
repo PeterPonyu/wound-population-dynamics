@@ -1,0 +1,46 @@
+{
+  "original_shared_cfm_mean_ed": 0.3947008450826009,
+  "matched_equal_donor": {
+    "mean": 0.18177671823517677,
+    "minimum": 0.14790582754440637,
+    "maximum": 0.21495265028781763
+  },
+  "matched_uniform": {
+    "mean": 0.18177497366452544,
+    "minimum": 0.14779374506779183,
+    "maximum": 0.21507860232681905
+  },
+  "exact_marginal_mean_ed": 0.16759806972263114,
+  "n_macro_draws_lower_than_shared": 50,
+  "maximum_original_score_reproduction_error": 4.014732356338868e-06,
+  "donor_summary": [
+    {
+      "held_donor": "PWH26",
+      "shared_cfm_ed": 0.7110385894775391,
+      "matched_equal_donor_mean_ed": 0.1568820120540563,
+      "matched_equal_donor_min_ed": 0.11471401082826649,
+      "matched_equal_donor_max_ed": 0.2106471141267905,
+      "marginal_lower_draws": 50,
+      "draws": 50
+    },
+    {
+      "held_donor": "PWH27",
+      "shared_cfm_ed": 0.288055419921875,
+      "matched_equal_donor_mean_ed": 0.14155599490337908,
+      "matched_equal_donor_min_ed": 0.10552254832153896,
+      "matched_equal_donor_max_ed": 0.17694819411976592,
+      "marginal_lower_draws": 50,
+      "draws": 50
+    },
+    {
+      "held_donor": "PWH28",
+      "shared_cfm_ed": 0.18500852584838867,
+      "matched_equal_donor_mean_ed": 0.2468921477480949,
+      "matched_equal_donor_min_ed": 0.18595683957367282,
+      "matched_equal_donor_max_ed": 0.3340001953725835,
+      "marginal_lower_draws": 0,
+      "draws": 50
+    }
+  ],
+  "interpretation": "50 draws characterize evaluation sampling in the same three donors, not biological replication; original shared-field values are historical, not newly trained."
+}

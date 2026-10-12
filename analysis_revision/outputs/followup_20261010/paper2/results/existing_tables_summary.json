@@ -1,0 +1,296 @@
+{
+  "held_donor_all_intervals": {
+    "cfm_conditioned": {
+      "cells": 9,
+      "wins_log2_lt_0": 2,
+      "wins_all_seeds_lt_0": 1,
+      "ties_abs_lt_0.05": 0,
+      "mean_log2": 1.2539367602171023,
+      "interval_1_7_mean_log2": 1.7176602803854522,
+      "win_cells": [
+        {
+          "individual": "PWH26",
+          "source_time": 0.0,
+          "target_time": 1.0,
+          "log2_ratio": -0.3377504701020005
+        },
+        {
+          "individual": "PWH28",
+          "source_time": 1.0,
+          "target_time": 7.0,
+          "log2_ratio": -0.1051674874910336
+        }
+      ]
+    },
+    "cfm_independent": {
+      "cells": 9,
+      "wins_log2_lt_0": 3,
+      "wins_all_seeds_lt_0": 2,
+      "ties_abs_lt_0.05": 1,
+      "mean_log2": 1.2387108486439762,
+      "interval_1_7_mean_log2": 1.691783436373883,
+      "win_cells": [
+        {
+          "individual": "PWH26",
+          "source_time": 0.0,
+          "target_time": 1.0,
+          "log2_ratio": -0.4887322171658507
+        },
+        {
+          "individual": "PWH26",
+          "source_time": 7.0,
+          "target_time": 30.0,
+          "log2_ratio": -0.0059842822705219
+        },
+        {
+          "individual": "PWH28",
+          "source_time": 1.0,
+          "target_time": 7.0,
+          "log2_ratio": -0.4193720790735259
+        }
+      ]
+    },
+    "identity": {
+      "cells": 9,
+      "wins_log2_lt_0": 0,
+      "wins_all_seeds_lt_0": 0,
+      "ties_abs_lt_0.05": 0,
+      "mean_log2": 2.760552281693464,
+      "interval_1_7_mean_log2": 2.8886773891284996,
+      "win_cells": []
+    },
+    "location_scale": {
+      "cells": 9,
+      "wins_log2_lt_0": 2,
+      "wins_all_seeds_lt_0": 2,
+      "ties_abs_lt_0.05": 0,
+      "mean_log2": 0.8508078043488626,
+      "interval_1_7_mean_log2": 1.0400313569281976,
+      "win_cells": [
+        {
+          "individual": "PWH26",
+          "source_time": 0.0,
+          "target_time": 1.0,
+          "log2_ratio": -0.3573505513691957
+        },
+        {
+          "individual": "PWH28",
+          "source_time": 0.0,
+          "target_time": 1.0,
+          "log2_ratio": -0.0765179585248687
+        }
+      ]
+    },
+    "mean_shift": {
+      "cells": 9,
+      "wins_log2_lt_0": 1,
+      "wins_all_seeds_lt_0": 1,
+      "ties_abs_lt_0.05": 0,
+      "mean_log2": 1.0059387296141948,
+      "interval_1_7_mean_log2": 1.1488213142279018,
+      "win_cells": [
+        {
+          "individual": "PWH26",
+          "source_time": 0.0,
+          "target_time": 1.0,
+          "log2_ratio": -0.3542724783700239
+        }
+      ]
+    },
+    "population_ot": {
+      "cells": 9,
+      "wins_log2_lt_0": 0,
+      "wins_all_seeds_lt_0": 0,
+      "ties_abs_lt_0.05": 0,
+      "mean_log2": 1.6778816134605705,
+      "interval_1_7_mean_log2": 1.9054119598966393,
+      "win_cells": []
+    }
+  },
+  "gse186527": {
+    "protocol_gate_definitions": "Lin- (fibroblast-enriched) or Lin+ (other cells), from the author's HTO dictionary",
+    "protocol_analyses": [
+      "Lin- (primary)",
+      "Lin+ (secondary, mouse 5 excluded)"
+    ],
+    "admission_groups": [
+      {
+        "cells_primary": 131,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 133,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 126,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin-",
+        "arm": "PBS",
+        "day": 7,
+        "admitted": true
+      },
+      {
+        "cells_primary": 228,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 237,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 222,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin-",
+        "arm": "PBS",
+        "day": 14,
+        "admitted": true
+      },
+      {
+        "cells_primary": 34,
+        "mice_primary": 2,
+        "cells_sensitivity_a": 34,
+        "mice_sensitivity_a": 2,
+        "cells_sensitivity_b": 33,
+        "mice_sensitivity_b": 2,
+        "analysis": "Lin-",
+        "arm": "PBS",
+        "day": 30,
+        "admitted": false
+      },
+      {
+        "cells_primary": 205,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 214,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 197,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin-",
+        "arm": "Verteporfin",
+        "day": 7,
+        "admitted": true
+      },
+      {
+        "cells_primary": 143,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 152,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 133,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin-",
+        "arm": "Verteporfin",
+        "day": 14,
+        "admitted": true
+      },
+      {
+        "cells_primary": 27,
+        "mice_primary": 2,
+        "cells_sensitivity_a": 35,
+        "mice_sensitivity_a": 2,
+        "cells_sensitivity_b": 26,
+        "mice_sensitivity_b": 2,
+        "analysis": "Lin-",
+        "arm": "Verteporfin",
+        "day": 30,
+        "admitted": false
+      },
+      {
+        "cells_primary": 264,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 282,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 250,
+        "mice_sensitivity_b": 3,
+        "analysis": "Lin+",
+        "arm": "PBS",
+        "day": 7,
+        "admitted": true
+      },
+      {
+        "cells_primary": 393,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 399,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 375,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin+",
+        "arm": "PBS",
+        "day": 14,
+        "admitted": true
+      },
+      {
+        "cells_primary": 62,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 68,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 53,
+        "mice_sensitivity_b": 3,
+        "analysis": "Lin+",
+        "arm": "PBS",
+        "day": 30,
+        "admitted": true
+      },
+      {
+        "cells_primary": 349,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 359,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 325,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin+",
+        "arm": "Verteporfin",
+        "day": 7,
+        "admitted": true
+      },
+      {
+        "cells_primary": 119,
+        "mice_primary": 4,
+        "cells_sensitivity_a": 128,
+        "mice_sensitivity_a": 4,
+        "cells_sensitivity_b": 109,
+        "mice_sensitivity_b": 4,
+        "analysis": "Lin+",
+        "arm": "Verteporfin",
+        "day": 14,
+        "admitted": true
+      },
+      {
+        "cells_primary": 26,
+        "mice_primary": 3,
+        "cells_sensitivity_a": 29,
+        "mice_sensitivity_a": 3,
+        "cells_sensitivity_b": 23,
+        "mice_sensitivity_b": 3,
+        "analysis": "Lin+",
+        "arm": "Verteporfin",
+        "day": 30,
+        "admitted": false
+      }
+    ],
+    "analysed": {
+      "Lin+": "run",
+      "Lin-": "not_admitted"
+    },
+    "lin_minus_reason": {
+      "arms_not_admitted": [
+        "PBS",
+        "Verteporfin"
+      ],
+      "reason": "floors failed",
+      "status": "not_admitted"
+    },
+    "lin_plus_admitted_arms": [
+      "PBS"
+    ],
+    "admitted_cells": 719,
+    "admitted_gate_values": [
+      "Lin+"
+    ],
+    "fraction_cells_detecting_marker_in_admitted_population": {
+      "Col1a1": 0.0917941585535466,
+      "Col1a2": 0.09318497913769123,
+      "Pdgfra": 0.013908205841446454,
+      "Dcn": 0.05146036161335188,
+      "Ptprc": 0.780250347705146,
+      "Lyz2": 0.5006954102920723,
+      "Cd74": 0.5229485396383866,
+      "Cd3e": 0.26564673157162727,
+      "Adgre1": 0.20166898470097358,
+      "Pecam1": 0.1349095966620306,
+      "Cdh5": 0.019471488178025034,
+      "Krt14": 0.06815020862308763
+    }
+  }
+}

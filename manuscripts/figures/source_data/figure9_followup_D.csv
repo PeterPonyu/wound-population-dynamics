@@ -1,0 +1,7 @@
+"transport","held","source_time","target_time","w_selected","w_oracle","log2_selected_vs_marginal","log2_transport_vs_marginal"
+"Independent CFM","PWH26",1,7,0.1,0.0666666666666667,-0.0291977323850295,2.34562181351511
+"Independent CFM","PWH27",1,7,0.1,0.05,0.0445569094116851,3.1051664973517
+"Independent CFM","PWH28",1,7,0.1,0.65,-0.143185596107901,-0.430218636402143
+"Mean translation","PWH26",1,7,0.3,0.05,0.191782447293484,1.71238917218379
+"Mean translation","PWH27",1,7,0.2,0.2,-0.195615789990044,1.26375174789958
+"Mean translation","PWH28",1,7,0.15,0.35,-0.173392222323006,0.40346890695015

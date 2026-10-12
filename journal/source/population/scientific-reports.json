@@ -1,0 +1,24 @@
+{
+  "main_source": "paper.tex",
+  "supplement_source": "supporting.tex",
+  "main_figures": [
+    "fig:p2f1",
+    "fig:p2f2",
+    "fig:p2f3",
+    "fig:p2f4",
+    "fig:p2f5",
+    "fig:p2f7",
+    "fig:p2f8",
+    "fig:p2f9"
+  ],
+  "main_tables": [],
+  "title": "Conditional flow matching in acute human wounds: a three-donor audit of population reconstruction",
+  "output": "journal",
+  "qa": "qa/scientific-reports",
+  "compiler": "xelatex",
+  "inline_float_spec": "tbp",
+  "inline_max_pages_after_citation": 3,
+  "equation_style": true,
+  "journal_figure_directory": true,
+  "journal_lowercase_panels": true
+}

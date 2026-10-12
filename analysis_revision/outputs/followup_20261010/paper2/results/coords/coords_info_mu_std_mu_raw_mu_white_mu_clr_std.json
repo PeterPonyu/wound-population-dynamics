@@ -1,0 +1,121 @@
+{
+  "mu_std/LIO_PWH26": {
+    "rep": "mu_std",
+    "n_fit": 9517
+  },
+  "mu_std/LIO_PWH27": {
+    "rep": "mu_std",
+    "n_fit": 7153
+  },
+  "mu_std/LIO_PWH28": {
+    "rep": "mu_std",
+    "n_fit": 7848
+  },
+  "mu_std/MT_day1": {
+    "rep": "mu_std",
+    "n_fit": 11247
+  },
+  "mu_std/MT_day7": {
+    "rep": "mu_std",
+    "n_fit": 8438
+  },
+  "mu_std/INNER_PWH26_evalPWH27": {
+    "rep": "mu_std",
+    "n_fit": 4411
+  },
+  "mu_std/INNER_PWH26_evalPWH28": {
+    "rep": "mu_std",
+    "n_fit": 5106
+  },
+  "mu_std/INNER_PWH27_evalPWH26": {
+    "rep": "mu_std",
+    "n_fit": 4411
+  },
+  "mu_std/INNER_PWH27_evalPWH28": {
+    "rep": "mu_std",
+    "n_fit": 2742
+  },
+  "mu_std/INNER_PWH28_evalPWH26": {
+    "rep": "mu_std",
+    "n_fit": 5106
+  },
+  "mu_std/INNER_PWH28_evalPWH27": {
+    "rep": "mu_std",
+    "n_fit": 2742
+  },
+  "mu_raw/LIO_PWH26": {
+    "rep": "mu_raw",
+    "n_fit": 9517
+  },
+  "mu_raw/LIO_PWH27": {
+    "rep": "mu_raw",
+    "n_fit": 7153
+  },
+  "mu_raw/LIO_PWH28": {
+    "rep": "mu_raw",
+    "n_fit": 7848
+  },
+  "mu_raw/MT_day1": {
+    "rep": "mu_raw",
+    "n_fit": 11247
+  },
+  "mu_raw/MT_day7": {
+    "rep": "mu_raw",
+    "n_fit": 8438
+  },
+  "mu_white/LIO_PWH26": {
+    "rep": "mu_white",
+    "n_fit": 9517,
+    "eigen_min": 0.0004511554975594927,
+    "eigen_max": 4.555709048792729
+  },
+  "mu_white/LIO_PWH27": {
+    "rep": "mu_white",
+    "n_fit": 7153,
+    "eigen_min": 0.0004592828661449264,
+    "eigen_max": 5.076412352395678
+  },
+  "mu_white/LIO_PWH28": {
+    "rep": "mu_white",
+    "n_fit": 7848,
+    "eigen_min": 0.0004201708362835438,
+    "eigen_max": 4.64791495948456
+  },
+  "mu_white/MT_day1": {
+    "rep": "mu_white",
+    "n_fit": 11247,
+    "eigen_min": 0.0004282569134978643,
+    "eigen_max": 4.516827924848687
+  },
+  "mu_white/MT_day7": {
+    "rep": "mu_white",
+    "n_fit": 8438,
+    "eigen_min": 0.00041503091358336157,
+    "eigen_max": 5.639005952553981
+  },
+  "mu_clr_std/LIO_PWH26": {
+    "rep": "mu_clr_std",
+    "n_fit": 9517,
+    "rank": 14
+  },
+  "mu_clr_std/LIO_PWH27": {
+    "rep": "mu_clr_std",
+    "n_fit": 7153,
+    "rank": 14
+  },
+  "mu_clr_std/LIO_PWH28": {
+    "rep": "mu_clr_std",
+    "n_fit": 7848,
+    "rank": 14
+  },
+  "mu_clr_std/MT_day1": {
+    "rep": "mu_clr_std",
+    "n_fit": 11247,
+    "rank": 14
+  },
+  "mu_clr_std/MT_day7": {
+    "rep": "mu_clr_std",
+    "n_fit": 8438,
+    "rank": 14
+  }
+}

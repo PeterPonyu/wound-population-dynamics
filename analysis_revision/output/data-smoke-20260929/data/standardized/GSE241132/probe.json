@@ -1,0 +1,269 @@
+{
+ "base": "data/raw/GSE241132",
+ "exists": true,
+ "files": [
+  {
+   "columns": [
+    "barcode",
+    "orig.ident",
+    "nCount_RNA",
+    "nFeature_RNA",
+    "Patient",
+    "Gender",
+    "Age",
+    "Condition",
+    "Doublet",
+    "doublet_scores",
+    "percent.mt",
+    "percent.ribo",
+    "percent.hb",
+    "percent.malat1",
+    "S.Score",
+    "G2M.Score",
+    "Phase",
+    "CC.Difference",
+    "nCount_SCT",
+    "nFeature_SCT",
+    "SCT_snn_res.0.5",
+    "seurat_clusters",
+    "SCT_snn_res.0.8",
+    "oldCellTypes_InATACproject",
+    "newCellTypes",
+    "newMainCellTypes"
+   ],
+   "head": [
+    [
+     "PWH26D0_AAACCCACACGTAACT-1",
+     "PWH26D0",
+     "27681",
+     "5164",
+     "PWH26",
+     "Male",
+     "29",
+     "Skin",
+     "Singlet",
+     "0.0150074949299004",
+     "5.44756179024716",
+     "32.7454909819639"
+    ],
+    [
+     "PWH26D0_AAACCCACACTGAGGA-1",
+     "PWH26D0",
+     "17228",
+     "3981",
+     "PWH26",
+     "Male",
+     "29",
+     "Skin",
+     "Singlet",
+     "0.0227677559348382",
+     "7.9367556040984",
+     "37.1612836115879"
+    ],
+    [
+     "PWH26D0_AAACCCAGTCCGACGT-1",
+     "PWH26D0",
+     "19962",
+     "3928",
+     "PWH26",
+     "Male",
+     "29",
+     "Skin",
+     "Singlet",
+     "0.0336176618163573",
+     "6.53374093169686",
+     "42.5058174020167"
+    ],
+    [
+     "PWH26D0_AAACCCATCAGCGGAA-1",
+     "PWH26D0",
+     "19153",
+     "4177",
+     "PWH26",
+     "Male",
+     "29",
+     "Skin",
+     "Singlet",
+     "0.0168270792534086",
+     "5.63709952699078",
+     "36.5484956356366"
+    ],
+    [
+     "PWH26D0_AAACGAAAGGATAATC-1",
+     "PWH26D0",
+     "6505",
+     "1850",
+     "PWH26",
+     "Male",
+     "29",
+     "Skin",
+     "Singlet",
+     "0.00884994237752506",
+     "0.507393447376051",
+     "33.4444766599014"
+    ]
+   ],
+   "n_columns": 26,
+   "name": "GSE241132_cell_metadata.txt.gz",
+   "size": 4849155
+  },
+  {
+   "n_samples": 12,
+   "name": "GSE241132_series_matrix.txt.gz",
+   "sample_fields": {
+    "gsm": [
+     "GSM7717079",
+     "GSM7717080",
+     "GSM7717081",
+     "GSM7717082",
+     "GSM7717083",
+     "GSM7717084",
+     "GSM7717085",
+     "GSM7717086",
+     "GSM7717087",
+     "GSM7717088",
+     "GSM7717089",
+     "GSM7717090"
+    ],
+    "individual": [
+     "Donor3",
+     "Donor4",
+     "Donor5"
+    ],
+    "tissue": [
+     "Skin"
+    ],
+    "title": [
+     "Donor3, Skin",
+     "Donor3, Wound1",
+     "Donor3, Wound30",
+     "Donor3, Wound7",
+     "Donor4, Skin",
+     "Donor4, Wound1",
+     "Donor4, Wound30",
+     "Donor4, Wound7",
+     "Donor5, Skin",
+     "Donor5, Wound1",
+     "Donor5, Wound30",
+     "Donor5, Wound7"
+    ],
+    "treatment": [
+     "intact skin",
+     "skin wound day 1",
+     "skin wound day 30",
+     "skin wound day 7"
+    ]
+   },
+   "size": 4216
+  },
+  {
+   "columns": [
+    "#Archive/File",
+    "Name",
+    "Time",
+    "Size",
+    "Type"
+   ],
+   "head": [
+    [
+     "Archive",
+     "GSE241132_RAW.tar",
+     "09/05/2024 00:37:39",
+     "775905280",
+     "TAR"
+    ],
+    [
+     "File",
+     "GSM7717079_PWH26D0.zip",
+     "08/17/2023 09:30:53",
+     "51157062",
+     "ZIP"
+    ],
+    [
+     "File",
+     "GSM7717080_PWH26D1.zip",
+     "08/17/2023 09:31:06",
+     "64868661",
+     "ZIP"
+    ],
+    [
+     "File",
+     "GSM7717081_PWH26D7.zip",
+     "08/17/2023 09:30:17",
+     "66276766",
+     "ZIP"
+    ],
+    [
+     "File",
+     "GSM7717082_PWH26D30.zip",
+     "08/17/2023 09:30:16",
+     "41861347",
+     "ZIP"
+    ]
+   ],
+   "n_columns": 5,
+   "name": "filelist.txt",
+   "size": 829
+  },
+  {
+   "name": "per_gsm/GSM7717079_PWH26D0.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717079_PWH26D0.zip: expected exactly one member, found 3",
+   "size": 51157062
+  },
+  {
+   "name": "per_gsm/GSM7717080_PWH26D1.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717080_PWH26D1.zip: expected exactly one member, found 3",
+   "size": 64868661
+  },
+  {
+   "name": "per_gsm/GSM7717081_PWH26D7.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717081_PWH26D7.zip: expected exactly one member, found 3",
+   "size": 66276766
+  },
+  {
+   "name": "per_gsm/GSM7717082_PWH26D30.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717082_PWH26D30.zip: expected exactly one member, found 3",
+   "size": 41861347
+  },
+  {
+   "name": "per_gsm/GSM7717083_PWH27D0.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717083_PWH27D0.zip: expected exactly one member, found 3",
+   "size": 42377414
+  },
+  {
+   "name": "per_gsm/GSM7717084_PWH27D1.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717084_PWH27D1.zip: expected exactly one member, found 3",
+   "size": 83361013
+  },
+  {
+   "name": "per_gsm/GSM7717085_PWH27D7.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717085_PWH27D7.zip: expected exactly one member, found 3",
+   "size": 92028725
+  },
+  {
+   "name": "per_gsm/GSM7717086_PWH27D30.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717086_PWH27D30.zip: expected exactly one member, found 3",
+   "size": 75711938
+  },
+  {
+   "name": "per_gsm/GSM7717087_PWH28D0.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717087_PWH28D0.zip: expected exactly one member, found 3",
+   "size": 49292125
+  },
+  {
+   "name": "per_gsm/GSM7717088_PWH28D1.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717088_PWH28D1.zip: expected exactly one member, found 3",
+   "size": 68331389
+  },
+  {
+   "name": "per_gsm/GSM7717089_PWH28D7.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717089_PWH28D7.zip: expected exactly one member, found 3",
+   "size": 75283055
+  },
+  {
+   "name": "per_gsm/GSM7717090_PWH28D30.zip",
+   "probe_error": "ValueError: data/raw/GSE241132/per_gsm/GSM7717090_PWH28D30.zip: expected exactly one member, found 3",
+   "size": 65341983
+  }
+ ]
+}

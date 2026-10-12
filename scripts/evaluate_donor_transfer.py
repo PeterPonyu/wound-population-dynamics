@@ -164,7 +164,7 @@ def main() -> int:
         verdict = 'transfer_fails_despite_alignment'
     log('=' * 74)
     report['verdict'] = verdict
-    report['protocol'] = protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'holdout_{d}' for d in donor_list], extra={'paired_same_donor_endpoints': True, 'source': args.source, 'target': args.target, 'steps': args.steps, 'batch_size': args.batch_size})
+    report['protocol'] = protocol_block(__file__, args.discovery_dir, args.seed, folds=[f'holdout_{d}' for d in donor_list], extra={'paired_same_donor_endpoints': True, 'source': args.source, 'target': args.target, 'steps': args.steps, 'batch_size': args.batch_size}, output_dir=args.output_dir)
     out = os.path.join(args.output_dir, 'report.json')
     with open(out, 'w') as fh:
         json.dump(report, fh, indent=2, default=str)

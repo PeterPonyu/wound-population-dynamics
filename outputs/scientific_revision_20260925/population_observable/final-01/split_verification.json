@@ -1,0 +1,362 @@
+[
+  {
+    "path": "fits/PWH26/k1_PWH27/seed0",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 0,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k1_PWH27/seed1",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 1,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k1_PWH27/seed2",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 2,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k1_PWH28/seed0",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 0,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k1_PWH28/seed1",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 1,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k1_PWH28/seed2",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 2,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k2_PWH27_PWH28/seed0",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27",
+      "PWH28"
+    ],
+    "seed": 0,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k2_PWH27_PWH28/seed1",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27",
+      "PWH28"
+    ],
+    "seed": 1,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH26/k2_PWH27_PWH28/seed2",
+    "held_donor": "PWH26",
+    "training_donors": [
+      "PWH27",
+      "PWH28"
+    ],
+    "seed": 2,
+    "source_count": 255,
+    "target_count": 920,
+    "target_all_count": 920,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH26/seed0",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 0,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH26/seed1",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 1,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH26/seed2",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 2,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH28/seed0",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 0,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH28/seed1",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 1,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k1_PWH28/seed2",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH28"
+    ],
+    "seed": 2,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k2_PWH26_PWH28/seed0",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26",
+      "PWH28"
+    ],
+    "seed": 0,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k2_PWH26_PWH28/seed1",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26",
+      "PWH28"
+    ],
+    "seed": 1,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH27/k2_PWH26_PWH28/seed2",
+    "held_donor": "PWH27",
+    "training_donors": [
+      "PWH26",
+      "PWH28"
+    ],
+    "seed": 2,
+    "source_count": 497,
+    "target_count": 1200,
+    "target_all_count": 1992,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH26/seed0",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 0,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH26/seed1",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 1,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH26/seed2",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26"
+    ],
+    "seed": 2,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH27/seed0",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 0,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH27/seed1",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 1,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k1_PWH27/seed2",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH27"
+    ],
+    "seed": 2,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k2_PWH26_PWH27/seed0",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26",
+      "PWH27"
+    ],
+    "seed": 0,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k2_PWH26_PWH27/seed1",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26",
+      "PWH27"
+    ],
+    "seed": 1,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  },
+  {
+    "path": "fits/PWH28/k2_PWH26_PWH27/seed2",
+    "held_donor": "PWH28",
+    "training_donors": [
+      "PWH26",
+      "PWH27"
+    ],
+    "seed": 2,
+    "source_count": 260,
+    "target_count": 909,
+    "target_all_count": 909,
+    "inverse_max_abs_error": 0.0,
+    "mean_displacement_z_max_abs_error": 0.0
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "requested_prediction_cells": 200,
+  "draws_per_fit": 50,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "count_adaptation": "Within each held fold use min(requested, real pool, wrong A pool, wrong B pool) for every method; fail below two",
+  "target": "All methods and draws use the same original held Wound7 evaluation indices; no target resampling",
+  "source_sampling": "default_rng(draw), draw real then lexicographic wrong A then B without replacement; reuse identical indices across model seeds",
+  "mixture": "Take each wrong draw's prefix; floor/ceil counts alternate for odd n. Assign each donor mass exactly 1/2 using .5/count weights",
+  "aggregation": "draw mean within saved fit, equal seed mean within held donor, equal held-donor macro mean",
+  "metric": "Float64 empirical energy V-statistic: 2 E||X-Y|| - E||X-X'|| - E||Y-Y'||, self zeros included; no square root",
+  "coordinates": "Original float32 reference standardization, then float64 distances. Both non-held donors define each scoring geometry",
+  "exact_identity": "(ED(P1,Q)+ED(P2,Q))/2 - ED((P1+P2)/2,Q) = ED(P1,P2)/4",
+  "identity_scope": "Full empirical training-Wound7 target marginals for script49; additionally the actual mixture-component source subsamples for each saved field/draw",
+  "count_contrast_warning": "individual_wrong_mean_minus_mixed uses n-cell individual distributions vs an n-total-cell mixture. It is NOT the exact convexity identity; mixture_identity_* uses its actual component subsets",
+  "uncertainty": "Draw minima/maxima are descriptive computational ranges, not confidence intervals. No p values or new biological replicates",
+  "inference": "Mixture gains alone do not identify held-source information or biological trajectories. This identity does not decompose benefits of jointly trained flow fields",
+  "fitted_models": "Nine existing k2 fields; CPU checkpoint verification only, no optimizer or model training"
+}

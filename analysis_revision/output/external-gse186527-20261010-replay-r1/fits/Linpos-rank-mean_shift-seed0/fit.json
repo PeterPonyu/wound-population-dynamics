@@ -1,0 +1,63 @@
+{
+ "binding": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "code_digest": "788fedb184078c9f410835368fd88a56b274eac6abe19786db895b212285ab31",
+  "dataset_sha256": "766149c17a9fe5bdf9001eba3797e2da9569aad91587aeb9b23e9d62b5446e73",
+  "job_id": "Linpos-rank-mean_shift-seed0",
+  "method": "mean_shift",
+  "protocol_sha256": "ad60dcb0ed7245eea3b602ca14bf00aab698937e4053d88267e9a1a49a1da5bc",
+  "seed": 0
+ },
+ "evaluations": [
+  {
+   "artifact": "evaluation0.npz",
+   "call": {
+    "anchor_time": 30.0,
+    "individual": "PBS",
+    "seed": 0,
+    "source_time": 7.0,
+    "target_time": 14.0
+   },
+   "mouse_energy": {
+    "1": 0.44443477061524117,
+    "2": 0.8670335202781443,
+    "3": 0.32474519913109656,
+    "4": 2.2116507695235126
+   },
+   "prediction_warnings": [],
+   "score_seed": 346949926,
+   "scores": {
+    "bures": 3.1045562877980695,
+    "energy": 0.3577630927300506,
+    "finite": true,
+    "mean_error": 0.918167879912831,
+    "mmd": 0.03951632223493501,
+    "n_prediction": 264,
+    "n_target": 393,
+    "sliced_w2": 0.40917180359761063
+   }
+  }
+ ],
+ "fit_diagnostics": {},
+ "fit_seconds": 7.08110019331798e-05,
+ "fit_warnings": [],
+ "task": {
+  "dataset_id": "GSE186527-Linpos",
+  "family": "missing_time",
+  "held_individual": null,
+  "held_time": 14.0,
+  "kind": "T-MT",
+  "pairs": [
+   {
+    "anchor_time": 30.0,
+    "individual": "PBS",
+    "source_time": 7.0,
+    "target_time": 14.0
+   }
+  ],
+  "repeat": 0,
+  "substitute": null,
+  "training_individuals": null
+ }
+}

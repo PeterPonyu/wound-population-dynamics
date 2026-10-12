@@ -1,0 +1,105 @@
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{\dimexpr0.138122\linewidth-3.867403pt\relax}p{\dimexpr0.182320\linewidth-5.104972pt\relax}p{\dimexpr0.082873\linewidth-2.320442pt\relax}p{\dimexpr0.099448\linewidth-2.784530pt\relax}p{\dimexpr0.093923\linewidth-2.629834pt\relax}p{\dimexpr0.093923\linewidth-2.629834pt\relax}p{\dimexpr0.099448\linewidth-2.784530pt\relax}p{\dimexpr0.209945\linewidth-5.878453pt\relax}@{}}
+\caption{Hashtag audit of the nine GSE186527 libraries. Day and arm for the six admitted libraries come from the library; mouse and gate come from the author-provided hashtag dictionary. Singlet, doublet and negative counts use the frozen primary rule (top count at least 20 and at least five times the second). The three unwounded/POD2 libraries contain no hashtag counts in any cell, so their conditions cannot be separated.}\label{tab:p2extlibraries}\\
+\toprule
+Accession & Condition & Cells & Any HTO & Singlet & Doublet & Negative & Admitted\\\midrule\endfirsthead
+\multicolumn{8}{l}{Table \thetable\ (continued)}\\[6pt]
+\toprule
+Accession & Condition & Cells & Any HTO & Singlet & Doublet & Negative & Admitted\\\midrule\endhead
+\bottomrule\endfoot
+GSM5429653 & POD0/POD2 mixture & 5353 & 0 & -- & -- & -- & No: zero HTO counts\\
+GSM5429654 & POD0/POD2 mixture & 655 & 0 & -- & -- & -- & No: zero HTO counts\\
+GSM5429655 & POD0/POD2 mixture & 335 & 0 & -- & -- & -- & No: zero HTO counts\\
+GSM5429656 & PBS POD7 & 589 & 501 & 399 & 65 & 125 & Yes\\
+GSM5429657 & Verteporfin POD7 & 952 & 892 & 603 & 259 & 90 & Yes\\
+GSM5429658 & PBS POD14 & 906 & 836 & 661 & 120 & 125 & Yes\\
+GSM5429659 & Verteporfin POD14 & 470 & 431 & 294 & 97 & 79 & Yes\\
+GSM5429660 & PBS POD30 & 474 & 218 & 96 & 76 & 302 & Yes\\
+GSM5429661 & Verteporfin POD30 & 452 & 217 & 57 & 72 & 323 & Yes\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{\dimexpr0.082840\linewidth-2.319527pt\relax}p{\dimexpr0.165680\linewidth-4.639053pt\relax}p{\dimexpr0.094675\linewidth-2.650888pt\relax}p{\dimexpr0.100592\linewidth-2.816568pt\relax}p{\dimexpr0.082840\linewidth-2.319527pt\relax}p{\dimexpr0.165680\linewidth-4.639053pt\relax}p{\dimexpr0.165680\linewidth-4.639053pt\relax}p{\dimexpr0.142012\linewidth-3.976331pt\relax}@{}}
+\caption{Cells and mice per arm, day and sorting gate after the frozen primary hashtag rule, with the two sensitivity rules for comparison. Lin$-$ is the fibroblast-enriched gate and Lin+ the remaining cells. A population is admitted at 50 cells and two mice. Mouse 5 is excluded from the Lin+ gate because the dictionary labels both of its tags Lin+ and the conflict is not resolved. No sensitivity rule rescues a population.}\label{tab:p2extgroups}\\
+\toprule
+Gate & Arm & Day & Cells & Mice & Cells (loose) & Cells (strict) & Admitted\\\midrule\endfirsthead
+\multicolumn{8}{l}{Table \thetable\ (continued)}\\[6pt]
+\toprule
+Gate & Arm & Day & Cells & Mice & Cells (loose) & Cells (strict) & Admitted\\\midrule\endhead
+\bottomrule\endfoot
+Lin- & PBS & POD7 & 131 & 4 & 133 & 126 & Yes\\
+Lin- & PBS & POD14 & 228 & 4 & 237 & 222 & Yes\\
+Lin- & PBS & POD30 & 34 & 2 & 34 & 33 & No\\
+Lin- & Verteporfin & POD7 & 205 & 4 & 214 & 197 & Yes\\
+Lin- & Verteporfin & POD14 & 143 & 4 & 152 & 133 & Yes\\
+Lin- & Verteporfin & POD30 & 27 & 2 & 35 & 26 & No\\
+Lin+ & PBS & POD7 & 264 & 4 & 282 & 250 & Yes\\
+Lin+ & PBS & POD14 & 393 & 4 & 399 & 375 & Yes\\
+Lin+ & PBS & POD30 & 62 & 4 & 68 & 53 & Yes\\
+Lin+ & Verteporfin & POD7 & 349 & 4 & 359 & 325 & Yes\\
+Lin+ & Verteporfin & POD14 & 119 & 4 & 128 & 109 & Yes\\
+Lin+ & Verteporfin & POD30 & 26 & 3 & 29 & 23 & No\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{\dimexpr0.080460\linewidth-2.252874pt\relax}p{\dimexpr0.172414\linewidth-4.827586pt\relax}p{\dimexpr0.068966\linewidth-1.931034pt\relax}p{\dimexpr0.097701\linewidth-2.735632pt\relax}p{\dimexpr0.160920\linewidth-4.505747pt\relax}p{\dimexpr0.103448\linewidth-2.896552pt\relax}p{\dimexpr0.137931\linewidth-3.862069pt\relax}p{\dimexpr0.178161\linewidth-4.988506pt\relax}@{}}
+\caption{Held-day reconstruction of the admitted lineage-positive PBS population, the non-fibroblast gate (source POD7, held POD14, later anchor POD30). Energy is the squared energy statistic in the 30-dimensional mouse-local PCA space fitted without POD14 cells; lower is better. Log ratio is the natural logarithm of energy divided by the location--scale energy. The last two columns score each prediction against the four held mice separately. One non-fibroblast population and four mice are a diagnostic, not a fibroblast or method ranking.}\label{tab:p2extresults}\\
+\toprule
+Clock & Method & Seeds & Energy & Range & Log ratio & Per-mouse mean & Per-mouse range\\\midrule\endfirsthead
+\multicolumn{8}{l}{Table \thetable\ (continued)}\\[6pt]
+\toprule
+Clock & Method & Seeds & Energy & Range & Log ratio & Per-mouse mean & Per-mouse range\\\midrule\endhead
+\bottomrule\endfoot
+rank & identity & 1 & 0.441 & 0.441, 0.441 & 0.250 & 1.017 & 0.408, 2.161\\
+rank & mean shift & 1 & 0.358 & 0.358, 0.358 & 0.042 & 0.962 & 0.325, 2.212\\
+rank & location scale & 1 & 0.343 & 0.343, 0.343 & 0.000 & 0.948 & 0.310, 2.198\\
+rank & quantile map & 1 & 0.360 & 0.360, 0.360 & 0.048 & 0.964 & 0.323, 2.210\\
+rank & ot displacement & 1 & 0.248 & 0.248, 0.248 & -0.326 & 0.860 & 0.218, 2.143\\
+rank & gaussian geodesic & 1 & 0.315 & 0.315, 0.315 & -0.084 & 0.922 & 0.281, 2.178\\
+rank & cfm independent & 3 & 0.310 & 0.287, 0.332 & -0.103 & 0.976 & 0.276, 2.434\\
+rank & cfm ot & 3 & 0.235 & 0.229, 0.241 & -0.379 & 0.854 & 0.202, 2.154\\
+rank & cfm sb & 3 & 0.241 & 0.238, 0.246 & -0.355 & 0.858 & 0.207, 2.152\\
+log days & location scale & 1 & 0.340 & 0.340, 0.340 & 0.000 & 0.942 & 0.306, 2.185\\
+log days & cfm independent & 3 & 0.284 & 0.271, 0.292 & -0.180 & 0.941 & 0.249, 2.358\\
+\end{longtable}
+}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{\dimexpr0.571429\linewidth-4.571429pt\relax}p{\dimexpr0.214286\linewidth-1.714286pt\relax}p{\dimexpr0.214286\linewidth-1.714286pt\relax}@{}}
+\caption{Descriptive scale references for the admitted population: energy between the pooled held day and the source or anchor day, and between each held mouse and the other held mice.}\label{tab:p2extscale}\\
+\toprule
+Reference & Mouse & Energy\\\midrule\endfirsthead
+\multicolumn{3}{l}{Table \thetable\ (continued)}\\[6pt]
+\toprule
+Reference & Mouse & Energy\\\midrule\endhead
+\bottomrule\endfoot
+held mouse vs other held mice & 1 & 0.168\\
+held mouse vs other held mice & 2 & 0.481\\
+held mouse vs other held mice & 3 & 0.248\\
+held mouse vs other held mice & 4 & 2.375\\
+source day vs held day & pooled & 0.441\\
+anchor day vs held day & pooled & 0.610\\
+\end{longtable}
+}
+\Needspace{235pt}
+{\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{\dimexpr0.080000\linewidth-1.600000pt\relax}p{\dimexpr0.171429\linewidth-3.428571pt\relax}p{\dimexpr0.057143\linewidth-1.142857pt\relax}p{\dimexpr0.268571\linewidth-5.371429pt\relax}p{\dimexpr0.268571\linewidth-5.371429pt\relax}p{\dimexpr0.154286\linewidth-3.085714pt\relax}@{}}
+\caption{A second execution of the same nominal external protocol and seeds, without replacing the original results. Energy means and full seed ranges describe retraining variation, not new mice. The last column is the largest absolute paired-fit energy change. Input-backed CUDA replay of all 19 newly saved fitted states has zero prediction discrepancy; this is distinct from exact retraining reproduction of the original run, whose weights were not saved.}\label{tab:p2extrepeat}\\
+\toprule
+Clock & Method & Fits & Original mean (range) & Repeat mean (range) & Max fit change\\\midrule\endfirsthead
+\multicolumn{6}{l}{Table \thetable\ (continued)}\\[6pt]
+\toprule
+Clock & Method & Fits & Original mean (range) & Repeat mean (range) & Max fit change\\\midrule\endhead
+\bottomrule\endfoot
+rank & identity & 1 & 0.441 (0.441, 0.441) & 0.441 (0.441, 0.441) & 0.000000\\
+rank & mean shift & 1 & 0.358 (0.358, 0.358) & 0.358 (0.358, 0.358) & 0.000000\\
+rank & location scale & 1 & 0.343 (0.343, 0.343) & 0.343 (0.343, 0.343) & 0.000000\\
+rank & quantile map & 1 & 0.360 (0.360, 0.360) & 0.360 (0.360, 0.360) & 0.000000\\
+rank & ot displacement & 1 & 0.248 (0.248, 0.248) & 0.248 (0.248, 0.248) & 0.000000\\
+rank & gaussian geodesic & 1 & 0.315 (0.315, 0.315) & 0.315 (0.315, 0.315) & 0.000000\\
+rank & cfm independent & 3 & 0.310 (0.287, 0.332) & 0.310 (0.286, 0.332) & 0.000080\\
+rank & cfm ot & 3 & 0.235 (0.229, 0.241) & 0.233 (0.223, 0.240) & 0.011673\\
+rank & cfm sb & 3 & 0.241 (0.238, 0.246) & 0.241 (0.238, 0.246) & 0.000019\\
+log days & location scale & 1 & 0.340 (0.340, 0.340) & 0.340 (0.340, 0.340) & 0.000000\\
+log days & cfm independent & 3 & 0.284 (0.271, 0.292) & 0.284 (0.271, 0.292) & 0.000039\\
+\end{longtable}
+}

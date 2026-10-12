@@ -1,0 +1,210 @@
+{
+ "analysis": {
+  "inferential_unit": "none_diagnostic_only",
+  "report_mode": "diagnostic_only"
+ },
+ "clock": {
+  "note": "Primary rank clock only; pilot diagnostic.",
+  "primary": "rank",
+  "sensitivity": [],
+  "sensitivity_methods": []
+ },
+ "dataset_task_exclusions": {},
+ "datasets": {
+  "tier_G": [],
+  "tier_W": [
+   "GSE241132"
+  ]
+ },
+ "evaluation": {
+  "caps": {
+   "c2st": 200,
+   "energy": 200,
+   "exact_w2": 100,
+   "sliced_w2": 200
+  },
+  "energy_scale_note": "Descriptive within-fold scores, not confirmatory ranking.",
+  "mmd_note": "Adaptive prediction-and-target kernel bandwidth; no cross-method MMD ranking/differences.",
+  "primary_metric": "energy",
+  "secondary_metrics": [
+   "mmd",
+   "sliced_w2",
+   "exact_w2",
+   "mean_error",
+   "bures",
+   "c2st_auc"
+  ],
+  "sliced_projections": 32
+ },
+ "flow_defaults": {
+  "batch_size": 64,
+  "context_dropout": 0.2,
+  "depth": 2,
+  "grad_clip": 1.0,
+  "hidden": 64,
+  "lr": 0.001,
+  "profile_stages": true,
+  "rk4_steps_per_interval": 20,
+  "sb_sigma_scale": 0.25,
+  "sinkhorn_iterations": 300,
+  "sinkhorn_tolerance": 0.001,
+  "steps": 120,
+  "time_dim": 16
+ },
+ "frozen_date": "2026-09-29",
+ "kind": "population",
+ "methods": {
+  "cfm_conditioned_s120": {
+   "base": "cfm_conditioned",
+   "params": {
+    "steps": 120
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_conditioned_s600": {
+   "base": "cfm_conditioned",
+   "params": {
+    "steps": 600
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_independent_s120": {
+   "base": "cfm_independent",
+   "params": {
+    "steps": 120
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_independent_s600": {
+   "base": "cfm_independent",
+   "params": {
+    "steps": 600
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_ot_s120": {
+   "base": "cfm_ot",
+   "params": {
+    "steps": 120
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_ot_s600": {
+   "base": "cfm_ot",
+   "params": {
+    "steps": 600
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_sb_s120": {
+   "base": "cfm_sb",
+   "params": {
+    "steps": 120
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "cfm_sb_s600": {
+   "base": "cfm_sb",
+   "params": {
+    "steps": 600
+   },
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "identity": {
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "location_scale": {
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "mean_shift": {
+   "tasks": [
+    "T-LIO"
+   ]
+  },
+  "target_marginal": {
+   "sampling_note": "Seed0 frozen equal-donor target draw, not sampling-free marginal.",
+   "tasks": [
+    "T-LIO"
+   ]
+  }
+ },
+ "min_cells_per_group": 50,
+ "not_claims": [
+  "This is not biological or clinical validation.",
+  "GSE241132 contains healthy acute wounds, not diabetic-foot-ulcer outcome validation.",
+  "Two seeds are computational stability probes, not biological replication.",
+  "No publication ranking or superiority claim is authorized."
+ ],
+ "pilot_only": true,
+ "protocol_id": "sdd-all-donor-budget-paired-20260929-v1",
+ "question": "Complete equal-step donor/budget diagnostic with all flows and fixed simple baselines.",
+ "representation": {
+  "primary": "pca_train"
+ },
+ "representation_seed": 0,
+ "representations": {
+  "pca_train": {
+   "kind": "pca_train",
+   "max_fit_cells": 10000,
+   "n_components": 15,
+   "n_hvg": 200
+  }
+ },
+ "schema_version": 1,
+ "seeds": {
+  "deterministic": [
+   0
+  ],
+  "stochastic": [
+   0,
+   1
+  ]
+ },
+ "smoke_only": true,
+ "stage_gate": {
+  "stage_a_stops": true,
+  "stage_b_requires": "fresh reviewed code/input-bound local receipt"
+ },
+ "status": "bounded_paired_diagnostic_only",
+ "tasks": {
+  "T-K": {
+   "enabled": false,
+   "k_values": [],
+   "max_held_individuals": 0,
+   "min_individuals": 99,
+   "repeats": 0
+  },
+  "T-LIO": {
+   "enabled": true,
+   "max_held_individuals": 3,
+   "min_individuals": 3
+  },
+  "T-MT": {
+   "enabled": false
+  },
+  "T-SRC": {
+   "enabled": false,
+   "max_substitutes": 0
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "code_digest": "705cf34f73f26ad2925e",
+ "counts": {
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_conditioned_s120": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_conditioned_s600": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_independent_s120": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_independent_s600": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_ot_s120": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_ot_s600": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_sb_s120": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_sb_s600": 6,
+  "population_fit|GSE241132|T-LIO|leave_individual|identity": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|location_scale": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|mean_shift": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|target_marginal": 3
+ },
+ "datasets": [
+  "GSE241132"
+ ],
+ "jobs": 60,
+ "planned_utc": "2026-09-30T02:35:03Z",
+ "protocol_hash": "7dd8a2755744e518b789"
+}

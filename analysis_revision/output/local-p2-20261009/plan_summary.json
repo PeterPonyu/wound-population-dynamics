@@ -1,0 +1,29 @@
+{
+ "code_digest": "ab109504d42ec1e58bb2",
+ "counts": {
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_conditioned": 9,
+  "population_fit|GSE241132|T-LIO|leave_individual|cfm_independent": 9,
+  "population_fit|GSE241132|T-LIO|leave_individual|identity": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|location_scale": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|mean_shift": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|population_ot": 3,
+  "population_fit|GSE241132|T-LIO|leave_individual|target_marginal": 3,
+  "population_fit|GSE241132|T-LIO|source_swap|cfm_conditioned": 18,
+  "population_fit|GSE241132|T-LIO|source_swap|cfm_independent": 18,
+  "population_fit|GSE241132|T-LIO|source_swap|identity": 6,
+  "population_fit|GSE241132|T-LIO|source_swap|location_scale": 6,
+  "population_fit|GSE241132|T-LIO|source_swap|mean_shift": 6,
+  "population_fit|GSE241132|T-MT|missing_time|cfm_conditioned": 6,
+  "population_fit|GSE241132|T-MT|missing_time|cfm_independent": 6,
+  "population_fit|GSE241132|T-MT|missing_time|identity": 2,
+  "population_fit|GSE241132|T-MT|missing_time|location_scale": 2,
+  "population_fit|GSE241132|T-MT|missing_time|mean_shift": 2,
+  "population_fit|GSE241132|T-MT|missing_time|ot_displacement": 2
+ },
+ "datasets": [
+  "GSE241132"
+ ],
+ "jobs": 107,
+ "planned_utc": "2026-10-09T09:30:41Z",
+ "protocol_hash": "4bd7932aac356804539d"
+}

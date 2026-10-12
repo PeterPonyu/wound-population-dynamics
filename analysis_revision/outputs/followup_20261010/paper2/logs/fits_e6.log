@@ -1,0 +1,6 @@
+mu_std INNER_PWH27_evalPWH26 cfm_independent 0 119.6s loss_last 6.100803852081299
+mu_std INNER_PWH26_evalPWH27 cfm_independent 0 119.0s loss_last 6.100803852081299
+mu_std INNER_PWH26_evalPWH28 cfm_independent 0 130.1s loss_last 6.170233249664307
+mu_std INNER_PWH27_evalPWH28 cfm_independent 0 124.1s loss_last 5.190883636474609
+mu_std INNER_PWH28_evalPWH26 cfm_independent 0 142.0s loss_last 6.170233249664307
+mu_std INNER_PWH28_evalPWH27 cfm_independent 0 130.3s loss_last 5.190883636474609

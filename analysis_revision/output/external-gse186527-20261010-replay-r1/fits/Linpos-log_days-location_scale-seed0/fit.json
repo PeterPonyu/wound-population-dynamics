@@ -1,0 +1,63 @@
+{
+ "binding": {
+  "analysis": "Lin+",
+  "clock": "log_days",
+  "code_digest": "788fedb184078c9f410835368fd88a56b274eac6abe19786db895b212285ab31",
+  "dataset_sha256": "766149c17a9fe5bdf9001eba3797e2da9569aad91587aeb9b23e9d62b5446e73",
+  "job_id": "Linpos-log_days-location_scale-seed0",
+  "method": "location_scale",
+  "protocol_sha256": "ad60dcb0ed7245eea3b602ca14bf00aab698937e4053d88267e9a1a49a1da5bc",
+  "seed": 0
+ },
+ "evaluations": [
+  {
+   "artifact": "evaluation0.npz",
+   "call": {
+    "anchor_time": 30.0,
+    "individual": "PBS",
+    "seed": 0,
+    "source_time": 7.0,
+    "target_time": 14.0
+   },
+   "mouse_energy": {
+    "1": 0.42301710922581304,
+    "2": 0.8534956813198926,
+    "3": 0.30642940792577367,
+    "4": 2.185443255441554
+   },
+   "prediction_warnings": [],
+   "score_seed": 346949926,
+   "scores": {
+    "bures": 2.9976879140328343,
+    "energy": 0.3395814677654849,
+    "finite": true,
+    "mean_error": 0.9026416022450157,
+    "mmd": 0.03749425665665945,
+    "n_prediction": 264,
+    "n_target": 393,
+    "sliced_w2": 0.3935642504974545
+   }
+  }
+ ],
+ "fit_diagnostics": {},
+ "fit_seconds": 0.007562184997368604,
+ "fit_warnings": [],
+ "task": {
+  "dataset_id": "GSE186527-Linpos",
+  "family": "missing_time",
+  "held_individual": null,
+  "held_time": 14.0,
+  "kind": "T-MT",
+  "pairs": [
+   {
+    "anchor_time": 30.0,
+    "individual": "PBS",
+    "source_time": 7.0,
+    "target_time": 14.0
+   }
+  ],
+  "repeat": 0,
+  "substitute": null,
+  "training_individuals": null
+ }
+}

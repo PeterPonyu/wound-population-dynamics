@@ -1,6 +1,6 @@
 {
-  "status": "release",
-  "version": "0.4.2",
+  "status": "unpublished",
+  "version": "0.5.0",
   "files": [
     {
       "source": "config/population_observable_protocol.json",
@@ -8,6 +8,37 @@
       "source_sha256": "836894235e472b6e4654e0451f215fb21b033fdcf93b0cca1e954d4edec39d3d",
       "exported_sha256": "fa8055b192b76e56e8cce8bfa34ae830c791d7129acfa82a9c7599385a36b745",
       "original": "provenance/originals/config/population_observable_protocol.json"
+    },
+    {
+      "source": "output/publication-quality-20261009/p2/report.json",
+      "exported": "output/publication-quality-20261009/p2/report.json",
+      "source_sha256": "f0b434a408e0d2b4736fb4ae89f1b5be50ddd27181c93d94992b7b316557a890",
+      "exported_sha256": "db445f0a9d23f4d7039a0003da7b228bfe44f11afd7bcdc98c63a56e11ea7073",
+      "original": "provenance/originals/output/publication-quality-20261009/p2/report.json"
+    },
+    {
+      "source": "output/publication-quality-20261009/p2/fit_costs.csv",
+      "exported": "output/publication-quality-20261009/p2/fit_costs.csv",
+      "source_sha256": "33e26fd4cfdd60861774b3824610261cc0a850c8b5af025738fe914834723143",
+      "exported_sha256": "33e26fd4cfdd60861774b3824610261cc0a850c8b5af025738fe914834723143"
+    },
+    {
+      "source": "output/publication-quality-20261009/p2/paired_ratios.csv",
+      "exported": "output/publication-quality-20261009/p2/paired_ratios.csv",
+      "source_sha256": "05216b4d9e15ad5912d50a034da3e717c08537788c374a770edef597a83ffa96",
+      "exported_sha256": "05216b4d9e15ad5912d50a034da3e717c08537788c374a770edef597a83ffa96"
+    },
+    {
+      "source": "output/publication-quality-20261009/p2/source_substitution.csv",
+      "exported": "output/publication-quality-20261009/p2/source_substitution.csv",
+      "source_sha256": "861623f8df2233bf40f8a04d6898dadf6913dcdeca6ab4b105fc0e5fa105b678",
+      "exported_sha256": "861623f8df2233bf40f8a04d6898dadf6913dcdeca6ab4b105fc0e5fa105b678"
+    },
+    {
+      "source": "output/submission-preparation-20261002-r1/population/report.json",
+      "exported": "output/submission-preparation-20261002-r1/population/report.json",
+      "source_sha256": "36c5fd58f7752ff65ba34514d1906d0fd32214da4879086501a0b4b17c0981f3",
+      "exported_sha256": "36c5fd58f7752ff65ba34514d1906d0fd32214da4879086501a0b4b17c0981f3"
     },
     {
       "source": "outputs/repaired_20260918/donor_conditioned_benchmark/report.json",
@@ -22,6 +53,13 @@
       "source_sha256": "139ea428007313c4dd5f9529cd02eef7ebe5fb7e3cc41d9a4a7b2658a89c27a0",
       "exported_sha256": "21b36d1cfacf310a3986fe58e67fca532a2f843bb49907b94604a0f19e44e86f",
       "original": "provenance/originals/outputs/repaired_20260918/donor_count_curve/report.json"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/donor_count_curve/report.json",
+      "exported": "outputs/scientific_revision_20260926/provenance_repair/donor_count_curve/report.json",
+      "source_sha256": "95db78f1e3af0a6fb21e4f4a1fe97bd395f32ac8d2baade8b68d436bc572d73d",
+      "exported_sha256": "1f173efed4bb55e679da0394257e2af4d9dbe96c57aac0b59b9e2a3b6aec26ce",
+      "original": "provenance/originals/outputs/scientific_revision_20260926/provenance_repair/donor_count_curve/report.json"
     },
     {
       "source": "outputs/repaired_20260918/donor_curve_inference/report.json",
@@ -56,6 +94,13 @@
       "source_sha256": "2f5c7ea9a3ca833d65b35f1b156378ab8b4b8707f1cf3ef92be60b0cd0ee77cd",
       "exported_sha256": "0eaa760e16ba528047996060acdec84b45c8d45fd6eda10ab45df0c42ae8102d",
       "original": "provenance/originals/outputs/repaired_20260918/donor_transfer_flow/report.json"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json",
+      "exported": "outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json",
+      "source_sha256": "c5c990f313a629c10939cb89f4244d3a1eda4a2f17dae0ca03b2027b78fa06b0",
+      "exported_sha256": "4656381cf5a8a434cac5c6574cb661f4813b192e667ef2eff695b3a2e1e62a64",
+      "original": "provenance/originals/outputs/scientific_revision_20260926/provenance_repair/donor_transfer_flow/report.json"
     },
     {
       "source": "outputs/repaired_20260918/human_temporal_flow/report.json",
@@ -182,6 +227,13 @@
       "source_sha256": "827f5a89b638005c2fa1d3078d37ea2ac4fda5e54df31f6233bd457ff72c4f01",
       "exported_sha256": "555165cddb5c1fbde7082199dab2bb95f62e57abc09e582fbe19a12fcd0f0ce8",
       "original": "provenance/originals/outputs/repaired_20260918/time_parameterisation/report.json"
+    },
+    {
+      "source": "outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json",
+      "exported": "outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json",
+      "source_sha256": "534ba23f2b4bdd20ff27e362dedee2ef75cfa1b85b01e5e69629e6c3c2b345c7",
+      "exported_sha256": "ae04b5b9b5cc7d5c32267bb5cae309abe85f12c02e6a73dc93f1ae04a10a42ad",
+      "original": "provenance/originals/outputs/scientific_revision_20260926/provenance_repair/time_parameterisation/report.json"
     },
     {
       "source": "outputs/robustness_extensions/report.json",
@@ -806,6 +858,104 @@
       "exported": "outputs/scientific_revision_20260925/population_observable/final-01/training_programme_per_fit.csv",
       "source_sha256": "c21cb4ca41fbca313710d6a65ad70955d07e66c3e2a87192eb997a3d86317f64",
       "exported_sha256": "c21cb4ca41fbca313710d6a65ad70955d07e66c3e2a87192eb997a3d86317f64"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/report.json",
+      "exported": "output/external-gse186527-20261009/results/report.json",
+      "source_sha256": "f2687377d1518864cc5150f8566348a9197827368f7c8f62fd43e3cc5af3a0c4",
+      "exported_sha256": "f2687377d1518864cc5150f8566348a9197827368f7c8f62fd43e3cc5af3a0c4"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/fits.csv",
+      "exported": "output/external-gse186527-20261009/results/fits.csv",
+      "source_sha256": "f0abe73a6dd180c8c71eb30724571d84b29eb2f000ac6ef11bc21a2ca18895ab",
+      "exported_sha256": "f0abe73a6dd180c8c71eb30724571d84b29eb2f000ac6ef11bc21a2ca18895ab"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/mouse_scores.csv",
+      "exported": "output/external-gse186527-20261009/results/mouse_scores.csv",
+      "source_sha256": "33f57c44a099e3e36c9ca407798a6c258efb1a47227ef87ee0925cb49d0a58d4",
+      "exported_sha256": "33f57c44a099e3e36c9ca407798a6c258efb1a47227ef87ee0925cb49d0a58d4"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/population_scores.csv",
+      "exported": "output/external-gse186527-20261009/results/population_scores.csv",
+      "source_sha256": "019475f4a8402e593f9c3c9eaa58410e978594443925453327ed871a0ae38bae",
+      "exported_sha256": "019475f4a8402e593f9c3c9eaa58410e978594443925453327ed871a0ae38bae"
+    },
+    {
+      "source": "output/external-gse186527-20261009/results/scale_references.csv",
+      "exported": "output/external-gse186527-20261009/results/scale_references.csv",
+      "source_sha256": "e4773cb2f87800cb964e1ee36f68697bd070354d9e390cf59110eb4329ee10e6",
+      "exported_sha256": "e4773cb2f87800cb964e1ee36f68697bd070354d9e390cf59110eb4329ee10e6"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/report.json",
+      "exported": "output/external-gse186527-20261010-replay-r1/report.json",
+      "source_sha256": "961b014b7478e203487cb4f26b567dbb05c6a67473ca4b1f2ff81242f461adbc",
+      "exported_sha256": "38918e0eb007bdb83343a64ab0eb38d2d79ffad08570c390baacd83584d854a1",
+      "original": "provenance/originals/output/external-gse186527-20261010-replay-r1/report.json"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/fits.csv",
+      "exported": "output/external-gse186527-20261010-replay-r1/fits.csv",
+      "source_sha256": "4c995ddf9b31a14c5bf26cb97377d39fb1dc174d13da7c758f85f47901f2d237",
+      "exported_sha256": "4c995ddf9b31a14c5bf26cb97377d39fb1dc174d13da7c758f85f47901f2d237"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/mouse_scores.csv",
+      "exported": "output/external-gse186527-20261010-replay-r1/mouse_scores.csv",
+      "source_sha256": "8481dc249a2194c9b482d3f3f374d8e2bd0c753a82ea760133f6ca19f341c8c0",
+      "exported_sha256": "8481dc249a2194c9b482d3f3f374d8e2bd0c753a82ea760133f6ca19f341c8c0"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/population_scores.csv",
+      "exported": "output/external-gse186527-20261010-replay-r1/population_scores.csv",
+      "source_sha256": "aa1d036d2562d8b3b72a7def5ab87cc13b669e179af014c33849430d70c67a90",
+      "exported_sha256": "aa1d036d2562d8b3b72a7def5ab87cc13b669e179af014c33849430d70c67a90"
+    },
+    {
+      "source": "output/external-gse186527-20261010-replay-r1/scale_references.csv",
+      "exported": "output/external-gse186527-20261010-replay-r1/scale_references.csv",
+      "source_sha256": "efe0cde7d069f922f3eda66fd2ec6ac6b6746c52bfc4350fdd14ca560ee9571f",
+      "exported_sha256": "efe0cde7d069f922f3eda66fd2ec6ac6b6746c52bfc4350fdd14ca560ee9571f"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/report.json",
+      "exported": "output/followup-integration-20261011-r1/p2/audit/report.json",
+      "source_sha256": "e745b8fbae5153d07cdbe3042a76d493ef4942eef7994c1d3d9469dcf63c8c4b",
+      "exported_sha256": "e745b8fbae5153d07cdbe3042a76d493ef4942eef7994c1d3d9469dcf63c8c4b"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/alpha_diagnostic.csv",
+      "exported": "output/followup-integration-20261011-r1/p2/audit/alpha_diagnostic.csv",
+      "source_sha256": "7f383a2e8a5b874650d5f60305b68a23c02f9a9cf3fe501ffd4d46a10aae9322",
+      "exported_sha256": "7f383a2e8a5b874650d5f60305b68a23c02f9a9cf3fe501ffd4d46a10aae9322"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/nested_donor.csv",
+      "exported": "output/followup-integration-20261011-r1/p2/audit/nested_donor.csv",
+      "source_sha256": "c695d97db9ad48ae3b054afc3c177c260a5cb68b518a08a58b5d37ef6d9432f2",
+      "exported_sha256": "c695d97db9ad48ae3b054afc3c177c260a5cb68b518a08a58b5d37ef6d9432f2"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/representation_donor.csv",
+      "exported": "output/followup-integration-20261011-r1/p2/audit/representation_donor.csv",
+      "source_sha256": "6f786b00de107040018a7f24cf7f72bfc7e3ba62aa0fc1031fd37853a58065d0",
+      "exported_sha256": "6f786b00de107040018a7f24cf7f72bfc7e3ba62aa0fc1031fd37853a58065d0"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/audit/representation_macro.csv",
+      "exported": "output/followup-integration-20261011-r1/p2/audit/representation_macro.csv",
+      "source_sha256": "5977c15f76e38b090730df7b8ae0f132bacd1fa14229a8d100e995ec2060c17d",
+      "exported_sha256": "5977c15f76e38b090730df7b8ae0f132bacd1fa14229a8d100e995ec2060c17d"
+    },
+    {
+      "source": "output/followup-integration-20261011-r1/p2/e0-reproduction/receipt.json",
+      "exported": "output/followup-integration-20261011-r1/p2/e0-reproduction/receipt.json",
+      "source_sha256": "68e11225c060c3ec13eb335df211e190613da118665342f155c1708dadd14296",
+      "exported_sha256": "09c587beab78b3110f9e9b2a931027d8a60c9ab2d2a329cad770111880048869",
+      "original": "provenance/originals/output/followup-integration-20261011-r1/p2/e0-reproduction/receipt.json"
     },
     {
       "source": "outputs/direction1_dfu_mainline/panel.npy",
@@ -2350,8 +2500,8 @@
       "source": "manuscripts/result_coverage.json",
       "exported": "manuscripts/result_coverage.json",
       "original": "provenance/originals/manuscripts/result_coverage.json",
-      "source_sha256": "f6c752f3a13602016ef94161519437350207ec4f1aff5959b240649ad4284aab",
-      "exported_sha256": "42592d9b6f483f706b0b875eee1590e5b6e4cae1b38ae203e82826ddf91daaee"
+      "source_sha256": "3c71f1d27c921a4691093c40ae40f6f54b0a08759e7df2bae80900a860facd58",
+      "exported_sha256": "8f0459eabfcdb4fd7a584c91ab754a62d1f34b8d5ed0d939d320a8ece33e3b9b"
     }
   ],
   "scope": "Native reports and numeric artifacts; originals preserve historical fingerprints. Export manifests identify translated local artifacts, not a new scientific run."

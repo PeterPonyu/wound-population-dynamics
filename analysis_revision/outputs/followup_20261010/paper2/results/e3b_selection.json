@@ -1,0 +1,98 @@
+{
+ "PWH26": {
+  "tag": "cfm_ot_h256_st2000_lr3e-4",
+  "method": "cfm_ot",
+  "hidden": 256,
+  "steps": 2000,
+  "lr": 0.0003,
+  "inner_energy": 0.3393402552515575,
+  "configs": 28,
+  "default_config_inner_energy": 1.5669388728324267,
+  "top5": [
+   {
+    "tag": "cfm_ot_h256_st2000_lr3e-4",
+    "inner_energy": 0.3393402552515575
+   },
+   {
+    "tag": "cfm_ot_h64_st2000_lr1e-3",
+    "inner_energy": 0.3636431013980956
+   },
+   {
+    "tag": "cfm_sb_h256_st2000_lr1e-3",
+    "inner_energy": 0.37277256436025435
+   },
+   {
+    "tag": "cfm_ot_h64_st8000_lr3e-4",
+    "inner_energy": 0.40788990231876154
+   },
+   {
+    "tag": "cfm_ot_h256_st8000_lr3e-4",
+    "inner_energy": 0.4116916662652683
+   }
+  ]
+ },
+ "PWH27": {
+  "tag": "cfm_independent_h64_st20000_lr3e-4",
+  "method": "cfm_independent",
+  "hidden": 64,
+  "steps": 20000,
+  "lr": 0.0003,
+  "inner_energy": 0.48065856706618415,
+  "configs": 28,
+  "default_config_inner_energy": 1.0349355997053387,
+  "top5": [
+   {
+    "tag": "cfm_independent_h64_st20000_lr3e-4",
+    "inner_energy": 0.48065856706618415
+   },
+   {
+    "tag": "cfm_independent_h128_st2000_lr1e-3",
+    "inner_energy": 0.5099310622734087
+   },
+   {
+    "tag": "cfm_independent_h64_st2000_lr1e-3",
+    "inner_energy": 0.5227774921409218
+   },
+   {
+    "tag": "cfm_ot_h64_st2000_lr3e-4",
+    "inner_energy": 0.543844484349371
+   },
+   {
+    "tag": "cfm_ot_h64_st2000_lr1e-3",
+    "inner_energy": 0.5560062738637236
+   }
+  ]
+ },
+ "PWH28": {
+  "tag": "cfm_independent_h64_st8000_lr1e-3",
+  "method": "cfm_independent",
+  "hidden": 64,
+  "steps": 8000,
+  "lr": 0.001,
+  "inner_energy": 0.5224631145143934,
+  "configs": 28,
+  "default_config_inner_energy": 1.0740424986358916,
+  "top5": [
+   {
+    "tag": "cfm_independent_h64_st8000_lr1e-3",
+    "inner_energy": 0.5224631145143934
+   },
+   {
+    "tag": "cfm_independent_h128_st8000_lr3e-4",
+    "inner_energy": 0.5509709710046572
+   },
+   {
+    "tag": "cfm_independent_h256_st8000_lr3e-4",
+    "inner_energy": 0.5675739090549397
+   },
+   {
+    "tag": "cfm_independent_h128_st8000_lr1e-3",
+    "inner_energy": 0.6130322217204354
+   },
+   {
+    "tag": "cfm_ot_h64_st8000_lr3e-4",
+    "inner_energy": 0.634293096774602
+   }
+  ]
+ }
+}

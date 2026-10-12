@@ -1,0 +1,44 @@
+coordinates mu_std/LIO_PWH26: max_abs=0
+coordinates mu_std/LIO_PWH27: max_abs=0
+coordinates mu_std/LIO_PWH28: max_abs=0
+coordinates mu_std/MT_day1: max_abs=0
+coordinates mu_std/MT_day7: max_abs=0
+coordinates mu_std/INNER_PWH26_evalPWH27: max_abs=0
+coordinates mu_std/INNER_PWH26_evalPWH28: max_abs=0
+coordinates mu_std/INNER_PWH27_evalPWH26: max_abs=0
+coordinates mu_std/INNER_PWH27_evalPWH28: max_abs=0
+coordinates mu_std/INNER_PWH28_evalPWH26: max_abs=0
+coordinates mu_std/INNER_PWH28_evalPWH27: max_abs=0
+coordinates mu_raw/LIO_PWH26: max_abs=0
+coordinates mu_raw/LIO_PWH27: max_abs=0
+coordinates mu_raw/LIO_PWH28: max_abs=0
+coordinates mu_raw/MT_day1: max_abs=0
+coordinates mu_raw/MT_day7: max_abs=0
+coordinates mu_white/LIO_PWH26: max_abs=0
+coordinates mu_white/LIO_PWH27: max_abs=0
+coordinates mu_white/LIO_PWH28: max_abs=0
+coordinates mu_white/MT_day1: max_abs=0
+coordinates mu_white/MT_day7: max_abs=0
+coordinates mu_clr_std/LIO_PWH26: max_abs=0
+coordinates mu_clr_std/LIO_PWH27: max_abs=0
+coordinates mu_clr_std/LIO_PWH28: max_abs=0
+coordinates mu_clr_std/MT_day1: max_abs=0
+coordinates mu_clr_std/MT_day7: max_abs=0
+coordinates pca30/LIO_PWH26: max_abs=0
+coordinates pca30/LIO_PWH27: max_abs=0
+coordinates pca30/LIO_PWH28: max_abs=0
+coordinates pca30/MT_day1: max_abs=0
+coordinates pca30/MT_day7: max_abs=0
+saved fields checked: 30/363
+saved fields checked: 60/363
+saved fields checked: 90/363
+saved fields checked: 120/363
+saved fields checked: 150/363
+saved fields checked: 180/363
+saved fields checked: 210/363
+saved fields checked: 240/363
+saved fields checked: 270/363
+saved fields checked: 300/363
+saved fields checked: 330/363
+saved fields checked: 360/363
+PASS 354 original fields + 9 nested refits; 31 coordinate reproductions

@@ -1,0 +1,136 @@
+{
+ "adapter": "local_gse241132",
+ "adapter_status": "validated_local",
+ "contract": {
+  "consecutive_pairs": [
+   {
+    "individuals": [
+     "PWH26",
+     "PWH27",
+     "PWH28"
+    ],
+    "source_time": 0.0,
+    "target_time": 1.0
+   },
+   {
+    "individuals": [
+     "PWH26",
+     "PWH27",
+     "PWH28"
+    ],
+    "source_time": 1.0,
+    "target_time": 7.0
+   },
+   {
+    "individuals": [
+     "PWH26",
+     "PWH27",
+     "PWH28"
+    ],
+    "source_time": 7.0,
+    "target_time": 30.0
+   }
+  ],
+  "count_type": "raw",
+  "dataset_id": "GSE241132",
+  "eligible": {
+   "T-K": false,
+   "T-LIO": true,
+   "T-MT": true
+  },
+  "group_sizes": {
+   "PWH26|0": 724,
+   "PWH26|1": 255,
+   "PWH26|30": 843,
+   "PWH26|7": 920,
+   "PWH27|0": 521,
+   "PWH27|1": 497,
+   "PWH27|30": 2096,
+   "PWH27|7": 1992,
+   "PWH28|0": 907,
+   "PWH28|1": 260,
+   "PWH28|30": 2335,
+   "PWH28|7": 909
+  },
+  "individuals": [
+   "PWH26",
+   "PWH27",
+   "PWH28"
+  ],
+  "lio_individuals": [
+   "PWH26",
+   "PWH27",
+   "PWH28"
+  ],
+  "min_cells": 20,
+  "missing_time_tasks": [
+   {
+    "anchor_time": 7.0,
+    "held_time": 1.0,
+    "individuals": [
+     "PWH26",
+     "PWH27",
+     "PWH28"
+    ],
+    "source_time": 0.0
+   },
+   {
+    "anchor_time": 30.0,
+    "held_time": 7.0,
+    "individuals": [
+     "PWH26",
+     "PWH27",
+     "PWH28"
+    ],
+    "source_time": 1.0
+   }
+  ],
+  "n_cells": 12259,
+  "n_genes": 36578,
+  "problems": [],
+  "status": "accepted",
+  "times": [
+   0.0,
+   1.0,
+   7.0,
+   30.0
+  ]
+ },
+ "dataset_file": "output/data-smoke-20260929/data/standardized/GSE241132/standard.h5ad",
+ "dataset_id": "GSE241132",
+ "dataset_sha256": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848",
+ "measurement": {
+  "problems": [],
+  "specimen_sizes": {
+   "GSM7717079": 724,
+   "GSM7717080": 255,
+   "GSM7717081": 920,
+   "GSM7717082": 843,
+   "GSM7717083": 521,
+   "GSM7717084": 497,
+   "GSM7717085": 1992,
+   "GSM7717086": 2096,
+   "GSM7717087": 907,
+   "GSM7717088": 260,
+   "GSM7717089": 909,
+   "GSM7717090": 2335
+  },
+  "specimens": [
+   "GSM7717079",
+   "GSM7717080",
+   "GSM7717081",
+   "GSM7717082",
+   "GSM7717083",
+   "GSM7717084",
+   "GSM7717085",
+   "GSM7717086",
+   "GSM7717087",
+   "GSM7717088",
+   "GSM7717089",
+   "GSM7717090"
+  ],
+  "status": "accepted"
+ },
+ "stage_a_utc": "2026-09-29T00:19:26Z",
+ "status": "ingested"
+}

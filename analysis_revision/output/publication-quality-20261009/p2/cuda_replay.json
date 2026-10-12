@@ -1,0 +1,991 @@
+{
+ "adapter_sha256": "732015f48f37d972292494eb0152a5d9f6c2cc5a2ae97a40dbf2f1baa34042ab",
+ "atol": 1e-05,
+ "backend": "cuda_for_fields_original_fit_backend",
+ "core_checks_unchanged": true,
+ "cpu_gate_passed": false,
+ "cpu_replay": {
+  "atol": 1e-05,
+  "backend": "cpu",
+  "captured_output_truncated": true,
+  "checked_jobs": 107,
+  "failure_log_sha256": "9900c3e82e6d7d0cf23e92af88699a80597e60c5f70c2e0c025ac21266109a20",
+  "interpretation": "CPU/CUDA portability is not certified; failures remain unresolved pending original-backend and cross-backend diagnostics.",
+  "rtol": 1e-05,
+  "status": "failed"
+ },
+ "per_job_replays": [
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "530e29fc699486661c61",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "3f57d39efd10a1669f3b",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "b081d6f98bcc749d308a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "043493fb4ce8a1285b13",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "27a90068c1ad980f2a52",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "13fb0ff41d84d9b21aed",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "6ea5aad4425b94662a6e",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "c7c00a7aac1d7d8eb19c",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "4fc815251852f8735f3a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "3bb2f87f8f494b69cf36",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "84a6f61e134e72533961",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "8f4bad4a77dba8b1c0e0",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "045bb9949820280730fd",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "9f395449deb8559b26a9",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "b90e986ce637e5d83ba3",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "013d946e26462c85980d",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "831ba6c5885d33f46c81",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "c343d2782b738e6a533f",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "5f9d1ae0718455e34f8a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "7b8c28d12caebd91bc64",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "4ef2ef5106ce78fb489c",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "72c3193320435426c164",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "23403cdb0c07ebd2df3a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "76624d1707cb75223db7",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "dd85cc267386c96cf732",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "d102e9d060fb654ef446",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "795238a8d1ad3bb6f664",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "1af9e35afea4687ebf6c",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "eecad024eab325c21209",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "39fda05dc116bf53eccb",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "e7225c5c96e58f96f38f",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "f99976f235e0ab730ca0",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "f90310fcdcb6094705b5",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "27be2eb4246ff9e274c8",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "01f99cb7f63f778e74e8",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "cbf698e0f359aeb9dc45",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "b3d0d823f173969aabd7",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "422e82eebde6731d63f0",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "79ed57f97e25a3580fb0",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "f2a83746410e8edf0662",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "7deca90b3b5edc9c6ce4",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "567f67f98e104fcd64fd",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "e02ba0f4c6aa19129e8f",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "50d19a5728d8e94ac8c4",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "6322af60b1414ae65f75",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "978c2d506859aa042c24",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "4727016d861775f181ef",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "349e9f2474177922dd64",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "629994fd15c8ee7742d3",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "56228df87b443f3a609f",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "1e7ccaa390b113ceb9bc",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "c933101d05bb244ab5fa",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "eef24622781bcfdc53a5",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 150,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "0949328fbaabca61a21e",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "b4f15638b32c02ccafbd",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "e9c59fbf708c23bf1a26",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "6b1e2ee781677a1c9d28",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "3d33730e1701ef70eca1",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "b2a4829a522df75aa17e",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "825418a851afe92e2bce",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "ee5b259c1658816d56f8",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "0381fa7b7523cbc4c381",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "d875e1e506557ecf80c6",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "7729561d7e2b696cda97",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "4fb7a1cc36c7f89c4191",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "202c9eb40855cd85e6a1",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "5052153931fe33be5db5",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "751e625d0cef71dd808b",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "d46f86ca84b4fb0f7ec2",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "8105f7eb5ac828594fe1",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "6a59fe4d06065773ca20",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "f03d59c60c63050d0af2",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "eb06247cde076f0b2c2d",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "0ce4aa8b752dce567bb9",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "e6689c7b59635b28b7df",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "03b74b01618ca1ecc449",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "e8a256633d5168068072",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "8a8ac5c641428b459c75",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "36698fbe557d16899d6b",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "2fdc53f36aff5b266ccc",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "fcaab3e93e3ba4d5f2e7",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "d654165636f606823518",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "0b534c593d6cc04554b2",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "cb73ca4f149a89fccfb2",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "bd7ac560e1d76e12a4e1",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "14f9be89a98b0d9b4ede",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "716242cd27f34e73ba37",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "b6fae0f3cbdf93e4681a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "888f5a212b67d8634f63",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "0f731d04c1859d838678",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "472e5a580d9ad54b2bfc",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "e6745bd2d8b54c3009c2",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "17b868eb02eaab2fdbdc",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "f0e71b9fca51b2b0f5cb",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "2436e5ff59a3eedfac01",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "89cfd7b822dd717d83ac",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "a120d574d17160761eff",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "59825c2170d646911d4a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "4ed7829797e8cffdf63a",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "8d9f3b01a4cc541a79ea",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cpu_baseline",
+   "field_reintegrated": false,
+   "input_revalidated": true,
+   "job_id": "5793cb25ab0f076264d9",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "9f6e2687bda8876f96f5",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "ace88d7fa57211febbc3",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "6c66cc4bfb31128f8ac7",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "7cce8fec9a5bb84484cc",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "7256ebfaa8f6245e43fd",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  },
+  {
+   "backend": "cuda",
+   "field_reintegrated": true,
+   "input_revalidated": true,
+   "job_id": "bafe5808060d36defd92",
+   "prediction_max_abs_difference": 0.0,
+   "prediction_records": 300,
+   "representation_derivation_rechecked": true
+  }
+ ],
+ "result": {
+  "all_planned_jobs_required": true,
+  "checked_jobs": 107,
+  "problems": [],
+  "status": "passed"
+ },
+ "rtol": 1e-05,
+ "scope": "same-backend prediction/state replay, not CPU portability or independent neural training provenance",
+ "wall_seconds": 698.8585611829985
+}

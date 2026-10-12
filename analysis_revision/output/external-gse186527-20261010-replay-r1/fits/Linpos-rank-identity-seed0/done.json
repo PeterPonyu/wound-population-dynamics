@@ -1,0 +1,14 @@
+{
+ "files": {
+  "evaluation0.npz": "298246002248e52433fb7c563e22e7c2fc5e3cac224e7e6819b1e1d31bb72ed4",
+  "fit.json": "c316a2a26f71813707989e362afbf6b594d198510fd67c7d303c6b4c95644a4f",
+  "model_replay.npz": "492affee00867972bee8c56b82a63be6ba13d871ff88cbff481f6c463e9cf2f3"
+ },
+ "job": {
+  "analysis": "Lin+",
+  "clock": "rank",
+  "job_id": "Linpos-rank-identity-seed0",
+  "method": "identity",
+  "seed": 0
+ }
+}

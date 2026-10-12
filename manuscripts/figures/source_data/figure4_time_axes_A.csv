@@ -1,37 +1,37 @@
 "axis","seed","method","ed"
-"Linear days",0,"Shared flow",1.97403537657477
+"Days",0,"Shared flow",1.97403537657477
 "Log days",0,"Shared flow",0.811988203654101
 "Rank",0,"Shared flow",0.804588495921119
-"Square-root days",0,"Shared flow",0.892435865231788
-"Linear days",1,"Shared flow",2.31003604973333
+"Sqrt days",0,"Shared flow",0.892435865231788
+"Days",1,"Shared flow",2.31003604973333
 "Log days",1,"Shared flow",0.765399953702831
 "Rank",1,"Shared flow",0.803698046647727
-"Square-root days",1,"Shared flow",0.872592735183183
-"Linear days",2,"Shared flow",2.17863220590341
+"Sqrt days",1,"Shared flow",0.872592735183183
+"Days",2,"Shared flow",2.17863220590341
 "Log days",2,"Shared flow",0.740037959155964
 "Rank",2,"Shared flow",0.822898137176472
-"Square-root days",2,"Shared flow",0.85877956025326
-"Linear days",0,"Centroid translation",0.977479496516658
+"Sqrt days",2,"Shared flow",0.85877956025326
+"Days",0,"Centroid translation",0.977479496516658
 "Log days",0,"Centroid translation",0.665404891880444
 "Rank",0,"Centroid translation",0.666673585576988
-"Square-root days",0,"Centroid translation",0.747631108175458
-"Linear days",1,"Centroid translation",0.977479496516658
+"Sqrt days",0,"Centroid translation",0.747631108175458
+"Days",1,"Centroid translation",0.977479496516658
 "Log days",1,"Centroid translation",0.665404891880444
 "Rank",1,"Centroid translation",0.666673585576988
-"Square-root days",1,"Centroid translation",0.747631108175458
-"Linear days",2,"Centroid translation",0.977479496516658
+"Sqrt days",1,"Centroid translation",0.747631108175458
+"Days",2,"Centroid translation",0.977479496516658
 "Log days",2,"Centroid translation",0.665404891880444
 "Rank",2,"Centroid translation",0.666673585576988
-"Square-root days",2,"Centroid translation",0.747631108175458
-"Linear days",0,"Unchanged source",1.47455216373366
+"Sqrt days",2,"Centroid translation",0.747631108175458
+"Days",0,"Unchanged source",1.47455216373366
 "Log days",0,"Unchanged source",1.47455216373366
 "Rank",0,"Unchanged source",1.47455216373366
-"Square-root days",0,"Unchanged source",1.47455216373366
-"Linear days",1,"Unchanged source",1.47455216373366
+"Sqrt days",0,"Unchanged source",1.47455216373366
+"Days",1,"Unchanged source",1.47455216373366
 "Log days",1,"Unchanged source",1.47455216373366
 "Rank",1,"Unchanged source",1.47455216373366
-"Square-root days",1,"Unchanged source",1.47455216373366
-"Linear days",2,"Unchanged source",1.47455216373366
+"Sqrt days",1,"Unchanged source",1.47455216373366
+"Days",2,"Unchanged source",1.47455216373366
 "Log days",2,"Unchanged source",1.47455216373366
 "Rank",2,"Unchanged source",1.47455216373366
-"Square-root days",2,"Unchanged source",1.47455216373366
+"Sqrt days",2,"Unchanged source",1.47455216373366

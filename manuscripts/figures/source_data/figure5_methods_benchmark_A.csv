@@ -1,14 +1,29 @@
-"label","value"
-"Stay-
-still",1.475998878479
-"Shared
-CFM",0.394700845082601
-"Mean
-shift",0.418586730957031
-"Nearest
-donor",0.514727910359701
-"Cond.
-CFM",0.617630958557129
-"OT",0.728403284942527
-"Target
-marginal",0.181776718235177
+"label","value","donor","kind"
+"Stay-still",1.475998878479,,"macro_mean"
+"Shared CFM",0.394700845082601,,"macro_mean"
+"Mean shift",0.418586730957031,,"macro_mean"
+"Nearest donor",0.514727910359701,,"macro_mean"
+"Cond. CFM",0.617630958557129,,"macro_mean"
+"OT",0.728403284942527,,"macro_mean"
+"Target marginal",0.181776718235177,,"macro_mean"
+"Stay-still",1.82211589813232,"PWH26","donor_error"
+"Stay-still",1.53546953201294,"PWH27","donor_error"
+"Stay-still",1.07041120529175,"PWH28","donor_error"
+"Shared CFM",0.711038589477539,"PWH26","donor_error"
+"Shared CFM",0.288055419921875,"PWH27","donor_error"
+"Shared CFM",0.185008525848389,"PWH28","donor_error"
+"Mean shift",0.567399024963379,"PWH26","donor_error"
+"Mean shift",0.34958028793335,"PWH27","donor_error"
+"Mean shift",0.338780879974365,"PWH28","donor_error"
+"Nearest donor",0.679235458374023,"PWH26","donor_error"
+"Nearest donor",0.431847095489502,"PWH27","donor_error"
+"Nearest donor",0.433101177215576,"PWH28","donor_error"
+"Cond. CFM",1.47299766540527,"PWH26","donor_error"
+"Cond. CFM",0.199035167694092,"PWH27","donor_error"
+"Cond. CFM",0.180860042572021,"PWH28","donor_error"
+"OT",0.720093336912917,"PWH26","donor_error"
+"OT",0.622807581449223,"PWH27","donor_error"
+"OT",0.842308936465441,"PWH28","donor_error"
+"Target marginal",0.156882012054056,"PWH26","donor_error"
+"Target marginal",0.141555994903379,"PWH27","donor_error"
+"Target marginal",0.246892147748095,"PWH28","donor_error"

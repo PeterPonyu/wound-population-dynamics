@@ -1,0 +1,396 @@
+{
+ "code_digest": "788fedb184078c9f410835368fd88a56b274eac6abe19786db895b212285ab31",
+ "code_files": {
+  "expansion/__init__.py": "37461fa6376b78461e7b281fa8c67fae161408fb03704edde3866793082b218f",
+  "expansion/__main__.py": "2e3f5b76b2ef8ac66eb3fcb8203852a7cea9c20fca645c5623f5d6c5b2ea96ae",
+  "expansion/analysis/__init__.py": "0509d28d07b984f54dee05bd72291f4f07d6efbcc68d6f7cbefe6b8051989197",
+  "expansion/analysis/aggregate.py": "318c6dee3a4fcbf39415472f8fb5e2f69b7c191a37777643df1b028d491301fb",
+  "expansion/analysis/inference.py": "84923f3ca0141fdcdae9542e67bb412f5f7ead117d68a112fdf17d103263e09e",
+  "expansion/analysis/moderators.py": "f4845438b62813c110b65854786a9d3cb8e51b9565b5fe40fcea4830ea6bdd1f",
+  "expansion/analysis/power.py": "0feeccd58649b3c8169f36dc9448363a86bb727395eece32e605660ae6317b3b",
+  "expansion/bundle/__init__.py": "b192f7256673cbc09c060ac31c8f71019ac2320f2ba01abddb9930bf587d815f",
+  "expansion/bundle/build.py": "b9efb98a8a14cb8eec1415af074495b3cf8f943cfee376119428e177d9801e06",
+  "expansion/bundle/runtime.py": "0eba4def357b09904b0e0291467923a7be040bb11ca06979b87931ff9ac650dd",
+  "expansion/common/__init__.py": "fa57c56203b8969026339ca50774ae5dd68be8a9b43a6e3d79021a19356940d5",
+  "expansion/common/io.py": "e85eddff2dbaa507bbd226671d0574a8554e163c069661651619f93e11daa9ce",
+  "expansion/common/provenance.py": "bc22ea7557ccc5554f7def4e781bbe7a4d26cf9d3d6b7a4f23de2c5e179336e5",
+  "expansion/common/rng.py": "5699d784a3e1b9e29eca69c6ec0dc8d6e1ceeaffc147cbc6558d06dbbac438ce",
+  "expansion/data/__init__.py": "c93cce1eb0571cc6990f1916c116f114d8f5809782e66093c92e1fe4890a0f7a",
+  "expansion/data/adapters.py": "565d5d198ab2cff6feffa8304dac08ff652145a293f58d952018ccc4c87250ef",
+  "expansion/data/fetch.py": "7d4c001b33cdd8410d0c5b66b66b897631a4dc12055aed7b0297064e5f1a58f2",
+  "expansion/data/formats.py": "87508532a2db6c4feda3a5c6b43b7facdb2a44de7e3adaedb6efa22023b365d6",
+  "expansion/data/gse175634_h5ad.py": "3f87e14b7ac8c352c10d71b3d8880eec9e8428904ee324a18de9635be3ffa198",
+  "expansion/data/gse175634_preparation.py": "b2362a16abb939b205318dc53e5eabd1ee6090d7430f2f69e612168212ff0e3c",
+  "expansion/data/gse175634_qc.py": "4996aa38a90308bcb611b788e7310b3b25c2a6fae24aa7041913fde4ed1d0c2e",
+  "expansion/data/intake.py": "05da09f1e04fedf0f345ea23751002186deb94693b8ad8444fdba30cab77b46a",
+  "expansion/data/quarantine.py": "1f4ec0c76c4eb1292f7a0909d2ee6de0421d936757efad119ceae40bf73ae878",
+  "expansion/data/registry.py": "9b99efcfe42b0e6171766c75817d910504e3bb462fa39245be26e8ed404ec222",
+  "expansion/data/secure_transfer.py": "7ae02b2e123a8fad44d0e991dcf6401d16e888deeb9ecf39aac47c12da256e0f",
+  "expansion/data/standard.py": "7011139c0d47220b75b5eaead8385b8e0ac1c3fbb0d60fce3f88e3b405ed99e5",
+  "expansion/launch.py": "0b355edf8133bfe0e8f20c89737796d2d53d933f9198f6db20c81afe19ab6eb5",
+  "expansion/measurement/__init__.py": "a7357d85cc1111b9401301488e913a319dbcc917b3027c53fea83d02d256f9fa",
+  "expansion/measurement/design.py": "61b999aa0567d35ef5ed261b27b1e581e254639a7a4c88157804af3cfa45dec2",
+  "expansion/measurement/programs.py": "bfe4419c9d46ecdf7bfca998577fd755de58ae6b13951345f9258e750f8ab8bc",
+  "expansion/measurement/semantics.py": "52b9e7b17de70502985cb3f997ee6873782b293a949418a490ec497e34de49b3",
+  "expansion/measurement/stability.py": "bbba480b2ba18487b440cf9cc0ac8e02e86fac39393bca60f9a375ca83d7cca0",
+  "expansion/measurement/worker.py": "79adf33e75e99da60a0f23e7d7d4510622aba13d20f2c01234b3b3a481617961",
+  "expansion/population/__init__.py": "f5f08cfcba0bdf49399fc3efb39505e4fc1db4f0a1516417681c300346f78e11",
+  "expansion/population/infosets.py": "b3c5de4d34a6c18e7c6347d75e7f7d344ddb49c36201c9ccbe90d19305d5d491",
+  "expansion/population/methods/__init__.py": "d5dae1b8dc7fc9eebd83f19e13f1099c371ca04b661e8b7ddb5db582c5faaebc",
+  "expansion/population/methods/base.py": "1b8926fc060901e150f539da8d78d0522f247c98ad8bc342fb83a0ef3000d818",
+  "expansion/population/methods/baselines.py": "9e55ba12cad9fcc4b6bc68e914e1a3d43c26e702ece40302e568644a3431aee9",
+  "expansion/population/methods/flows.py": "c7e955a6a62afbfb686f92b327a4fbd770c9e1e16143e957814f5c9b8bf1ca66",
+  "expansion/population/metrics.py": "9cfc2fcddcb56d20fb07b4d38918b957980fa47d0a5ef08e3650b2c15f0b2bb5",
+  "expansion/population/paired.py": "218aafd26ca08c3a95ff7a3875fdbdff0dd95222e3368770bf5a84b7f4dcbbc2",
+  "expansion/population/represent.py": "fa2df9340f38cf66cd159265e59fb435700398313386409cc7a8a00aaa48a2e6",
+  "expansion/population/tasks.py": "bc21f742ad0e7056768db775d115b8ed1b521b6a974776dc3ef8b8e2fe39d4c2",
+  "expansion/population/worker.py": "72e1377f26241d1f51b2458cad86ac87259705c2ab04ea8f6110fbd5d9745a62",
+  "expansion/runner/__init__.py": "7dd8a17b3cab8844131bfef136771a79f6c78aed1c4adc04fee69b9ffab424ad",
+  "expansion/runner/approval.py": "233865d332526a8e8b0b87c9245563f987a93cb239d5a3c826dedf12446ba1a4",
+  "expansion/runner/cli.py": "a9c78c5da6cbbaa751ebf8dd1e82c298e23851c79967bf2cc319356df49f8475",
+  "expansion/runner/jobs.py": "23c80f84da86948a3d23b9792628f9e29a672a8743b826ec1e676fed83d793e4",
+  "expansion/runner/queue.py": "054412af4fd35da0715f7f1d30bfb06e5b74208ecebca33dddfb8ac104369d0d",
+  "scripts/external_gse186527.py": "ccc3784675aa57f8e4db5366c528edce851f08d4f21f04f71a893b43cd09d1d2"
+ },
+ "created_utc": "2026-10-10T07:26:02.618785+00:00",
+ "input_files": {
+  "output/external-gse186527-20261009/admission/admission.json": "abfdb3a8b3394bca64be331ffab636a4443f2fbd38edea223be78e95bf4225d6",
+  "output/external-gse186527-20261009/admission/cell_assignments.csv.gz": "b37700701b2edd8224fc337fbfa38cb149aae6265d2e11536de1df09dd67dbe1",
+  "output/external-gse186527-20261009/admission/groups.csv": "c87a39affcf5925c64ad687cf72173c646e90d6a290932568e60167db22bf660",
+  "output/external-gse186527-20261009/admission/hto_dictionary.csv": "3df53f1b095f2b4e5b47f9f71139b0677b2e439fce2b10537b8346beb92bd179",
+  "output/external-gse186527-20261009/admission/libraries.csv": "a1e8b9b8d021807d50164c52ff9abe68a833145abac2866a4bed85ff30c6d2fc",
+  "output/external-gse186527-20261009/admission/standard_Linpos.h5ad": "766149c17a9fe5bdf9001eba3797e2da9569aad91587aeb9b23e9d62b5446e73"
+ },
+ "planned_fits": [
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-identity-seed0",
+   "method": "identity",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-mean_shift-seed0",
+   "method": "mean_shift",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-location_scale-seed0",
+   "method": "location_scale",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-quantile_map-seed0",
+   "method": "quantile_map",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-ot_displacement-seed0",
+   "method": "ot_displacement",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-gaussian_geodesic-seed0",
+   "method": "gaussian_geodesic",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed0",
+   "method": "cfm_independent",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed1",
+   "method": "cfm_independent",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_independent-seed2",
+   "method": "cfm_independent",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed0",
+   "method": "cfm_ot",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed1",
+   "method": "cfm_ot",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_ot-seed2",
+   "method": "cfm_ot",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed0",
+   "method": "cfm_sb",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed1",
+   "method": "cfm_sb",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "rank",
+   "job_id": "Linpos-rank-cfm_sb-seed2",
+   "method": "cfm_sb",
+   "seed": 2
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-location_scale-seed0",
+   "method": "location_scale",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed0",
+   "method": "cfm_independent",
+   "seed": 0
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed1",
+   "method": "cfm_independent",
+   "seed": 1
+  },
+  {
+   "analysis": "Lin+",
+   "clock": "log_days",
+   "job_id": "Linpos-log_days-cfm_independent-seed2",
+   "method": "cfm_independent",
+   "seed": 2
+  }
+ ],
+ "protocol": {
+  "admission_floors": {
+   "applies_to": "each (arm, day, gate) population used by a task; a task whose source, held or anchor population fails is NOT admitted and is reported as such",
+   "min_cells_per_group": 50,
+   "min_mice_per_group": 2,
+   "no_floor_lowering_after_inspection": true
+  },
+  "analysis": {
+   "practical_delta_log": 0.1823,
+   "primary_comparator": "location_scale",
+   "report_mode": "diagnostic_only",
+   "summary": "per arm and gate: energy of every method, log ratio to the comparator, and the same ratios per held mouse; no p-values, no ranking of methods, no pooling of arms or gates into an inferential unit"
+  },
+  "authorisation": "The author approved acquiring GSE186527_RAW.tar and running an external P2 benchmark in chat on 2026-10-09 (answer: download and run).",
+  "clock": {
+   "primary": "rank",
+   "sensitivity": [
+    "log_days"
+   ],
+   "sensitivity_methods": [
+    "location_scale",
+    "cfm_independent"
+   ]
+  },
+  "evaluation": {
+   "caps": {
+    "c2st": 2000,
+    "energy": 2000,
+    "exact_w2": 1000,
+    "sliced_w2": 4000
+   },
+   "mouse_level": "additionally score the prediction against each held mouse's cells separately; report the per-mouse mean and range",
+   "primary_metric": "energy",
+   "secondary_metrics": [
+    "mmd",
+    "sliced_w2",
+    "mean_error",
+    "bures"
+   ],
+   "sliced_projections": 128,
+   "target": "all cells of the held (arm, day, gate) population"
+  },
+  "flow_defaults": {
+   "batch_size": 512,
+   "depth": 3,
+   "grad_clip": 1.0,
+   "hidden": 256,
+   "lr": 0.001,
+   "rk4_steps_per_interval": 50,
+   "sinkhorn_iterations": 300,
+   "steps": 8000,
+   "time_dim": 32
+  },
+  "frozen_utc": "2026-10-10T03:00:00Z",
+  "hto_demultiplexing": {
+   "doublet_rule": "second-highest count >= max(20, top/5)",
+   "feature_selection": "the ten 'Antibody Capture' features, located by feature type and name, never by row index",
+   "negative_rule": "top count < 20",
+   "reporting": "per library: cells, any-HTO cells, singlet/doublet/negative counts under all three rules and the fraction of primary singlets whose label changes under each sensitivity rule",
+   "sensitivity_rules": [
+    {
+     "min_top_count": 10,
+     "min_top_over_second": 3.0
+    },
+    {
+     "min_top_count": 50,
+     "min_top_over_second": 10.0
+    }
+   ],
+   "singlet_rule_primary": {
+    "min_top_count": 20,
+    "min_top_over_second": 5.0
+   }
+  },
+  "inputs": {
+   "archive": "GSE186527_RAW.tar",
+   "archive_bytes": 72949760,
+   "archive_sha256": "5c8203131c00b23db625ade6def19c66f6ade9e6a00a380cf0c618e8f41f2efb",
+   "primary_paper": "Mascharak et al., Cell Stem Cell 29:315-327 (2022), doi:10.1016/j.stem.2021.12.011",
+   "series": "GSE186527",
+   "soft_sha256": "1109a6bcc86991373cb5fbb486cd57a1e639079a65ae29c15847104ec2029f45"
+  },
+  "kind": "population_external_cross_sectional",
+  "method_params": {
+   "cfm_sb": {
+    "sb_sigma_scale": 0.25
+   },
+   "ot_displacement": {
+    "cap": 2000,
+    "k": 15
+   }
+  },
+  "methods": [
+   "identity",
+   "mean_shift",
+   "location_scale",
+   "quantile_map",
+   "ot_displacement",
+   "gaussian_geodesic",
+   "cfm_independent",
+   "cfm_ot",
+   "cfm_sb"
+  ],
+  "not_claims": [
+   "Mice are nested in (arm, day): no animal is observed twice, so no cell or animal trajectory is reconstructed.",
+   "Lin-/Lin+ proportions are set by sorting and carry no whole-wound composition.",
+   "Libraries are batch-confounded with day and arm; arm-level differences cannot be separated from batch.",
+   "Two arms and one held day are not an inferential sample; seeds and draws are computational repetitions.",
+   "Nothing here validates the human wound or diabetic-foot findings."
+  ],
+  "protocol_id": "external-gse186527-tmt-20261009-a",
+  "question": "In a destructive cross-sectional mouse wound series, do neural flow fields reconstruct a withheld sampling day better than permitted simple alternatives, treating each treatment arm as a population?",
+  "representation": {
+   "fit_cells": "cells of the analysed gate whose day is not the held day, from both arms",
+   "max_fit_cells": 50000,
+   "n_components": 30,
+   "n_hvg": 2000,
+   "note": "Mouse-local, train-only. No human-to-mouse ortholog map is used.",
+   "primary": "pca_train",
+   "seed": 0
+  },
+  "schema_version": 1,
+  "seeds": {
+   "deterministic": [
+    0
+   ],
+   "stochastic": [
+    0,
+    1,
+    2
+   ]
+  },
+  "status": "frozen_before_any_rna_level_analysis",
+  "tasks": {
+   "T-K": "excluded for the same reason",
+   "T-LIO": "excluded: arm is not an individual; no animal is sampled twice",
+   "T-MT": {
+    "anchor_time": 30,
+    "held_time": 14,
+    "individuals": [
+     "PBS",
+     "Verteporfin"
+    ],
+    "note": "Retrospective interpolation using the later day; it is not prospective prediction.",
+    "source_time": 7,
+    "times": [
+     7,
+     14,
+     30
+    ]
+   },
+   "analyses": [
+    "Lin- (primary)",
+    "Lin+ (secondary, mouse 5 excluded)"
+   ]
+  },
+  "time_and_arm_assignment": {
+   "excluded_libraries": [
+    "GSM5429653 (T1)",
+    "GSM5429654 (T2)",
+    "GSM5429655 (T3)"
+   ],
+   "exclusion_reason": "These unwounded + POD2 libraries mix three conditions that are distinguishable only through HTOs. The admission audit found zero HTO counts in every cell of all three released matrices, so no cell can be assigned to unwounded/POD2/PBS/Verteporfin. Their day annotations also disagree (GEO characteristics 2, 3 and 4 days for the same POD2 dictionary labels).",
+   "mouse5_conflict": "The dictionary labels both HTO9 and HTO10 of mouse 5 as Lin+. Neither is relabelled. Mouse 5 (HTO9 and HTO10) is excluded from the Lin+ analysis and contributes nothing to Lin-.",
+   "rule": "day and arm come from the library (GSM5429656 T-7P=POD7 PBS, T-7V=POD7 Verteporfin, T-14P, T-14V, T-30P, T-30V); mouse and gate come from the HTO via the author's dictionary"
+  },
+  "unit_definitions": {
+   "gate": "Lin- (fibroblast-enriched) or Lin+ (other cells), from the author's HTO dictionary",
+   "individual": "treatment arm (PBS or Verteporfin), as for GSE326622 in population-benchmark-v1; NOT a mouse",
+   "mouse": "HTO-labelled animal inside a library; nested within (arm, day); each mouse is sampled at one day only",
+   "population": "cells of one arm, one library (day) and one FACS gate, pooled over mice"
+  }
+ },
+ "protocol_sha256": "ad60dcb0ed7245eea3b602ca14bf00aab698937e4053d88267e9a1a49a1da5bc",
+ "runtime": {
+  "cuda_matmul_tf32": false,
+  "cudnn_tf32": true,
+  "deterministic_algorithms": false,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "pid": 2111410,
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.13.5",
+  "torch_cuda": "13.0",
+  "torch_threads": 4,
+  "versions": {
+   "POT": "0.9.6.post1",
+   "anndata": "0.12.10",
+   "numpy": "2.2.6",
+   "pandas": "2.3.3",
+   "scikit-learn": "1.8.0",
+   "scipy": "1.16.3",
+   "torch": "2.12.0+cu130"
+  }
+ },
+ "schema": "external-population-reproduction-v1",
+ "scope": "Retrospective cross-sectional diagnostic; no new biological units. Prediction replay, not optimizer resume."
+}

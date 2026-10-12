@@ -1,0 +1,43 @@
+{
+  "table_s25_full_cell": {
+    "Wound7": {
+      "unchanged_source": 1.4724762061265302,
+      "translation": 0.6674204410636548,
+      "per_donor_unchanged": [
+        1.7580284658395158,
+        1.5845662153158733,
+        1.0748339372242013
+      ],
+      "per_donor_translation": [
+        0.705820683439951,
+        0.6898344741297668,
+        0.6066061656212467
+      ]
+    },
+    "Wound1": {
+      "unchanged_source": 1.3460169798645598,
+      "translation": 0.9292727374829651,
+      "per_donor_unchanged": [
+        1.1341395830364265,
+        1.5517124269806004,
+        1.3521989295766526
+      ],
+      "per_donor_translation": [
+        0.8703744657884611,
+        1.0899749088091717,
+        0.8274688378512627
+      ]
+    }
+  },
+  "harness_reproduction": {
+    "rows": 2700,
+    "missing": 0,
+    "max_abs_energy_difference": 4.440892098500626e-16,
+    "methods": [
+      "identity",
+      "location_scale",
+      "mean_shift",
+      "target_marginal"
+    ]
+  }
+}

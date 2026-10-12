@@ -2,7 +2,10 @@
 import importlib.util
 import io
 import json
+import os
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -18,6 +21,21 @@ SPEC.loader.exec_module(AUDIT)
 
 
 class ObservableMathematicsTests(unittest.TestCase):
+    def test_import_preserves_the_callers_numeric_thread_contract(self):
+        keys = ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS",
+                "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS")
+        code = """
+import importlib.util, json, os
+spec = importlib.util.spec_from_file_location('observable_import', 'scripts/audit_population_observable.py')
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+print(json.dumps({key: os.environ.get(key) for key in KEYS}))
+""".replace("KEYS", repr(keys))
+        run = subprocess.run([sys.executable, "-B", "-c", code], cwd=ROOT,
+                             env={**os.environ, **dict.fromkeys(keys, "1")},
+                             capture_output=True, text=True, timeout=30, check=True)
+        self.assertEqual(json.loads(run.stdout), dict.fromkeys(keys, "1"))
+
     def test_projection_rejects_nonfinite_checkpoints_saved_mu_and_batches(self):
         import torch
         from wound_models.topic_model import TopicModel, TopicEncoder

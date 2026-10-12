@@ -1,0 +1,61 @@
+{
+ "finished_utc": "2026-10-09T09:51:30Z",
+ "invocation": {
+  "event_sha256": "854a012d11cf98779d5dd1f196f98d6d9fe1c4a36184f5220eef92069a265da9",
+  "id": "1c2488555da242c0a8d0e3b49dd3ceee"
+ },
+ "job": {
+  "dataset_id": "GSE241132",
+  "job_id": "b4f15638b32c02ccafbd",
+  "job_type": "population_fit",
+  "method": "mean_shift",
+  "params": {
+   "code_digest": "ab109504d42ec1e58bb2",
+   "dataset_sha256": "620aa6980e8ee5c6846532b65b22e860bca1faa1b64f54c17bac553315624848",
+   "evaluation_contract": "train-side-paired-v2",
+   "evaluation_draw_seed": 20261005,
+   "evaluation_stochastic": false
+  },
+  "protocol_hash": "4bd7932aac356804539d",
+  "representation": "frozen_topic_mu",
+  "seed": 0,
+  "task": {
+   "dataset_id": "GSE241132",
+   "family": "source_swap",
+   "held_individual": "PWH26",
+   "held_time": null,
+   "kind": "T-LIO",
+   "pairs": [
+    {
+     "anchor_time": null,
+     "individual": "PWH26",
+     "source_time": 0.0,
+     "target_time": 1.0
+    },
+    {
+     "anchor_time": null,
+     "individual": "PWH26",
+     "source_time": 1.0,
+     "target_time": 7.0
+    },
+    {
+     "anchor_time": null,
+     "individual": "PWH26",
+     "source_time": 7.0,
+     "target_time": 30.0
+    }
+   ],
+   "repeat": 0,
+   "substitute": "PWH27",
+   "training_individuals": null
+  }
+ },
+ "job_id": "b4f15638b32c02ccafbd",
+ "outputs": {
+  "evaluation_contract.npz": "aa0111834859b31e06bb0fab7af9b1d569863ff5eb44eefcb4bd660a28a31105",
+  "model_replay.npz": "629603dae0d6825348288d935e204d75253b399fb7abfdf12bec4ee80fe9b958",
+  "predictions.npz": "2cf54100bb1cb5ffeaf6cfa57f23b91d0adbfa5dbd8b1f5cabd416b4a7e444b3",
+  "result.json": "1752e82ce4177f6493e66867fd811a63beb69f268e37c130288cc407dd7543a6"
+ },
+ "seconds": 7.938786261998757
+}
