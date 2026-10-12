@@ -1,0 +1,11 @@
+{
+  "software_version": "0.5.0",
+  "software_publication_and_download_check": "PASS",
+  "editorial_document_release": "https://github.com/PeterPonyu/wound-population-dynamics/releases/tag/submission-2026-10-12",
+  "editorial_document_commit": "5aee3f5063a564c1b46c1ae6041470fde20cc435",
+  "immutable_archives_and_release_tags_changed": false,
+  "metadata_scope": "Mutable default-branch publication metadata; frozen software/source manifests in historical releases remain unchanged.",
+  "current_compact_manifest_files_checked": 1118,
+  "prior_manifest_sha256": "8178342c82c24c6d7c33833f33727a356e387190d36ab1b588112bba9a51e441",
+  "current_manifest_sha256": "ea10c8911f9d3d1424980281a09182be6b159227c500b541ef2e5be834e30981"
+}
